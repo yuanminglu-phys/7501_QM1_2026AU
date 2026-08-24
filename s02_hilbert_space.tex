@@ -70,7 +70,7 @@ In the Dirac notation, $\dbra{u}$ is known as a \emph{bra}, and $\dket{v}$ is kn
 \end{align}
 and \emph{linear in ket}
 \begin{align}
-    \dket{u}(\sum_i\lambda_i\dket{v_i})=\sum_i\lambda_i\expval{u|v_i}
+    \dbra{u}(\sum_i\lambda_i\dket{v_i})=\sum_i\lambda_i\expval{u|v_i}
 \end{align}
 These properties are summarized in Chapter 1.2 of \shankar~and Chapter 2.1.4 of \nielsen.
 
@@ -99,7 +99,7 @@ Strictly speaking, in addition to being a vector space equipped with an inner pr
 For an inner product space of finite dimensions on any complete field $\mathbb{F}$, such as real and complex numbers $\mathbb{F}=\mathbb{R},\mathbb{C}$, it is automatically a Hilbert space. Below are a few examples of Hilbert spaces, and inner product spaces that are not Hilbert spaces:
 \begin{itemize}
     \item $n$-dimensional Hilbert space on complex numbers: $\mathbb{V}\simeq \mathbb{C}^n$
-    \item $n\times n$ complex matrices equipped with the Hilbert-Schmidt inner product forms a Hilbert space $L_{\mathbb{C}^n}$
+    \item $n\times n$ complex matrices equipped with the Hilbert-Schmidt inner product forms a Hilbert space $L_{\mathbb{C}^n}$ (see Homework 1)
     \item $n$-dimensional Hilbert space on real numbers: $\mathbb{V}\simeq \mathbb{R}^n$
     \item $n$-dimensional vector space $\mathbb{V}\simeq \mathbb{Q}^n$ on rational numbers is not a Hilbert space because it is not complete, since a Cauchy sequence of rational numbers can converge to an irrational number.
     \item The inner product space of continuous square-integrable complex functions on interval $[a,b]$ with the following $L^2$ inner product:
@@ -114,7 +114,7 @@ A Hilbert space forms the \emph{state space} described in Postulate \ref{postula
 \begin{align}
 \dket{v}=\sum_iv_i\dket{i},~\forall~\dket{v}\in\mathbb{V};~~~\expval{i|j}=\delta_{i,j}
 \end{align}
-where $\delta_{i,j}$ is the Kronecker delta function. Given a $n$-dimensional vector space $V$, one can always find a set of $n$ linearly independent vectors $\{e_j|1\leq j\leq n\}$, known as a basis of vector space $V$, such that any vector $v\in V$ can be uniquely expressed as a linear superposition of the basis vectors: $v=\sum_{j}v_je_j$ with $v_j\in\mathbb{F}$. Given the inner product structure in a Hilbert space, a set of complete orthonormal basis can be constructed following the Gram-Schmidt procedure, specified in Chapter 1.2 of \shankar~and Chapter 2.1.4 of \nielsen. In such a complete orthonormal basis of Hilbert space $\mathbb{V}=\mathbb{C}^n$, a Dirac ket $\dket{v}$ can be represented by a column vector $\vec v=(v_1,\cdots,v_n)^T$, a Dirac bra represented by a row vector, and the inner product reduces to the familiar form in $\mathbb{C}^n$:
+where $\delta_{i,j}$ is the Kronecker delta function. Given a $n$-dimensional vector space $V$, one can always find a set of $n$ linearly independent vectors $\{e_j|1\leq j\leq n\}$, known as a basis of vector space $V$, such that any vector $v\in V$ can be uniquely expressed as a linear superposition of the basis vectors: $v=\sum_{j}v_je_j$ with $v_j\in\mathbb{F}$. Given the inner product structure in a Hilbert space, a set of complete orthonormal basis can be constructed following the Gram-Schmidt procedure, discussed in details in Chapter 1.2 of \shankar~and Chapter 2.1.4 of \nielsen. In such a complete orthonormal basis of Hilbert space $\mathbb{V}=\mathbb{C}^n$, a Dirac ket $\dket{v}$ can be represented by a column vector $\vec v=(v_1,\cdots,v_n)^T$, a Dirac bra represented by a row vector, and the inner product reduces to the familiar form in $\mathbb{C}^n$:
 \begin{align}
 \expval{u|v}=\sum_iu_i^\ast v_i=\bpm u_1^\ast,\cdots,u_n^\ast\epm\bpm v_1\\ \cdots\\v_n\epm
 \end{align}

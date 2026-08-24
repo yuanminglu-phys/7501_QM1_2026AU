@@ -1,0 +1,103 @@
+\chapter{Homework 1 (due 9/4)}
+
+\section{Franck-Hertz experiment}
+
+In the Franck-Hertz experiment (see Fig. \ref{fig:franck-hertz} in lecture notes), the sharp drop of electric current through the vacuum tube at a voltage of 4.9 V corresponds to the absorption of electron energy by the mercury atoms in the vacuum tube, where the atomic energy level of mercury atoms go through a transition. Compute the wavelength of light associated with this atomic energy level transition, show that it is approximately 254 nm, as observed in optical emission of the same vacuum tube.
+
+\section{Davisson-Germer experiment}
+
+(1) \emph{Bragg's law}~~~Consider the diffraction of a wave by a lattice of atoms with a lattice constant of $d$ between layers. Derive the Bragg's law
+\begin{align}\label{bragg law}
+n\lambda=2d\cos\frac\theta2,~~~n=0,1,2,3,\cdots
+\end{align}
+for the diffraction pattern.
+
+\begin{figure}
+\includegraphics[width=0.9\columnwidth]{Bragg law.png}
+\caption{Scattering of a wave by a lattice of atoms with a lattice constant $d$.}
+\label{fig:bragg's law}
+\end{figure}
+
+(2) Consider the Davisson-Germer experiment illustrated in Fig. \ref{fig:davisson germer} of overleaf lecture notes. For $\theta=50^o$, $d=0.091$~nm for nickel crystals, and an electron beam accelerated by a $V=54$ volts voltage, show that it satisfies the Bragg's law with $n=1$.
+
+In part (1) and (2), we have dealt with a simplified version of the actual Davisson-Germer experiment\cite{Davisson1927}, assuming the electron beam was scattered by a three-dimensional simple cubic lattice. Below we will seriously consider the actual situation of Davisson-Germer experiment in history, where an electron beam was scattered by the (111) surface of a nickel crystal in which Ni atoms form a face-centered cubic (FCC) lattice. In this case, we need to first derive the general Bragg condition for two-dimensional diffraction peaks and apply it to the setup of Davisson-Germer experiment. Below we carry out this calculation step by step.
+
+(3) For electrons of energy $54$~eV in the Davisson-Germer experiment, their penetration depth into the nickel crystal is less than 1 nanometer, comparable to the FCC lattice constant $a=3.52$ \AA. This means as a zeroth order approximation, we can model the Davisson-Germer experiment as electrons scattered by the top layer of Ni atoms parallel to the crystal surface. In Davisson-Germer experiment the incident beam of electrons is perpendicular to the cleaved (111) surface of the nickel crystal. Can you draw the two-dimensional lattice formed on the (111) surface of a nickel crystal? Given the FCC lattice constant $a=3.52$ \AA in nickel cystals, what is the distance $\tilde a$ between two nearest Ni atoms on its (111) surface?
+
+(4) For the two-dimensional (2d) plane parallel to the (111) surface, we can choose the following two orthonormal vectors as two basis vectors for the 2d plane:
+\begin{align}
+\hat e_1=(-1,1,0)/\sqrt2,~~~\hat e_2=(-1,-1,2)/\sqrt6,~~~\hat e_1\times\hat e_2=(1,1,1)/\sqrt3.
+\end{align}
+In this two-dimensional lattice on (111) surface, the periodic pattern of Ni atoms are described by two primitive vectors 
+\begin{align}
+\vec a_1=\tilde a \hat e_1,~~~\vec a_2=\tilde a\frac{-\hat e_1+\sqrt3\hat e_2}2.
+\end{align}
+where $\tilde a$ is the distance $\tilde a$ between two nearest Ni atoms on its (111) surface. They are called primitive vectors in the sense that any lattice site position $\vec R$ in the 2d lattice is a summation of integer multiples of $\vec a_i$
+\begin{align}
+\vec R=\sum_{j=1}^2m_j\vec a_j,~~~m_j\in\mbz.
+\end{align}
+Most generally, the Bragg condition for diffraction peaks is given by
+\begin{align}\label{bragg condition}
+\sum_{\vec R}e^{\imth\vec q\cdot\vec R}\neq0\Longleftrightarrow\vec q\cdot\vec a_j=0\mod2\pi,~~~\forall~j=1,2.
+\end{align}
+where $\vec q$ is the in-plane component of electron momentum transfer before and after scattered by the nickel crystal:
+\begin{align}\label{inplane mtm transfer}
+\vec q\equiv(\vec k_\text{out}-\vec k_\text{in})-\frac{(1,1,1)}3(\vec k_\text{out}-\vec k_\text{in})\cdot(1,1,1).
+\end{align}
+In later lectures we will come back to (\ref{bragg condition}) when discussing Fourier transform as a change of basis (i.e. a unitary transformation). From (\ref{bragg condition}), show that
+\begin{align}\label{bragg peaks}
+&\vec q=\sum_{j=1}^2n_j\vec b_j,~~~n_j\in\mbz
+\end{align}
+and where the \emph{reciprocal lattice primitive vectors} $\vec b_{1,2}$ are defined by the following conditions
+\begin{align}
+\vec a_i\cdot\vec b_j=2\pi\delta_{i,j}
+\end{align}
+Note that $\vec b_{1,2}$ are both perpendicular to (1,1,1) as well. Express $\vec b_{1,2}$ using $\tilde a$ and $\hat e_{1,2}$.
+
+(5) In the Davisson-Germer experiment, the incident momentum $\vec k_\text{in}$ is perpendicular to the (111) surface i.e. $\vec k_i=\frac{2\pi}{\lambda}(1,1,1)/\sqrt{3}$ where $\lambda$ is the wavelength of electrons with a kinetic energy of 54 eV. For elastic scatterings responsible for the diffraction pattern, we have 
+\begin{align}\label{elastic scattering}
+|\vec k_i|=|\vec k_f|=\frac{2\pi}{\lambda}
+\end{align}
+In the experimental setup of Fig. \ref{fig:davisson germer} (left), using results (\ref{inplane mtm transfer})-(\ref{bragg peaks}) of the previous part, derive the following Bragg's law for Davisson-Germer experiment:
+\begin{align}\label{bragg cond:davisson germer}
+\lambda\sqrt{n_1^2+n_1n_2+n_2^2}=\sqrt{\frac38}a\sin\theta,~~~n_{1,2}\in\mbz
+\end{align}
+
+Comment: specifically, if we choose $(n_1,n_2)=n(1,0)$ or $n(0,1)$ or $n(1,-1)$, Eq. (\ref{bragg cond:davisson germer}) reduces to the more familiar one
+\begin{align}
+n\lambda=d_{(111)}\sin\theta,~~~n\in\mbz,~~~d_{(111)}=a\sqrt{3/8}\approx2.16~\text{\AA}.
+\end{align}
+
+(6) Note that the in-plane momentum transfer $\vec q$ can be written as
+\begin{align}
+\vec q=|q|(\cos\phi\hat e_1+\sin\phi\hat e_2)
+\end{align}
+where $\phi$ is the azimuth angle in Fig. \ref{fig:davisson germer} of the lecture notes. Use relations (\ref{inplane mtm transfer})-(\ref{elastic scattering}) to explain the $\phi$-dependent peaks in the right panel of Fig. \ref{fig:davisson germer}.
+
+(7) \textbf{Bonus} Can you qualitatively explain in Fig. \ref{fig:davisson germer} right panel, why are the peak heights at $\phi=\frac\pi2\mod2\pi/3$ are different from those at $\phi=\frac\pi6\mod2\pi/3$?
+
+\section{Hilbert space $\mathbb{L}_\mathbb{V}$ of linear operators on $\mathbb{V}=\mathbb{C}^n$}
+
+(1) Consider linear operators on complex vector space $\mathbb{V}=\mathbb{C}^n$, i.e. $n\times n$ complex matrices. Prove that they form a vector space, which we label as $\mathbb{L}_\mathbb{V}$. For the definition of a vector space, refer to Chapter 1.1 of \shankar.
+
+(2) Prove that the following binary operation $(\cdot,\cdot)$ on $\mathbb{L}_\mathbb{V}\times \mathbb{L}_\mathbb{V}$ defined by
+\begin{align}
+(A,B)\equiv\text{tr}(A^\dagger B),~~~A,B\in\mathbb{L}_\mathbb{V}
+\end{align}
+is an inner product. For the definition of an inner product, refer to \shankar~1.2 or \nielsen~2.1.4. This is known as the Hilbert-Schmidt inner product on operators.
+
+(3) Using the above Hilbert-Schmidt inner product, show that 3 Pauli matrices $\sigma_x,\sigma_y,\sigma_z$ defined below
+\begin{align}
+\sigma_x=\bpm0&1\\1&0\epm,~~\sigma_y=\bpm0&-\imth\\ \imth&0\epm,~~\sigma_z=\bpm1&0\\0&-1\epm
+\end{align}
+and the $2\times2$ identity matrix $\hat 1$ together can form a complete orthonormal basis for the vector space $\mathbb{L}_{\mathbb{C}^2}$ of all $2\times 2$ complex matrices.
+
+(4) \textbf{Bonus} Prove the following \emph{completeness relation of Pauli matrices}:
+\begin{align}
+\sum_{i=x,y,z}(\sigma_i)_{a,b}(\sigma_i)_{c,d}=\vec\sigma_{a,b}\cdot\vec\sigma_{c,d}=2\delta_{a,d}\delta_{b,c}-\delta_{a,b}\delta_{c,d}
+\end{align}
+
+Hint: use the conclusion of part (3), i.e. any $2\times 2$ Hermitian matrix $\hat M$ can be written as
+\begin{align}
+\hat M=\frac{\text{Tr}(\hat M)}2\hat 1_{2\times2}+\sum_{a=x,y,z}\frac{\text{Tr}(\hat M\sigma_a)}2\sigma_a
+\end{align}

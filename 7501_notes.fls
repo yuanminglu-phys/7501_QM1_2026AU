@@ -170,6 +170,12 @@ INPUT ch00_syllabus.aux
 INPUT ./ch01_postulates.aux
 INPUT ./ch01_postulates.aux
 INPUT ch01_postulates.aux
+INPUT ./ch02_density_matrix.aux
+INPUT ./ch02_density_matrix.aux
+INPUT ch02_density_matrix.aux
+INPUT ./app00_homeworks.aux
+INPUT ./app00_homeworks.aux
+INPUT app00_homeworks.aux
 OUTPUT 7501_notes.aux
 INPUT /opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -317,6 +323,36 @@ INPUT ./s06_tensor_product.tex
 INPUT ./s06_tensor_product.tex
 INPUT ./s06_tensor_product.tex
 INPUT s06_tensor_product.tex
+OUTPUT ch02_density_matrix.aux
+INPUT ./app00_homeworks.tex
+INPUT ./app00_homeworks.tex
+OUTPUT app00_homeworks.aux
+INPUT ./app00_homeworks.tex
+INPUT ./app00_homeworks.tex
+INPUT app00_homeworks.tex
+INPUT ./app01_hw1.tex
+INPUT ./app01_hw1.tex
+INPUT ./app01_hw1.tex
+INPUT ./app01_hw1.tex
+INPUT app01_hw1.tex
+INPUT ./figures/Bragg law.png
+INPUT ./figures/Bragg law.png
+INPUT ./figures/Bragg law.png
+INPUT ./figures/Bragg law.png
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT ./7501_notes.bbl
 INPUT ./7501_notes.bbl
 INPUT 7501_notes.bbl
@@ -327,6 +363,12 @@ INPUT ch00_syllabus.aux
 INPUT ./ch01_postulates.aux
 INPUT ./ch01_postulates.aux
 INPUT ch01_postulates.aux
+INPUT ./ch02_density_matrix.aux
+INPUT ./ch02_density_matrix.aux
+INPUT ch02_density_matrix.aux
+INPUT ./app00_homeworks.aux
+INPUT ./app00_homeworks.aux
+INPUT app00_homeworks.aux
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb

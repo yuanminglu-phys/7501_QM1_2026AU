@@ -19,5 +19,10 @@
 \contentsline {section}{\numberline {1.5}Unitary evolution of a closed quantum system (9/9)}{21}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Appendix: Functions of operators/matrices}{22}{subsection.1.5.1}%
 \contentsline {section}{\numberline {1.6}Composite quantum systems and tensor product (9/11)}{24}{section.1.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{26}{chapter*.2}%
+\def \@chapapp {\appendixname }
+\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{26}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{26}{appendix.A.1}%
+\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{26}{appendix.A.2}%
+\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{28}{appendix.A.3}%
+\contentsline {chapter}{\nonumberline Bibliography}{30}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
