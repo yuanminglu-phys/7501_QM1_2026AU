@@ -1,0 +1,130 @@
+\documentclass[
+  11pt,
+  open=any,           % Replaces 'openany'
+  bibliography=totoc, % Adds Bibliography to TOC
+  numbers=noenddot    % Removes trailing dots in headings (e.g., 1.1)
+]{scrbook}
+
+% Standard AMS math & theorem setup
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Force each \section to start on a new page
+\AddToHook{cmd/section/before}{\clearpage}
+
+\usepackage[numbers,sort&compress]{natbib}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}} % Searches the figures/ subfolder automatically
+\usepackage{esint}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{framed}
+\usepackage[english]{babel}
+\usepackage{wrapfig}
+\usepackage{epigraph}
+
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{hyperref}
+
+
+
+% AMS theorem styles integrated into scrbook
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{pos}[thm]{Postulate}
+
+% --- Custom Macros ---
+%\newcommand{\bs}[1]{\symbf{#1}}
+\newcommand{\bst}{{\mathcal{T}}}
+\newcommand{\fnp}{{\symbf{P}_f}}
+\newcommand{\ie}{{\emph{i.e.~}}}
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\imth}{\hspace{1pt}\mathrm{i}\hspace{1pt}}
+\newcommand{\alert}[1]{{\color{red}{#1}}}
+\newcommand{\eg}{{\emph{e.g.~}}}
+\newcommand{\etc}{{\emph{etc.~}}}
+\newcommand{\plash}[1]{#1\!\!\!/}
+\newcommand{\p}[1]{{#1}^\prime}
+\newcommand{\mbz}{{\mathbb{Z}}}
+
+\newcommand{\bct}{\begin{center}}
+\newcommand{\ect}{\end{center}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bal}{\begin{align}}
+\newcommand{\eal}{\end{align}}
+\newcommand{\bfr}{\begin{framed}}
+\newcommand{\efr}{\end{framed}}
+\newcommand{\tre}{\operatorname{Re}}
+\newcommand{\tim}{\operatorname{Im}}
+\newcommand{\cs}{{C_6}}
+\newcommand{\kag}{\text{kagome}}
+\newcommand{\expval}[1]{\langle{#1}\rangle}
+\newcommand{\arxiv}[1]{\href{http://arxiv.org/abs/#1}{#1}}
+\newcommand{\trace}{\operatorname{Tr}}
+\newcommand{\dket}[1]{|{#1}\rangle}
+\newcommand{\dbra}[1]{\langle{#1}|}
+\newcommand{\sumr}{\sum_{\symbf{r}}}
+\newcommand{\sumk}{\sum_{\symbf{k}}}
+\newcommand{\referto}[1]{\begin{itemize}\item Refer to {#1}\end{itemize}}
+\newcommand{\dif}[1]{\mathrm{d}{#1}}
+
+\linespread{1}
+
+% Section numbering depth
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+% Hanging indents for publications
+\def\rrr#1\\{\par
+\medskip\hbox{\vbox{\parindent=2em\hsize=6.12in
+\hangindent=4em\hangafter=1#1}}}
+
+\def\CourseNo{7501}
+\def\CourseTitle{Quantum Mechanics 1 (graduate core course)}
+\def\Semester{Autumn 2026}
+\def\Jobs{Professor}
+
+\title{Physics \CourseNo\ (\Semester)\\ \CourseTitle}
+\author{Yuan-Ming Lu}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+
+\begin{center}
+{\LARGE Physics \CourseNo\ (\Semester)\par}
+\vspace{0.5em}
+{\LARGE \CourseTitle\par}
+\vspace{1.5em}
+{\large Yuan-Ming Lu\par}
+\vspace{1em}
+{\large \today\par}
+\end{center}
+
+\bigskip
+\noindent\textbf{Abstract.} In this elementary course of quantum mechanics, we will learn the mathematical basis of quantum mechanics (i.e. linear algebra), the postulates of quantum theory, and how to use quantum mechanics to understand microscopic quantum phenomena.
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\mainmatter
+\setcounter{chapter}{-1}
+\include{ch00_syllabus}
+\include{ch01_postulates}
+
+\backmatter
+\bibliographystyle{apsrev4-2}
+\bibliography{refs}
+
+\end{document}

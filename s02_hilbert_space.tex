@@ -1,0 +1,99 @@
+\section{Hilbert space and state vectors (8/29)}
+
+\referto{\nielsen~2.1, \tong~3.1, \shankar~1.1-1.4}
+
+How to explain the above experimental observations? 4 postulates, derived (or more precisely, guessed) after a long process of trial and error, form the foundation for a theory framework that explains all observed experimental phenomena, known as quantum mechanics. Below we will introduce theses postulates one by one, along the way of introducing linear algebra as the mathematics of quantum mechanics.
+
+\begin{pos}\label{postulate 1}
+    Associated to any isolated physical system is a complex vector space with inner product (i.e. a Hilbert space) known as the {state space} of the system. The system is completely described by its state vector, which is a unit vector in the system's state space.
+\end{pos}
+
+The key mathematical framework for quantum mechanics is linear algebra. The basic objects of linear algebra are vector spaces:
+
+A \emph{vector space} over a \emph{scalar field} $\mathbb{F}$ is a set $\mathbb{V}$ of objects (called \emph{vectors}) equipped two binary operations: a \emph{vector addition} ($``+''$)
+\begin{align}
+\dket{v}+\dket{w}\in\mathbb{V},~~~\forall~\dket{v},\dket{w}\in\mathbb{V}.
+\end{align}
+and a \emph{scalar multiplication}:
+\begin{align}
+a\dket{v}\in\mathbb{V},~~~\forall~\dket{v}\in\mathbb{V},~a\in\mathbb{F}.
+\end{align}
+Mathematically, the set $\mathbb{V}$ forms an abelian group under vector addition operation, and the scalar multiplication defines a ring homomorphism from the field $\mathbb{F}$ into the endomorphism ring of this abelian group.
+
+It is worthwhile to define a group since we will study symmetry in quantum mechanics later. A group is a set $V=\{a,b,\cdots\}$ equipped with a \emph{closed} binary operation $+$: $V\times V\rightarrow V$
+\begin{align}
+a+b=c\in V,~~~\forall~a,b\in V.
+\end{align}
+where 3 group axioms are satisfied:
+
+(1) \emph{Identity element}:
+\begin{align}
+\exists~0\in V,~\text{s.t.}~\forall~a\in V,~a+0=0+a-a.
+\end{align}
+
+(2) \emph{Inverse}:
+\begin{align}
+\forall~a\in V,~\exists~(-a)\in V,~\text{s.t.}~a+(-a)=0.
+\end{align}
+
+(3) \emph{Associativity}:
+\begin{align}
+(a+b)+c=a+(b+c),~~~\forall~a,b,c\in V.
+\end{align}
+An Abelian group is a group whose addition operation is commutative:
+\begin{align}
+a+b=b+a,~~~\forall~a,b\in V.
+\end{align}
+
+The scalar multiplication is another map $\mathbb{F}\times\mathbb{V}\rightarrow\mathbb{V}$ that is \emph{associative} and \emph{distributive in both the vectors and the scalars}. The precise conditions satisfied by vector addition and scalar multiplication are summarized in Chapter 1.1 of \shankar.
+
+Of particular interests to quantum mechanics is a \emph{Hilbert space}, which is a ($n$-dimensional) vector space $\mathbb{C}^n$ over the field $\mathbb{C}$ of complex numbers, equipped with a map $\mathbb{V}\times\mathbb{V}\rightarrow\mathbb{C}$ known as an \emph{inner product}:
+\begin{align}
+\expval{u|v}\in\mathbb{C},~~~\forall~\dket{u},\dket{v}\in\mathbb{V}.
+\end{align}
+In the Dirac notation, $\dbra{u}$ is known as a \emph{bra}, and $\dket{v}$ is known as a \emph{ket}. The inner product is \emph{skew-symmetric}, \emph{positive semidefinite} and \emph{linear in ket}, specified in Chapter 1.2 of \shankar~and Chapter 2.1.4 of \nielsen.
+
+Note that an inner product also defines a norm for each vector in vector space $\mathbb{V}$:
+\begin{align}
+|\dket{v}|\equiv\sqrt{\expval{v|v}}
+\end{align}
+Two important properties of an inner product are
+
+(1) \textbf{ Cauchy-Schwarz inequality}:
+\begin{align}
+\expval{v|v}\expval{u|u}\geq|\expval{u|v}|^2
+\end{align}
+The equality holds if and only if $\dket{v}$ and $\dket{w}$ are linearly dependent.\\
+
+(2) \textbf{ Triangle inequality} for the norms of vectors:
+\begin{align}
+|\dket{v}+\dket{w}|\leq|\dket{v}|+|\dket{w}|
+\end{align}
+Triangle inequality can be derived from the Cauchy-Schwarz inequality.
+
+Strictly speaking, in addition to being a vector space equipped with an inner product (known as an inner product space), a Hilbert space must also be \emph{complete} in the sense that every Cauchy sequence $\{v^{(k)}\}$ of vectors in $\mathbb{V}$ has a limit that also lies in $\mathbb{V}$:
+\begin{align}
+\lim_{k\rightarrow\infty}v^{(k)}\in\mathbb{V},~~~\text{if}~\forall~\epsilon>0,~~~\exists~N\in\mbz_+,~\text{s.t.}~|v^{(m)}-v^{(n)}|<\epsilon,~~\forall~m,n>N.
+\end{align}
+For an inner product space of finite dimensions on any complete field $\mathbb{F}$, such as real and complex numbers $\mathbb{F}=\mathbb{R},\mathbb{C}$, it is automatically a Hilbert space. Below are a few examples of Hilbert spaces, and inner product spaces that are not Hilbert spaces:
+\begin{itemize}
+    \item $n$-dimensional Hilbert space on complex numbers: $\mathbb{V}\simeq \mathbb{C}^n$
+    \item $n\times n$ complex matrices equipped with the Hilbert-Schmidt inner product forms a Hilbert space $L_{\mathbb{C}^n}$
+    \item $n$-dimensional Hilbert space on real numbers: $\mathbb{V}\simeq \mathbb{R}^n$
+    \item $n$-dimensional vector space $\mathbb{V}\simeq \mathbb{Q}^n$ on rational numbers is not a Hilbert space because it is not complete, since a Cauchy sequence of rational numbers can converge to an irrational number.
+    \item The inner product space of continuous square-integrable complex functions on interval $[a,b]$ with the following $L^2$ inner product:
+    \begin{align}
+   \expval{f_1|f_2}\equiv\int_a^bf_1^\ast(x)f_2(x)\text{d}x
+    \end{align}
+    is not a Hilbert space due to its incompleteness: a Cauchy sequence of continuous functions can be discontinuous. Its completion is the Hilbert space $L^2[a,b]$.
+    \item For the same reason of incompleteness, the inner product space of polynomials on $[a,b]$ with the same $L^2$ inner product is not a Hilbert space, even though it's a subspace of $L^2[a,b]$.
+\end{itemize}
+
+A Hilbert space forms the \emph{state space} described in Postulate \ref{postulate 1}. With the help of the inner product structure, we can always choose a complete set of orthonormal basis $\{\dket{i}\}$ that expands the full state space $\mathbb{V}$, such that
+\begin{align}
+\dket{v}=\sum_iv_i\dket{i},~\forall~\dket{v}\in\mathbb{V};~~~\expval{i|j}=\delta_{i,j}
+\end{align}
+where $\delta_{i,j}$ is the Kronecker delta function. Given a $n$-dimensional vector space $V$, one can always find a set of $n$ linearly independent vectors $\{e_j|1\leq j\leq n\}$, known as a basis of vector space $V$, such that any vector $v\in V$ can be uniquely expressed as a linear superposition of the basis vectors: $v=\sum_{j}v_je_j$ with $v_j\in\mathbb{F}$. Given the inner product structure in a Hilbert space, a set of complete orthonormal basis can be constructed following the Gram-Schmidt procedure, specified in Chapter 1.2 of \shankar~and Chapter 2.1.4 of \nielsen. In such a complete orthonormal basis of Hilbert space $\mathbb{V}=\mathbb{C}^n$, a Dirac ket $\dket{v}$ can be represented by a column vector $\vec v=(v_1,\cdots,v_n)^T$, a Dirac bra represented by a row vector, and the inner product reduces to the familiar form in $\mathbb{C}^n$:
+\begin{align}
+\expval{u|v}=\sum_iu_i^\ast v_i=\bpm u_1^\ast,\cdots,u_n^\ast\epm\bpm v_1\\ \cdots\\v_n\epm
+\end{align}

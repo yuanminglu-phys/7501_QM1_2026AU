@@ -1,0 +1,18 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {0}Course Information}{1}{chapter.0}%
+\contentsline {chapter}{\numberline {1}Postulates and Mathematics of Quantum Mechanics}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Key experiments that established quantum mechanics (8/26)}{6}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Energy quantization of light in terms of photons}{6}{subsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.1}Black-body radiation and Planck's formula}{6}{subsubsection.1.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.2}Einstein's ``light quantum'' and photoelectric effect}{7}{subsubsection.1.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.1.3}Compton effect demonstrated quantization of light in terms of photons}{7}{subsubsection.1.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.2}Quantization of atomic energy levels}{8}{subsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.1}Rydberg formula for the spectral lines in a hydrogen atom}{8}{subsubsection.1.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.1.2.2}Franck-Hertz experiment}{8}{subsubsection.1.1.2.2}%
+\contentsline {subsection}{\numberline {1.1.3}Quantization of angular momentum}{8}{subsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.3.1}Bohr's explanation of hydrogen atom spectral lines}{8}{subsubsection.1.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.1.3.2}Stern-Gerlach experiment demonstrated the quantization of angular momentum}{9}{subsubsection.1.1.3.2}%
+\contentsline {subsection}{\numberline {1.1.4}Davisson-Germer experiment demonstrated the wave nature of electrons}{10}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Hilbert space and state vectors (8/29)}{13}{section.1.2}%
+\contentsline {chapter}{\nonumberline Bibliography}{16}{chapter*.2}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
