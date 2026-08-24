@@ -1,0 +1,64 @@
+\section{Composite quantum systems and tensor product (9/11)}
+\label{sec:composite system}
+
+\referto{\nielsen~2.1.7, 2.2.8, 4.3; \tong~3.6}
+
+Previously we have focused on a single closed quantum system. When two closed quantum systems are combined together e.g. through some interactions b/w the two systems, how to describe such as composite quantum system? The last postulate addresses this issue, under the mathematical frameworks of \emph{tensor product}:
+\begin{pos}\label{postulate 4}
+    The state space of a composite physical system is the tensor product of the state spaces of the component physical systems. Moreover, if we have systems numbered 1 through $n$, and the system number $i$ is prepared in the state $\dket{\psi_i}$, then the joint state of the total system is $\dket{\psi_1}\otimes\dket{\psi_2}\otimes\cdots\otimes\dket{\psi_n}$.
+\end{pos}
+
+Specifically, consider two quantum systems with Hilbert space $V$ of dimension $m$ and $W$ of dimension $n$, their composite system is described by the tensor product of the two Hilbert spaces:
+\begin{align}
+V\otimes W\equiv\{\dket{v}\otimes\dket{w}|\dket{v}\in V, \dket{w}\in W\}
+\end{align}
+which is a Hilbert space of dimension $mn$. Linear operators on $V\otimes W$ are given by $A\otimes B$, where $A$ is a linear operator on $V$ and $B$ is a linear operator on $W$, satisfying
+\begin{align}
+(A\otimes B)\dket{v}\otimes\dket{w}=A\dket{v}\otimes B\dket{w}
+\end{align}
+An inner product on $V\otimes W$ is naturally defined as
+\begin{align}
+(\sum_ia_i\dket{v_i}\otimes\dket{w_i},\sum_jb_j\dket{v_j^\prime}\otimes\dket{w_j^\prime})=\sum_{i,j}a^\ast_ib_j\expval{v_i|v_j^\prime}\expval{w_i|w_j^\prime}
+\end{align}
+One can therefore define a complete set of orthonormal basis $\{\dket{v_i}\otimes\dket{w_j}\}$ for $V\otimes W$, and the matrix representation of linear operators in $V\otimes W$ is given by
+\begin{align}
+(A\otimes B)_{i,j}=A_{i_1,j_1}B_{i_2,j_2},~~~A\in L_V,~B\in L_W.
+\end{align}
+Since $A\otimes B$ is a matrix of dimension $mn$, where $m$ and $n$ are dimensions of matrices $A$ and $B$ respectively, the row and column index of matrix $A\otimes B$ can be written as
+\begin{align}
+i=(i_1-1)n+i_2,~~~j=(j_1-1)n+j_2.
+\end{align}
+More properties of tensor product can be found in \nielsen~section 2.1.7.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{|c||c|c|c|}
+\hline
+Name&Controlled-Z (CPHASE)&CNOT&SWAP\\
+\hline
+Unitary matrix&$\bpm1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&-1\epm$&$\bpm1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\epm$&$\bpm1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\epm$\\
+\hline
+\end{tabular}
+\caption{Common 2-qubit gates and associated unitary matrices.}\label{tab:2-qubit gate}
+\end{table}
+
+\begin{table}[t]
+\centering
+\begin{tabular}{|c||c|c|}
+\hline
+Name&Toffoli (Controlled-CNOT)&Fredkin (Controlled-SWAP)\\
+\hline
+Unitary matrix&$\frac{1+Z_1}2\otimes\text{CNOT}_{23}+\frac{1-Z_1}2\otimes\hat 1_{23}$&$\frac{1+Z_1}2\otimes\text{SWAP}_{23}+\frac{1-Z_1}2\otimes\hat 1_{23}$\\
+\hline
+\end{tabular}
+\caption{Common 3-qubit gates and associated unitary matrices.}\label{tab:3-qubit gate}
+\end{table}
+
+With the help of tensor product, we can define Hamiltonian and unitary operators for a composite quantum system. We will study the transverse field Ising model for a 2-qubit system
+\begin{align}
+\label{tfim}
+H_\text{TFIM}=-JX_1\otimes X_2-h(Z_1\otimes\hat 1_2+\hat 1_2\otimes Z_2)
+\end{align}
+as a demonstration. Due to a conserved quantity $Z_1\otimes Z_2$ that commutes with the Hamiltonian, it can be diagonalized in the $Z_1\otimes Z_2=\pm1$ subspaces respectively.
+
+A good set of examples of unitary operators in a composite system are 2-qubit and 3-qubit quantum gates, shown in Table \ref{tab:2-qubit gate} and \ref{tab:3-qubit gate} respectively, such as a controlled-$U$ gate in the 2-qubit system.
