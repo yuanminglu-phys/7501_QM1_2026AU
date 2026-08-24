@@ -55,7 +55,7 @@ In the Dirac notation, $\dbra{u}$ is known as a \emph{bra}, and $\dket{v}$ is kn
 
 Note that an inner product also defines a norm for each vector in vector space $\mathbb{V}$:
 \begin{align}
-|\dket{v}|\equiv\sqrt{\braket{v|v}}
+|\dket{v}|\equiv\sqrt{\expval{v|v}}
 \end{align}
 Two important properties of an inner product are
 
@@ -83,7 +83,7 @@ For an inner product space of finite dimensions on any complete field $\mathbb{F
     \item $n$-dimensional vector space $\mathbb{V}\simeq \mathbb{Q}^n$ on rational numbers is not a Hilbert space because it is not complete, since a Cauchy sequence of rational numbers can converge to an irrational number.
     \item The inner product space of continuous square-integrable complex functions on interval $[a,b]$ with the following $L^2$ inner product:
     \begin{align}
-   \braket{f_1|f_2}\equiv\int_a^bf_1^\ast(x)f_2(x)\text{d}x
+   \expval{f_1|f_2}\equiv\int_a^bf_1^\ast(x)f_2(x)\text{d}x
     \end{align}
     is not a Hilbert space due to its incompleteness: a Cauchy sequence of continuous functions can be discontinuous. Its completion is the Hilbert space $L^2[a,b]$.
     \item For the same reason of incompleteness, the inner product space of polynomials on $[a,b]$ with the same $L^2$ inner product is not a Hilbert space, even though it's a subspace of $L^2[a,b]$.
