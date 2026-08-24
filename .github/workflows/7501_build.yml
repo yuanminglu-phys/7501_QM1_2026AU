@@ -1,0 +1,29 @@
+name: Compile LaTeX PDF
+
+on:
+  push:
+    branches:
+      - main  # Change to 'master' if using the older default branch name
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX Document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: 7501_notes.tex  # Replace with your primary .tex filename if different
+
+      - name: Create Release & Upload PDF
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest PDF Build
+          files: main.pdf      # Output filename matching your root_file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
