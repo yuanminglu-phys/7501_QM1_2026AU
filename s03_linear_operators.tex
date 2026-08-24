@@ -1,0 +1,107 @@
+\section{Linear operators and observables (9/2)}
+
+\referto{\nielsen~2.1; \tong~3.2, 4.1; \sakurai~1.3-1.4; \shankar~1.5-1.6}
+
+Given two vector spaces $\mathbb{V}$ and $\mathbb{W}$, we can also define a linear operator $\hat O$ as any function that maps the vector space $\mathbb{V}$ to $\mathbb{W}$, which is linear in its inputs:
+\begin{align}
+\hat O(\sum_ia_i\dket{v_i})=\sum_ia_i\hat O(\dket{v_i})
+\end{align}
+In the case of $\mathbb{V}=\mathbb{W}$ we call it a linear operator $\hat O\in\mathbb{L}_\mathbb{V}$ on vector space $\mathbb{V}$, which is of particular interest to quantum mechanics.
+
+Using a complete set of orthonormal basis $\{\dket{j}|1\leq j\leq\text{dim}\mathbb{V}\}$ for Hilbert space $\mathbb{V}$, each linear operator has a matrix representation:
+\begin{align}
+\hat O=\sum_{a,b}O_{a,b}\dket{a}\dbra{b},~~~O_{a,b}\equiv\expval{a|\hat O|b}
+\end{align}
+In particular, for the identity matrix which maps every vector to itself, we have the \textbf{completeness relation} for basis $\{\dket{i}\}$, also known as the \textbf{resolution of identity}:
+\begin{align}
+\sum_i\dket{i}\dbra{i}=\hat 1.
+\end{align}
+We can also define the product of two linear operators $\hat M,\hat N\in\mathbb{L}_\mathbb{V}$:
+\begin{align}
+\hat M\hat N=\sum_{a,b,c}M_{a,b}N_{b,c}\dket{a}\dbra{c}
+\end{align}
+their commutator
+\begin{align}
+[\hat M,\hat N]=\hat M\hat N-\hat N\hat M
+\end{align}
+and anti-commutator
+\begin{align}
+\{\hat M,\hat N\}=\hat M\hat N+\hat N\hat M
+\end{align}
+and the \emph{Hermitian adjoint} of an operator
+\begin{align}
+\hat O^\dagger=\sum_{a,b}O^\ast_{b,a}\dket{a}\dbra{b}=(O^T)^\ast=(O^\ast)^T
+\end{align}
+Specifically in Postulate \ref{postulate 3:projective measurements} about quantum (projective) measurements, each physical observable corresponds to a Hermitian linear operator, represented as a Hermitian matrix in the orthonormal basis:
+\begin{align}
+\hat M=\hat M^\dagger=\sum_{a,b}M_{a,b}\dket{a}\dbra{b},~~~(M^\dagger)_{a,b}=M^\ast_{b,a}=M_{a,b}\equiv\expval{a|\hat M|b}.
+\end{align}
+
+The diagonal form
+\begin{align}\label{diagonal form}
+\hat O=\sum_a O_a\dket{a}\dbra{a}
+\end{align}
+where $\{\dket{a}\}$ is a complete set of orthonormal basis of the Hilbert space, is also known as the \emph{spectral decomposition} of a matrix $\hat O$. If there is a complete set of orthonormal basis $\{\dket{a}\}$ such that the linear operator $\hat O$ can be rewritten as the diagonal form (\ref{diagonal form}), the matrix $\hat O$ is called ``diagonalizable''.
+
+Not all matrices are diagonalizable (i.e. have a diagonal form), two non-diagonalizable examples are
+\begin{align}
+\hat M_1=\bpm1&1\\1&0\epm,~\hat M_2=\bpm1&1\\0&0\epm,~~~
+\end{align}
+They either have less eigenvectors than the dimension of the Hilbert space, or have at least two non-orthogonal eigenvectors with different eigenvalues.\\
+
+Below are a few useful theorems on the diagonalization of matrices:
+
+\textbf{The spectral decomposition theorem} states: A linear operator $\hat O$ on vector space $\mathbb{V}$ is diagonal w.r.t. some orthonormal basis of $\mathbb{V}$ if and only if operator $\hat O$ is \emph{normal} i.e. $\hat O^\dagger\hat O=\hat O\hat O^\dagger$. (Refer to \nielsen~Box 2.2).\\
+
+\textbf{Theorem}: A normal matrix is Hermitian if and only if it has real eigenvalues.\\
+
+\textbf{Theorem}: The eigenkets corresponding to different eigenvalues of a Hermitian matrix are orthogonal.\\
+
+\textbf{Theorem}: A positive linear operator must be Hermitian.\\
+
+\textbf{Simultaneous diagonalization theorem:} Two Hermitian linear operators $\hat A$ and $\hat B$ can be diagnoalized simultaneously if and only if $[\hat A,\hat B]=0$. In other words, there is a complete set of simultaneous eigenket $\{\dket{a,b}\}$ such that
+\begin{align}
+\hat A\dket{a,b}=a\dket{a,b},~~~\hat B\dket{a,b}=b\dket{a,b}.
+\end{align}
+if and only if $[\hat A,\hat B]=0$.\\
+
+An Hermitian operator can be diagonalized into a special orthonormal basis $\{\dket{i}\}$, known as its eigenbasis, in which the linear operator is represented by a diagonal matrix
+\begin{align}
+\label{eigen basis}
+\hat M=\sum_i\lambda_i\dket{i}\dbra{i}
+\end{align}
+If we use the set $\{m\}$ to label all different (real) eigenvalues of matrix $\hat M$, we can rewrite the above diagonal form (\ref{eigen basis}) as
+\begin{align}
+\hat M=\sum_m m\hat P_m,~~~\hat P_m=\sum_{j}\delta_{\lambda_j,m}\dket{j}\dbra{j}
+\end{align}
+where operators $\hat P_m$ are known as \emph{projection operators} (or \emph{projectors}) onto the eigenspace of $\hat M$ with eigenvalue $m$. Mathematically, a projector $\hat P$ is defined as a linear operator satisfying:
+\begin{align}
+\hat P^2=\hat P
+\end{align}
+You will learn more about projectors in HW2.
+
+Given a state $\dket{\psi}$ and a physical observable $\hat M$, the (probability-weighted) \emph{expectation value} $\expval{\hat M}$ of operator $\hat M$ w.r.t. state vector $\dket{\psi}$ is
+\begin{align}
+\label{expval}
+\expval{\hat M}\equiv\frac{\expval{\psi|\hat M|\psi}}{\expval{\psi|\psi}}
+\end{align}
+Naturally, the expectation value of any physical observable ia a real number, since any physical observable corresponds to a Hermitian operator.
+
+We note that the expectation value (\ref{expval}) of any observable is the same for two linearly dependent states $\dket{\psi}$ and $\alpha\dket{\psi}$ for any complex scalar $\alpha\in\mathbb{C}$. This means $\dket{\psi}$ and $\alpha\dket{\psi}$ describe the same physical state. In other words, in a $N$-dimensional Hilbert space $\mathbb{V}=\mathbb{C}^N$, for a generic state
+\begin{align}
+\dket\psi\equiv\sum_{j=1}^N\psi_j\dket{j}
+\end{align}
+where $\{\dket{j}|1\leq j\leq N\}$ is a complete set of orthonormal basis of $\mathbb{V}$, although $\{\psi_j\in\mathbb{C}|1\leq j\leq N\}$ correspond to $2N$ independent real variables, only $2N-2$ of them are physically measurable, because the global phase factor and normalization leads to 2 redundancies that cannot be physically observed.
+
+In the simplest example of a single qubit, we have $\mathbb{V}=\mathbb{C}^2$ for the $N=2$-dimensional Hilbert space. There are 4 linearly independent Hermitian operators in $\mathbb{C}^2$, whose matrix representations are
+\begin{align}
+\hat 1=\bpm1&0\\0&1\epm,~~~\hat\sigma_x=\bpm0&1\\1&0\epm,~~~\hat\sigma_y=\bpm0&-\imth\\ \imth&0\epm,~~~\hat\sigma_z=\bpm1&0\\0&-1\epm.
+\end{align}
+As you will learn in HW1, they (up to normalization) form a complete set of orthonormal basis for the Hilbert space $L_{\mathbb{C}^2}$ of linear operators. In the matrix representation, a generic state vector can be written as
+\begin{align}
+\dket{\psi}=\alpha\bpm\cos\theta e^{\imth\phi}\\ \sin\theta\epm,~~~\alpha\in\mathbb{C}
+\end{align}
+$\theta$ and $\phi$ are the two variables in the state vector that can be physically measured. One can carry out measurements for two observables to extract $\theta$ and $\phi$:
+\begin{align}
+\expval{\hat\sigma_z}=\cos(2\theta),~~~\expval{\hat\sigma_x}=\sin(2\theta)\cos\phi
+\end{align}

@@ -1,0 +1,91 @@
+\section{Unitary evolution of a closed quantum system (9/9)}
+
+\referto{\tong~4.3; \sakurai~2.1; \nielsen~2.1.8, 2.2.2, 4.2; \shankar~4.3}
+
+In addition to Postulates \ref{postulate 1} and \ref{postulate 3:projective measurements} introduced earlier, we have two more postulates, one regarding how a quantum system evolves with time:
+\begin{pos}\label{postulate 2}
+    The time evolution of the state of a closed quantum system is described by the Schrodinger equation:
+    \begin{align}\label{schrodinger eq}
+    \imth\hbar\frac{\text{d}\dket{\psi}}{\text{d}t}=\hat H\dket{\psi}
+    \end{align}
+    where $\hbar=h/2\pi\approx1.05\times10^{-34}$ J$\cdot$s is a constant, and $\hat H$ is a fixed Hermitian operator known as the Hamiltonian of the closed system.
+\end{pos}
+
+Postulate \ref{postulate 2} states that the state vector associated with a closed quantum system evolves following the Schrodinger equation (\ref{schrodinger eq}). This postulate can be states in an equivalent manner:
+
+\textbf{Postulate 3b.} \emph{The evolution of a closed quantum system is described by a unitary transformation. That is, the state $\dket{\psi(t_2)}$ of the system at time $t_2$ is related to the state $\dket{\psi(t_1))}$ at time $t_1$ by a unitary operator $U$ which only depends on the times $t_1$ and $t_2$:}
+\begin{align}
+\dket{\psi(t_2)}=U(t_1,t_2)\dket{\psi(t_1)},~~~U(t_1,t_2)=e^{-\imth(t_2-t_1)\hat H/\hbar}
+\end{align}
+One can further generalize this to a time-dependent Hamiltonian $\hat H(t)$ where we have
+\begin{align}
+U(t_1,t_2)=\mathcal{T}e^{-\imth\int_{t_1}^{t_2}\hat H(t)\text{d}t/\hbar}
+\end{align}
+where $\mathcal{T}$ denotes time ordering in the integral, as explained in \sakurai~2.1.
+
+In linear algebra, a unitary operator $\hat U$ is defined as any linear operator satisfying
+\begin{align}
+\hat U^\dagger\hat U=\hat 1.
+\end{align}
+which also implies $\hat U\hat U^\dagger=\hat 1$. Due to the spectrum decomposition theorem, a unitary operator can be diagonalized, and its eigenvalues all have modulus 1:
+\begin{align}
+\hat U\dket{\psi}=e^{\imth\theta}\dket{\psi}
+\end{align}
+
+\begin{table}[t]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Single-qubit gate&Symbol&Unitary matrix\\
+\hline
+Pauli-X (bit flip)&$X$&$\bpm0&1\\1&0\epm$\\
+\hline
+Pauli-Y&$Y$&$\bpm0&-\imth\\ \imth&0\epm$\\
+\hline
+Pauli-Z (phase flip)&$Z$&$\bpm1&0\\0&-1\epm$\\
+\hline
+Hadamard&$H$&$\frac1{\sqrt2}\bpm1&1\\1&-1\epm$\\
+\hline
+Phase&$S$&$\bpm1&0\\0&\imth\epm$\\
+\hline
+$\pi/8$&$T$&$\bpm1&0\\0&e^{\imth\pi/4}\epm$\\
+\hline
+\end{tabular}
+\caption{Common single-qubit gates and associated unitary matrices.}\label{tab:single qubit gate}
+\end{table}
+
+Three examples of unitary operators in quantum mechanics are the following: (1) unitary time evolution operator $U(t_1,t_2)=e^{-\imth(t_2-t_1)\hat H/\hbar}$ for a closed quantum system discussed above; (2) a symmetry operator in a quantum system as we will discuss later in this course; (3) a quantum (logic) gate in quantum computing. For instance, in a two-dimensional closed quantum system, also known as a qubit, the common quantum gates are summarized in Table \ref{tab:single qubit gate}.
+
+In the case of unitary time evolution $U(t_1,t_2)$, the Hamiltonian $\hat H$ of a closed quantum system plays a crucial role. In its spectral decomposition:
+\begin{align}
+\hat H=\sum_aE_a\dket{a}\dbra{a}
+\end{align}
+the eigenkets $\dket{a}$ are called the \emph{energy eigenstates}, or \emph{stationary states}, and the eigenvalue $E_a$ is called the energy of state $\dket{a}$. In particular, the eigenstate with the lowest energy is known as the \emph{ground state}, while other states with higher energy are known as \emph{excited states}. According to Schrodinger equation (\ref{schrodinger eq}), a generic state vector
+\begin{align}
+\dket{\psi}=\sum_ac_a\dket{a}
+\end{align}
+evolves as
+\begin{align}
+\dket{\psi(t)}=e^{-\imth t\hat H/\hbar}\dket{\psi}=\sum_ac_ae^{-\imth E_at/\hbar}\dket{a}
+\end{align}
+and the different oscillation frequency $\omega_a=E_a/\hbar$ in different components of state $\dket{\psi(t)}$ can result in oscillations of physical observables. Two such examples, i.e. (1) spin precession; and (2) neutrino oscillation are discussed in detail in \sakurai~2.1. In particular, a physical observable you will encounter a lot in the future is the \emph{transition probability}:
+\begin{align}
+P(i\rightarrow f)\equiv|\expval{f|e^{-\imth\hat Ht/\hbar}|i}|^2
+\end{align}
+which measures the probability that an initial state $\dket{i}$ evolves into a final state $\dket{f}$ after time $t$. This quantity corresponds to the observed beam intensity in various scattering experiments.
+
+\subsection{Appendix: Functions of operators/matrices}
+\label{app:function of matrices}
+
+A function $f(\hat M)$ of a square matrix $\hat M$ can be defined by the following Taylor expansion
+\begin{align}
+f(\hat M)=\sum_{n=0}^\infty\frac{\hat M^n}{n!}\frac{\text{d}^nf(x)}{\text{x}^n}|_{x=0}
+\end{align}
+if the Taylor expansion converges at $x=0$. In quantum mechanics we will mostly encounter square matrices that can be diagonalized, such as Hermitian and unitary matrices. For a diagonalizable matrix $\hat M$ with eigenkets $\{\dket{j}\}$ and eigenvalues $\{\lambda_j\}$, the matrix can be written as
+\begin{align}
+\hat M=\sum_j\lambda_j\dket{j}\dbra{j}
+\end{align}
+and a function of this diagonalizable matrix can be defined as
+\begin{align}
+f(\hat M)=\sum_jf(\lambda_j)\dket{j}\dbra{j}
+\end{align}

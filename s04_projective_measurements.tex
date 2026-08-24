@@ -1,0 +1,43 @@
+\section{Projective measurements (9/4)}
+
+\referto{\nielsen~2.2.5, \tong~3.4, 4.2, 16.4.1}
+
+\begin{pos}\label{postulate 3:projective measurements}
+    A \textbf{projective measurements} is described by a physical observable, $\hat M=\hat M^\dagger$ on the Hilbert space of the system being observsed. The observable has a specral decomposition
+    \begin{align}
+\hat M=\sum_m m\hat P_m
+    \end{align}
+    where $\hat P_m$ is the projector onto the eigenspace of $M$ with eigenvalue $m$. The possible outcomes of the measurement correspond to the eigenvalues $m$ of the observable. Upon measuring state $\dket{\psi}$, the probability of getting result $m$ is given by
+    \begin{align}
+p(m)=\expval{\psi|\hat P_m|\psi}
+    \end{align}
+    If the outcome $m$ occured, the state of the quantum system collapsed into a new state
+    \begin{align}
+    \hat P_m\dket{\psi}/\sqrt{p(m)}
+    \end{align}
+    immediately after the measurement.
+\end{pos}
+
+Postulate \ref{postulate 3:projective measurements} is in fact only a special form of quantum measurements, which will be discussed in detail in later parts of this course. Most generally, a generalized quantum measurement is described as follows:
+
+\textbf{Postulate 2b}: A \textbf{generalized quantum measurement} is described by a collection $\{M_m\}$ of measurement operators. These are operators acting on the state space of the system being measured. The index $m$ refers to the measurement outcomes that may occur in the experiment. If the (normalized) state of the quantum system is $\dket{\psi}$ immediately before the measurements, then the probability that result $m$ occurs is given by
+    \begin{align}
+    p(m)=\expval{\psi|M_m^\dagger M_m|\psi}
+    \end{align}
+    and the state of the system after the measurement is $\frac{M_m\dket{\psi}}{\sqrt{\expval{\psi|M_m^\dagger M_m|\psi}}}$. The measurement operators satisfy the completeness equation
+    \begin{align}\label{completeness equation}
+    \sum_mM_m^\dagger M_m=\hat 1.
+    \end{align}
+
+When we choose $\hat M_m$ to be projector $\hat P_m$ into the eigenspace of observable $\hat M$ with eigenvalue $m$, the above generalized measurement reduces to the a projective measurement. Now it also becomes clear that the expectation value of observable $\hat M$ w.r.t. to (normalized) state vector $\dket{\psi}$ is nothing but the probability-weighted average of measurement outcomes:
+\begin{align}
+\expval{\hat M}\equiv\expval{\psi|\hat M|\psi}=\sum_m m\times p(m)
+\end{align}
+One can also find out the \emph{standard deviation} of measuring observable $\hat M$ in state $\dket{\psi}$:
+\begin{align}
+\Delta(M)\equiv\sqrt{\expval{(\hat M-\expval{\hat M})^2}}=\sqrt{\expval{\hat M^2}-\expval{\hat M}^2}
+\end{align}
+
+A significant consequence of the collapse part in Postulate \ref{postulate 3:projective measurements} is the following: starting from any state vector $\dket{\psi}$, if we measure the same observable $\hat M$ multiple times, the measurement outcome does not change any more after the 1st measurement. This is because the state already collapse into an eigenstate of $\hat M$ with some eigenvalue $m$ after the 1st measurement.
+
+Another interesting aspect comes from \emph{incompatible measurements} of physical observables that do not commute with each other. If we perform two measurements $\hat A$ and $\hat B$ that satisfy $[\hat A,\hat B]\neq0$, for a generic quantum state, the measurement outcome depend on the order of the two measurements: i.e. measuring $\hat A$ after $\hat B$ versus $\hat B$ after $\hat A$ will yield different results. For example, starting from the eigenstate $\dket{\uparrow}$ of Pauli matrix $\sigma_z$, if we measure $\sigma_z$ and then $\sigma_x$, there is a probability of $1/2$ for us to end up with $+1$ outcomes for both measurements. However, if $\sigma_x$ is measured before the $\sigma_z$ measurement, there is only a probability of $1/4$ of $+1$ outcomes for both measurements.
