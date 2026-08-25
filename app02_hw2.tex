@@ -75,6 +75,22 @@ Hint: first show that
 \hat f(x)=e^{-x \hat B}\hat Ae^{x\hat B}=\hat A+x\alpha\hat 1
 \end{align}
 
+(8) For a quantum-mechanical particle in one dimension, its position $\hat x$ and momentum $\hat p$ operators satisfy the canonical commutation relation:
+\begin{align}
+    [\hat x,\hat p]=\imth\hbar=\imth h/2\pi
+\end{align}
+Use the results of part (7) to show that for every $\hat x$ eigenstate $\dket{x_0}$ with eigenvalue $x_0$ 
+\begin{align}
+    \hat x\dket{x_0}=x_0\dket{x_0}
+\end{align}
+the following state
+\begin{align}
+    \dket{x_0+a}\equiv e^{-\imth\hat p a/\hbar}\dket{x_0}
+\end{align}
+is also an eigenstate of $\hat x$ with eigenvalue $x_0+a$. 
+
+Comment: physically this means the linear operator $\hat T(a)\equiv e^{-\imth pa/\hbar}$ translate the position by $a$, from $x_0$ to $x_0+a$. 
+
 \subsection{Consecutive measurements of incompatible operators}
 
 Two consecutive projective measurements, for Pauli matrices $\hat \sigma_x$ and $\hat \sigma_z$ respectively, are carried out one after another on a quantum state of a single qubit (i.e. a Hilbert space $\mathbb{V}=\mathbb{C}^2$). In the first procedure, we first measured $\hat\sigma_x$ with an outcome $+1$ and probability $p(X=+1)$, and then measured $\hat\sigma_z$ with an outcome $+1$ with probability $p(Z=+1|X=+1)$. In the second procedure, we switched the order of the two measurements, i.e. we first measured $\hat\sigma_z$ with an outcome $+1$ and probability $p(Z=+1)$, and then measured $\hat\sigma_x$ with an outcome $+1$ with probability $p(X=+1|Z=+1)$. It is found that the probabilites do no depend on the order of the two incompatible measurements, i.e.
@@ -84,11 +100,13 @@ p(X=+1)=p(X=+1|Z=+1),~~~p(Z=+1|X=+1)=p(Z=+1)
 
 (1) Find a single-qubit pure state $\dket{\psi}$ that satisfies the condition (\ref{hw3.1}). 
 
-(2) If the quantum state is a single-qubit mixed state, it is generally described by a density matrix of the following form:
+(2) \textbf{Bonus} If the quantum state is a single-qubit mixed state, it is generally described by a density matrix of the following form:
 \begin{align}
 \hat\rho=\frac{\hat 1+\vec r\cdot\vec\sigma}2,~~~\vec r=(x,y,z)\in\mathbb{R}^3,~~~|\vec r|\leq1.
 \end{align}
 Find those mixed states that satisfy the same condition (\ref{hw3.1}). 
+
+Comment: you will need to learn about measurements on mixed states in \nielsen~2.4.1.
 
 \subsection{Quantum Zeno effect}
 
