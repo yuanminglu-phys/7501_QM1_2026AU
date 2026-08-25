@@ -353,6 +353,11 @@ INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT ./app02_hw2.tex
+INPUT ./app02_hw2.tex
+INPUT ./app02_hw2.tex
+INPUT ./app02_hw2.tex
+INPUT app02_hw2.tex
 INPUT ./7501_notes.bbl
 INPUT ./7501_notes.bbl
 INPUT 7501_notes.bbl

@@ -24,5 +24,10 @@
 \contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{26}{appendix.A.1}%
 \contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{26}{appendix.A.2}%
 \contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{28}{appendix.A.3}%
-\contentsline {chapter}{\nonumberline Bibliography}{30}{chapter*.2}%
+\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{30}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{30}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{30}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{31}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{31}{subsection.B.0.4}%
+\contentsline {chapter}{\nonumberline Bibliography}{32}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
