@@ -29,5 +29,5 @@
 \contentsline {subsection}{\numberline {B.0.2}Linear algebra}{30}{subsection.B.0.2}%
 \contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{31}{subsection.B.0.3}%
 \contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{31}{subsection.B.0.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{32}{chapter*.2}%
+\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
