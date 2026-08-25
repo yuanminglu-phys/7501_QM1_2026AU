@@ -28,6 +28,6 @@
 \contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{30}{subsection.B.0.1}%
 \contentsline {subsection}{\numberline {B.0.2}Linear algebra}{30}{subsection.B.0.2}%
 \contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{31}{subsection.B.0.3}%
-\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{31}{subsection.B.0.4}%
+\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{32}{subsection.B.0.4}%
 \contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
