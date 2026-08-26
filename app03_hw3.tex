@@ -1,0 +1,99 @@
+\chapter{Homework 3 (due 9/18)}
+
+
+\subsection{Spin precession}
+
+(1) For a unit vector $\vec n=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$, diagonalize the matrix $\vec n\cdot\vec\sigma=\sum_{i=x,y,z}n_i\sigma_i$. Prove that it has two eigenvalues $\pm1$, and find out the two eigenvectors. 
+
+(2) We denote $\dket{\vec n}$ as the eigenvector of $\vec n\cdot\vec\sigma$ with eigenvalue $+1$. Starting from time zero, the state vector $\dket{\psi(0)}\equiv\dket{\vec n}$ evolves under the following Hamiltonian:
+\begin{align}
+\hat H=-B\sigma_z
+\end{align}
+Prove that the following expectation value of $S_z=\hbar\sigma_z/2$ 
+\begin{align}
+\expval{S_z(t)}\equiv\expval{\psi(t)|S_z|\psi(t)}
+\end{align}
+does not change with time. 
+
+(3) Compute the time-dependent expectation values of $S_x$ and $S_y$, and show that they oscillate with time. 
+
+(4) Compute the transition probability that the state vector $\dket{\vec n}$ returns to itself after time $t$:
+\begin{align}
+P(\vec n\rightarrow\vec n:t)\equiv|\expval{\psi(t)|\psi(0)}|^2
+\end{align}
+
+\subsection{Neutrino oscillation}
+
+Read the neutrino oscillation in \sakurai~2.1. Using the energy eigenvalues
+\begin{align}
+E_i=\sqrt{p^2c^+m_i^2c^4}\approx pc(1+\frac{m_i^2c^2}{2p^2})
+\end{align}
+prove the probability
+\begin{align}
+P(\nu_e\rightarrow\nu_e)=1-\sin^2(2\theta)\sin^2\big[\frac{(m_1^2-m_2^2)c^4t}{4E\hbar}\big],~~~E\approx pc.
+\end{align}
+
+\subsection{Propagator}
+
+(1) Consider the following propagator for Hamiltonian $\hat H$:
+\begin{align}
+    G(i,f;t)\equiv-\imth\expval{f|e^{-\imth\hat Ht/\hbar}|i}
+\end{align}
+Show that its Fourier transform
+\begin{align}
+    G(i,f:\omega+\imth0^+)\equiv\lim_{\epsilon\rightarrow0^+}\int_0^\infty e^{\imth(\omega+\imth\epsilon)t}G(i,f:t)
+\end{align}
+is equal to
+\begin{align}
+    G(i,f:\omega+\imth0^+)=\expval{f|\frac{1}{\omega+\imth0^+-\hat H}|i}
+\end{align}
+where we have set $\hbar=1$. 
+
+(2) \textbf{Bonus} Now consider a quantum particle in one dimension, by choosing $i,f$ to be position eigenstates $\dket{i}=\dket{x}$, $\dket{f}=\dket{y}$. Show that
+\begin{align}
+    G(x,x^\prime;t)=-\imth\sum_n\psi_n(x)\psi^\ast_n(x^\prime)e^{-\imth E_nt/\hbar}
+\end{align}
+where $E_n$ and $\psi_n(x)$ are the eigenvalues and eigenstates of Hamiltonian $\hat H$. 
+
+(3) \textbf{Bonus} Show that the imaginary part of the frequency-space propagator is given by
+\begin{align}
+    \Im G(x,x;\omega+\imth0^+)=-\pi\sum_n|\psi_n(x)|^2\delta(\omega-E_n/\hbar)
+\end{align}
+
+
+\subsection{2-qubit Hamiltonian}
+
+Consider a closed quantum system consisting of two spin-$1/2$ particles $\{\vec S_i=\frac\hbar2\vec\sigma_i|i=1,2\}$, i.e. two qubits. The Hamiltonian of the system is given by the \emph{Heisenberg model}
+\begin{align}\label{2-qubit heisenberg model}
+\hat H=J\vec S_1\cdot\vec S_2=\sum_{a=x,y,z}J S_{1,a}\otimes S_{2,a}
+\end{align}
+
+(1) Using the matrix representation of Pauli matrices, show the commutation relation for each qubit:
+\begin{align}
+[S_{j,a},S_{j,b}]=\imth\hbar\epsilon_{abc}S_{j,c},~~~j=1,2;~~~a,b,c=x,y,z
+\end{align}
+where $\epsilon_{abc}$ is the Levi-Civita symbol. 
+
+(2) Prove that each component of the total spin
+\begin{align}
+S^\text{tot}_a\equiv S_{1,a}\otimes\hat 1_2+\hat 1_1\otimes S_{2,a}
+\end{align}
+commutes with the Hamiltonian:
+\begin{align}
+[S^\text{tot}_a,\hat H]=0,~~~a=x,y,z.
+\end{align}
+The total spin of the system is defined as 
+\begin{align}
+S^2_\text{tot}=\vec S^\text{tot}\cdot\vec S^\text{tot}=\sum_aS^\text{tot}_aS^\text{tot}_a
+\end{align}
+Show that it commutes with both the Hamiltonian $\hat H$, and $S^\text{tot}_a,~a=x,y,z$.
+
+(3) Show that if the Hamiltonian $\hat H$ commutes with another Hermitian operator $\hat O$ (known as a conserved quantity or a constant of motion), for any two eigenstates $\dket{\psi_1},\dket{\psi_2}$ of operator $\hat O$ with different eigenvalues $\lambda_1\neq\lambda_2$, the following matrix must vanish
+\begin{align}
+\expval{\psi_1|\hat H|\psi_2}=0
+\end{align}
+In other words, Hamiltonian $\hat H$ is a block diagnoal matrix in the eigenbasis of the conserved quantity $\hat O$. 
+
+(4) Diagonalize the Hamiltonian $\hat H$ and find its energy levels. Find the simultaneous eigenstates of $\hat H$, $S^\text{tot}_z$ and $S^2_\text{tot}$, in the orthonormal basis of $\{\dket{\sigma_{1,z}=\pm1}\otimes\dket{\sigma_{2,z}=\pm1}\}$. Note: these 4 eigenstates can be properly chosen to form the \emph{Bell basis} of 2-qubit Hilbert space $\mathbb{C}^4$. (You are allowed to use computer programs, but please show your codes if you do so.)
+
+(5) \textbf{Bonus} Can you explain the reason for the degenerate and non-degenerate energy levels, using what you have learnt from Problem 2.(4) in Homework 2?

@@ -72,7 +72,13 @@ and the different oscillation frequency $\omega_a=E_a/\hbar$ in different compon
 \begin{align}
 P(i\rightarrow f)\equiv|\expval{f|e^{-\imth\hat Ht/\hbar}|i}|^2
 \end{align}
-which measures the probability that an initial state $\dket{i}$ evolves into a final state $\dket{f}$ after time $t$. This quantity is related to the outgoing beam intensity in scattering experiments.
+which measures the probability that an initial state $\dket{i}$ evolves into a final state $\dket{f}$ after time $t$. This quantity is directly related to the outgoing beam intensity in scattering experiments.
+
+The transition probability is the modulus square of the \emph{propagator}
+\begin{align}
+    G(i,f:t)\equiv\expval{f|e^{-\imth\hat Ht/\hbar}|i}
+\end{align}
+which plays very important conceptual and computational roles in quantum mechanics. We will learn more about the propagator in HW3.  
 
 \subsection{Appendix: Functions of operators/matrices}
 \label{app:function of matrices}

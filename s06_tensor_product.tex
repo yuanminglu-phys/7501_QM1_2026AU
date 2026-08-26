@@ -1,7 +1,9 @@
-\section{Composite quantum systems and tensor product (9/11)}
+\section{Composite quantum systems (9/11)}
 \label{sec:composite system}
 
-\referto{\nielsen~2.1.7, 2.2.8, 4.3; \tong~3.6}
+\referto{\nielsen~2.1.7, 2.2.8, 4.3; \tong~3.6. For generalized measurements, refer to \nielsen~2.2.6 and \tong~16.4.2}
+
+\subsection{Tensor product}
 
 Previously we have focused on a single closed quantum system. When two closed quantum systems are combined together e.g. through some interactions b/w the two systems, how to describe such as composite quantum system? The last postulate addresses this issue, under the mathematical frameworks of \emph{tensor product}:
 \begin{pos}\label{postulate 4}
@@ -62,3 +64,41 @@ H_\text{TFIM}=-JX_1\otimes X_2-h(Z_1\otimes\hat 1_2+\hat 1_2\otimes Z_2)
 as a demonstration. Due to a conserved quantity $Z_1\otimes Z_2$ that commutes with the Hamiltonian, it can be diagonalized in the $Z_1\otimes Z_2=\pm1$ subspaces respectively.
 
 A good set of examples of unitary operators in a composite system are 2-qubit and 3-qubit quantum gates, shown in Table \ref{tab:2-qubit gate} and \ref{tab:3-qubit gate} respectively, such as a controlled-$U$ gate in the 2-qubit system.
+
+\subsection{Generalized measurements}
+
+Composite systems play an important role in understanding general measurements in quantum mechanics, where we consider the measured system (Hilbert space $\mathbb{V}_s$) and an ancilla (Hilbert space $\mathbb{V}_a$) together as a composite quantum system, whose Hilbert space is the tensor product $\mathbb{V}_s\otimes\mathbb{V}_a$.
+
+Consider an initial state 
+\begin{align}
+    \dket{\Phi}\equiv\dket{\psi}_s\otimes\dket{\phi}_a
+\end{align}
+unitarily evolving under a Hamiltonian $\hat H$ of the composite system for time $t$. Next we perform a projective measurement on the ancilla, associated with observable $\hat1_s\otimes\hat O_a$, where Hermitian operator $\hat O$ has the following spectral decomposition:
+\begin{align}
+    \hat O=\sum_q q~\dket{q}\dbra{q}
+\end{align}
+The basis vectors $\{\dket{q}\}$ forms a complete set of orthonormal basis for ancilla Hilbert space $\mathbb{V}_a$.
+
+After this measurement, if the measurement outcome is $q$, the system collapses into a new state $M_q\dket{\psi}_s\otimes\dket{q}_a$ (unnormalized), where linear operator $M_q$ is defined as
+\begin{align}\label{Kraus operators:generalized measurements}
+    M_q\equiv \expval{q|_a e^{-\imth\hat Ht/\hbar}|\phi}_a\in L_{\mathbb{V}_s}
+\end{align}
+satisfying the completeness relation
+\begin{align}\label{completeness:Kraus operators}
+    \sum_qM_q^\dagger M_q=\hat 1_s
+\end{align}
+The probability for measurement outcome $q$ is given by
+\begin{align}\label{probability:generalized measurements}
+    \text{Pr}(q)=\text{Tr}(M_q\dket{\psi}_s\dbra{\psi}_sM_q^\dagger)=\expval{\psi|M_q^\dagger M_q|\psi}
+\end{align}
+Clearly, the completeness relation (\ref{completeness:Kraus operators}) for the Kraus operators $\{M_q\}$ guaranties the normalization of probability distribution:
+\begin{align}
+    \sum_q\text{Pr}(q)=1.
+\end{align}
+Examining this measurement from the system's viewpoint while disregarding the ancilla, for measurement outcome $q$, initial state $\dket\psi$ becomes $M_q\dket{\psi}$, with a probability $\text{Pr}(q)$ given in (\ref{probability:generalized measurements}). This is known as a generalized measurement. 
+
+If the Kraus operator $M_q$ is very close to identity matrix $\hat 1_s$, such a generalized measurement is known as a weak measurement because the measurement changes the initial state weakly in the sense that 
+\begin{align}
+    |\dket{\psi}-M_q\dket\psi|\ll1
+\end{align}
+This is the case when $\dket{\phi}=\dket{q}$ and the evolution time $t$ is much smaller than all energy scales in Hamiltonian $\hat H$. 

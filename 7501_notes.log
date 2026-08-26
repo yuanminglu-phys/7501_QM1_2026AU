@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  25 AUG 2026 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  26 AUG 2026 04:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -693,50 +693,50 @@ chapter 1.
 ] [6
 
 ]
-<figures/compton1.png, id=146, 1284.8pt x 903.375pt>
+<figures/compton1.png, id=160, 1284.8pt x 903.375pt>
 File: figures/compton1.png Graphic file (type png)
 <use figures/compton1.png>
 Package pdftex.def Info: figures/compton1.png  used on input line 64.
 (pdftex.def)             Requested size: 202.29759pt x 142.22717pt.
-<figures/compton2.png, id=148, 1927.2pt x 1137.24875pt>
+<figures/compton2.png, id=162, 1927.2pt x 1137.24875pt>
 File: figures/compton2.png Graphic file (type png)
 <use figures/compton2.png>
 Package pdftex.def Info: figures/compton2.png  used on input line 65.
 (pdftex.def)             Requested size: 202.29759pt x 119.37126pt.
  [7 <./figures/compton1.png> <./figures/compton2.png>]
-<figures/fh1.jpg, id=172, 321.2pt x 731.533pt>
+<figures/fh1.jpg, id=186, 321.2pt x 731.533pt>
 File: figures/fh1.jpg Graphic file (type jpg)
 <use figures/fh1.jpg>
 Package pdftex.def Info: figures/fh1.jpg  used on input line 95.
 (pdftex.def)             Requested size: 89.90927pt x 204.76086pt.
-<figures/fh2.png, id=173, 1284.8pt x 961.5925pt>
+<figures/fh2.png, id=187, 1284.8pt x 961.5925pt>
 File: figures/fh2.png Graphic file (type png)
 <use figures/fh2.png>
 Package pdftex.def Info: figures/fh2.png  used on input line 96.
 (pdftex.def)             Requested size: 202.29759pt x 151.39293pt.
-<figures/fh3.png, id=174, 803.0pt x 1215.54124pt>
+<figures/fh3.png, id=188, 803.0pt x 1215.54124pt>
 File: figures/fh3.png Graphic file (type png)
 <use figures/fh3.png>
 Package pdftex.def Info: figures/fh3.png  used on input line 97.
 (pdftex.def)             Requested size: 112.38832pt x 170.11897pt.
  [8]
-<figures/sg1.png, id=188, 1284.8pt x 908.39375pt>
+<figures/sg1.png, id=202, 1284.8pt x 908.39375pt>
 File: figures/sg1.png Graphic file (type png)
 <use figures/sg1.png>
 Package pdftex.def Info: figures/sg1.png  used on input line 129.
 (pdftex.def)             Requested size: 359.644pt x 254.2792pt.
  [9 <./figures/fh1.jpg> <./figures/fh2.png> <./figures/fh3.png>]
-<figures/sg2.png, id=206, 1927.2pt x 913.4125pt>
+<figures/sg2.png, id=220, 1927.2pt x 913.4125pt>
 File: figures/sg2.png Graphic file (type png)
 <use figures/sg2.png>
 Package pdftex.def Info: figures/sg2.png  used on input line 148.
 (pdftex.def)             Requested size: 404.5952pt x 191.7526pt.
-<figures/dg1.png, id=209, 1284.8pt x 927.465pt>
+<figures/dg1.png, id=223, 1284.8pt x 927.465pt>
 File: figures/dg1.png Graphic file (type png)
 <use figures/dg1.png>
 Package pdftex.def Info: figures/dg1.png  used on input line 162.
 (pdftex.def)             Requested size: 202.29759pt x 146.0199pt.
-<figures/dg2.png, id=210, 535.2497pt x 469.755pt>
+<figures/dg2.png, id=224, 535.2497pt x 469.755pt>
 File: figures/dg2.png Graphic file (type png)
 <use figures/dg2.png>
 Package pdftex.def Info: figures/dg2.png  used on input line 163.
@@ -791,13 +791,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]) (./s05_unitary_evolution.tex
 [20] [21
 
-]
-Underfull \vbox (badness 2020) has occurred while \output is active []
+] [22]) (./s06_tensor_product.tex [23]
+Overfull \hbox (1.95226pt too wide) in paragraph at lines 4--4
+[]\OT1/cmr/m/n/10.95 Refer to []N&C[] 2.1.7, 2.2.8, 4.3; []Tong[] 3.6. For gen-
+er-al-ized mea-sure-ments, re-fer to []N&C[] 2.2.6
+ []
 
- [22])
-(./s06_tensor_product.tex [23] [24
+[24
 
-])) [25]
+] [25])) [26]
 \openout2 = `ch02_density_matrix.aux'.
 
 
@@ -806,7 +808,7 @@ No file ch02_density_matrix.tex.
 
 (./app00_homeworks.tex (./app01_hw1.tex
 chapter A.
-<figures/Bragg law.png, id=406, 1487.5575pt x 856.19875pt>
+<figures/Bragg law.png, id=436, 1487.5575pt x 856.19875pt>
 File: figures/Bragg law.png Graphic file (type png)
 <use figures/Bragg law.png>
 Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
@@ -814,7 +816,7 @@ Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
 
 Underfull \vbox (badness 1910) has occurred while \output is active []
 
- [26
+ [27
 
 
 
@@ -825,7 +827,7 @@ Underfull \vbox (badness 1910) has occurred while \output is active []
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27 <./figures/Bragg law.png>]
+ [28 <./figures/Bragg law.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 79.
@@ -853,14 +855,26 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Underfull \vbox (badness 3118) has occurred while \output is active []
 
- [28])
-(./app02_hw2.tex [29]
+ [29])
+(./app02_hw2.tex [30]
 chapter B.
-[30
+[31
 
-] [31])) [32] (./7501_notes.bbl
+] [32]) (./app03_hw3.tex [33]
+chapter C.
+
+Overfull \hbox (6.32901pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/n/10.95 (1) For a unit vec-tor $[] = ([] \OML/cmm/m/it/10.95 ^^R [] 
+^^^; [] ^^R [] ^^^; [] ^^R\OT1/cmr/m/n/10.95 )$, di-ag-o-nal-ize the ma-trix $[
+] \OMS/cmsy/m/n/10.95 ^^A [] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 n[]^
+^[[]$\OT1/cmr/m/n/10.95 .
+ []
+
+[34
+
+])) [35] (./7501_notes.bbl
 chapter without number
-) [33
+) [36
 
 
 
@@ -873,10 +887,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17017 strings out of 467168
- 300025 string characters out of 5411585
- 883348 words of memory out of 5000000
- 45809 multiletter control sequences out of 15000+600000
+ 17070 strings out of 467168
+ 300777 string characters out of 5411585
+ 882348 words of memory out of 5000000
+ 45825 multiletter control sequences out of 15000+600000
  640956 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,107p,11213b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -899,10 +913,10 @@ texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texli
 ve/texdir/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (35 pages, 1152256 bytes).
+Output written on 7501_notes.pdf (38 pages, 1164974 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 599 compressed objects within 6 object streams
- 205 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 683 compressed objects within 7 object streams
+ 239 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

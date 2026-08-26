@@ -18,16 +18,23 @@
 \contentsline {section}{\numberline {1.4}Projective measurements (9/4)}{19}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Unitary evolution of a closed quantum system (9/9)}{21}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Appendix: Functions of operators/matrices}{22}{subsection.1.5.1}%
-\contentsline {section}{\numberline {1.6}Composite quantum systems and tensor product (9/11)}{24}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Composite quantum systems (9/11)}{24}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Tensor product}{24}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Generalized measurements}{25}{subsection.1.6.2}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{26}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{26}{appendix.A.1}%
-\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{26}{appendix.A.2}%
-\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{28}{appendix.A.3}%
-\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{30}{appendix.B}%
-\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{30}{subsection.B.0.1}%
-\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{30}{subsection.B.0.2}%
-\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{31}{subsection.B.0.3}%
-\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{32}{subsection.B.0.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.2}%
+\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{27}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{27}{appendix.A.1}%
+\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{27}{appendix.A.2}%
+\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{29}{appendix.A.3}%
+\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{31}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{31}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{31}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{32}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{33}{subsection.B.0.4}%
+\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{34}{appendix.C}%
+\contentsline {subsection}{\numberline {C.0.1}Spin precession}{34}{subsection.C.0.1}%
+\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{34}{subsection.C.0.2}%
+\contentsline {subsection}{\numberline {C.0.3}Propagator}{34}{subsection.C.0.3}%
+\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{35}{subsection.C.0.4}%
+\contentsline {chapter}{\nonumberline Bibliography}{36}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
