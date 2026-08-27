@@ -97,8 +97,12 @@ Clearly, the completeness relation (\ref{completeness:Kraus operators}) for the 
 \end{align}
 Examining this measurement from the system's viewpoint while disregarding the ancilla, for measurement outcome $q$, initial state $\dket\psi$ becomes $M_q\dket{\psi}$, with a probability $\text{Pr}(q)$ given in (\ref{probability:generalized measurements}). This is known as a generalized measurement. 
 
-If the Kraus operator $M_q$ is very close to identity matrix $\hat 1_s$, such a generalized measurement is known as a weak measurement because the measurement changes the initial state weakly in the sense that 
+If the Kraus operator $M_q$ is very close to identity matrix $\hat 1_s$
 \begin{align}
-    |\dket{\psi}-M_q\dket\psi|\ll1
+    M_q=\sqrt{1-\lambda_q}\hat1+\hat O_q,~~~\lambda_q\ll1
 \end{align}
-This is the case when $\dket{\phi}=\dket{q}$ and the evolution time $t$ is much smaller than all energy scales in Hamiltonian $\hat H$. 
+such a generalized measurement is known as a weak measurement because the measurement only modifies the initial state weakly in the sense that 
+\begin{align}
+    \Big|\dket{\psi}-{M_q\dket\psi}\Big|\ll1
+\end{align}
+This is the case when $\dket{\phi}=\dket{q}$ and the evolution time $t$ is much smaller than any energy scale in Hamiltonian $\hat H$. 
