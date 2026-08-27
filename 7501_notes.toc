@@ -37,5 +37,5 @@
 \contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{34}{subsection.C.0.2}%
 \contentsline {subsection}{\numberline {C.0.3}Propagator}{34}{subsection.C.0.3}%
 \contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{35}{subsection.C.0.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{36}{chapter*.2}%
+\contentsline {chapter}{\nonumberline Bibliography}{37}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
