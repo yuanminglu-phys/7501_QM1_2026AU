@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  26 AUG 2026 04:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  27 AUG 2026 14:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -808,7 +808,7 @@ No file ch02_density_matrix.tex.
 
 (./app00_homeworks.tex (./app01_hw1.tex
 chapter A.
-<figures/Bragg law.png, id=436, 1487.5575pt x 856.19875pt>
+<figures/Bragg law.png, id=439, 1487.5575pt x 856.19875pt>
 File: figures/Bragg law.png Graphic file (type png)
 <use figures/Bragg law.png>
 Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
@@ -887,8 +887,8 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17070 strings out of 467168
- 300777 string characters out of 5411585
+ 17073 strings out of 467168
+ 300816 string characters out of 5411585
  882348 words of memory out of 5000000
  45825 multiletter control sequences out of 15000+600000
  640956 words of font info for 91 fonts, out of 8000000 for 9000
@@ -913,10 +913,10 @@ texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texli
 ve/texdir/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (38 pages, 1164974 bytes).
+Output written on 7501_notes.pdf (38 pages, 1166182 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 683 compressed objects within 7 object streams
- 239 named destinations out of 1000 (max. 500000)
+ 792 PDF objects out of 1000 (max. 8388607)
+ 687 compressed objects within 7 object streams
+ 242 named destinations out of 1000 (max. 500000)
  291 words of extra memory for PDF output out of 10000 (max. 10000000)
 
