@@ -26,6 +26,7 @@
 \contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{27}{appendix.A.1}%
 \contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{27}{appendix.A.2}%
 \contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{29}{appendix.A.3}%
+\contentsline {section}{\numberline {A.4}Compton shift}{30}{appendix.A.4}%
 \contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{31}{appendix.B}%
 \contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{31}{subsection.B.0.1}%
 \contentsline {subsection}{\numberline {B.0.2}Linear algebra}{31}{subsection.B.0.2}%
