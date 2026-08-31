@@ -16,6 +16,12 @@ In particular, for the identity matrix which maps every vector to itself, we hav
 \begin{align}
 \sum_i\dket{i}\dbra{i}=\hat 1.
 \end{align}
+In the case of continuous variables, e.g. coordinates for a particle in free space, the summation will be replaced by integral:
+\begin{align}
+    \int\dif x\dket{x}\dbra{x}=\hat1
+\end{align}
+where $\dket{x}$ is an eigenstate of position operator $\dket{x}$ with eigenvalue $x$. 
+
 We can also define the product of two linear operators $\hat M,\hat N\in\mathbb{L}_\mathbb{V}$:
 \begin{align}
 \hat M\hat N=\sum_{a,b,c}M_{a,b}N_{b,c}\dket{a}\dbra{c}
@@ -28,7 +34,7 @@ and anti-commutator
 \begin{align}
 \{\hat M,\hat N\}=\hat M\hat N+\hat N\hat M
 \end{align}
-and the \emph{Hermitian adjoint} of an operator
+and the \emph{Hermitian conjugate} (or \emph{Hermitian adjoint}) of an operator
 \begin{align}
 \hat O^\dagger=\sum_{a,b}O^\ast_{b,a}\dket{a}\dbra{b}=(O^T)^\ast=(O^\ast)^T
 \end{align}
@@ -45,21 +51,33 @@ where $\{\dket{a}\}$ is a complete set of orthonormal basis of the Hilbert space
 
 Not all matrices are diagonalizable (i.e. have a diagonal form), two non-diagonalizable examples are
 \begin{align}
-\hat M_1=\bpm1&1\\1&0\epm,~\hat M_2=\bpm1&1\\0&0\epm,~~~
+\hat M_1=\bpm1&1\\0&1\epm,~\hat M_2=\bpm1&1\\0&0\epm,~~~
 \end{align}
-They either have less eigenvectors than the dimension of the Hilbert space, or have at least two non-orthogonal eigenvectors with different eigenvalues.\\
+$\hat M_1$ is known as a Jordan block with only 1 eigenvector, while $\hat M_2$ has two eigenvectors with different eigenvalues, but not orthogonal to each other. Generally, any complex square matrix can be decomposed into tensor sums of Jordan blocks by similarity transformations.\\
 
 Below are a few useful theorems on the diagonalization of matrices:
 
-\textbf{The spectral decomposition theorem} states: A linear operator $\hat O$ on vector space $\mathbb{V}$ is diagonal w.r.t. some orthonormal basis of $\mathbb{V}$ if and only if operator $\hat O$ is \emph{normal} i.e. $\hat O^\dagger\hat O=\hat O\hat O^\dagger$. (Refer to \nielsen~Box 2.2).\\
+\begin{thm}
+    \textbf{The spectral decomposition theorem}: A linear operator $\hat O$ on vector space $\mathbb{V}$ is diagonal w.r.t. some orthonormal basis of $\mathbb{V}$ if and only if operator $\hat O$ is \emph{normal} i.e. $\hat O^\dagger\hat O=\hat O\hat O^\dagger$. 
+\end{thm}
+Refer to \nielsen~Box 2.2 for proof of this theorem.\\
 
-\textbf{Theorem}: A normal matrix is Hermitian if and only if it has real eigenvalues.\\
+\begin{thm}
+    A normal matrix is Hermitian if and only if it has real eigenvalues.
+\end{thm}
 
-\textbf{Theorem}: The eigenkets corresponding to different eigenvalues of a Hermitian matrix are orthogonal.\\
+\begin{thm}
+    The eigenkets corresponding to different eigenvalues of a Hermitian matrix are orthogonal.
+\end{thm}
 
-\textbf{Theorem}: A positive linear operator must be Hermitian.\\
+\begin{thm}
+   A positive linear operator must be Hermitian. 
+\end{thm}
 
-\textbf{Simultaneous diagonalization theorem:} Two Hermitian linear operators $\hat A$ and $\hat B$ can be diagnoalized simultaneously if and only if $[\hat A,\hat B]=0$. In other words, there is a complete set of simultaneous eigenket $\{\dket{a,b}\}$ such that
+\begin{thm}
+    \textbf{Simultaneous diagonalization theorem}: Two Hermitian linear operators $\hat A$ and $\hat B$ can be diagnoalized simultaneously if and only if $[\hat A,\hat B]=0$.
+\end{thm}
+ In other words, there is a complete set of simultaneous eigenket $\{\dket{a,b}\}$ such that
 \begin{align}
 \hat A\dket{a,b}=a\dket{a,b},~~~\hat B\dket{a,b}=b\dket{a,b}.
 \end{align}
