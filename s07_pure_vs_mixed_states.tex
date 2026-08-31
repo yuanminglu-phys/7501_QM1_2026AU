@@ -1,0 +1,94 @@
+
+
+\section{Density matrix and mixed states (9/16)}\label{sec:schmidt decomposition}
+
+\referto{\nielsen~2.4, 2.5; \tong~16.3.3, 16.4}
+
+
+If we think of a physical system (with Hilbert space $A$) and its environment (with Hilbert space $B$) combined together as a (composite) closed quantum system, any state therein is described by a state vector
+\begin{align}\label{system+environment}
+\dket{\psi}=\sum_{i,j}\psi_{i,j}\dket{a_i}\otimes\dket{b_j}
+\end{align}
+where $\{\dket{a_i}|1\leq i\leq m=\text{dim}A\}$ is a complete set of orthonormal basis for $A$, while $\{\dket{b_j}|1\leq j\leq n=\text{dim}B\}$ is a complete set of orthonormal basis for $B$. 
+
+To study physical properties of system $A$, the composite state $\dket\psi$ in (\ref{system+environment}) is an overkill because it also contains all information about the environment, in which we are not interested at all. It turns out the following quantity, known as the \emph{density matrix} (or \emph{density operator}) for subsystem $A$
+\begin{align}\label{reduced density matrix}
+\hat\rho=\trace_B\dket{\psi}\dbra{\psi}=\sum_{i_1,i_2=1}^{m}\rho_{i_1,i_2}\dket{a_{i_1}}\dbra{a_{i_2}},~~~\rho_{i_1,i_2}=\sum_{j=1}^n\psi_{i_1,j}\psi^\ast_{i_2,j}
+\end{align}
+encodes all information about physical system $A$ in composite state $\dket\psi$. As shown above it is obtained by tracing out subsystem $B$ in state $\dket\psi$. Any physical observable of the system $A$ corresponds to a Hermtian operator $\hat O_A\times\hat 1_B$ in the composite system $A\times B$, and its expectation value is nothing but
+\begin{align}
+    \expval{\hat O}_A\equiv\expval{\psi|\hat O_A\otimes\hat1_B|\psi}=\text{Tr}(\hat\rho\hat O)
+\end{align}
+
+Instead of directly computing the partial trace, there is another efficient way to obtain the density matrix (\ref{reduced density matrix}), known as \emph{Schmidt decomposition}, which we describe below. This approach is especially informative for understanding entanglement between subsystem $A$ and $B$. 
+
+We can treat the wavefunction $\psi_{i,j}$ in (\ref{system+environment}) as a matrix of dimension $m\times n$, which has the following singular value decomposition (SVD):
+\begin{align}
+\psi=U^\dagger DV,~~~U^\dagger U=V^\dagger V=\hat 1,~~~D_{i,j}=\delta_{i,j}\lambda_i,~\lambda_i\geq0.
+\end{align}
+where $U,V$ are two unitary matrices of dimensions $m\times m$ and $n\times n$ respectively. $D$ is a $m\times n$ matrix whose matrix elements all vanish except for positive diagonal elements $\{\lambda_i>0|1\leq i\leq r,~r\leq\min({m,n)}\}$, known as singular values of matrix $\psi$. The positive integer $r\leq\min{(m,n)}$, is the rank of matrix $\hat\psi$. 
+
+Since unitary matrices implement the change of basis, the SVD procedure introduced a new set of orthonormal basis (known as the Schmidt basis) for both the system $A$ and environment $B$:
+\begin{align}
+\dket{A_i}=\sum_{i^\prime}U^\ast_{i,i^\prime}\dket{a_{i^\prime}},~~~\dket{B_j}=\sum_{j^\prime}V_{j,j^\prime}\dket{b_{j^\prime}}
+\end{align}
+such that the state vector (\ref{system+environment}) can be written as
+\begin{align}
+\dket{\psi}=\sum_{i=1}^r\lambda_i\dket{A_i}\otimes\dket{B_i},~~~\lambda_i>0
+\end{align}
+This is known as the Schmidt decomposition of state vector $\dket{\psi}$ in a composite Hilbert space, which is the tensor product of $A$ and $B$. The rank $r$ of matrix $\psi$ is known as the Schmidt rank (or Schmidt number), and the positive numbers $\{\lambda_i>0|1\leq i\leq r\}$ are known as Schmidt coefficients. 
+
+
+
+Note that normalization of state vector $\dket{\psi}$ implies that $\{p_i\equiv\lambda_i^2\}$ leads to a normalized probability distribution:
+\begin{align}
+\expval{\psi|\psi}=\sum_{i=1}^r\lambda_i^2=1=\sum_{i=1}^r p_i
+\end{align}
+
+
+In the Schmidt basis $\{\dket{A_i}\}$, the density matrix (\ref{reduced density matrix}) has the following diagonal form:
+\begin{align}\label{ensemble of state}
+\hat\rho=\sum_{i=1}^r\lambda_i^2\dket{A_i}\dbra{A_i}=\sum_{i=1}^rp_i\dket{A_i}\dbra{A_i}
+\end{align}
+which has the physical meaning as an ensemble $\{p_i,\dket{A_i}\}$ of pure states. $p_i$ is the probability for the system $A$ to fall into pure state $\dket{A_i}$. 
+
+Mathematically, a density matrix is defined as a linear operator $\hat\rho$ satisfying 2 conditions:
+
+(1) \textbf{Trace condition} 
+\begin{align}
+\trace\hat\rho=1
+\end{align}
+
+(2) \textbf{Positivity condition}
+\begin{align}
+\hat\rho\geq0
+\end{align}
+The positivity of $\hat\rho$ already implies that it is a Hermitian operator i.e. $\hat\rho=\hat\rho^\dagger$. 
+
+All density matrices form a convex set in the sense that $x\rho_1+(1-x)\rho_2,~\forall~0\leq x\leq1$ is also a density matrix if $\rho_{1,2}$ are density matrices. 
+
+In the diagonal basis (\ref{ensemble of state}) of density matrix $\hat \rho$, if the Schmidt rank $r>1$ i.e. there are at least two independent pure states in the ensemble, we call $\hat\rho$ a \emph{mixed state}. If $r=1$, instead we call $\hat\rho=\dket{A_1}\dbra{A_1}$ to be a \emph{pure state}. 
+\begin{thm}
+    A density matrix $\hat\rho$ corresponds to a pure state if and only if 
+\begin{align}
+    {\hat\rho}^2=\hat\rho
+\end{align}
+\end{thm}
+
+
+
+
+
+As a simplest example of Schmidt decomposition, we consider a single-qubit physical system $A$ and a single-qubit environment $B$, where a pure state of the combined closed system has the following general form:
+\begin{align}
+\dket{\psi}=\alpha\dket{00}+\beta\dket{01}+\gamma\dket{10}+\delta\dket{11}
+\end{align}
+where we have used $\dket{0}\equiv\dket{\uparrow}$ and $\dket{1}\equiv\dket{\downarrow}$ (known as the computational basis) to label eigenstates of the Pauli-$\hat Z$ operator. We also used a shorthand notation for tensor product states:
+\begin{align}
+\dket{ab}\equiv\dket{a}_A\otimes\dket{b}_B,~~~a,b=0,1.
+\end{align}
+In this case we have the matrix $\psi_{a,b}$ as
+\begin{align}
+\hat\psi=\bpm \alpha&\beta\\ \gamma&\delta\epm
+\end{align}
+for the SVD procedure.  

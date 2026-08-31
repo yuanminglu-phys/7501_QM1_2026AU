@@ -80,16 +80,20 @@ Note that an inner product also defines a norm for each vector in vector space $
 \end{align}
 Two important properties of an inner product are
 
-(1) \textbf{ Cauchy-Schwarz inequality}:
+\begin{thm}
+    \textbf{ Cauchy-Schwarz inequality}:
 \begin{align}
 \expval{v|v}\expval{u|u}\geq|\expval{u|v}|^2
 \end{align}
+\end{thm}
 The equality holds if and only if $\dket{v}$ and $\dket{w}$ are linearly dependent.\\
 
-(2) \textbf{ Triangle inequality} for the norms of vectors:
+\begin{thm}
+  \textbf{Triangle inequality} for the norms of vectors:
 \begin{align}
 |\dket{v}+\dket{w}|\leq|\dket{v}|+|\dket{w}|
-\end{align}
+\end{align}  
+\end{thm}
 Triangle inequality can be derived from the Cauchy-Schwarz inequality, which is a part of Homework 2. 
 
 Strictly speaking, in addition to being a vector space equipped with an inner product (known as an inner product space), a Hilbert space must also be \emph{complete} in the sense that every Cauchy sequence $\{v^{(k)}\}$ of vectors in $\mathbb{V}$ has a limit that also lies in $\mathbb{V}$:

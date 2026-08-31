@@ -1,0 +1,85 @@
+\section{Entanglement and quantum teleportation (9/18)}
+
+\referto{\nielsen~1.3.6-1.3.7, 2.4.3; \tong~16.2.3, 16.3.2, 16.3.4. Use \nielsen~11.3 for further readings on entropy.}
+
+\subsection{Entanglement entropy}
+
+In the Schmidt decomposition described in section {\ref{sec:schmidt decomposition}}, if the density matrix $\hat\rho$ is obtained by a partial trace over $B$ from state $\rho_{AB}$ in the composite system $A\otimes B$:
+\begin{align}
+\hat\rho_A=\trace_B\hat\rho_{AB}
+\end{align}
+it is called a \emph{reduced density matrix}. Importantly, the reduced density matrix characterizes the correlation and entanglement between subsystem $A$ and $B$, as we illustrate below. 
+
+
+Consider the following Hamiltonian in a composite system of two qubits $A$ and $B$:
+\begin{align}
+H=-JX_A\otimes X_B-hZ_A\otimes Z_B,~~~h,J>0
+\end{align}
+It can be simultaneously diagonalized with the conserved quantities $Z_A\otimes Z_B$ and $X_A\otimes X_B$. Its ground state with the lowest energy $E_0=-h-J$ is given by
+\begin{align}
+\dket{Bell_0}=\frac{\dket{00}+\dket{11}}{\sqrt2}
+\end{align}
+while the 3 excited states are given by
+\begin{align}
+&\dket{Bell_1}=\frac{\dket{01}+\dket{10}}{\sqrt2},\\
+&\dket{Bell_2}=\frac{\dket{01}-\dket{10}}{\sqrt2},\\
+&\dket{Bell_3}=\frac{\dket{00}-\dket{11}}{\sqrt2}.
+\end{align}
+These 4 states are known as \emph{Bell states} or \emph{EPR pairs}. They are all examples of bipartite \emph{maximally entangled states} in the two-qubit system, in the sense that their reduced density matrix is proportional to the identity operator:
+\begin{align}
+\hat\rho_A=\trace_B\dket{Bell_j}\dbra{Bell_j}=\frac12\hat 1_A,~~~j=0,1,2,3.
+\end{align}
+Generally, a bipartite pure state $\dket{\psi_{AB}}$ is maximally entangled if and only if
+\begin{align}\label{maximally entangled state}
+\hat\rho_A\equiv\trace_B\dket{\psi_{AB}}\dbra{\psi_{AB}}=\frac1{\text{dim} A}\hat 1_A
+\end{align}
+In order to quantitatively measure the quantum entanglement between two subsystems, we need to introduce the concept of von Neumann entropy for a density matrix $\hat\rho$:
+\begin{align}
+S(\hat\rho)\equiv-\trace\hat\rho\log\hat\rho
+\end{align}
+In the diagonal form (\ref{ensemble of state}) of density matrix $\hat\rho$, the von Neumann entropy defined above reduces to the Shannon entropy 
+\begin{align}
+S=-\sum_jp_j\log p_j
+\end{align}
+for a probability distribution $\{p_j\}$, an important concept in information theory. If we take the equilibrium density matrix $\hat\rho\propto e^{-\hat H/k_BT}$, the von Neumann entropy is nothing but the thermodynamic entropy of the corresponding quantum system described by Hamiltonian $\hat H$. 
+
+Now for a pure state $\dket{\psi_{AB}}$ in our bipartite system $A\otimes B$, if we consider the reduced density matrix $\hat\rho_A$ for subsystem $A$, its associated von Neumann entropy is called the \emph{entanglement entropy}, because it quantitatively captures the entanglement (or more precisely, correlation) between subsystems $A$ and $B$. The entanglement entropy has the following properties: 
+
+(1) Positivity: $S(\hat\rho)\geq0$. In particular, $S(\hat\rho)=0$ if and only if $\hat\rho$ is a pure state. 
+
+(2) Upper bound: $S(\hat\rho_A)\leq\log(\text{dim}A)$, which is saturated by $\hat\rho_A=\hat 1_A/\text{dim} A$. This is why (\ref{maximally entangled state}) is called a maximally entangled state. 
+
+(3) $S(\hat\rho_A)=S(\hat\rho_B)$, which comes directly from Schmidt decomposition of pure state $\dket{\psi_{AB}}$. If $S(\hat\rho_A)=S(\hat\rho_B)>0$, we say that $A$ and $B$ subsystems are entangled in a pure state $\dket{\psi_{AB}}$.
+
+(4) Subadditivity: $S(\rho_{AB})\leq S(\rho_A)+S(\rho_B)$ for a mixed state $\rho_{AB}$. The equality holds if and only if $\rho_{AB}=\rho_A\otimes\rho_B$, which is called a bipartite \emph{product state}. This property allows for defining the \emph{mutual information} between subsystems $A$ and $B$
+\begin{align}
+I(A:B)\equiv S(\rho_A)+S(\rho_B)-S(\rho_{AB})\geq0
+\end{align}
+which is a measure of entanglement (or quantum correlations) between $A$ and $B$ in a mixed state. The mutual information reduces to twice the entanglement entropy for a pure state. 
+
+(5) Araki-Lieb inequality: $S(\rho_{AB})\geq|S(\rho_A)-S(\rho_B)|$.
+
+(6) Concavity: $S(\sum_i p_i\rho_i)\geq\sum_ip_iS(\rho_i)$ for any probability distribution $\{p_i\}$ and any density matrices $\{\rho_i\}$.
+
+(7) Strong subadditivity: refer to \nielsen~11.4. 
+
+\subsection{Quantum teleportation}
+
+The quantum entanglement between subsystems is an important resource to transfer quantum information. One striking example of such is the quantum teleportation. Consider a general pure state of a single qubit
+\begin{align}\label{teleportation:single qubit state}
+\dket{\psi}=\alpha\dket{0}+\beta\dket{1}
+\end{align}
+It encodes an infinite number of classical bits because $\alpha,\beta$ are both generic complex numbers. In order for Alice to send the information encoded in this qubit to Bob, an infinite amount of classical bits will be needed if the information is sent via classical communication. Remarkably, the quantum entanglement allows Alice to teleport the qubit to Bob by only sending 2 classical bits using classical communication. The procedure is as follows. Alice has two qubits 1 and 2 where qubit 1 encodes the desired state $\dket{\psi}_1$, while Bob has a single qubit 3. Initially qubit 2 and qubit 3 are in a maximally entangled state (i.e. a Bell state), say $\dket{Bell_0}_{23}$. Alice first implements a CNOT gate on qubit 1 and 2 (qubit 1 being the controlled qubit), followed by a Hadamard gate on qubit 1:
+\begin{align}
+&\dket{\psi}_1\otimes\dket{Bell_0}_{23}\overset{CNOT_{12}}\longrightarrow\frac{(\alpha\dket{00}+\beta\dket{11})\dket{0}+(\alpha\dket{01}+\beta\dket{10})\dket{1}}{\sqrt2}\\
+&\overset{H_1}\longrightarrow\frac12\big[\alpha(\dket{0}+\dket{1})(\dket{00}+\dket{11})+\beta(\dket{0}-\dket{1})(\dket{10}+\dket{01})\big]\\
+&=\frac12\big[\dket{00}(\alpha\dket{0}+\beta\dket{1})+\dket{01}(\alpha\dket{1}+\beta\dket{0})+\dket{10}(\alpha\dket{0}-\beta\dket{1})+\dket{11}(\alpha\dket{1}-\beta\dket{0})\big]
+\end{align}
+Next, Alice makes measurements of Pauli $\hat Z$ operator on qubits 1 and 2, with registered measurement outcome $M_{1,2}=0,1$ (i.e. $\hat Z_{1,2}=(-1)^{M_{1,2}}=\pm1$). After the measurement, Bob's qubit 3 collapsed into the following state:
+\begin{align}
+\dket{\psi_{M_1,M_2}}=\alpha\dket{M_2}+\beta(-1)^{M_1}\dket{1-M_2}
+\end{align}
+She further sends the two bits of measurment outcomes $M_{1,2}$ to Bob via classical communication. According to the two classical bits, Bob further implements a unitary operation $\hat Z^{M_1}\hat X^{M_2}$ on the 3rd qubit, and he will successfully recover the desired single qubit state (\ref{teleportation:single qubit state}) in qubit 3:
+\begin{align}
+\hat Z^{M_1}\hat X^{M_2}\dket{\psi_{M_1,M_2}}=\dket{\psi}=\alpha\dket0+\beta\dket1
+\end{align}

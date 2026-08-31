@@ -56,6 +56,8 @@ $\pi/8$&$T$&$\bpm1&0\\0&e^{\imth\pi/4}\epm$\\
 
 Three examples of unitary operators in quantum mechanics are the following: (1) unitary time evolution operator $U(t_1,t_2)=e^{-\imth(t_2-t_1)\hat H/\hbar}$ for a closed quantum system discussed above; (2) a symmetry operator in a quantum system as we will discuss later in this course; (3) a quantum (logic) gate in quantum computing. For instance, in a two-dimensional closed quantum system, also known as a qubit, the common quantum gates are summarized in Table \ref{tab:single qubit gate}.
 
+Starting from a complete set of orthonormal basis vectors $\{\dket{i}\}$ of Hilbert space $\mathbb{V}$, after the action of a unitary operator $\hat U$, we can obtain another complete set of orthonormal basis vectors $\{\dket{i}^\prime=\hat U\dket{i}\}$ of the same Hilbert space. In other words, each unitary operator implements a change of basis in the Hilbert space. Therefore, the unitary time evolution merely performs a rotation for vectors in the Hilbert space, since it only changes the state itself but not the inner product of any two states.  
+
 In the case of unitary time evolution $U(t_1,t_2)$, the Hamiltonian $\hat H$ of a closed quantum system plays a crucial role. In its spectral decomposition:
 \begin{align}
 \hat H=\sum_aE_a\dket{a}\dbra{a}
