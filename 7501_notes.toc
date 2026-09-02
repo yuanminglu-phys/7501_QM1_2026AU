@@ -42,5 +42,9 @@
 \contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{40}{subsection.C.0.2}%
 \contentsline {subsection}{\numberline {C.0.3}Propagator}{40}{subsection.C.0.3}%
 \contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{41}{subsection.C.0.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.2}%
+\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{43}{appendix.D}%
+\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{43}{subsection.D.0.1}%
+\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{43}{subsection.D.0.2}%
+\contentsline {subsection}{\numberline {D.0.3}Entanglement negativity}{44}{subsection.D.0.3}%
+\contentsline {chapter}{\nonumberline Bibliography}{46}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

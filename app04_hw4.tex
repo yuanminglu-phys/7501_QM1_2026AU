@@ -1,0 +1,119 @@
+\chapter{Homework 4 (due 9/25)}
+
+\subsection{Bloch ball for single-qubit mixed states}
+
+(1) Show that an arbitrary density matrix for a single-qubit mixed state can be written as
+\begin{align}\label{Bloch sphere for mixed state}
+\hat \rho=\frac{\hat 1+\vec r\cdot\hat{\vec\sigma}}2
+\end{align}
+where $\vec\sigma$ are 3 Pauli matrices, and $\vec r$ is a 3-dimensional vector such that $|\vec r|\leq1$. This vector $\vec r$ is known as the \emph{Bloch vector} for the state $\hat\rho$. 
+
+Hint: a density matrix $\hat \rho$ is defined to satisfy two properties: $\hat \rho$ is positive (i.e. it can be diagnonalized and all eigenvalues are non-negative) and $\text{Tr}\rho=1$. 
+
+(2) Show that a state $\rho$ is pure if and only if $|\vec r|=1$ i.e. $\vec r$ is a unit vector. 
+
+Hint: a density matrix $\hat\rho$ is a pure state if and only if $\hat\rho^2=\hat\rho$.
+
+(3) Consider the eigenstate $\dket{\vec r}$ of operator $\vec r\cdot\vec\sigma$ with eigenvalue $+1$, where $\vec r$ is a unit vector. Show that in this case, its density matrix $\rho=\dket{\vec r}\dbra{\vec r}$ is exactly given by Eq. (\ref{Bloch sphere for mixed state}) with $\vec r$ being a unit vector. This is known as the Bloch sphere. 
+
+(4) Compute the von Neumann entropy $S(\rho)=-\trace\rho\log\rho$ for the mixed state (\ref{Bloch sphere for mixed state}). Plot it as a function of $|\vec r|$. 
+
+
+\subsection{Entanglement entropy}
+
+(1) If $\rho_1$ and $\rho_2$ are two density matrices, show that
+\begin{align}\label{convex set:density matrix}
+\hat\rho(x)\equiv x\hat\rho_1+(1-x)\hat\rho_2,~~~0\leq x\leq1.
+\end{align}
+is also a density matrix. 
+
+(2) \textbf{ Bonus} Assume that $\hat\rho(x)$ in (\ref{convex set:density matrix}) is always invertible for any $0\leq x\leq1$, i.e. its inverse matrix $[\hat\rho(x)]^{-1}$ always exists. Prove that its von Neumann entropy is a concave function of $x$, i.e.
+\begin{align}\label{concave:entropy}
+\frac{\text{d}^2S(\hat\rho(x))}{\text{d}x^2}\leq0
+\end{align}
+
+(3) \textbf{ Bonus} Use the concave property (\ref{concave:entropy}) to prove the concavity of von Neumann entropy
+\begin{align}
+S(\sum_jp_j\hat\rho_j)\geq\sum_jp_jS(\hat\rho_j)
+\end{align}
+where $\{p_j\}$ is a probability distribution and $\{\hat\rho_j\}$ is a set of density matrices. 
+
+Hint: for a concave function $f(x)$ satisfying $f^{\prime\prime}\leq0$, we always have $f(px_1+(1-p)x_2)\geq pf(x_1)+(1-p)f(x_2)$ for $0\leq p\leq 1$.
+
+(4) Consider a pure state $\dket\psi_{AB}$ in a composite quantum system with Hilbert space $A\otimes B$. Show that for the reduced density matrices 
+\begin{align}
+\rho_A=\trace_B\dket{\psi_{AB}}\dbra{\psi_{AB}},~~~\rho_B=\trace_A\dket{\psi_{AB}}\dbra{\psi_{AB}}
+\end{align}
+they share the same von Neumann entropy
+\begin{align}
+S(\rho_A)=S(\rho_B)
+\end{align}
+Therefore either $S(\rho_A)$ or $S(\rho_B)$ can be defined as the entanglement entropy. 
+
+(5) Consider a composite system of two qubits $A$ and $B$. Can you write down the generic form of a maximally entangled state $\dket{\psi_{AB}}$, satisfying that the reduced density matrix has a maximal entanglement entropy?
+
+Hint: for a maximally entangled 2-qubit state, we must have
+\begin{align}
+\hat\rho_A=\hat\rho_B=\frac12\hat1.
+\end{align}
+so that $S(\rho_{A,B})=\log2$. 
+
+
+(6) For a pure state in a composite system of 2 qubits $A$ and $B$:
+\begin{align}
+\dket{\psi_{AB}}=\alpha\dket{00}+\beta\dket{01}+\gamma\dket{10}+\delta\dket{11}
+\end{align}
+show that this state is (bipartite) entangled if and only if 
+\begin{align}
+\alpha\delta-\beta\gamma\neq0.
+\end{align}
+
+Hint: a pure state is (bipartite) entangled if and only if its bipartite entangled entropy is nonzero:
+\begin{align}
+S(\rho_A)=S(\rho_B)>0
+\end{align}
+
+(7) \textbf{Bonus} This problem is about \emph{tripartite entanglement}. Show that in a 3-qubit system, there are pure states that cannot be written in the following form:
+\begin{align}
+\dket{\psi}=\sum_{j=1}^2\lambda_{j}\dket{\alpha_j}_1\otimes\dket{\beta_j}_2\otimes\dket{\gamma_j}_3.
+\end{align}
+where $\{\alpha_j\},~\{\beta_j\},~\{\gamma_j\}$ are any complete basis for $\mathbb{C}^2$. Find one such state. 
+
+\subsection{Entanglement negativity}
+
+When we consider a mixed state $\rho_{AB}$ defined in a composite system $A\otimes B$, the entanglement entropy $S(\rho_A)$ should be replaced by the mutual information
+\begin{align}\label{mutual information}
+I(A:B)\equiv S(\rho_A)+S(\rho_B)-S(\rho_{AB})
+\end{align}
+Clearly it reduces to the entanglement entropy in the special case when $\rho_{AB}$ is a pure state.
+
+In a generic mixed state, the mutual information (\ref{mutual information}) is incapable of distinguishing classical correlation betweem $A$ and $B$ from the quantum entanglement. To capture bipartite quantum entanglement in a mixed state $\rho_{AB}$, we need to introduce new entanglement measures. One such quantity is (logarithmic) entanglement negativity:
+\begin{align}\label{log negativity}
+    E_{\mathcal{N}}(\rho_{AB})\equiv\log||\rho_{AB}^{T_A}||_1
+\end{align}
+where $T_A$ denotes a partial transpose on subsystem $A$. 
+
+The trace norm $||\cdot||_1$ for a density matrix $\rho$ is defined as
+\begin{align}
+    ||\rho||_1\equiv\text{Tr}\sqrt{\rho^\dagger\rho}=\sum_i|\lambda_i|
+\end{align}
+where $\{\lambda_i\}$ are the eigenvalues of density matrix $\rho$. 
+
+Obviously the logarithmic negativity $E_{\mathcal{N}}$ vanishes if all eigenvalues of $\rho_{AB}^{T_A}$ are non-negative.
+
+(1) Show that 
+\begin{align}
+    E_{\mathcal{N}}(\rho_{AB})=\log(1+2\sum_{\lambda_i<0}|\lambda_i|)
+\end{align}
+where $\{\lambda_i\}$ are all eigenvalues of matrix $\rho_{AB}^{T_A}$. 
+
+(2) Now consider a composite system of two qubits, one qubit in $A$ and one qubit in $B$. Show that for the Bell state $\dket{Bell_0}$ in this composite system, the logarithmic negativity is $\log2$. 
+
+(3) \textbf{Bonus} Next consider a mixed state, which is the equilibrium density matrix at inverse temperature $\beta=J/k_BT$ ($J$ is a constant of the dimension of energy)
+\begin{align}
+    \rho_{AB}\propto e^{-\beta Z_A\otimes Z_B}
+\end{align}
+where $\hat Z=\bpm1&0\\0&-1\epm$ is the 3rd Pauli matrix. Show that its logarithmic negativity (\ref{log negativity}) vanishes, while the mutual information (\ref{mutual information}) is nonzero. Plot its mutual information as a function of $\beta>0$. 
+
+ 
+
