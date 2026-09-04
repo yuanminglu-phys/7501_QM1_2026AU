@@ -113,22 +113,8 @@ Now consider a generic Hamiltonian
 \begin{align}
     \hat H=H_{0,0}\dket0\dbra0+\sum_{q\neq0}(H_{q,0}\dket{q}\dbra0+h.c.)+\sum_{p,q\neq0}H_{p,q}\dket{p}\dbra{q}
 \end{align}
-that governs the time evolution of the system. We used $h.c.$ as a shorthanded notation for ``hermitian conjugate''. 
+that governs the time evolution of the system. We used $h.c.$ as a shorthand notation for ``hermitian conjugate''. 
 
 \alert{TODO}
 
-\subsection{Appendix: Functions of operators/matrices}
-\label{app:function of matrices}
 
-A function $f(\hat M)$ of a square matrix $\hat M$ can be defined by the following Taylor expansion
-\begin{align}
-f(\hat M)=\sum_{n=0}^\infty\frac{\hat M^n}{n!}\frac{\text{d}^nf(x)}{\text{x}^n}|_{x=0}
-\end{align}
-if the Taylor expansion converges at $x=0$. In quantum mechanics we will mostly encounter square matrices that can be diagonalized, such as Hermitian and unitary matrices. For a diagonalizable matrix $\hat M$ with eigenkets $\{\dket{j}\}$ and eigenvalues $\{\lambda_j\}$, the matrix can be written as
-\begin{align}
-\hat M=\sum_j\lambda_j\dket{j}\dbra{j}
-\end{align}
-and a function of this diagonalizable matrix can be defined as
-\begin{align}
-f(\hat M)=\sum_jf(\lambda_j)\dket{j}\dbra{j}
-\end{align}
