@@ -311,13 +311,13 @@ INPUT ./s04_projective_measurements.tex
 INPUT ./s04_projective_measurements.tex
 INPUT ./s04_projective_measurements.tex
 INPUT s04_projective_measurements.tex
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./s05_unitary_evolution.tex
 INPUT ./s05_unitary_evolution.tex
 INPUT ./s05_unitary_evolution.tex
 INPUT ./s05_unitary_evolution.tex
 INPUT s05_unitary_evolution.tex
-INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
-INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./s06_tensor_product.tex
 INPUT ./s06_tensor_product.tex
 INPUT ./s06_tensor_product.tex

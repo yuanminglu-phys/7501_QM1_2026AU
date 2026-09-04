@@ -29,13 +29,21 @@ In part (1) and (2), we have dealt with a simplified version of the actual Davis
 \hat e_1=(-1,1,0)/\sqrt2,~~~\hat e_2=(-1,-1,2)/\sqrt6,~~~\hat e_1\times\hat e_2=(1,1,1)/\sqrt3.
 \end{align}
 In this two-dimensional lattice on (111) surface, the periodic pattern of Ni atoms are described by two primitive vectors 
-\begin{align}
+\begin{align}\label{hw1:primitive vectors}
 \vec a_1=\tilde a \hat e_1,~~~\vec a_2=\tilde a\frac{-\hat e_1+\sqrt3\hat e_2}2.
 \end{align}
 where $\tilde a$ is the distance $\tilde a$ between two nearest Ni atoms on its (111) surface. They are called primitive vectors in the sense that any lattice site position $\vec R$ in the 2d lattice is a summation of integer multiples of $\vec a_i$
 \begin{align}
 \vec R=\sum_{j=1}^2m_j\vec a_j,~~~m_j\in\mbz.
 \end{align}
+One can also define \emph{reciprocal lattice primitive vectors} $\vec b_{1,2}$ by the following conditions
+\begin{align}
+\vec a_i\cdot\vec b_j=2\pi\delta_{i,j}
+\end{align}
+Note that $\vec b_{1,2}$ are both perpendicular to (1,1,1) as well. 
+
+\textbf{For $\vec a_{1,2}$ defined in (\ref{hw1:primitive vectors}), express $\vec b_{1,2}$ using $\tilde a$ and $\hat e_{1,2}$.}\\
+
 Most generally, the Bragg condition for diffraction peaks is given by
 \begin{align}\label{bragg condition}
 \sum_{\vec R}e^{\imth\vec q\cdot\vec R}\neq0\Longleftrightarrow\vec q\cdot\vec a_j=0\mod2\pi,~~~\forall~j=1,2.
@@ -44,15 +52,10 @@ where $\vec q$ is the in-plane component of electron momentum transfer before an
 \begin{align}\label{inplane mtm transfer}
 \vec q\equiv(\vec k_\text{out}-\vec k_\text{in})-\frac{(1,1,1)}3(\vec k_\text{out}-\vec k_\text{in})\cdot(1,1,1).
 \end{align}
-In later lectures we will come back to (\ref{bragg condition}) when discussing Fourier transform as a change of basis (i.e. a unitary transformation). From (\ref{bragg condition}), show that
+In later lectures we will come back to (\ref{bragg condition}) when discussing Fourier transform as a change of basis (i.e. a unitary transformation). \textbf{From (\ref{bragg condition}), show that
 \begin{align}\label{bragg peaks}
 &\vec q=\sum_{j=1}^2n_j\vec b_j,~~~n_j\in\mbz
-\end{align}
-and where the \emph{reciprocal lattice primitive vectors} $\vec b_{1,2}$ are defined by the following conditions
-\begin{align}
-\vec a_i\cdot\vec b_j=2\pi\delta_{i,j}
-\end{align}
-Note that $\vec b_{1,2}$ are both perpendicular to (1,1,1) as well. Express $\vec b_{1,2}$ using $\tilde a$ and $\hat e_{1,2}$.
+\end{align}}
 
 (5) In the Davisson-Germer experiment, the incident momentum $\vec k_\text{in}$ is perpendicular to the (111) surface i.e. $\vec k_i=\frac{2\pi}{\lambda}(1,1,1)/\sqrt{3}$ where $\lambda$ is the wavelength of electrons with a kinetic energy of 54 eV. For elastic scatterings responsible for the diffraction pattern, we have 
 \begin{align}\label{elastic scattering}
