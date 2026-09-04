@@ -76,9 +76,6 @@ In the diagonal basis (\ref{ensemble of state}) of density matrix $\hat \rho$, i
 \end{thm}
 
 
-
-
-
 As a simplest example of Schmidt decomposition, we consider a single-qubit physical system $A$ and a single-qubit environment $B$, where a pure state of the combined closed system has the following general form:
 \begin{align}
 \dket{\psi}=\alpha\dket{00}+\beta\dket{01}+\gamma\dket{10}+\delta\dket{11}
@@ -92,3 +89,13 @@ In this case we have the matrix $\psi_{a,b}$ as
 \hat\psi=\bpm \alpha&\beta\\ \gamma&\delta\epm
 \end{align}
 for the SVD procedure.  
+
+Similar to the case of pure states, in a composite system $\mathbb{V}_1\otimes\mathbb{V}_2$, one can also define a \emph{product state} for generic mixed states:
+\begin{align}
+    \rho_\text{product}=\rho_1\otimes\rho_2
+\end{align}
+and a \emph{separate state}:
+\begin{align}
+    \rho_\text{separable}=\sum_i p_i\rho_{1,i}\otimes\rho_{2,i},~~~\sum_ip_i=1.
+\end{align}
+A product state features vanishing mutual information (see next section) between subsystems 1 and 2, while a separable state features vanishing quantum entanglement (e.g. in terms of entanglement negativity, see HW4) between sysbsystems 1 and 2. 

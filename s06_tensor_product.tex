@@ -32,6 +32,12 @@ i=(i_1-1)n+i_2,~~~j=(j_1-1)n+j_2.
 \end{align}
 More properties of tensor product can be found in \nielsen~section 2.1.7.
 
+A \emph{product state} in a composite system $\mathbb{V}_1\otimes\mathbb{V}_2$ is defined as
+\begin{align}
+    \dket\psi_{12}=\dket{\psi_1}\otimes\dket{\psi_2}
+\end{align}
+It has NO quantum entanglement between subsystems 1 and 2. 
+
 \begin{table}[t]
 \centering
 \begin{tabular}{|c||c|c|c|}
@@ -65,7 +71,7 @@ as a demonstration. Due to a conserved quantity $Z_1\otimes Z_2$ that commutes w
 
 A good set of examples of unitary operators in a composite system are 2-qubit and 3-qubit quantum gates, shown in Table \ref{tab:2-qubit gate} and \ref{tab:3-qubit gate} respectively, such as a controlled-$U$ gate in the 2-qubit system.
 
-\subsection{Generalized measurements}
+\subsection{Generalized measurements}\label{sec:generalized measurements}
 
 Composite systems play an important role in understanding general measurements in quantum mechanics, where we consider the measured system (Hilbert space $\mathbb{V}_s$) and an ancilla (Hilbert space $\mathbb{V}_a$) together as a composite quantum system, whose Hilbert space is the tensor product $\mathbb{V}_s\otimes\mathbb{V}_a$.
 
@@ -91,11 +97,11 @@ The probability for measurement outcome $q$ is given by
 \begin{align}\label{probability:generalized measurements}
     \text{Pr}(q)=\text{Tr}(M_q\dket{\psi}_s\dbra{\psi}_sM_q^\dagger)=\expval{\psi|M_q^\dagger M_q|\psi}
 \end{align}
-Clearly, the completeness relation (\ref{completeness:Kraus operators}) for the Kraus operators $\{M_q\}$ guaranties the normalization of probability distribution:
+Clearly, the completeness relation (\ref{completeness:Kraus operators}) for operators $\{M_q\}$ guarantees the normalization of probability distribution:
 \begin{align}
     \sum_q\text{Pr}(q)=1.
 \end{align}
-Examining this measurement from the system's viewpoint while disregarding the ancilla, for measurement outcome $q$, initial state $\dket\psi$ becomes $M_q\dket{\psi}$, with a probability $\text{Pr}(q)$ given in (\ref{probability:generalized measurements}). This is known as a generalized measurement. 
+If we disregard the ancilla and examine this measurement from the viewpoint of the system, for measurement outcome $q$, initial state $\dket\psi$ becomes $M_q\dket{\psi}$, with a probability $\text{Pr}(q)$ given in (\ref{probability:generalized measurements}). This is known as a generalized measurement. 
 
 If the Kraus operator $M_q$ is very close to identity matrix $\hat 1_s$
 \begin{align}
@@ -105,4 +111,4 @@ such a generalized measurement is known as a weak measurement because the measur
 \begin{align}
     \Big|\dket{\psi}-{M_q\dket\psi}\Big|\ll1
 \end{align}
-This is the case when $\dket{\phi}=\dket{q}$ and the evolution time $t$ is much smaller than any energy scale in Hamiltonian $\hat H$. 
+This is the case when initial state $\dket{\phi}=\dket{q}$ and the evolution time $t$ is much smaller than any energy scale in Hamiltonian $\hat H$. 

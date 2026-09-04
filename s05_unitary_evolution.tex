@@ -13,7 +13,7 @@ In addition to Postulates \ref{postulate 1} and \ref{postulate 3:projective meas
 
 Postulate \ref{postulate 2} states that the state vector associated with a closed quantum system evolves following the Schrodinger equation (\ref{schrodinger eq}). This postulate can be states in an equivalent manner:
 
-\textbf{Postulate 3b.} \emph{The evolution of a closed quantum system is described by a unitary transformation. That is, the state $\dket{\psi(t_2)}$ of the system at time $t_2$ is related to the state $\dket{\psi(t_1))}$ at time $t_1$ by a unitary operator $U$ which only depends on the times $t_1$ and $t_2$:}
+\textbf{Postulate 3a} \emph{The evolution of a closed quantum system is described by a unitary transformation. That is, the state $\dket{\psi(t_2)}$ of the system at time $t_2$ is related to the state $\dket{\psi(t_1))}$ at time $t_1$ by a unitary operator $U$ which only depends on the times $t_1$ and $t_2$:}
 \begin{align}
 \dket{\psi(t_2)}=U(t_1,t_2)\dket{\psi(t_1)},~~~U(t_1,t_2)=e^{-\imth(t_2-t_1)\hat H/\hbar}
 \end{align}
@@ -80,7 +80,42 @@ The transition probability is the modulus square of the \emph{propagator}
 \begin{align}
     G(i,f:t)\equiv\expval{f|e^{-\imth\hat Ht/\hbar}|i}
 \end{align}
-which plays very important conceptual and computational roles in quantum mechanics. We will learn more about the propagator in HW3.  
+which plays very important conceptual and computational roles in quantum mechanics. We will learn more about the propagator in HW3. 
+
+\subsection{Schrodinger vs. Heisenberg pictures}
+
+Regarding the time dependence of physical observables, such as the expectation value of a Hermitian operator $\hat O$ at time $t$, there are two equivalent ways to approach this problem. 
+
+In the Schrodinger picture, where the state vector $\dket{\psi}$ evolves with time while the operator $\hat O$ remains a constant:
+\begin{align}
+    \dket{\psi_S(t)}=\hat U(t,0)\dket{\psi_0},~~~\hat O_S(t)=\hat O
+\end{align}
+In the Heisenberg picture, on the other hand, the state vector remains a constant while the operator evolves with time:
+\begin{align}
+    \dket{\psi_H(t)}=\dket{\psi_0},~~~\hat O_H(t)=\hat U^\dagger(t,0)\hat O\hat U(t,0)
+\end{align}
+It is straightforward to show that both pictures yield the same physical observable
+\begin{align}
+    \expval{O(t)}=\expval{\psi_S(t)|\hat O_S(t)|\psi_S(t)}=\expval{\psi_H(t)|\hat O_H(t)|\psi_H(t)}=\expval{\psi_0|\hat U^\dagger(t,0)\hat O\hat U(t,0)|\psi_0}
+\end{align}
+
+In general, it is more convenient to use the Heisenberg picture to compute expectation values of an observable, while the Schrodinger picture is more convenient to extract time dependence of the state vector and its related properties, such as entanglement entropy.
+
+\subsection{Quantum Zeno effect}
+
+Consider a quantum system under repeated measurements of a physical observable $\hat O$ with the following spectral decomposition:
+\begin{align}
+    \hat O=\sum_q q~\dket{q}\dbra{q}
+\end{align}
+Without loss of generality, let's assume the initial state of the system is $\hat O$ eigenstate $\dket{0}$ with eigenvalue $q_0$. 
+
+Now consider a generic Hamiltonian
+\begin{align}
+    \hat H=H_{0,0}\dket0\dbra0+\sum_{q\neq0}(H_{q,0}\dket{q}\dbra0+h.c.)+\sum_{p,q\neq0}H_{p,q}\dket{p}\dbra{q}
+\end{align}
+that governs the time evolution of the system. We used $h.c.$ as a shorthanded notation for ``hermitian conjugate''. 
+
+\alert{TODO}
 
 \subsection{Appendix: Functions of operators/matrices}
 \label{app:function of matrices}

@@ -1,0 +1,84 @@
+\section{Generalized measurements and decoherence}
+
+\referto{\nielsen~2.2.6, 2.4.2, 8.2; \tong~16.4; \anastopolous~8.2}
+
+\subsection{Generalized measurements on a mixed state}
+
+Consider the product state $\rho_s\otimes\rho_a$ as the initial state of a composite system $\mathbb{V}_s\otimes\mathbb{V}_a$, consisting of a physical system $s$ unentangled with the experimental apparatus $a$. We assume the apparatus density matrix $\rho_a$ has the following spectral decomposition:
+\begin{align}
+    \rho_a=\sum_jp_j\dket{j}_a\dbra{j}_a,~~~\sum_jp_j=1,~0<p_j\leq1.
+\end{align}
+where $\{\dket{j}_e\}$ is a complete set of orthonormal basis for the apparatus Hilbert space $\mathbb{V}_e$. 
+
+The system and apparatus evolve together under a unitary operator $\hat U$, before a projective measurement is performed for an observable (i.e. Hermitian operator) on the apparatus Hilbert space
+\begin{align}
+    \hat O=\hat 1_s\otimes(\sum_qq~\dket{q}_a\dbra{q}_a)
+\end{align}
+It's straightforward to show that for measurement outcome $q$, the initial state $\rho_s$ of the physical system collapses into the following (unnormalized) state
+\begin{align}
+    \rho_q\propto M_{q,j}\rho_sM^\dagger_{q,j}
+\end{align}
+with a probability distribution
+\begin{align}
+    \text{Pr}(q)=\sum_j\text{Tr}(M_{q,j}\rho_sM^\dagger_{q,j})
+\end{align}
+where the measurement operators $\{M_{q,j}\}$ are defined as
+\begin{align}
+    M_{q,j}\equiv\expval{q|\hat U|j}\sqrt{p_j}
+\end{align}
+satisfying the completeness relation
+\begin{align}
+    \sum_{q,j}M^\dagger_{q,j}M_{q,j}=\hat1_s
+\end{align}
+The above discussion is completely in parallel to section \ref{sec:generalized measurements}, merely generalizing everything to the context of mixed states. Therefore we can formulate the measurement postulate of quantum mechanics for density matrices:
+
+\textbf{Postulate 2b}: A \emph{generalized quantum measurement} is described by a collection $\{M_m\}$ of measurement operators satisfying the completeness relation:
+\begin{align}
+    \sum_m M_m^\dagger M_m=\hat 1.
+    \end{align}
+If the state of the quantum system is $\rho$ immediately before the measurements, then the probability that result $m$ occurs is given by
+    \begin{align}
+    p(m)=\text{Tr}(\rho M_m^\dagger M_m)
+    \end{align}
+    and the (unnormalized) state of the system after the measurement is $\rho_m\propto M_m\rho M_m^\dagger$. 
+
+\subsection{Examples of generalized measurements}
+
+\subsection{Measurements induce decoherence}
+
+
+In its eigenbasis $\{\dket{j}|1\leq j\leq\text{dim}\mathbb{V}\}$, a mixed state (\ref{ensemble of state}) is an ensemble of pure states $\{\dket{j}\}$
+\begin{align}\label{mixed state}
+\hat\rho=\sum_{j}p_j\dket{j}\dbra{j},~~~\sum_jp_j=1.
+\end{align}
+while a generic pure state in the same physical system can be written as a (normalized) superposition of the basis vectors $\{\dket{j}\}$:
+\begin{align}\label{pure state}
+\dket{\psi}=\sum_j\psi_j\dket{j},~~~\sum_j|\psi_j|^2=1.
+\end{align}
+But there is a big difference between the (``incoherent'') ensemble summation in the mixed state (\ref{mixed state}) and the (``coherent'') superposition in the pure state (\ref{pure state}), in the sense that the pure state contains more information in the relative phases of coefficients $\psi_j$ that can be measured experimentally. To make it clear, we use the normalization condition in (\ref{pure state}) to define the probability distribution $p_j\equiv|\psi_j|^2$, and the normalized pure state can be rewritten as
+\begin{align}\label{pure state:normalized}
+\dket{\psi}=\sum_j\sqrt{p_j}e^{\imth\phi_j}\dket{j},~~~\sum_jp_j=1.
+\end{align}
+While the global phase factor is a redundancy with no physical significance, there are $(\text{dim}\mathbb{V}-1)$ relative phases that can be detected by physical observables. 
+
+To illustrate, consider a single qubit example, where we use $(\hat X,\hat Y,\hat Z)$ to label the 3 Pauli matrices. We consider a mixed state $\hat\rho$ and a pure state $\psi$, both having $1/2$ probability for either $Z=+1$ or $Z=-1$. In the computational basis $\dket{0}\equiv\dket{\uparrow},~\dket{1}\equiv\dket{\downarrow}$ that diagonalizes $\hat Z$, the mixed state is written as
+\begin{align}
+\hat\rho=\frac12(\dket{0}\dbra{0}+\dket{1}\dbra{1})=\frac12\bpm1&0\\0&1\epm
+\end{align}
+and the pure state as
+\begin{align}
+\dket{\psi}=\frac1{\sqrt2}(\dket{0}+e^{\imth\phi}\dket{1})=\frac1{\sqrt2}\bpm1\\e^{\imth\phi}\epm
+\end{align}
+If we now measure another observable $\hat X$ for both states, we end up with different expectation values:
+\begin{align}
+\trace(\hat\rho\hat X)=0,~~~\expval{\psi|\hat X|\psi}=\cos\phi.
+\end{align}
+exactly rooted in the relative phases and associated quantum inteferences in the pure state.
+
+As a result, the reduction from a pure state (\ref{pure state:normalized}) to a mixed state (\ref{mixed state}) is a process of decoherence, i.e. a reduction of quantum interference. This can be achieved by a projective measurement (see postulate \ref{postulate 3:projective measurements}), where the measurement outcome is unknown. Consider the implementation of a measurement for physical observable diagonal in basis $\{\dket{j}\}$
+\begin{align}
+\hat O\equiv\sum_j O_j\dket{j}\dbra{j}
+\end{align}
+on the pure state (\ref{pure state:normalized}), If we don't know the outcome, after a projective measurement, we should view the resulting state as a summation of projector $\dket{j}\dbra{j}$ weighted by probability $p_j=|\expval{j|\psi}|^2$, and hence we end up with the mixed state (\ref{mixed state}). This means a quantum measurement will generally decohere a quantum state, even if we don't know the measurement outcome. This is in sharp contrast to a classical system. 
+
+
