@@ -344,6 +344,11 @@ INPUT ./s09_generalized_measurements_decoherence.tex
 INPUT ./s09_generalized_measurements_decoherence.tex
 INPUT ./s09_generalized_measurements_decoherence.tex
 INPUT s09_generalized_measurements_decoherence.tex
+INPUT ./s10_open_system_evolution.tex
+INPUT ./s10_open_system_evolution.tex
+INPUT ./s10_open_system_evolution.tex
+INPUT ./s10_open_system_evolution.tex
+INPUT s10_open_system_evolution.tex
 INPUT ./app00_homeworks.tex
 INPUT ./app00_homeworks.tex
 OUTPUT app00_homeworks.aux
