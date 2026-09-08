@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  8 SEP 2026 17:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  8 SEP 2026 17:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -877,15 +877,18 @@ chapter 2.
 ] [36] [37])
 (./s10_open_system_evolution.tex [38] [39
 
-] [40] [41] [42])) [43
+] [40]
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+ [41]
+[42])) [43
 
 ]
 \openout2 = `app00_homeworks.aux'.
 
-
-(./app00_homeworks.tex (./app01_hw1.tex
+ (./app00_homeworks.tex (./app01_hw1.tex
 chapter A.
-<figures/Bragg law.png, id=727, 1487.5575pt x 856.19875pt>
+<figures/Bragg law.png, id=730, 1487.5575pt x 856.19875pt>
 File: figures/Bragg law.png Graphic file (type png)
 <use figures/Bragg law.png>
 Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
@@ -982,8 +985,8 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20099 strings out of 467168
- 350350 string characters out of 5411585
+ 20100 strings out of 467168
+ 350363 string characters out of 5411585
  956100 words of memory out of 5000000
  48322 multiletter control sequences out of 15000+600000
  654477 words of font info for 230 fonts, out of 8000000 for 9000
@@ -1009,10 +1012,10 @@ ive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (67 pages, 1280991 bytes).
+Output written on 7501_notes.pdf (67 pages, 1281858 bytes).
 PDF statistics:
- 1334 PDF objects out of 1440 (max. 8388607)
- 1193 compressed objects within 12 object streams
- 466 named destinations out of 1000 (max. 500000)
+ 1337 PDF objects out of 1440 (max. 8388607)
+ 1196 compressed objects within 12 object streams
+ 467 named destinations out of 1000 (max. 500000)
  51731 words of extra memory for PDF output out of 61914 (max. 10000000)
 
