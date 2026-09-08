@@ -1,0 +1,124 @@
+\chapter{Homework 6 (Due 10/14)}
+
+\subsection{Position and momentum operators on a discrete periodic chain}
+
+During the lecture, we showed that the position-space basis $\{\dket{x}\}$ and momentum-space basis $\{\dket{p}\}$ in the continuum can be approached as the limit of a one-dimensional periodic ring of $L$ lattice sites $\{\dket{n}\equiv\dket{n+L}|1\leq n\leq L\}$, where two neighboring sites are separated by a lattice constant $a$. The unitary translation operator (it's easy to check $\hat T_x^\dagger\hat T_x=\hat1$)
+\begin{align}\label{momentum:finite L}
+\hat T_x=\sum_{n=1}^{L}\dket{(n\mod L)+1}\dbra{n}=e^{-\imth a\hat p/\hbar}
+\end{align}
+allows us to define the unitary momentum operator $\hat p$, and the position operator is given by
+\begin{align}\label{position:finite L}
+\hat x=\sum_{n=1}^{L}(n-\frac{L}2)a\dket{n}\dbra{n}
+\end{align}
+where $a$ labels the lattice constant. In lectures we claimed that in the simultaneous limits of $a\rightarrow0^+$ and $La\rightarrow\infty$, they correspond to the position and momentum operators in the continuum. In this problem, we consider them in a finite chain for a finite positive integer $L$. 
+
+(1) \textbf{Bonus} Find all eigenvalues and their associated eigenstates of the translation operator $\hat T_x$ for a finite $L\in\mbz_+$.
+
+Hint: there should be $L$ eigenstates for a $L\times L$ unitary operator. These are also eigenstates of momentum operator $\hat p$. 
+
+%(2) Can you write down the matrix representation of the momentum operator $\hat p$ in the eigenbasis of translation operator $\hat T_x$?
+
+%Hint: it should be a diagonal matrix since $\hat T_x=e^{-\imth a\hat p/\hbar}$. There is in fact an ambiguity in choosing the eigenvalues of $\hat p$ operator in (\ref{momentum:finite L}):
+%\begin{align}
+%p\simeq p+\frac{2\pi\hbar}{a}
+%\end{align}
+%but we can always choose the $\hat p$ eigenvalues to be in the following range to fix the ambiguity:
+%\begin{align}
+%-\frac{\pi\hbar}{a}\leq p<\frac{\pi\hbar}{a}
+%\end{align}
+
+
+(2) \textbf{Bonus} In lectures, we used the fact that $[\hat x,\hat T_x]=a\hat T_x$ to derive the commutation relation $[\hat x,\hat p]=\imth\hbar\hat1$. But we know that in a finite-dimensional Hilbert space, it is impossible for the commutator of two linear operators to be a nonzero constant matrix. Here we will investigate what really happens in a finite-dimensional space, which is $\mathbb{C}^L$ here. 
+
+Compute the commutator $[\hat x,\hat T_x]$ of the position and translation operators defined in (\ref{position:finite L}) and (\ref{momentum:finite L}), in the complete orthonormal basis of $\{\dket{n}\}$. Show that it is almost the same as $a\hat T_x$, except for one matrix element. 
+
+
+(3) \textbf{Bonus} For an arbitrary momentum eigenstate (you can choose any one of the $L$ eigenstates of $\hat T_x$), compute the variance of the position operator:
+\begin{align}
+(\Delta x)^2\equiv\expval{\hat x^2}-\expval{\hat x}^2
+\end{align}
+How does the variance increase with $L$ in the limit of $L\rightarrow\infty$?
+
+\subsection{Dirac delta function}
+
+(1) In lectures we learnt that the Dirac delta function is given by
+\begin{align}
+\delta(x)=\frac1{{2\pi}}\int\text{d}p~e^{\imth px}
+\end{align}
+However, this integral does not converge since the integrand $e^{\imth px}$ does not vanish at infinity. To regulate this integral, and to define Dirac delta function more rigorously, we define
+\begin{align}
+\delta(x)=\lim_{\lambda\rightarrow0^+}\int\frac{\text{d}p}{{2\pi}}e^{\imth px-\lambda p^2}
+\end{align}
+Carry out this integral to show that
+\begin{align}\label{dirac delta:def}
+\delta(x)=\lim_{\lambda\rightarrow0^+}\frac{e^{-x^2/4\lambda}}{\sqrt{4\pi\lambda}}
+\end{align}
+
+(2) Show that the above definition (\ref{dirac delta:def}) satisfies the properties of Dirac delta functions:
+\begin{align}\label{dirac delta:parity}
+&\delta(x)=\delta(-x),\\
+&\delta(x\neq0)=0,\\
+&\int\text{d}x~\delta(x)=1.\label{dirac delta:integral}
+\end{align}
+
+(3) Prove the following property of the delta function:
+\begin{align}
+\delta(ax)=\delta(x)/|a|
+\end{align}
+
+Hint: consider the property (\ref{dirac delta:integral}) of Dirac delta functions.  
+
+(4) Prove another property of the delta function:
+\begin{align}
+\delta\big[f(x)\big]=\sum_i\frac{\delta(x-x_i)}{|\text{d}f/\text{d}x|_{x=x_i}}
+\end{align}
+where $x_i$ are the zeros of $f(x)$.
+
+%Hint: Where does $\delta\big[f(x)\big]$ blow up? Expand $f(x)$ near such points in a Taylor series, keeping the first nonzero term. 
+
+
+\subsection{Inversion symmetry in one dimension}
+
+(1) For a one-dimensional quantum mechanics problem, consider the following unitary operator $\hat U$:
+\begin{align}
+\hat U=\int\text{d}x\dket{-x}\dbra{x}
+\end{align}
+Show that $\hat U$ is a unitary operator first. 
+
+(2) How does operator $\hat U$ act on the momentum-space basis? Using Fourier transform to show that
+\begin{align}
+\hat U\dket{p}=\dket{-p}
+\end{align}
+$\hat U$ is known as the inversion symmetry operator. 
+
+(3) Consider a bound state $\dket{\psi}$, which is also an eigenstate of a Hamiltonian
+\begin{align}\label{ham:1d particle}
+\hat H=\frac{\hat p^2}{2m}+V(\hat x)
+\end{align}
+satisfying $V(x)=V(-x)$. Show that 
+\begin{align}
+\expval{\psi|\hat x|\psi}=\expval{\psi|\hat p|\psi}=0
+\end{align}
+
+\subsection{Double delta function potential}
+
+Because the inversion symmetry operator $\hat U$ commutes with the Hamiltonian, each energy eigenstate must also be an eigenstate of inversion operator $\hat U$. Consider the Hamiltonian (\ref{ham:1d particle}) with the following attractive potential
+\begin{align}
+V(x)=-V_0~\delta(x-x_0)-V_0~\delta(x+x_0)
+\end{align}
+where both $V_0$ and $x_0$ are positive constants. 
+
+(1) Write down the form of the bound state wavefunction in the three regions:
+
+\[
+  (i)~x<-x_0, 
+  \qquad
+  (ii)~-x_0<x<x_0 
+  \qquad (iii)~x>x_0
+\]
+
+(2) Write down the boundary condition equations at $x=\pm x_0$, to continuously connect the wavefunctions of the 3 regions. 
+
+(3) Solve for the wavefunction of an energy eigenstate with a negative energy $E<0$. What is the inversion eigenvalue of this state?
+
+Hint: recall that the energies of bound states are discrete. It won't be surprising if your results depend on the energy $E$ and parameters $V_0,x_0$.
