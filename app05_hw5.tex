@@ -1,0 +1,112 @@
+\chapter{Homework 5 (due 10/2)}
+
+
+\subsection{Revisiting the quantum Zeno effect}
+
+We will now revisit the quantum Zeno effect in the lens of generalized measurements. Consider an initial state of a single qubit 
+\begin{align}\label{quantum zeno:initial state}
+\hat{\rho}_0=\dket{+}\dbra{+},~~~\dket{+}=\frac{\dket{0}+\dket{1}}{\sqrt2}
+\end{align}
+evolving under the following Hamiltonian
+\begin{align}
+\hat H=-\mu_BB\hat Z,~~~T=\frac{\pi m_e}{eB}
+\end{align}
+where $\mu_B=\hbar e/2m_e$ is the Bohr magneton. After a small period $\Delta t=T/n$ of unitary time evolution, we carry out a projective measurement on Pauli matrix $\hat X$. Recall that while $\dket{0},\dket{1}$ are eigenstates of Pauli $\hat Z$ operator, $\dket{\pm}$ are eigenstates of $\hat X$.  
+
+(1) As we have learnt in the lecture notes, the 2-step procedure, of unitary time evolution for $\Delta t=T/n$ followed by a projective measurement on $\hat X$, can be described by a generalized measurement. Compute the measurement operators $\{\hat M_m|m=\pm\}$ as $2\times2$ matrices, and show that they satisfy the completeness relation
+\begin{align}
+\sum_{m=\pm}\hat M^\dagger_m\hat M_m=\hat1. 
+\end{align}
+
+(2) In the generalized measurement discussed above, if we do not know the measurement outcomes, the density matrix after the measurement is given by the action of a quantum channel $\mathcal{E}$, which is characterized by measurement operators $\{\hat M_m\}$:
+\begin{align}\label{quantum zeno:quantum channel}
+\mathcal{E}[\hat\rho]\equiv\sum_m\hat M_m\hat\rho\hat M_m^\dagger
+\end{align}
+In the discussion of quantum Zeno effect, such a generalized measurement (without knowing measurement outcomes) was performed $n$ times. Starting from the initial density matrix $\hat\rho_0$ in (\ref{quantum zeno:initial state}), what is the final density matrix $\mathcal{E}^n[\rho_0]$ after $n$ such operation? 
+
+Hint: any single-qubit density matrix can be expressed in terms of the Bloch ball:
+\begin{align}
+\hat\rho=\frac{\hat 1+\vec r\cdot\vec\sigma}2,~~~|\vec r|\leq1.
+\end{align}
+How does the vector $\vec r$ transform under the quantum channel (\ref{quantum zeno:quantum channel})?
+
+(3) Using the above results, compute the probability at time $T$ (after $n$ such 2-step procedures) to produce the measurement outcome of $\sigma_x=+1$. 
+
+Comment: recall that we have obtained this probability in HW2. You should compare your results here to HW2.  
+
+\subsection{Measurements}
+
+(1) \textbf{Bonus: distinguishing states by POVM measurements} \nielsen~Exercise 2.64. 
+
+(2) Let $\dket{\psi=a\dket{0}+b\dket{1}}$ be any single-qubit quantum state. Suppose we receive one of the four states $\dket\psi,~\hat X\dket\psi,~\hat Y\dket\psi,~\hat Z\dket\psi$ with equal prior probabilities of 1/4, where $(\hat X,\hat Y,\hat Z)$ are the three Pauli matrices. This is known as Pauli-twirling. Show that the density matrix received by us is exactly $\hat\rho=\frac12\hat1$. 
+
+Comment: for such a single-qubit mixed state with $\hat\rho=\frac12\hat1$, the outcome for any projective measurement $\hat P$ has a probability of one half, thus the received state contains no information at all about the identity of $\dket\psi$. This is Problem 4 in Chapter 16 exercises of \tong. 
+
+
+
+\subsection{Quantum channels}
+
+(1) \textbf{Bonus} Consider an open quantum system $A$ interacting with its environment $B$. In the lectures, we have shown that for an initial state of $\rho_A\otimes\dket{0}\dbra{0}_B$ where $\dket{0}$ is a pure state in $B$, the time evolution for system $A$ is given by a quantum channel $\varepsilon$, which is specified by a set of Kraus operators $\{\hat M_k\}$ satisfying the completeness relation 
+\begin{align}
+\sum_k\hat M_k^\dagger\hat M_k=\hat 1_A.
+\end{align}
+Show that this is still true if we consider the initial state to be a product state $\rho_A\otimes\rho_B$, where $\rho_B$ is an arbitrary density matrix in $B$.
+
+Hint: you will need to find the set of Kraus operators satisfying the completeness relation in this case. It is convenient to work in the eigenbasis of $\rho_B$.  
+ 
+(2) \nielsen~Exercise 8.15
+
+%(3) \nielsen~Exercise 8.18
+
+(3) \textbf{Bonus: generalized depolarizing channel} \nielsen~Exercise 8.19
+
+%(5) \nielsen~Exercise 8.28
+
+
+
+
+\subsection{The master equation}
+
+\subsubsection{Phase damping}
+
+Time evolution of a single-qubit open system under the phase damping quantum channel $\varepsilon_z$ is given by:
+\begin{align}
+\hat\rho=\bpm\rho_{11}&\rho_{12}\\ \rho_{21}&\rho_{22}\epm\rightarrow\varepsilon_z[\hat\rho]=(1-p)\hat\rho+p\hat Z\hat\rho \hat Z=\bpm\rho_{11}&(1-2p)\rho_{12}\\ (1-2p)\rho_{21}&\rho_{22}\epm
+\end{align}
+where $p$ is the probability of error. For the time evolution by a small time $\Delta t$, the error probability is given by
+\begin{align}
+2p=\Gamma\Delta t
+\end{align}
+where $\Gamma$ is the rate of error. 
+
+(1) Derive the differential equation 
+\begin{align}
+\frac{\text{d}\rho}{\text{d}t}=\lim_{\Delta t\rightarrow0^+}\frac{\varepsilon_z[\rho]-\rho(t=0)}{\Delta t}
+\end{align}
+and solve it. Obtain the form of $\rho(t)$ for a given initial state $\hat\rho(t=0)=\bpm\rho_{11}&\rho_{12}\\ \rho_{21}&\rho_{22}\epm$. 
+
+(2) Write the differential equation in part (1) into the form of a master equation. Find the Hamiltonian $\hat H$ and the Lindblad operators $\{\hat L_k\}$ in the master equation. 
+
+
+\subsubsection{Amplitude damping}
+
+(1) Solve the following master equation for a 1-qubit density matrix $\rho(t)$, with a single Lindblad operator $L=\sqrt{\lambda}\sigma_-\equiv\sqrt{\lambda}(\hat X-\imth\hat Y)/2=\sqrt{\lambda}\bpm0&0\\1&0\epm$:
+\begin{align}
+\frac{\text{d}\rho}{\text{d}t}=\lambda\sigma_-\rho\sigma_+-\frac\lambda2\{\rho,\sigma_+\sigma_-\}
+\end{align}
+where $\sigma_+=(\hat X+\imth\hat Y)/2=\bpm0&1\\0&0\epm$. Express $\rho(t)$ as a function of the initial density matrix
+\begin{align}\label{amplitude damping:initial state}
+\rho(t=0)=\bpm\rho_{11}&\rho_{12}\\ \rho_{21}&\rho_{22}\epm
+\end{align}
+
+Comment: this master equation describes the amplitude damping of a 1-qubit system. 
+
+(2) Consider the time evolution of a 1-qubit system by an amplitude-damping quantum channel $\varepsilon_p$ with the following set of Kraus operators:
+\begin{align}
+\hat M_0=\bpm\sqrt{1-p}&0\\0&1\epm,~~~\hat M_1=\bpm0&0\\ \sqrt p&0\epm
+\end{align}
+For the same initial state (\ref{amplitude damping:initial state}), obtain the final density matrix $\rho(p)=\varepsilon_p[\rho(t=0)]$ after the action of the quantum channel, as a function of the amplitude-damping probability $p$. Compare it with the previous problem, and obtain the relation between $p$ in this problem, and $t$ in the previous problem. 
+
+\subsubsection{Amplitude + phase dampings}
+
+\nielsen~Exercise 8.30. There is a typo in \nielsen~for this problem: you need to show that $T_2=2T_1$ for amplitude damping only, and $T_2\leq 2T_1$ for both amplitude and phase dampings. 
