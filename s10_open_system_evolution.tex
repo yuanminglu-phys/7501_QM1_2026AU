@@ -1,5 +1,6 @@
 \section{Time evolution of open quantum systems (9/25)}
 
+\referto{\tong~16.5.1-16.5.3, \nielsen~8.3}
 
 For a closed quantum system, its unitary time evolution can be easily reformulated using density matrices:
 \begin{align}
@@ -8,7 +9,7 @@ For a closed quantum system, its unitary time evolution can be easily reformulat
  \imth\hbar\frac{\dif\rho}{\dif t}&=[H,\rho], &
  \rho(t)&=U(t,0)\rho(0)U^\dagger(t,0).
 \end{align}
-However this is not the most general time evolution for a mixed state, as we will show below. 
+However this is not the most general time evolution for a mixed state $\rho(t)$, as we will show below. 
 
 \subsection{Quantum channels and Kraus operators}
 
@@ -60,7 +61,11 @@ positivity means that for every auxiliary system $B$,
 \begin{equation}
  (\ce_A\otimes\mathcal I_B)(\rho_{AB})\geq0
 \end{equation}
-whenever $\rho_{AB}\geq0$. A Kraus representation is not unique.
+whenever $\rho_{AB}\geq0$. A Kraus representation is not unique: two sets of Kraus operators $\{M_i\}$ and $\{N_j\}$ represent the same quantum channel if and only if they are related by a unitary matrix $u_{i,j}$:
+\begin{align}
+    M_i=\sum_ju_{i,j}N_j,~~~u^\dagger u=\hat1.
+\end{align}
+
 
 \subsubsection{Example: a bit-flip channel}
 For two qubits with
