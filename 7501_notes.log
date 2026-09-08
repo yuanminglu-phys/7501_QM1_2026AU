@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  8 SEP 2026 03:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  8 SEP 2026 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -246,6 +246,16 @@ Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 ))
 Class scrbook Info: amsthm's \deferred@thm@head patched.
 
+(/opt/texlive/texdir/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
 (/opt/texlive/texdir/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip72
@@ -275,7 +285,7 @@ File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/esint/esint.sty
 Package: esint 
-\symlargesymbolsA=\mathgroup6
+\symlargesymbolsA=\mathgroup9
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
@@ -523,7 +533,36 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip82
 )
-\c@thm=\count321
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+\MT@toks=\toks32
+\MT@tempbox=\box59
+\MT@count=\count321
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks33
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen183
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count322
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip83
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+\c@thm=\count323
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
 (scrbook)           because of handling of possible bookmark level gaps.
@@ -531,61 +570,61 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 101.
+(scrbook)           before \begin{document} on input line 117.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2026-05-21 v1.32 PDF bookmarks (HO)
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
-\BKM@id=\count322
+\BKM@id=\count324
 ))
 (./7501_notes.aux (./ch00_syllabus.aux) (./ch01_postulates.aux)
 (./ch02_density_matrix.aux) (./app00_homeworks.aux))
 \openout1 = `7501_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-Package scrbase Info: activating english \partname on input line 101.
-Package scrbase Info: activating english \chaptername on input line 101.
-Package scrbase Info: activating english \appendixname on input line 101.
-Package scrbase Info: activating english \figurename on input line 101.
-Package scrbase Info: activating english \tablename on input line 101.
-Package scrbase Info: activating english \contentsname on input line 101.
-Package scrbase Info: activating english \listfigurename on input line 101.
-Package scrbase Info: activating english \listtablename on input line 101.
-Package scrbase Info: activating english \bibname on input line 101.
-Package scrbase Info: activating english \indexname on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+Package scrbase Info: activating english \partname on input line 117.
+Package scrbase Info: activating english \chaptername on input line 117.
+Package scrbase Info: activating english \appendixname on input line 117.
+Package scrbase Info: activating english \figurename on input line 117.
+Package scrbase Info: activating english \tablename on input line 117.
+Package scrbase Info: activating english \contentsname on input line 117.
+Package scrbase Info: activating english \listfigurename on input line 117.
+Package scrbase Info: activating english \listtablename on input line 117.
+Package scrbase Info: activating english \bibname on input line 117.
+Package scrbase Info: activating english \indexname on input line 117.
 
 (/opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen183
-\scratchbox=\box59
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen184
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count325
+\scratchdimen=\dimen184
+\scratchbox=\box60
+\nofMPsegments=\count326
+\nofMParguments=\count327
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count328
+\MPscratchDim=\dimen185
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
+\everyMPtoPDFconversion=\toks35
 ) (/opt/texlive/texdir/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -629,22 +668,56 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 101.
+Package hyperref Info: Link coloring OFF on input line 117.
+LaTeX Info: Redefining \microtypecontext on input line 117.
+Package microtype Info: Applying patch `item' on input line 117.
+Package microtype Info: Applying patch `toc' on input line 117.
+Package microtype Info: Applying patch `eqnum' on input line 117.
+Package microtype Info: Applying patch `footnote' on input line 117.
+Package microtype Info: Applying patch `verbatim' on input line 117.
+LaTeX Info: Redefining \microtypesetup on input line 117.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
 Package babel Info: Main language set to 'english'.
-[1
+ [1
 
 
 
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./7501_notes.toc
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package tocbasic Info: character protrusion at toc deactivated on input line 13
+6.
+ (./7501_notes.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
- (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+esint on input line 4
 .
@@ -669,25 +742,19 @@ File: uesint.fd
 (./ch00_syllabus.tex
 chapter 0.
 
-Overfull \hbox (153.47818pt too wide) in paragraph at lines 55--56
-\OT1/cmr/m/n/10.95 bridge Uni-ver-sity Press, 2025). Prob-lem sets avail-able a
-t []https://www.damtp.cam.ac.uk/user/tong/books/quantum.html[]. 
+Overfull \hbox (108.55759pt too wide) in paragraph at lines 55--56
+\OT1/cmr/m/n/10.95 (-20) Uni-ver-sity Press, 2025). Prob-lem sets avail-able at
+ []https://www.damtp.cam.ac.uk/user/tong/books/quantum.html[]. 
  []
 
 [1
 
 
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-[2]
-Overfull \hbox (34.01146pt too wide) in paragraph at lines 126--127
-\OT1/cmr/m/n/10.95 on Aca-demic Mis-con-duct (COAM, []https://oaa.osu.edu/resou
-rces/policies-and-procedures/committee-
- []
-
-)
-Overfull \hbox (34.28409pt too wide) in paragraph at lines 144--125
-\OT1/cmr/m/n/10.95 Re-ports can be sub-mit-ted to the Civil Rights Com-pli-ance
- Of-fice (CRCO) at []http://civilrights.osu.edu/[],
+[2])
+Overfull \hbox (23.65706pt too wide) in paragraph at lines 144--141
+\OT1/cmr/m/n/10.95 (-20) Re-ports can be sub-mit-ted to the Civil Rights Com-pl
+i-ance Of-fice (CRCO) at []http://civilrights.osu.edu/[],
  []
 
 [3] [4]
@@ -703,50 +770,50 @@ chapter 1.
 ] [6
 
 ]
-<figures/compton1.png, id=213, 1284.8pt x 903.375pt>
+<figures/compton1.png, id=229, 1284.8pt x 903.375pt>
 File: figures/compton1.png Graphic file (type png)
 <use figures/compton1.png>
 Package pdftex.def Info: figures/compton1.png  used on input line 64.
 (pdftex.def)             Requested size: 202.29759pt x 142.22717pt.
-<figures/compton2.png, id=215, 1927.2pt x 1137.24875pt>
+<figures/compton2.png, id=231, 1927.2pt x 1137.24875pt>
 File: figures/compton2.png Graphic file (type png)
 <use figures/compton2.png>
 Package pdftex.def Info: figures/compton2.png  used on input line 65.
 (pdftex.def)             Requested size: 202.29759pt x 119.37126pt.
  [7 <./figures/compton1.png> <./figures/compton2.png>]
-<figures/fh1.jpg, id=238, 321.2pt x 731.533pt>
+<figures/fh1.jpg, id=254, 321.2pt x 731.533pt>
 File: figures/fh1.jpg Graphic file (type jpg)
 <use figures/fh1.jpg>
 Package pdftex.def Info: figures/fh1.jpg  used on input line 95.
 (pdftex.def)             Requested size: 89.90927pt x 204.76086pt.
-<figures/fh2.png, id=239, 1284.8pt x 961.5925pt>
+<figures/fh2.png, id=255, 1284.8pt x 961.5925pt>
 File: figures/fh2.png Graphic file (type png)
 <use figures/fh2.png>
 Package pdftex.def Info: figures/fh2.png  used on input line 96.
 (pdftex.def)             Requested size: 202.29759pt x 151.39293pt.
-<figures/fh3.png, id=240, 803.0pt x 1215.54124pt>
+<figures/fh3.png, id=256, 803.0pt x 1215.54124pt>
 File: figures/fh3.png Graphic file (type png)
 <use figures/fh3.png>
 Package pdftex.def Info: figures/fh3.png  used on input line 97.
 (pdftex.def)             Requested size: 112.38832pt x 170.11897pt.
  [8]
-<figures/sg1.png, id=254, 1284.8pt x 908.39375pt>
+<figures/sg1.png, id=270, 1284.8pt x 908.39375pt>
 File: figures/sg1.png Graphic file (type png)
 <use figures/sg1.png>
 Package pdftex.def Info: figures/sg1.png  used on input line 129.
 (pdftex.def)             Requested size: 359.644pt x 254.2792pt.
  [9 <./figures/fh1.jpg> <./figures/fh2.png> <./figures/fh3.png>]
-<figures/sg2.png, id=273, 1927.2pt x 913.4125pt>
+<figures/sg2.png, id=289, 1927.2pt x 913.4125pt>
 File: figures/sg2.png Graphic file (type png)
 <use figures/sg2.png>
 Package pdftex.def Info: figures/sg2.png  used on input line 148.
 (pdftex.def)             Requested size: 404.5952pt x 191.7526pt.
-<figures/dg1.png, id=276, 1284.8pt x 927.465pt>
+<figures/dg1.png, id=292, 1284.8pt x 927.465pt>
 File: figures/dg1.png Graphic file (type png)
 <use figures/dg1.png>
 Package pdftex.def Info: figures/dg1.png  used on input line 162.
 (pdftex.def)             Requested size: 202.29759pt x 146.0199pt.
-<figures/dg2.png, id=277, 535.2497pt x 469.755pt>
+<figures/dg2.png, id=293, 535.2497pt x 469.755pt>
 File: figures/dg2.png Graphic file (type png)
 <use figures/dg2.png>
 Package pdftex.def Info: figures/dg2.png  used on input line 163.
@@ -777,25 +844,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-[17]
-Underfull \vbox (badness 2443) has occurred while \output is active []
+[17] [18]) (./s04_projective_measurements.tex [19] [20
 
- [18])
-(./s04_projective_measurements.tex [19] [20
+])
+(./s05_unitary_evolution.tex [21] [22
 
-]) (./s05_unitary_evolution.tex
-[21] [22
-
-]
-Underfull \vbox (badness 1406) has occurred while \output is active []
-
- [23])
-(./s06_tensor_product.tex [24]
-Overfull \hbox (1.95226pt too wide) in paragraph at lines 4--4
-[]\OT1/cmr/m/n/10.95 Refer to []N&C[] 2.1.7, 2.2.8, 4.3; []Tong[] 3.6. For gen-
-er-al-ized mea-sure-ments, re-fer to []N&C[] 2.2.6
- []
-
+] [23]) (./s06_tensor_product.tex [24]
 [25
 
 ]
@@ -821,15 +875,17 @@ chapter 2.
 (./s09_generalized_measurements_decoherence.tex [34] [35
 
 ] [36] [37])
-(./s10_open_system_evolution.tex [38])) [39
+(./s10_open_system_evolution.tex [38] [39
+
+] [40] [41] [42])) [43
 
 ]
 \openout2 = `app00_homeworks.aux'.
 
- (./app00_homeworks.tex
-(./app01_hw1.tex
+
+(./app00_homeworks.tex (./app01_hw1.tex
 chapter A.
-<figures/Bragg law.png, id=650, 1487.5575pt x 856.19875pt>
+<figures/Bragg law.png, id=727, 1487.5575pt x 856.19875pt>
 File: figures/Bragg law.png Graphic file (type png)
 <use figures/Bragg law.png>
 Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
@@ -837,7 +893,7 @@ Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
 
 Underfull \vbox (badness 1910) has occurred while \output is active []
 
- [40
+ [44
 
 
 
@@ -850,7 +906,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./figures/Bragg law.png>]
+ [45 <./figures/Bragg law.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 82.
@@ -878,42 +934,42 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Underfull \vbox (badness 2057) has occurred while \output is active []
 
- [42])
-(./app02_hw2.tex [43]
+ [46])
+(./app02_hw2.tex [47]
 chapter B.
-[44
+[48
 
-] [45]) (./app03_hw3.tex [46]
+] [49]) (./app03_hw3.tex [50]
 chapter C.
+[51
 
-Overfull \hbox (6.32901pt too wide) in paragraph at lines 6--7
-\OT1/cmr/m/n/10.95 (1) For a unit vec-tor $[] = ([] \OML/cmm/m/it/10.95 ^^R [] 
-^^^; [] ^^R [] ^^^; [] ^^R\OT1/cmr/m/n/10.95 )$, di-ag-o-nal-ize the ma-trix $[
-] \OMS/cmsy/m/n/10.95 ^^A [] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 n[]^
-^[[]$\OT1/cmr/m/n/10.95 .
- []
-
-[47
-
-]) (./app04_hw4.tex [48] [49]
+]) (./app04_hw4.tex [52] [53]
 chapter D.
-[50
+[54
 
 ]
 Underfull \vbox (badness 1953) has occurred while \output is active []
 
- [51])
-(./app05_hw5.tex [52]
+ [55])
+(./app05_hw5.tex [56]
 chapter E.
-[53
+[57
 
 ]
 Underfull \vbox (badness 1688) has occurred while \output is active []
 
- [54]))
-[55] (./7501_notes.bbl
+ [58])
+(./app06_hw6.tex [59]
+chapter F.
+
+Underfull \vbox (badness 2189) has occurred while \output is active []
+
+ [60
+
+]
+[61])) [62] (./7501_notes.bbl
 chapter without number
-) [56
+) [63
 
 
 
@@ -926,36 +982,37 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17658 strings out of 467168
- 310793 string characters out of 5411585
- 889016 words of memory out of 5000000
- 46237 multiletter control sequences out of 15000+600000
- 640956 words of font info for 91 fonts, out of 8000000 for 9000
+ 20099 strings out of 467168
+ 350350 string characters out of 5411585
+ 956100 words of memory out of 5000000
+ 48322 multiletter control sequences out of 15000+600000
+ 654477 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,107p,11213b,656s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,16n,107p,11213b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></o
 pt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/
 texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/texli
 ve/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/texlive/te
 xdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/texlive/texdir/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/texlive/texdir/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/texdir/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/texdir/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr6.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsl10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ssbx10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-</opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/
-texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texli
-ve/texdir/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/t
-exdir/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/t
-exdir/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (60 pages, 1237537 bytes).
+ist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></opt/texlive/texdir/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/texdir/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msl10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx
+10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></op
+t/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/texl
+ive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/t
+exdir/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/texdi
+r/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/texdi
+r/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on 7501_notes.pdf (67 pages, 1280991 bytes).
 PDF statistics:
- 1178 PDF objects out of 1200 (max. 8388607)
- 1047 compressed objects within 11 object streams
- 391 named destinations out of 1000 (max. 500000)
- 467 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1334 PDF objects out of 1440 (max. 8388607)
+ 1193 compressed objects within 12 object streams
+ 466 named destinations out of 1000 (max. 500000)
+ 51731 words of extra memory for PDF output out of 61914 (max. 10000000)
 

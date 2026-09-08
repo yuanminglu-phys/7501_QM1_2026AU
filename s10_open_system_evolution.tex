@@ -1,1 +1,220 @@
-\section{Time evolution of open quantum systems}
+\section{Time evolution of open quantum systems (9/25)}
+
+
+For a closed quantum system, its unitary time evolution can be easily reformulated using density matrices:
+\begin{align}
+ \imth\hbar \frac{\dif{}}{\dif t}\dket{\psi(t)}&=H\dket{\psi(t)}, &
+ \dket{\psi(t)}&=U(t,0)\dket{\psi(0)},\\
+ \imth\hbar\frac{\dif\rho}{\dif t}&=[H,\rho], &
+ \rho(t)&=U(t,0)\rho(0)U^\dagger(t,0).
+\end{align}
+However this is not the most general time evolution for a mixed state, as we will show below. 
+
+\subsection{Quantum channels and Kraus operators}
+
+
+Let system $A$ interact with an environment $B$. Assume initially the environment is in a pure state $\dket{0}_B$:
+\begin{equation}
+ \rho_{AB}(t=0)=\rho_A(0)\otimes\rho_B(0),
+ \qquad \rho_B(0)=\proj{0}_B.
+\end{equation}
+After joint unitary evolution,
+\begin{equation}
+ \rho_{AB}(t)=U(t,0)\bigl(\rho_A(0)\otimes\proj{0}_B\bigr)U^\dagger(t,0).
+\end{equation}
+The reduced state in system $A$ is
+\begin{align}
+ \rho_A(t)
+ &=\trace_B\rho_{AB}(t)\\
+ &=\sum_k {}_B\!\dbra{k}U(t,0)\dket{0}_B\,\rho_A(0)\,
+ {}_B\!\dbra{0}U^\dagger(t,0)\dket{k}_B\\
+ &=\sum_k M_k(t)\rho_A(0)M_k^\dagger(t),
+\end{align}
+where the \emph{Kraus operators} $\{M_k\}$ defined by 
+\begin{equation}
+ M_k(t)={}_B\!\dbra{k}U(t,0)\dket{0}_B.
+\end{equation}
+satisfy the completeness relation
+\begin{equation}
+ \sum_kM_k^\dagger M_k={}_B\!\dbra{0}U^\dagger U\dket{0}_B=\hat1_A.
+\end{equation}
+This indicates the time evolution of an open quantum system $A$ is described by a quantum channel, or a CPTP map $\ce$ defined below.
+
+\subsubsection{Definition of a quantum channel}
+
+A quantum channel is a completely positive, trace-preserving (CPTP) map
+\begin{equation}
+ \ce(\rho)=\sum_mM_m\rho M_m^\dagger,
+ \qquad \sum_mM_m^\dagger M_m=\hat1.
+\end{equation}
+It is trace preserving:
+\begin{align}
+    \trace\ce(\rho)=\trace\rho
+\end{align}
+convex linear
+\begin{align}
+    \ce(p\rho_1+(1-p)\rho_2)=p\ce(\rho_1)+(1-p)\ce(\rho_2),~~~\forall~0\leq p\leq1.
+\end{align}
+and completely positive. Complete
+positivity means that for every auxiliary system $B$,
+\begin{equation}
+ (\ce_A\otimes\mathcal I_B)(\rho_{AB})\geq0
+\end{equation}
+whenever $\rho_{AB}\geq0$. A Kraus representation is not unique.
+
+\subsubsection{Example: a bit-flip channel}
+For two qubits with
+\begin{equation}
+ H=-\hbar\omega\,\sx^{(A)}\otimes\sx^{(B)},
+\end{equation}
+the unitary is
+\begin{equation}
+ U(t)=\cos(\omega t)\id
+ +\imth\sin(\omega t)\sx^{(A)}\otimes\sx^{(B)}.
+\end{equation}
+With the environment initially in $\dket{0}_B$,
+\begin{equation}
+ M_0=\cos(\omega t)\id_A,
+ \qquad M_1=\imth\sin(\omega t)\sx^{(A)}.
+\end{equation}
+Therefore
+\begin{equation}
+ \rho_A(t)=[1-p(t)]\rho_A(0)+p(t)\sx\rho_A(0)\sx,
+ \qquad p(t)=\sin^2(\omega t).
+\end{equation}
+Differentiation with respect to $p$ gives
+\begin{equation}
+ \frac{\dif\rho_A}{\dif p}=\sx\rho_A\sx-\rho_A,
+ \qquad \trace\!\left(\frac{\dif\rho_A}{\dif p}\right)=0.
+\end{equation}
+
+\subsection{The Master Equation}
+
+\subsubsection{Lindblad form}
+Markovian, time-local dynamics has the following Lindblad form
+\begin{equation}
+ \boxed{
+ \frac{\dif\rho}{\dif t}
+ =-\frac{\imth}{\hbar}[H,\rho]
+ +\sum_j\left(2L_j\rho L_j^\dagger
+ -L_j^\dagger L_j\rho-\rho L_j^\dagger L_j\right)}.
+\end{equation}
+The commutator with Hamiltonian $\hat H$ generates coherent evolution. The linear operators $\{L_j\}$ are known as \emph{quantum jump operators}. The remaining terms describe
+dissipation and decoherence while preserving the trace.
+
+\subsubsection{Bloch-vector representation}
+A qubit state can be written as
+\begin{equation}
+ \rho=\frac12(\id+\bm r\cdot\bm\sigma),
+ \qquad \bm r=(x,y,z),\qquad |\bm r|\leq1.
+\end{equation}
+Quantum channels of a single qubit act as affine transformations of the Bloch ball:
+\begin{align}
+    \ce(\rho)=\frac{\id+\bm{r}^\prime\cdot\bm\sigma}{2},~~~\bm r^\prime=M\bm r+\bm v.
+\end{align}
+where $M$ is a $3\times3$ matrix and $\bm v$ is a constant vector. 
+
+\subsubsection{Bit-flip channel}
+For
+\begin{equation}
+ \ce_X(\rho)=(1-p)\rho+p\sx\rho\sx,
+\end{equation}
+the Bloch vector transforms as
+\begin{equation}
+ (x,y,z)\longmapsto\bigl(x,(1-2p)y,(1-2p)z\bigr).
+\end{equation}
+The Bloch ball contracts toward the $x$ axis.
+
+\subsubsection{Phase-flip channel and phase damping}
+The phase-flip channel is
+\begin{equation}
+ \ce_Z(\rho)=(1-p)\rho+p\sz\rho\sz.
+\end{equation}
+For
+\begin{equation}
+ \dket{\psi}=\alpha\dket{0}+\beta\dket{1},
+ \qquad
+ \rho_0=\proj{\psi}
+ =\begin{pmatrix}|\alpha|^2&\alpha\beta^*\\
+ \alpha^*\beta&|\beta|^2\end{pmatrix},
+\end{equation}
+one application gives
+\begin{equation}
+ \ce_Z(\rho_0)=
+ \begin{pmatrix}|\alpha|^2&(1-2p)\alpha\beta^*\\
+ (1-2p)\alpha^*\beta&|\beta|^2\end{pmatrix}.
+\end{equation}
+After $n$ applications the off-diagonal entries acquire a factor
+$(1-2p)^n$. Setting $2p=\Gamma t/n$ and taking $n\to\infty$ gives
+\begin{equation}
+ \rho(t)=\begin{pmatrix}
+ |\alpha|^2&e^{-\Gamma t}\alpha\beta^*\\
+ e^{-\Gamma t}\alpha^*\beta&|\beta|^2
+ \end{pmatrix}.
+\end{equation}
+The populations remain fixed while coherence decays.
+
+\subsubsection{Depolarizing channel}
+A common parametrization is
+\begin{equation}
+ \ce_{\mathrm{dep}}(\rho)=(1-p)\rho+\frac p3
+ (\sx\rho\sx+\sy\rho\sy+\sz\rho\sz).
+\end{equation}
+Using
+\begin{equation}
+ 2\id=\rho+\sx\rho\sx+\sy\rho\sy+\sz\rho\sz,
+\end{equation}
+the Bloch vector transforms as
+\begin{equation}
+ \bm r\longmapsto\left(1-\frac{4p}{3}\right)\bm r.
+\end{equation}
+One Kraus representation is
+\begin{equation}
+ M_0=\sqrt{1-p}\,\id,
+ \qquad M_j=\sqrt{\frac p3}\,\sigma_j,
+ \quad j=x,y,z.
+\end{equation}
+
+\subsubsection{Amplitude-damping channel}
+Let $\dket{0}_B$ denote no photon and $\dket{1}_B$ one photon. The joint
+evolution satisfies
+\begin{align}
+ U\dket{0}_A\dket{0}_B&=\dket{0}_A\dket{0}_B,\\
+ U\dket{1}_A\dket{0}_B
+ &=\sqrt{1-p}\dket{1}_A\dket{0}_B
+ +\sqrt p\dket{0}_A\dket{1}_B.
+\end{align}
+The Kraus operators are
+\begin{equation}
+ M_0={}_B\!\dbra{0}U\dket{0}_B
+ =\begin{pmatrix}1&0\\0&\sqrt{1-p}\end{pmatrix},
+ \qquad
+ M_1={}_B\!\dbra{1}U\dket{0}_B
+ =\begin{pmatrix}0&\sqrt p\\0&0\end{pmatrix}.
+\end{equation}
+Thus
+\begin{equation}
+ \ce_{\mathrm{AD}}(\rho_0)
+ =\begin{pmatrix}
+ |\alpha|^2+p|\beta|^2&\sqrt{1-p}\,\alpha\beta^*\\
+ \sqrt{1-p}\,\alpha^*\beta&(1-p)|\beta|^2
+ \end{pmatrix}.
+\end{equation}
+For $p=\Gamma t/n$ and $n\to\infty$,
+\begin{equation}
+ \rho(t)=\begin{pmatrix}
+ |\alpha|^2+(1-e^{-\Gamma t})|\beta|^2
+ &e^{-\Gamma t/2}\alpha\beta^*\\
+ e^{-\Gamma t/2}\alpha^*\beta&e^{-\Gamma t}|\beta|^2
+ \end{pmatrix}.
+\end{equation}
+The excited-state population decays as $e^{-\Gamma t}$, while coherence
+decays as $e^{-\Gamma t/2}$.
+
+\section{Limits of the description}
+A channel acting only on $A$ does not describe every possible reduced
+evolution. If $A$ and $B$ are initially correlated, assigning a single
+completely positive map to arbitrary initial states of $A$ may be impossible.
+The standard channel construction assumes a fixed, initially uncorrelated
+environment state. The Lindblad equation adds assumptions such as
+Markovianity and time locality.
