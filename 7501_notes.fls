@@ -102,6 +102,8 @@ INPUT /opt/texlive/texdir/texmf-dist/tex/latex/epigraph/epigraph.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/epigraph/epigraph.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/nextpage/nextpage.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/generic/iftex/ifvtex.sty

@@ -31,27 +31,27 @@
 \contentsline {section}{\numberline {2.3}Generalized measurements and decoherence}{35}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Generalized measurements on a mixed state}{35}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Examples of generalized measurements}{36}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Measurements induce decoherence}{36}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Time evolution of open quantum systems}{38}{section.2.4}%
+\contentsline {subsection}{\numberline {2.3.3}Measurements induce decoherence}{37}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Time evolution of open quantum systems}{39}{section.2.4}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{39}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{39}{appendix.A.1}%
-\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{39}{appendix.A.2}%
-\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{41}{appendix.A.3}%
-\contentsline {section}{\numberline {A.4}Compton shift}{42}{appendix.A.4}%
-\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{43}{appendix.B}%
-\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{43}{subsection.B.0.1}%
-\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{43}{subsection.B.0.2}%
-\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{44}{subsection.B.0.3}%
-\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{45}{subsection.B.0.4}%
-\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{46}{appendix.C}%
-\contentsline {subsection}{\numberline {C.0.1}Spin precession}{46}{subsection.C.0.1}%
-\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{46}{subsection.C.0.2}%
-\contentsline {subsection}{\numberline {C.0.3}Propagator}{46}{subsection.C.0.3}%
-\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{47}{subsection.C.0.4}%
-\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{49}{appendix.D}%
-\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{49}{subsection.D.0.1}%
-\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{49}{subsection.D.0.2}%
-\contentsline {subsection}{\numberline {D.0.3}Entanglement negativity}{50}{subsection.D.0.3}%
-\contentsline {chapter}{\nonumberline Bibliography}{52}{chapter*.2}%
+\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{40}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{40}{appendix.A.1}%
+\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{40}{appendix.A.2}%
+\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{42}{appendix.A.3}%
+\contentsline {section}{\numberline {A.4}Compton shift}{43}{appendix.A.4}%
+\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{44}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{44}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{44}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{45}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{46}{subsection.B.0.4}%
+\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{47}{appendix.C}%
+\contentsline {subsection}{\numberline {C.0.1}Spin precession}{47}{subsection.C.0.1}%
+\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{47}{subsection.C.0.2}%
+\contentsline {subsection}{\numberline {C.0.3}Propagator}{47}{subsection.C.0.3}%
+\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{48}{subsection.C.0.4}%
+\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{50}{appendix.D}%
+\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{50}{subsection.D.0.1}%
+\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{50}{subsection.D.0.2}%
+\contentsline {subsection}{\numberline {D.0.3}Entanglement negativity}{51}{subsection.D.0.3}%
+\contentsline {chapter}{\nonumberline Bibliography}{53}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

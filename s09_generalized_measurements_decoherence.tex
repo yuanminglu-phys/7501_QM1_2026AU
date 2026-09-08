@@ -16,7 +16,7 @@ The system and apparatus evolve together under a unitary operator $\hat U$, befo
 \end{align}
 It's straightforward to show that for measurement outcome $q$, the initial state $\rho_s$ of the physical system collapses into the following (unnormalized) state
 \begin{align}
-    \rho_q\propto M_{q,j}\rho_sM^\dagger_{q,j}
+    \rho_q\propto\sum_j M_{q,j}\rho_sM^\dagger_{q,j}
 \end{align}
 with a probability distribution
 \begin{align}
@@ -42,15 +42,91 @@ If the state of the quantum system is $\rho$ immediately before the measurements
     \end{align}
     and the (unnormalized) state of the system after the measurement is $\rho_m\propto M_m\rho M_m^\dagger$. 
 
+In a generalized measurement, the set of positive operators $\{E_m\equiv M_m^\dagger M_m\}$ is known as a POVM (positive operator-value measure). A generalized measurement is sometimes also known as a POVM. 
+
 \subsection{Examples of generalized measurements}
 
-(1) Quantum Zeno effect
+(1) \emph{Quantum Zeno effect}
+
+In a single-qubit system, consider an $N$-step procedure in which each step consists of unitary time evolution
+for a duration $T/N$, followed by a projective measurement of $\hat X$:
+\begin{align}
+    \hat X=\hat P_+-\hat P_-,~~~\hat P_+=\proj{+},~\hat P_-=\proj{-}.
+\end{align}
+where
+\begin{align}
+    \dket{\pm}=\frac1{\sqrt{2}}(\dket{0}\pm\dket1)
+\end{align}
+are the eigenstates of Pauli $\hat X$ operator. 
+
+In this example, the measurement operators associated with the $\pm$ outcome after
+each step are $\{\hat M_\pm\}$ defined as follows:
+\begin{align}
+    \hat M_\pm=\hat P_\pm\,U(T/N),~~~M^\dagger_+M_++M^\dagger_-M_-=\hat1.
+\end{align}
 
 
-(2) Detection of a photon
+(2) \emph{Detection of a photon}
 
+Let $\dket{0}$ denote no photon and $\dket{1}$ denote one photon.  A simple
+photon detection model uses
+\begin{align}
+    \hat M_0=\proj{0},~~~\hat M_c=\dket{0}\dbra{1}
+\end{align}
+where the subscript $c$ denotes a click in the photon reader. The photon is annihilated after the click outcome. It's straightforward to check the completeness relation holds for $\{M_0,M_c\}$. 
 
-(3) Distinguishing quantum states 
+(3) \emph{Distinguishing quantum states}
+
+Suppose a qubit is prepared in either
+\[
+  \dket{0}
+  \qquad\text{or}\qquad
+  \dket{+}=\frac{1}{\sqrt{2}}\bigl(\dket{0}+\dket{1}\bigr).
+\]
+The task is to determine which state was received.
+
+(i) {Projective measurement in the $Z$ basis}:
+
+The measurement operators are projection operators
+\[
+  \hat P_0=\proj{0},
+  \qquad
+  \hat P_1=\proj{1}.
+\]
+If the outcome is $1$, the received state must have been $\dket{+}$ because
+$\expval{1|0}=0$.  If the outcome is $0$, the two possibilities cannot be
+distinguished.
+
+(ii) {Projective measurement in the $X$ basis}:
+
+The measurement operators are again projectors
+\[
+  \hat P_+=\proj{+},
+  \qquad
+  \hat P_-=\proj{-}.
+\]
+If the outcome is $+$, the states cannot be distinguished.  If the outcome
+is $-$, the received state must have been $\dket{0}$ because
+$\expval{-|+}=0$.
+
+{ii} {A three-outcome POVM}:
+
+Consider the POVM $\{E_m=M_m^\dagger M_m\}$:
+\begin{align*}
+  \hat E_1&=\frac{1}{2}\proj{1}
+  =\begin{pmatrix}0&0\\[2pt]0&\tfrac12\end{pmatrix},\\
+  \hat E_2&=\frac{1}{2}\proj{-}
+  =\frac14\begin{pmatrix}1&-1\\[2pt]-1&1\end{pmatrix},\\
+  \hat E_3&=\hat1-\hat E_1-\hat E_2
+  =\begin{pmatrix}\tfrac34&\tfrac14\\[2pt]\tfrac14&\tfrac14\end{pmatrix}
+  \ge 0.
+\end{align*}
+The outcomes have the following interpretation:
+\begin{enumerate}[label=\arabic*.]
+  \item Outcome $1$: the state must have been $\dket{+}$.
+  \item Outcome $2$: the state must have been $\dket{0}$.
+  \item Outcome $3$: the measurement is inconclusive.
+\end{enumerate}
 
 
 
