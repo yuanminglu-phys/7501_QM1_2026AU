@@ -53,5 +53,13 @@
 \contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{50}{subsection.D.0.1}%
 \contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{50}{subsection.D.0.2}%
 \contentsline {subsection}{\numberline {D.0.3}Entanglement negativity}{51}{subsection.D.0.3}%
-\contentsline {chapter}{\nonumberline Bibliography}{53}{chapter*.2}%
+\contentsline {chapter}{\numberline {E}Homework 5 (due 10/2)}{53}{appendix.E}%
+\contentsline {subsection}{\numberline {E.0.1}Revisiting the quantum Zeno effect}{53}{subsection.E.0.1}%
+\contentsline {subsection}{\numberline {E.0.2}Measurements}{53}{subsection.E.0.2}%
+\contentsline {subsection}{\numberline {E.0.3}Quantum channels}{54}{subsection.E.0.3}%
+\contentsline {subsection}{\numberline {E.0.4}The master equation}{54}{subsection.E.0.4}%
+\contentsline {subsubsection}{\numberline {E.0.4.1}Phase damping}{54}{subsubsection.E.0.4.1}%
+\contentsline {subsubsection}{\numberline {E.0.4.2}Amplitude damping}{55}{subsubsection.E.0.4.2}%
+\contentsline {subsubsection}{\numberline {E.0.4.3}Amplitude + phase dampings}{55}{subsubsection.E.0.4.3}%
+\contentsline {chapter}{\nonumberline Bibliography}{56}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
