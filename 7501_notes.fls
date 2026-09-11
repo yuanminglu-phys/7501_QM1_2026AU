@@ -366,11 +366,11 @@ INPUT ./s07_pure_vs_mixed_states.tex
 INPUT ./s07_pure_vs_mixed_states.tex
 INPUT ./s07_pure_vs_mixed_states.tex
 INPUT s07_pure_vs_mixed_states.tex
-INPUT ./s08_entanglement_teleportation.tex
-INPUT ./s08_entanglement_teleportation.tex
-INPUT ./s08_entanglement_teleportation.tex
-INPUT ./s08_entanglement_teleportation.tex
-INPUT s08_entanglement_teleportation.tex
+INPUT ./s08_entanglement.tex
+INPUT ./s08_entanglement.tex
+INPUT ./s08_entanglement.tex
+INPUT ./s08_entanglement.tex
+INPUT s08_entanglement.tex
 INPUT ./s09_generalized_measurements_decoherence.tex
 INPUT ./s09_generalized_measurements_decoherence.tex
 INPUT ./s09_generalized_measurements_decoherence.tex
@@ -465,6 +465,11 @@ INPUT ./app04_hw4.tex
 INPUT ./app04_hw4.tex
 INPUT ./app04_hw4.tex
 INPUT app04_hw4.tex
+INPUT ./figures/hw4_aspect_exp.pdf
+INPUT ./figures/hw4_aspect_exp.pdf
+INPUT ./figures/hw4_aspect_exp.pdf
+INPUT ./figures/hw4_aspect_exp.pdf
+INPUT ./figures/hw4_aspect_exp.pdf
 INPUT ./app05_hw5.tex
 INPUT ./app05_hw5.tex
 INPUT ./app05_hw5.tex
@@ -501,6 +506,7 @@ INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
+INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb

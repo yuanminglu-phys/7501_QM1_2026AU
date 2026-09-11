@@ -1,0 +1,206 @@
+\section{Witnessing quantum entanglement (9/18)}
+
+\newcommand{\epr}{\mathrm{EPR}}
+\newcommand{\ghz}{\mathrm{GHZ}}
+
+\referto{\tong~16.1.1-16.1.4, \scully~Chapter 18}
+
+
+
+\subsection{The EPR ``paradox''}
+
+The Einstein--Podolsky--Rosen paradox asks whether quantum mechanics can
+be replaced by a theory that is both local and realistic. Consider two
+spatially separated observers, Alice and Bob, who receive qubits $1$ and $2$.
+Alice may measure either $Q$ or $R$, while Bob may measure either $S$ or $T$.
+Every measurement has outcomes in $\{+1,-1\}$:
+\begin{equation}
+ Q^2=R^2=S^2=T^2=1.
+\end{equation}
+Measurements associated with different parties are compatible, for example
+$[Q,S]=0$.
+
+In a local realistic model, measurement outcomes are assumed to have
+pre-existing values and Alice's choice does not affect Bob's value. Thus, for
+a hidden-variable assignment,
+\begin{equation}
+ E(QS)=E(Q)E(S),
+\end{equation}
+where each individual value $E(Q),E(R),E(S),E(T)$ is $\pm1$. 
+
+\subsection{The CHSH inequality}
+Define the CHSH combination
+\begin{equation}
+ \mathcal{B}=QS+RS+RT-QT.
+\end{equation}
+For a local realistic assignment,
+\begin{align}
+ E(\mathcal{B})
+ &=\bigl[E(Q)+E(R)\bigr]E(S)
+   +\bigl[E(R)-E(Q)\bigr]E(T).
+\end{align}
+Since $E(R)=E(Q)$ or $E(R)=-E(Q)$, precisely one bracket vanishes and the
+other equals $\pm2$. Consequently,
+\begin{equation}
+ \boxed{|E(QS+RS+RT-QT)|\leq2.}
+\end{equation}
+This is the Clauser--Horne--Shimony--Holt (CHSH) inequality.
+
+\subsubsection{Quantum-mechanical violation}
+Let the observables be spin measurements along unit vectors $\bm m_{1,2}$ and $\bm n_{1,2}$:
+\begin{equation}
+ Q=\bm m_1\cdot\bm\sigma_1,
+ \quad R=\bm n_1\cdot\bm\sigma_1,
+ \quad S=\bm m_2\cdot\bm\sigma_2,
+ \quad T=\bm n_2\cdot\bm\sigma_2.
+\end{equation}
+The two qubits are prepared in the singlet Bell state
+\begin{equation}
+ \dket{\Psi^-}=\frac{1}{\sqrt2}\left(\dket{01}-\dket{10}\right).
+\end{equation}
+For this state,
+\begin{equation}
+ \dbra{\Psi^-}(\bm a\cdot\bm\sigma_1)
+ (\bm b\cdot\bm\sigma_2)\dket{\Psi^-}=-\bm a\cdot\bm b.
+\end{equation}
+Hence
+\begin{align}
+ \langle\mathcal{B}\rangle
+ &=-\bm m_1\cdot\bm m_2-\bm n_1\cdot\bm m_2
+   -\bm n_1\cdot\bm n_2+\bm m_1\cdot\bm n_2\\
+ &=-(\bm m_1+\bm n_1)\cdot\bm m_2
+   +(\bm m_1-\bm n_1)\cdot\bm n_2.
+\end{align}
+Choose coplanar directions with neighboring axes separated by $45^\circ$.
+Then
+\begin{equation}
+ |\langle\mathcal{B}\rangle|=2\sqrt2>2.
+\end{equation}
+The value $2\sqrt2$ is the maximal quantum value, known as the Tsirelson
+bound.
+
+\subsubsection{Experimental test with photon polarization}
+In an optical realization, a source produces pairs of entangled photons. One
+photon is sent to polarimeter $A$ and the other to polarimeter $B$. Each
+polarimeter selects a measurement orientation, and a coincidence monitor
+records joint detection events. With
+\begin{equation}
+ \dket{V}=\text{vertical polarization},
+ \qquad \dket{H}=\text{horizontal polarization},
+\end{equation}
+polarization measurements implement the two-outcome observables required for
+a Bell test.
+
+\subsection{The GHZ Argument}
+
+Consider the three-qubit GHZ state
+\begin{equation}
+ \dket{\ghz}=\frac{1}{\sqrt2}\left(\dket{000}-\dket{111}\right).
+\end{equation}
+The state obeys
+\begin{align}
+ X_A Y_B Y_C\dket{\ghz}&=+\dket{\ghz},\\
+ Y_A X_B Y_C\dket{\ghz}&=+\dket{\ghz},\\
+ Y_A Y_B X_C\dket{\ghz}&=+\dket{\ghz},
+\end{align}
+and
+\begin{equation}
+ X_A X_B X_C\dket{\ghz}=-\dket{\ghz}.
+\end{equation}
+
+Suppose a local hidden-variable theory assigns predetermined values
+$s_j^{(x)},s_j^{(y)}\in\{+1,-1\}$ to the $X$ and $Y$ measurements on qubit
+$j=A,B,C$. The first three GHZ correlations require
+\begin{align}
+ s_A^{(x)}s_B^{(y)}s_C^{(y)}&=+1,\\
+ s_A^{(y)}s_B^{(x)}s_C^{(y)}&=+1,\\
+ s_A^{(y)}s_B^{(y)}s_C^{(x)}&=+1.
+\end{align}
+Multiplying these equations gives
+\begin{equation}
+ s_A^{(x)}s_B^{(x)}s_C^{(x)}=+1.
+\end{equation}
+Quantum mechanics instead predicts a product of $-1$. This is a direct
+contradiction, with no statistical inequality required.
+
+\subsection{Bell's Original Inequality}
+
+Return to the singlet state
+\begin{equation}
+ \dket{\epr}=\frac{1}{\sqrt2}\left(\dket{01}-\dket{10}\right).
+\end{equation}
+For a unit vector $\bm n$,
+\begin{equation}
+ \bm n\cdot\bm\sigma=n_x\sigma_x+n_y\sigma_y+n_z\sigma_z,
+ \qquad |\bm n|=1,
+\end{equation}
+and
+\begin{equation}
+ \bm n\cdot\bm\sigma\,\dket{\pm_{\bm n}}
+ =\pm\dket{\pm_{\bm n}}.
+\end{equation}
+In any common spin basis,
+\begin{equation}
+ \dket{\epr}=\frac{1}{\sqrt2}\left(
+ \dket{+_{\bm n},-_{\bm n}}-\dket{-_{\bm n},+_{\bm n}}
+ \right).
+\end{equation}
+
+Consider measurement axes $\bm n_a$, $\bm n_b$, and $\bm n_c$. Let $P_{ab}$
+denote the probability that the first qubit has outcome $+1$ along
+$\bm n_a$ while the second has outcome $+1$ along $\bm n_b$. Writing
+$p(s_as_bs_c)$ for a predetermined hidden-variable assignment,
+\begin{align}
+ P_{ab}&=p(+,-,+)+p(+,-,-),\\
+ P_{bc}&=p(+,+,-)+p(-,+,-),\\
+ P_{ac}&=p(+,-,-)+p(-,+,-).
+\end{align}
+Nonnegativity of probabilities implies a three-axis probability inequality
+\begin{equation}
+ \boxed{P_{ab}+P_{bc}\geq P_{ac}.}
+\end{equation}
+
+This inequality is indeeded violated by quantum probabilities. For coplanar directions, parameterize the spin eigenstates by
+\begin{equation}
+ \dket{+_{\theta}}=
+ \begin{pmatrix}\cos(\theta/2)\\ \sin(\theta/2)\end{pmatrix},
+ \qquad
+ \dket{-_{\theta}}=
+ \begin{pmatrix}-\sin(\theta/2)\\ \cos(\theta/2)\end{pmatrix}.
+\end{equation}
+For the singlet,
+\begin{equation}
+ P_{ij}=\frac12\sin^2\!\left(\frac{\theta_i-\theta_j}{2}\right).
+\end{equation}
+Choose
+\begin{equation}
+ \theta_a=0,\qquad \theta_b=\theta,\qquad \theta_c=2\theta.
+\end{equation}
+Then
+\begin{equation}
+ P_{ab}=P_{bc}=\frac12\sin^2\!\left(\frac\theta2\right),
+ \qquad P_{ac}=\frac12\sin^2\theta.
+\end{equation}
+Bell's inequality would require
+\begin{equation}
+ \sin^2\!\left(\frac\theta2\right)\geq\frac12\sin^2\theta.
+\end{equation}
+For $\theta=60^\circ$,
+\begin{equation}
+ \frac14\not\geq\frac38,
+\end{equation}
+which contradicts the local hidden-variable prediction.
+
+\subsection{Summary}
+
+Below is a summary of these entanglement witnesses:
+\begin{itemize}
+ \item Local realism leads to the CHSH bound
+       $|\langle\mathcal B\rangle|\leq2$.
+ \item The singlet state can reach $2\sqrt2$, violating the CHSH inequality.
+ \item GHZ correlations give a deterministic contradiction with predetermined
+       local outcomes.
+ \item Bell's original probability inequality is also violated by singlet
+       correlations for suitable measurement directions.
+\end{itemize}
+
