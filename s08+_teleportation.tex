@@ -1,0 +1,22 @@
+
+
+\subsection{Quantum teleportation}
+
+The quantum entanglement between subsystems is an important resource to harness, in order to perform tasks difficult to achieve in classical physics. One striking example of such is the quantum teleportation. Consider a general pure state of a single qubit
+\begin{align}\label{teleportation:single qubit state}
+\dket{\psi}=\alpha\dket{0}+\beta\dket{1}
+\end{align}
+It encodes an infinite number of classical bits because $\alpha,\beta$ are both generic complex numbers. In order for Alice to send the information encoded in this qubit to Bob, an infinite amount of classical bits will be needed if the information is sent via classical communication. Remarkably, the quantum entanglement allows Alice to teleport the qubit to Bob by only sending 2 classical bits using classical communication. The procedure is as follows. Alice has two qubits 1 and 2 where qubit 1 encodes the desired state $\dket{\psi}_1$, while Bob has a single qubit 3. Initially qubit 2 and qubit 3 are in a maximally entangled state (i.e. a Bell state), say $\dket{Bell_0}_{23}$. Alice first implements a CNOT gate on qubit 1 and 2 (qubit 1 being the controlled qubit), followed by a Hadamard gate on qubit 1:
+\begin{align}
+&\dket{\psi}_1\otimes\dket{Bell_0}_{23}\overset{CNOT_{12}}\longrightarrow\frac{(\alpha\dket{00}+\beta\dket{11})\dket{0}+(\alpha\dket{01}+\beta\dket{10})\dket{1}}{\sqrt2}\\
+&\overset{H_1}\longrightarrow\frac12\big[\alpha(\dket{0}+\dket{1})(\dket{00}+\dket{11})+\beta(\dket{0}-\dket{1})(\dket{10}+\dket{01})\big]\\
+&=\frac12\big[\dket{00}(\alpha\dket{0}+\beta\dket{1})+\dket{01}(\alpha\dket{1}+\beta\dket{0})+\dket{10}(\alpha\dket{0}-\beta\dket{1})+\dket{11}(\alpha\dket{1}-\beta\dket{0})\big]
+\end{align}
+Next, Alice makes measurements of Pauli $\hat Z$ operator on qubits 1 and 2, with registered measurement outcome $M_{1,2}=0,1$ (i.e. $\hat Z_{1,2}=(-1)^{M_{1,2}}=\pm1$). After the measurement, Bob's qubit 3 collapsed into the following state:
+\begin{align}
+\dket{\psi_{M_1,M_2}}=\alpha\dket{M_2}+\beta(-1)^{M_1}\dket{1-M_2}
+\end{align}
+She further sends the two bits of measurment outcomes $M_{1,2}$ to Bob via classical communication. According to the two classical bits, Bob further implements a unitary operation $\hat Z^{M_1}\hat X^{M_2}$ on the 3rd qubit, and he will successfully recover the desired single qubit state (\ref{teleportation:single qubit state}) in qubit 3:
+\begin{align}
+\hat Z^{M_1}\hat X^{M_2}\dket{\psi_{M_1,M_2}}=\dket{\psi}=\alpha\dket0+\beta\dket1
+\end{align}
