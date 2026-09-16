@@ -51,45 +51,46 @@
 \contentsline {subsubsection}{\numberline {2.4.2.5}Depolarizing channel}{42}{subsubsection.2.4.2.5}%
 \contentsline {subsubsection}{\numberline {2.4.2.6}Amplitude-damping channel}{43}{subsubsection.2.4.2.6}%
 \contentsline {subsection}{\numberline {2.4.3}Limits of the description}{43}{subsection.2.4.3}%
-\contentsline {chapter}{\numberline {3}A quantum particle in one dimension}{44}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Position, momentum and translation operators (9/30)}{45}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Solving one-dimensional potentials (10/2)}{46}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Bound states and scattering states (10/14)}{47}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Heisenberg's uncertainty principle (10/21)}{48}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Simple harmonic oscillators (10/23)}{49}{section.3.5}%
+\contentsline {subsection}{\numberline {2.4.4}Appendix: Summary of 4 postulates of quantum mechanics}{44}{subsection.2.4.4}%
+\contentsline {chapter}{\numberline {3}A quantum particle in one dimension}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Position, momentum and translation operators (9/30)}{46}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Solving one-dimensional potentials (10/2)}{47}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Bound states and scattering states (10/14)}{48}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Heisenberg's uncertainty principle (10/21)}{49}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Simple harmonic oscillators (10/23)}{50}{section.3.5}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{50}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{50}{appendix.A.1}%
-\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{50}{appendix.A.2}%
-\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{52}{appendix.A.3}%
-\contentsline {section}{\numberline {A.4}Compton shift}{53}{appendix.A.4}%
-\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{54}{appendix.B}%
-\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{54}{subsection.B.0.1}%
-\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{54}{subsection.B.0.2}%
-\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{55}{subsection.B.0.3}%
-\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{56}{subsection.B.0.4}%
-\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{57}{appendix.C}%
-\contentsline {subsection}{\numberline {C.0.1}Spin precession}{57}{subsection.C.0.1}%
-\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{57}{subsection.C.0.2}%
-\contentsline {subsection}{\numberline {C.0.3}Propagator}{57}{subsection.C.0.3}%
-\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{58}{subsection.C.0.4}%
-\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{60}{appendix.D}%
-\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{60}{subsection.D.0.1}%
-\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{60}{subsection.D.0.2}%
-\contentsline {subsection}{\numberline {D.0.3}Witnessing entanglement}{61}{subsection.D.0.3}%
-\contentsline {subsection}{\numberline {D.0.4}Entanglement negativity}{61}{subsection.D.0.4}%
-\contentsline {chapter}{\numberline {E}Homework 5 (due 10/2)}{63}{appendix.E}%
-\contentsline {subsection}{\numberline {E.0.1}Revisiting the quantum Zeno effect}{63}{subsection.E.0.1}%
-\contentsline {subsection}{\numberline {E.0.2}Measurements}{63}{subsection.E.0.2}%
-\contentsline {subsection}{\numberline {E.0.3}Quantum channels}{64}{subsection.E.0.3}%
-\contentsline {subsection}{\numberline {E.0.4}The master equation}{64}{subsection.E.0.4}%
-\contentsline {subsubsection}{\numberline {E.0.4.1}Phase damping}{64}{subsubsection.E.0.4.1}%
-\contentsline {subsubsection}{\numberline {E.0.4.2}Amplitude damping}{65}{subsubsection.E.0.4.2}%
-\contentsline {subsubsection}{\numberline {E.0.4.3}Amplitude + phase dampings}{65}{subsubsection.E.0.4.3}%
-\contentsline {chapter}{\numberline {F}Homework 6 (Due 10/14)}{66}{appendix.F}%
-\contentsline {subsection}{\numberline {F.0.1}Position and momentum operators on a discrete periodic chain}{66}{subsection.F.0.1}%
-\contentsline {subsection}{\numberline {F.0.2}Dirac delta function}{66}{subsection.F.0.2}%
-\contentsline {subsection}{\numberline {F.0.3}Inversion symmetry in one dimension}{67}{subsection.F.0.3}%
-\contentsline {subsection}{\numberline {F.0.4}Double delta function potential}{68}{subsection.F.0.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{69}{chapter*.2}%
+\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{51}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{51}{appendix.A.1}%
+\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{51}{appendix.A.2}%
+\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{53}{appendix.A.3}%
+\contentsline {section}{\numberline {A.4}Compton shift}{54}{appendix.A.4}%
+\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{55}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{55}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{55}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{56}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{57}{subsection.B.0.4}%
+\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{58}{appendix.C}%
+\contentsline {subsection}{\numberline {C.0.1}Spin precession}{58}{subsection.C.0.1}%
+\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{58}{subsection.C.0.2}%
+\contentsline {subsection}{\numberline {C.0.3}Propagator}{58}{subsection.C.0.3}%
+\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{59}{subsection.C.0.4}%
+\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{61}{appendix.D}%
+\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{61}{subsection.D.0.1}%
+\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{61}{subsection.D.0.2}%
+\contentsline {subsection}{\numberline {D.0.3}Witnessing entanglement}{62}{subsection.D.0.3}%
+\contentsline {subsection}{\numberline {D.0.4}Entanglement negativity}{62}{subsection.D.0.4}%
+\contentsline {chapter}{\numberline {E}Homework 5 (due 10/2)}{64}{appendix.E}%
+\contentsline {subsection}{\numberline {E.0.1}Revisiting the quantum Zeno effect}{64}{subsection.E.0.1}%
+\contentsline {subsection}{\numberline {E.0.2}Measurements}{64}{subsection.E.0.2}%
+\contentsline {subsection}{\numberline {E.0.3}Quantum channels}{65}{subsection.E.0.3}%
+\contentsline {subsection}{\numberline {E.0.4}The master equation}{65}{subsection.E.0.4}%
+\contentsline {subsubsection}{\numberline {E.0.4.1}Phase damping}{65}{subsubsection.E.0.4.1}%
+\contentsline {subsubsection}{\numberline {E.0.4.2}Amplitude damping}{66}{subsubsection.E.0.4.2}%
+\contentsline {subsubsection}{\numberline {E.0.4.3}Amplitude + phase dampings}{66}{subsubsection.E.0.4.3}%
+\contentsline {chapter}{\numberline {F}Homework 6 (Due 10/14)}{67}{appendix.F}%
+\contentsline {subsection}{\numberline {F.0.1}Position and momentum operators on a discrete periodic chain}{67}{subsection.F.0.1}%
+\contentsline {subsection}{\numberline {F.0.2}Dirac delta function}{67}{subsection.F.0.2}%
+\contentsline {subsection}{\numberline {F.0.3}Inversion symmetry in one dimension}{68}{subsection.F.0.3}%
+\contentsline {subsection}{\numberline {F.0.4}Double delta function potential}{69}{subsection.F.0.4}%
+\contentsline {chapter}{\nonumberline Bibliography}{70}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
