@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  16 SEP 2026 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  18 SEP 2026 02:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -771,50 +771,50 @@ chapter 1.
 ] [6
 
 ]
-<figures/compton1.png, id=255, 1284.8pt x 903.375pt>
+<figures/compton1.png, id=261, 1284.8pt x 903.375pt>
 File: figures/compton1.png Graphic file (type png)
 <use figures/compton1.png>
 Package pdftex.def Info: figures/compton1.png  used on input line 64.
 (pdftex.def)             Requested size: 202.29759pt x 142.22717pt.
-<figures/compton2.png, id=257, 1927.2pt x 1137.24875pt>
+<figures/compton2.png, id=263, 1927.2pt x 1137.24875pt>
 File: figures/compton2.png Graphic file (type png)
 <use figures/compton2.png>
 Package pdftex.def Info: figures/compton2.png  used on input line 65.
 (pdftex.def)             Requested size: 202.29759pt x 119.37126pt.
  [7 <./figures/compton1.png> <./figures/compton2.png>]
-<figures/fh1.jpg, id=280, 321.2pt x 731.533pt>
+<figures/fh1.jpg, id=286, 321.2pt x 731.533pt>
 File: figures/fh1.jpg Graphic file (type jpg)
 <use figures/fh1.jpg>
 Package pdftex.def Info: figures/fh1.jpg  used on input line 95.
 (pdftex.def)             Requested size: 89.90927pt x 204.76086pt.
-<figures/fh2.png, id=281, 1284.8pt x 961.5925pt>
+<figures/fh2.png, id=287, 1284.8pt x 961.5925pt>
 File: figures/fh2.png Graphic file (type png)
 <use figures/fh2.png>
 Package pdftex.def Info: figures/fh2.png  used on input line 96.
 (pdftex.def)             Requested size: 202.29759pt x 151.39293pt.
-<figures/fh3.png, id=282, 803.0pt x 1215.54124pt>
+<figures/fh3.png, id=288, 803.0pt x 1215.54124pt>
 File: figures/fh3.png Graphic file (type png)
 <use figures/fh3.png>
 Package pdftex.def Info: figures/fh3.png  used on input line 97.
 (pdftex.def)             Requested size: 112.38832pt x 170.11897pt.
  [8]
-<figures/sg1.png, id=296, 1284.8pt x 908.39375pt>
+<figures/sg1.png, id=302, 1284.8pt x 908.39375pt>
 File: figures/sg1.png Graphic file (type png)
 <use figures/sg1.png>
 Package pdftex.def Info: figures/sg1.png  used on input line 129.
 (pdftex.def)             Requested size: 359.644pt x 254.2792pt.
  [9 <./figures/fh1.jpg> <./figures/fh2.png> <./figures/fh3.png>]
-<figures/sg2.png, id=315, 1927.2pt x 913.4125pt>
+<figures/sg2.png, id=321, 1927.2pt x 913.4125pt>
 File: figures/sg2.png Graphic file (type png)
 <use figures/sg2.png>
 Package pdftex.def Info: figures/sg2.png  used on input line 148.
 (pdftex.def)             Requested size: 404.5952pt x 191.7526pt.
-<figures/dg1.png, id=318, 1284.8pt x 927.465pt>
+<figures/dg1.png, id=324, 1284.8pt x 927.465pt>
 File: figures/dg1.png Graphic file (type png)
 <use figures/dg1.png>
 Package pdftex.def Info: figures/dg1.png  used on input line 162.
 (pdftex.def)             Requested size: 202.29759pt x 146.0199pt.
-<figures/dg2.png, id=319, 535.2497pt x 469.755pt>
+<figures/dg2.png, id=325, 535.2497pt x 469.755pt>
 File: figures/dg2.png Graphic file (type png)
 <use figures/dg2.png>
 Package pdftex.def Info: figures/dg2.png  used on input line 163.
@@ -881,7 +881,9 @@ chapter 2.
 Underfull \vbox (badness 1072) has occurred while \output is active []
 
  [42]
-[43])) [44]
+[43])) [44
+
+]
 \openout2 = `ch03_1d_schrodinger_eq.aux'.
 
  (./ch03_1d_schrodinger_eq.tex
@@ -909,7 +911,7 @@ chapter 3.
  (./app00_homeworks.tex
 (./app01_hw1.tex
 chapter A.
-<figures/Bragg law.png, id=815, 1487.5575pt x 856.19875pt>
+<figures/Bragg law.png, id=829, 1487.5575pt x 856.19875pt>
 File: figures/Bragg law.png Graphic file (type png)
 <use figures/Bragg law.png>
 Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
@@ -972,12 +974,16 @@ chapter D.
 [61
 
 ]
-<figures/hw4_aspect_exp.pdf, id=950, 2251.10002pt x 879.36531pt>
+Underfull \vbox (badness 3895) has occurred while \output is active []
+
+ [62]
+<figures/hw4_aspect_exp.pdf, id=984, 2251.10002pt x 879.36531pt>
 File: figures/hw4_aspect_exp.pdf Graphic file (type pdf)
 <use figures/hw4_aspect_exp.pdf>
-Package pdftex.def Info: figures/hw4_aspect_exp.pdf  used on input line 90.
+Package pdftex.def Info: figures/hw4_aspect_exp.pdf  used on input line 126.
 (pdftex.def)             Requested size: 445.06021pt x 173.85724pt.
- [62]) (./app05_hw5.tex [63 <./figures/hw4_aspect_exp.pdf>]
+)
+(./app05_hw5.tex [63 <./figures/hw4_aspect_exp.pdf>]
 chapter E.
 [64
 
@@ -1009,13 +1015,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20241 strings out of 467168
- 353557 string characters out of 5411585
+ 20281 strings out of 467168
+ 353910 string characters out of 5411585
  956100 words of memory out of 5000000
- 48389 multiletter control sequences out of 15000+600000
- 654477 words of font info for 230 fonts, out of 8000000 for 9000
+ 48390 multiletter control sequences out of 15000+600000
+ 655317 words of font info for 240 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,107p,11213b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,16n,107p,11213b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></o
 pt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/
 texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/texli
@@ -1037,10 +1043,10 @@ ive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (74 pages, 2729504 bytes).
+Output written on 7501_notes.pdf (74 pages, 2735366 bytes).
 PDF statistics:
- 1486 PDF objects out of 1728 (max. 8388607)
- 1331 compressed objects within 14 object streams
- 519 named destinations out of 1000 (max. 500000)
- 51840 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1518 PDF objects out of 1728 (max. 8388607)
+ 1363 compressed objects within 14 object streams
+ 538 named destinations out of 1000 (max. 500000)
+ 51864 words of extra memory for PDF output out of 61914 (max. 10000000)
 
