@@ -9,7 +9,7 @@ For a closed quantum system, its unitary time evolution can be easily reformulat
  \imth\hbar\frac{\dif\rho}{\dif t}&=[H,\rho], &
  \rho(t)&=U(t,0)\rho(0)U^\dagger(t,0).
 \end{align}
-However this is not the most general time evolution for a mixed state $\rho(t)$, as we will show below. 
+However this is not the most general time evolution for a mixed state $\rho(t)$ in an open quantum system, as we will show below. 
 
 \subsection{Quantum channels and Kraus operators}
 
@@ -224,7 +224,47 @@ The standard channel construction assumes a fixed, initially uncorrelated
 environment state. The Lindblad equation adds assumptions such as
 Markovianity and time locality.
 
-\newpage
 
-\subsection{Appendix: Summary of 4 postulates of quantum mechanics}
 
+\section{Appendix: Summarizing the postulates of quantum mechanics}
+
+Below we summarize the 4 postulates of quantum mechanics using two different languages: (1) in terms of state vectors for a closed quantum system, (2) in terms of density matrices for an open quantum system. 
+
+\subsection{State vector formulation of quantum mechanics for a closed system}
+
+\begin{pos}
+    A quantum system is described by a Hilbert space $\mathbb{V}$, and each state of the quantum system is described by a normalized vector $\dket{\psi}\in\mathbb{V}$ in the Hilbert space, up to a global phase factor. 
+\end{pos}
+
+\begin{pos}
+    Any physical observable corresponds to a Hermitian operator $\hat O=\hat O^\dagger$ in the Hilbert space, which has a spectral decomposition $\hat O=\sum_qq~\proj{q}$ with real eigenvalues $\{q\}$. A projective measurement of this observable on state $\dket\psi$ can yield a measurement outcome of $q$ with probability $\text{Pr}(q)=|\expval{q|\psi}|^2$, and the initial state $\dket\psi$ collapses into state $\dket q$ after reading out the measurement outcome $q$. 
+\end{pos}
+
+
+\begin{pos}
+    The time evolution of a closed quantum system is described by the Schrodinger equation with a Hamiltonian $\hat H(t)$: $\imth\frac{\dif{}}{\dif t}\dket{\psi(t)}=\hat H(t)\dket{\psi(t)}$. Equivalently $\dket{\psi(t)}=\hat U(t,0)\dket{\psi(0)}$ i.e. the state evolves under a unitary time evolution operator $\hat U(t,0)$.  
+\end{pos}
+
+\begin{pos}
+    A composite quantum system of two subsystem $\mathbb{V}_1$ and $\mathbb{V}_2$ corresponds to a tensor product of the two Hilbert space $\mathbb{V}=\mathbb{V}_1\otimes \mathbb{V}_2$. The states and operators follow the tensor product rules similarly. 
+\end{pos}
+
+
+\subsection{Density matrix formulation of quantum mechanics for an open system}
+
+\begin{pos}
+    A quantum system is described by a Hilbert space $\mathbb{V}$, and each state of the quantum system corresponds to a density matrix $\hat\rho\in L_\mathbb{V}$, which is a linear operator satisfying the trace condition $\trace\hat\rho=1$ and positivity condition $\hat\rho\geq0$. 
+\end{pos}
+
+\begin{pos}
+    A generalized (POVM) measurement on quantum state $\rho$ is described by a set of measurement operators $\{\hat M_q\}$ satisfying the completeness relation $\sum_q\hat M^\dagger_q\hat M_q=\hat1$. The probability for measurement outcome $q$ is given by $\text{Pr}(q)=\trace{M_q\rho M_q^\dagger}$, and the initial state $\rho$ collapses into  (unnormalized) state $M_q\rho M_q^\dagger$ after reading out the measurement outcome $q$. 
+\end{pos}
+
+
+\begin{pos}
+    If the system and environment are not correlated at the beginning, the time evolution of an open quantum system is described by a quantum channel (i.e. a CPTP map). Under further assumptions of Markovianity and time locality, the time evolution is described by a master equation of the Lindblad Form. 
+\end{pos}
+
+\begin{pos}
+    A composite quantum system of two subsystem $\mathbb{V}_1$ and $\mathbb{V}_2$ corresponds to a tensor product of the two Hilbert space $\mathbb{V}=\mathbb{V}_1\otimes \mathbb{V}_2$. The states and operators follow the tensor product rules similarly. 
+\end{pos}

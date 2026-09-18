@@ -50,7 +50,7 @@ S(\rho_A)=S(\rho_B)
 \end{align}
 Therefore either $S(\rho_A)$ or $S(\rho_B)$ can be defined as the entanglement entropy. 
 
-(5) Consider a composite system of two qubits $A$ and $B$. Can you write down the generic form of a maximally entangled state $\dket{\psi_{AB}}$, satisfying that the reduced density matrix has a maximal entanglement entropy?
+(5) \textbf{Bonus} Consider a composite system of two qubits $A$ and $B$. Can you write down the generic form of a maximally entangled state $\dket{\psi_{AB}}$, satisfying that the reduced density matrix has a maximal entanglement entropy?
 
 Hint: for a maximally entangled 2-qubit state, we must have
 \begin{align}
@@ -82,9 +82,45 @@ where $\{\alpha_j|j=1,2\}$ is a set of complete orthonormal basis for $\mathbb{C
 
 \subsection{Witnessing entanglement}
 
-(1) \textbf{Bonus} Tsirelson's inequality: \nielsen~Problem 2.3
+Consider the singlet Bell state
+\begin{align}
+    \dket{\epr}=\frac1{\sqrt2}(\dket{01}-\dket{10})
+\end{align}
+where we have used shorthand notation $\dket{10}\equiv\dket1_1\otimes\dket0_2$ for two qubits 1 and 2. From the lecture, we know that this state is invariant under spin rotations, i.e. 
+\begin{align}
+    \dket{\epr}=\frac1{\sqrt2}(\dket{+\vec n,-\vec n}-\dket{-\vec n,+\vec n})
+\end{align}
+where $\vec n$ is any unit vector, and $\dket{\vec n}$ is the eigenstate of $\vec n\cdot\vec\sigma$:
+\begin{align}
+    \vec n\cdot\hat{\vec\sigma}\dket{\vec n}=+\dket{\vec n}
+\end{align}
 
-(2) To understand Aspect's experiment to demonstrate a violation to CHSH inequality in 1982 (Nobel Prize 2022), solve \bebera~problem 15.7 (see Fig. \ref{fig:hw4 aspect exp}).
+(1) Show that 
+\begin{align}
+    \expval{\vec m|\vec n\cdot\hat{\vec\sigma}|\vec m}=\vec m\cdot\vec n
+\end{align}
+where $\vec m,\vec n$ are both unit vectors. 
+
+(2) For two unit vectors $\vec m$ and $\vec n$, show that
+\begin{align}
+    \expval{\epr|(\vec m\cdot\vec\sigma_1)\otimes(\vec n\cdot\vec\sigma_2)|\epr}=-\vec m\cdot\vec n
+\end{align}
+
+(3) Show that for simultaneous measurements of two compatible observables $\vec m\cdot\hat{\vec\sigma}_1$ and $\vec n\cdot\hat{\vec\sigma}_2$ in the singlet Bell state $\dket\epr$, the probability for the measurement outcome $\vec m\cdot\vec\sigma_1=+1$ and $\vec n\cdot\vec\sigma_2=+1$ is given by
+\begin{align}
+    P(\vec m,\vec n)=\frac12|\expval{-\vec m|\vec n}|^2
+\end{align}
+where $\vec m,\vec n$ are unit vectors. 
+
+For $\vec m=(\cos\theta_1,\sin\theta_1,0)$ and $\vec n=(\cos\theta_2,\sin\theta_2,0)$ in $x$-$y$ plane, further show that
+\begin{align}
+    P(\vec m,\vec n)=\frac12\sin^2\frac{\theta_1-\theta_2}2
+\end{align}
+
+
+(4) \textbf{Bonus} Tsirelson's inequality: \nielsen~Problem 2.3
+
+(5) \textbf{Bonus} As shown in Fig. \ref{fig:hw4 aspect exp}, to understand Aspect's experiment to demonstrate a violation to CHSH inequality in 1982 (Nobel Prize 2022), solve \bebera~problem 15.7 (see Fig. \ref{fig:hw4 aspect exp}).
 
 \begin{figure}
 \includegraphics[width=0.99\columnwidth]{figures/hw4_aspect_exp.pdf}
@@ -93,41 +129,41 @@ where $\{\alpha_j|j=1,2\}$ is a set of complete orthonormal basis for $\mathbb{C
 \end{figure}
 
 
-\subsection{Entanglement negativity}
+% \subsection{Entanglement negativity (Bonus)}
 
-When we consider a mixed state $\rho_{AB}$ defined in a composite system $A\otimes B$, the entanglement entropy $S(\rho_A)$ should be replaced by the mutual information
-\begin{align}\label{mutual information}
-I(A:B)\equiv S(\rho_A)+S(\rho_B)-S(\rho_{AB})
-\end{align}
-Clearly it reduces to (twice) the entanglement entropy $2S(\rho_A)$ in the special case when $\rho_{AB}$ is a pure state.
+% When we consider a mixed state $\rho_{AB}$ defined in a composite system $A\otimes B$, the entanglement entropy $S(\rho_A)$ should be replaced by the mutual information
+% \begin{align}\label{mutual information}
+% I(A:B)\equiv S(\rho_A)+S(\rho_B)-S(\rho_{AB})
+% \end{align}
+% Clearly it reduces to (twice) the entanglement entropy $2S(\rho_A)$ in the special case when $\rho_{AB}$ is a pure state.
 
-In a generic mixed state, the mutual information (\ref{mutual information}) is incapable of distinguishing classical correlation betweem $A$ and $B$ from the quantum entanglement. To capture bipartite quantum entanglement in a mixed state $\rho_{AB}$, we need to introduce new entanglement measures. One such quantity is (logarithmic) entanglement negativity:
-\begin{align}\label{log negativity}
-    E_{\mathcal{N}}(\rho_{AB})\equiv\log||\rho_{AB}^{T_A}||_1
-\end{align}
-where $T_A$ denotes a partial transpose on subsystem $A$. 
+% In a generic mixed state, the mutual information (\ref{mutual information}) is incapable of distinguishing classical correlation betweem $A$ and $B$ from the quantum entanglement. To capture bipartite quantum entanglement in a mixed state $\rho_{AB}$, we need to introduce new entanglement measures. One such quantity is (logarithmic) entanglement negativity:
+% \begin{align}\label{log negativity}
+%     E_{\mathcal{N}}(\rho_{AB})\equiv\log||\rho_{AB}^{T_A}||_1
+% \end{align}
+% where $T_A$ denotes a partial transpose on subsystem $A$. 
 
-The trace norm $||\cdot||_1$ for a density matrix $\rho$ is defined as
-\begin{align}
-    ||\rho||_1\equiv\text{Tr}\sqrt{\rho^\dagger\rho}=\sum_i|\lambda_i|
-\end{align}
-where $\{\lambda_i\}$ are the eigenvalues of density matrix $\rho$. 
+% The trace norm $||\cdot||_1$ for a density matrix $\rho$ is defined as
+% \begin{align}
+%     ||\rho||_1\equiv\text{Tr}\sqrt{\rho^\dagger\rho}=\sum_i|\lambda_i|
+% \end{align}
+% where $\{\lambda_i\}$ are the eigenvalues of density matrix $\rho$. 
 
-Obviously the logarithmic negativity $E_{\mathcal{N}}$ vanishes if all eigenvalues of $\rho_{AB}^{T_A}$ are non-negative.
+% Obviously the logarithmic negativity $E_{\mathcal{N}}$ vanishes if all eigenvalues of $\rho_{AB}^{T_A}$ are non-negative.
 
-(1) \textbf{Bonus} Show that 
-\begin{align}
-    E_{\mathcal{N}}(\rho_{AB})=\log(1+2\sum_{\lambda_i<0}|\lambda_i|)
-\end{align}
-where $\{\lambda_i\}$ are all eigenvalues of matrix $\rho_{AB}^{T_A}$. 
+% (1) \textbf{Bonus} Show that 
+% \begin{align}
+%     E_{\mathcal{N}}(\rho_{AB})=\log(1+2\sum_{\lambda_i<0}|\lambda_i|)
+% \end{align}
+% where $\{\lambda_i\}$ are all eigenvalues of matrix $\rho_{AB}^{T_A}$. 
 
-(2) Now consider a composite system of two qubits, one qubit in $A$ and one qubit in $B$. Show that for the Bell state $\dket{Bell_0}$ in this composite system, the logarithmic negativity is $\log2$. 
+% (2) \textbf{Bonus} Now consider a composite system of two qubits, one qubit in $A$ and one qubit in $B$. Show that for the Bell state $\dket{\epr}$ in this composite system, the logarithmic negativity is $\log2$. 
 
-(3) \textbf{Bonus} Next consider a mixed state, which is the equilibrium density matrix at inverse temperature $\beta=J/k_BT$ ($J$ is a constant of the dimension of energy)
-\begin{align}
-    \rho_{AB}\propto e^{-\beta Z_A\otimes Z_B}
-\end{align}
-where $\hat Z=\bpm1&0\\0&-1\epm$ is the 3rd Pauli matrix. Show that its logarithmic negativity (\ref{log negativity}) vanishes, while the mutual information (\ref{mutual information}) is nonzero. Plot its mutual information as a function of $\beta>0$. 
+% (3) \textbf{Bonus} Next consider a mixed state, which is the equilibrium density matrix at inverse temperature $\beta=J/k_BT$ ($J$ is a constant of the dimension of energy)
+% \begin{align}
+%     \rho_{AB}\propto e^{-\beta Z_A\otimes Z_B}
+% \end{align}
+% where $\hat Z=\bpm1&0\\0&-1\epm$ is the 3rd Pauli matrix. Show that its logarithmic negativity (\ref{log negativity}) vanishes, while the mutual information (\ref{mutual information}) is nonzero. Plot its mutual information as a function of $\beta>0$. 
 
  
 
