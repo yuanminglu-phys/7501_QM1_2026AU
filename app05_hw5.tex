@@ -13,7 +13,7 @@ evolving under the following Hamiltonian
 \end{align}
 where $\mu_B=\hbar e/2m_e$ is the Bohr magneton. After a small period $\Delta t=T/n$ of unitary time evolution, we carry out a projective measurement on Pauli matrix $\hat X$. Recall that while $\dket{0},\dket{1}$ are eigenstates of Pauli $\hat Z$ operator, $\dket{\pm}$ are eigenstates of $\hat X$.  
 
-(1) As we have learnt in the lecture notes, the 2-step procedure, of unitary time evolution for $\Delta t=T/n$ followed by a projective measurement on $\hat X$, can be described by a generalized measurement. Compute the measurement operators $\{\hat M_m|m=\pm\}$ as $2\times2$ matrices, and show that they satisfy the completeness relation
+(1) As we have learnt in the lecture, the 2-step procedure, of unitary time evolution for $\Delta t=T/n$ followed by a projective measurement on $\hat X$, can be described by a generalized measurement. Compute the measurement operators $\{\hat M_m|m=\pm\}$ as $2\times2$ matrices, and show that they satisfy the completeness relation
 \begin{align}
 \sum_{m=\pm}\hat M^\dagger_m\hat M_m=\hat1. 
 \end{align}
@@ -22,15 +22,18 @@ where $\mu_B=\hbar e/2m_e$ is the Bohr magneton. After a small period $\Delta t=
 \begin{align}\label{quantum zeno:quantum channel}
 \mathcal{E}[\hat\rho]\equiv\sum_m\hat M_m\hat\rho\hat M_m^\dagger
 \end{align}
-In the discussion of quantum Zeno effect, such a generalized measurement (without knowing measurement outcomes) was performed $n$ times. Starting from the initial density matrix $\hat\rho_0$ in (\ref{quantum zeno:initial state}), what is the final density matrix $\mathcal{E}^n[\rho_0]$ after $n$ such operation? 
-
-Hint: any single-qubit density matrix can be expressed in terms of the Bloch ball:
+We have previously learnt that any single-qubit density matrix can be expressed in terms of the Bloch ball:
 \begin{align}
 \hat\rho=\frac{\hat 1+\vec r\cdot\vec\sigma}2,~~~|\vec r|\leq1.
 \end{align}
 How does the vector $\vec r$ transform under the quantum channel (\ref{quantum zeno:quantum channel})?
 
-(3) Using the above results, compute the probability at time $T$ (after $n$ such 2-step procedures) to produce the measurement outcome of $\sigma_x=+1$. 
+(3) In the discussion of quantum Zeno effect, such a generalized measurement (without knowing measurement outcomes) was performed $n$ times. Starting from the initial density matrix $\hat\rho_0$ in (\ref{quantum zeno:initial state}), what is the final density matrix $\mathcal{E}^n[\rho_0]$ after $n$ such operation? 
+
+Hint: use the results of part (2). 
+
+
+(4) Using the above results, compute the probability at time $T$ (after $n$ such 2-step procedures) to produce the measurement outcome of $\sigma_x=+1$. 
 
 Comment: recall that we have obtained this probability in HW2. You should compare your results here to HW2.  
 
@@ -109,4 +112,4 @@ For the same initial state (\ref{amplitude damping:initial state}), obtain the f
 
 \subsubsection{Amplitude + phase dampings}
 
-\nielsen~Exercise 8.30. There is a typo in \nielsen~for this problem: you need to show that $T_2=2T_1$ for amplitude damping only, and $T_2\leq 2T_1$ for both amplitude and phase dampings. 
+\textbf{Bonus} \nielsen~Exercise 8.30. There is a typo in \nielsen~for this problem: you need to show that $T_2=2T_1$ for amplitude damping only, and $T_2\leq 2T_1$ for both amplitude and phase dampings. 

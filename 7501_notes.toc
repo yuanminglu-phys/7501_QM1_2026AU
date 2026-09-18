@@ -84,14 +84,14 @@
 \contentsline {subsection}{\numberline {D.0.3}Witnessing entanglement}{62}{subsection.D.0.3}%
 \contentsline {chapter}{\numberline {E}Homework 5 (due 10/2)}{64}{appendix.E}%
 \contentsline {subsection}{\numberline {E.0.1}Revisiting the quantum Zeno effect}{64}{subsection.E.0.1}%
-\contentsline {subsection}{\numberline {E.0.2}Measurements}{64}{subsection.E.0.2}%
+\contentsline {subsection}{\numberline {E.0.2}Measurements}{65}{subsection.E.0.2}%
 \contentsline {subsection}{\numberline {E.0.3}Quantum channels}{65}{subsection.E.0.3}%
 \contentsline {subsection}{\numberline {E.0.4}The master equation}{65}{subsection.E.0.4}%
 \contentsline {subsubsection}{\numberline {E.0.4.1}Phase damping}{65}{subsubsection.E.0.4.1}%
 \contentsline {subsubsection}{\numberline {E.0.4.2}Amplitude damping}{66}{subsubsection.E.0.4.2}%
 \contentsline {subsubsection}{\numberline {E.0.4.3}Amplitude + phase dampings}{66}{subsubsection.E.0.4.3}%
 \contentsline {chapter}{\numberline {F}Homework 6 (Due 10/14)}{67}{appendix.F}%
-\contentsline {subsection}{\numberline {F.0.1}Position and momentum operators on a discrete periodic chain}{67}{subsection.F.0.1}%
+\contentsline {subsection}{\numberline {F.0.1}(Bonus) Position and momentum operators on a discrete periodic chain}{67}{subsection.F.0.1}%
 \contentsline {subsection}{\numberline {F.0.2}Dirac delta function}{67}{subsection.F.0.2}%
 \contentsline {subsection}{\numberline {F.0.3}Inversion symmetry in one dimension}{68}{subsection.F.0.3}%
 \contentsline {subsection}{\numberline {F.0.4}Double delta function potential}{69}{subsection.F.0.4}%

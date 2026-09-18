@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  18 SEP 2026 02:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  18 SEP 2026 03:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -985,16 +985,16 @@ Package pdftex.def Info: figures/hw4_aspect_exp.pdf  used on input line 126.
 )
 (./app05_hw5.tex [63 <./figures/hw4_aspect_exp.pdf>]
 chapter E.
-[64
+
+Underfull \vbox (badness 3138) has occurred while \output is active []
+
+ [64
 
 ]
-Underfull \vbox (badness 1688) has occurred while \output is active []
-
- [65])
-(./app06_hw6.tex [66]
+[65]) (./app06_hw6.tex [66]
 chapter F.
 
-Underfull \vbox (badness 2189) has occurred while \output is active []
+Underfull \vbox (badness 2035) has occurred while \output is active []
 
  [67
 
@@ -1015,11 +1015,11 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20281 strings out of 467168
- 353910 string characters out of 5411585
+ 20279 strings out of 467168
+ 353896 string characters out of 5411585
  956100 words of memory out of 5000000
  48390 multiletter control sequences out of 15000+600000
- 655317 words of font info for 240 fonts, out of 8000000 for 9000
+ 655267 words of font info for 239 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,107p,11213b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></o
@@ -1043,7 +1043,7 @@ ive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (74 pages, 2735366 bytes).
+Output written on 7501_notes.pdf (74 pages, 2735463 bytes).
 PDF statistics:
  1518 PDF objects out of 1728 (max. 8388607)
  1363 compressed objects within 14 object streams
