@@ -1,2 +1,296 @@
 \section{Solving one-dimensional potentials (10/2)}
 
+\referto{\tong~2.1.1, 2.3.2, 2.4.1; \sakurai~Appendix B on ``Elementary Solutions to Schr\"odinger Wave Equation"}
+
+\subsection{General Properties of stationary Schr\"odinger equations}
+
+The stationary Schr\"odinger equation is
+\begin{equation}
+ \dbra{x}\hat H\dket{\psi}=E\expval{x}{\psi}.
+\end{equation}
+For a particle of mass $m$ in a one-dimensional potential $V(x)$,
+\begin{equation}
+ \boxed{
+ -\frac{\hbar^2}{2m}\psi''(x)+V(x)\psi(x)=E\psi(x).}
+\end{equation}
+This is a linear, second-order ordinary differential equation.
+
+\textbf{Linearity:}
+
+If $\psi_1(x)$ and $\psi_2(x)$ are solutions with the same energy $E$, then
+any linear combination
+\begin{equation}
+ c_1\psi_1(x)+c_2\psi_2(x),
+ \qquad c_1,c_2\in\mathbb C,
+\end{equation}
+is also a solution with energy $E$.
+
+\textbf{Complex conjugation and time reversal symmetry}
+
+If $V(x)$ is real and $\psi(x)$ is a solution with energy $E$, then
+$\psi^*(x)$ is also a solution with the same energy. For
+\begin{equation}
+ \hat H=\frac{\hat p^{\,2}}{2m}+V(\hat x),
+\end{equation}
+this follows from
+\begin{equation}
+ \hat H^*=\hat H.
+\end{equation}
+This is the stationary manifestation of time-reversal symmetry for a
+spinless particle in a real scalar potential.
+
+\textbf{Real eigenfunctions}
+
+Energy eigenfunctions can be chosen to be real. Starting from a complex
+solution $\psi(x)$, define
+\begin{equation}
+ \psi_1(x)=\psi(x)+\psi^*(x),
+ \qquad
+ \psi_2(x)=\imth\bigl(\psi(x)-\psi^*(x)\bigr).
+\end{equation}
+Both $\psi_1$ and $\psi_2$ are real solutions with the same energy. A
+nonzero member of this pair can therefore be used as a real eigenfunction.
+
+\textbf{Smoothness and matching conditions}
+
+If $V(x)$ is smooth, then solutions of the Schr\"odinger equation are smooth.
+If $V(x)$ has a finite discontinuity, integration of the equation across the
+discontinuity shows that both $\psi(x)$ and $\psi'(x)$
+are continuous. Singular potentials, such as a delta function, require a
+modified derivative matching condition.
+
+\subsection{Examples}
+
+\subsubsection{Free particle}
+For a free particle,
+\begin{equation}
+ V(x)=0.
+\end{equation}
+The plane-wave solutions are
+\begin{equation}
+ \psi_k(x)\propto e^{\imth kx},
+ \qquad
+ E=\frac{\hbar^2k^2}{2m}.
+\end{equation}
+These are scattering states and are not square-normalizable on the entire
+real line. The two waves $\psi_{+k}$ and $\psi_{-k}$ have the same energy.
+Real eigenfunctions may be chosen as $\cos(kx)$ and $\sin(kx)$. 
+
+To properly normalize these plane waves, we have to utilize the Dirac delta function:
+\begin{align}
+    \expval{k_1|k_2}=\int\dif{x}~\psi_{k_1}^\ast(x)\psi_{k_2}(x)=\delta(k_1-k_2)
+\end{align}
+which means
+\begin{align}
+    \psi_k(x)=\frac1{\sqrt{2\pi}}e^{\imth kx}
+\end{align}
+
+
+\textbf{Periodic boundary condition:}
+
+If we consider a plane wave on a periodic ring of length $L$, we need to enforce the \emph{periodic boundary condition} 
+\begin{align}
+    \psi_k(x)\equiv\psi_k(x+L)
+\end{align}
+which quantizes the wavevector $k$ as 
+\begin{align}
+    k=\frac{2\pi}{L}n_k,~~~n_k\in\mbz.
+\end{align}
+
+
+\subsubsection{Step potential}
+Consider
+\begin{equation}
+ V(x)=
+ \begin{cases}
+ 0, & x<0,\\
+ U, & x>0,
+ \end{cases}
+ \qquad U>0.
+\end{equation}
+Because $V(x)\geq0$, there are no energy eigenstates with $E<0$.
+
+\textbf{Case I: $E>U$}
+
+Define
+\begin{equation}
+ k=\frac{\sqrt{2mE}}{\hbar},
+ \qquad
+ k'=\frac{\sqrt{2m(E-U)}}{\hbar}.
+\end{equation}
+For a wave incident from the left, write
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ e^{\imth kx}+r e^{-\imth kx}, & x<0,\\
+ t e^{\imth k'x}, & x>0.
+ \end{cases}
+\end{equation}
+Continuity of $\psi$ and $\psi'$ at $x=0$ gives
+\begin{equation}
+ 1+r=t,
+ \qquad
+ k(1-r)=k't.
+\end{equation}
+Therefore,
+\begin{equation}
+ \boxed{r=\frac{k-k'}{k+k'},
+ \qquad
+ t=\frac{2k}{k+k'}=\frac{2}{1+k'/k}.}
+\end{equation}
+The reflection and transmission probabilities are determined by probability
+currents:
+\begin{equation}
+ R=|r|^2,
+ \qquad
+ T=\frac{k'}{k}|t|^2,
+ \qquad
+ R+T=1.
+\end{equation}
+
+\textbf{Case II: $0<E<U$}
+
+Now define
+\begin{equation}
+ k=\frac{\sqrt{2mE}}{\hbar},
+ \qquad
+ \kappa=\frac{\sqrt{2m(U-E)}}{\hbar},
+ \qquad k'=\imth\kappa.
+\end{equation}
+The physical solution is
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ e^{\imth kx}+r e^{-\imth kx}, & x<0,\\
+ t e^{-\kappa x}, & x>0.
+ \end{cases}
+\end{equation}
+The growing exponential for $x>0$ is excluded. The matching formulas are the
+same as before after substituting $k'=\imth\kappa$:
+\begin{equation}
+ t=\frac{2k}{k+\imth\kappa},
+ \qquad
+ r=\frac{k-\imth\kappa}{k+\imth\kappa}.
+\end{equation}
+Thus $|r|^2=1$. There is no transmitted probability current, although the
+wave function penetrates a distance of order $\kappa^{-1}$ into the
+classically forbidden region.
+
+\subsubsection{Delta-function potential}
+Consider 
+\begin{equation}
+ V(x)=V_0~\delta(x).
+\end{equation}
+The wave function is continuous at the origin. Integrating the stationary
+Schr\"odinger equation from $-\epsilon$ to $+\epsilon$ and taking
+$\epsilon\to0^+$ gives
+\begin{equation}
+ \boxed{
+ \psi'(0^+)-\psi'(0^-)=\frac{2mV_0}{\hbar^2}\psi(0).}
+\end{equation}
+
+\textbf{Scattering states: $E>0$}
+
+Let
+\begin{equation}
+ k=\frac{\sqrt{2mE}}{\hbar},
+\end{equation}
+and use
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ e^{\imth kx}+r e^{-\imth kx}, & x<0,\\
+ t e^{\imth kx}, & x>0.
+ \end{cases}
+\end{equation}
+Continuity gives
+\begin{equation}
+ 1+r=t.
+\end{equation}
+The derivative jump condition gives
+\begin{equation}
+ \imth k(t-1+r)=\frac{2mV_0}{\hbar^2}t.
+\end{equation}
+Define
+\begin{equation}
+ \alpha=\frac{mV_0}{\hbar^2k}.
+\end{equation}
+Then
+\begin{equation}
+ \boxed{t=\frac{1}{1+\imth\alpha},
+ \qquad
+ r=\frac{-\imth\alpha}{1+\imth\alpha}.}
+\end{equation}
+Equivalently,
+\begin{equation}
+ t=\frac{1}{1-mV_0/(\imth k\hbar^2)},
+ \qquad
+ r=\frac{mV_0/(\imth k\hbar^2)}{1-mV_0/(\imth k\hbar^2)}.
+\end{equation}
+The fluxes satisfy
+\begin{equation}
+ |t|^2+|r|^2=1.
+\end{equation}
+The same scattering result applies to either sign of $V_0$ as long as
+$E>0$.
+
+\textbf{Bound state for an attractive delta potential}
+
+Let $V_0<0$ and $E<0$. Define
+\begin{equation}
+ \kappa=\frac{\sqrt{2m|E|}}{\hbar}.
+\end{equation}
+Normalizability requires exponential decay at both infinities:
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+A e^{\kappa x}, & x<0,\\
+ B e^{-\kappa x}, & x>0.
+ \end{cases}
+\end{equation}
+The continuity gives $A=B$ and the derivative jump condition becomes
+\begin{equation}
+ -2\kappa A=\frac{2mV_0}{\hbar^2}A,
+\end{equation}
+so
+\begin{equation}
+ \kappa=-\frac{mV_0}{\hbar^2}=\frac{m|V_0|}{\hbar^2}.
+\end{equation}
+Therefore the attractive delta potential has one bound state with energy
+\begin{equation}
+ \boxed{E=-\frac{mV_0^2}{2\hbar^2}.}
+\end{equation}
+Normalization gives
+\begin{equation}
+ 1=\int_{-\infty}^{\infty}|\psi(x)|^2\dif x
+ =\frac{|A|^2}{\kappa},
+\end{equation}
+so one may choose
+\begin{equation}
+ \boxed{\psi(x)=\sqrt{\kappa}\,e^{-\kappa|x|}.}
+\end{equation}
+
+\subsection{Bound and Scattering Spectra}
+
+Bound states are normalizable and have discrete energies. For the attractive
+delta potential, there is a single bound-state energy. In contrast, scattering states are
+not square-normalizable in the full space and form a continuous energy
+spectrum. They are instead normalized using delta-function normalization. 
+
+
+
+\subsection{Summary}
+%\addcontentsline{toc}{chapter}{Summary}
+\begin{itemize}
+ \item The stationary Schr\"odinger equation is a linear, second-order ODE.
+ \item For real potentials, energy eigenfunctions can be chosen real.
+ \item Finite potential discontinuities preserve continuity of both $\psi$
+       and $\psi'$.
+ \item A delta potential preserves $\psi$ but produces a finite jump in
+       $\psi'$.
+ \item Step and delta potentials illustrate reflection, transmission,
+       evanescent waves, and bound-state quantization.
+ \item Bound states have discrete energies, whereas scattering states form a
+       continuous spectrum.
+\end{itemize}
+

@@ -1,2 +1,275 @@
-\section{Position, momentum and translation operators (9/30)}
+\section{Position, momentum and Schrodinger's wave equation (9/30)}
 
+\referto{\tong~3.2.5, \sakurai~1.6, 1.7}
+
+\subsection{Position and momentum: from a discrete lattice to the continuum}
+
+\subsubsection{Position basis on a lattice}
+Consider a one-dimensional lattice with lattice constant $a$. Its sites are
+labeled by integers $n$, and the position eigenstates form the basis of Hilbert space
+\begin{equation}
+ \mathbb{V}=\operatorname{span}\{\dket{n}:n=0,\pm1,\pm2,\ldots\}\simeq\mathbb{C}^\infty
+\end{equation}
+The position operator is
+\begin{equation}
+ \hat{x}=\sum_{n=-\infty}^{\infty}na\proj{n},
+\end{equation}
+so that
+\begin{equation}
+ \hat{x}\dket{n}=na\dket{n}.
+\end{equation}
+
+\subsubsection{Translation operator}
+Define the one-site translation operator by
+\begin{equation}
+ \hat{T}_x=\sum_{n=-\infty}^{\infty}\dket{n+1}\dbra{n}.
+\end{equation}
+Its adjoint translates in the opposite direction, and
+\begin{equation}
+ \hat{T}_x^\dagger\hat{T}_x=\id,
+\end{equation}
+so $\hat{T}_x$ is unitary. The position operator and translation operator
+satisfy
+\begin{equation}
+ \comm{\hat{x}}{\hat{T}_x}=a\hat{T}_x.
+\end{equation}
+
+The eigenstates of translation are labeled by a dimensionless wave number
+$k$:
+\begin{equation}
+ \hat{T}_x\dket{k}=e^{-\imth k}\dket{k},
+ \qquad 0\leq k<2\pi.
+\end{equation}
+For a periodic lattice with $N$ sites and $\dket{n}\equiv\dket{n+N}$, the change of basis is implemented by a unitary transformation
+\begin{equation}
+ \dket{k}=\frac{1}{\sqrt{N}}\sum_{n=0}^{N-1} e^{\imth kn}\dket{n},
+ \qquad
+ k=\frac{2\pi}{N}n_k\mod2\pi,~n_k\in\mbz.
+\end{equation}
+known as the discrete Fourier transform (DFT). The inverse transformation is
+\begin{equation}
+ \dket{n}=\frac{1}{\sqrt{N}}\sum_{n_k=0}^{N-1} e^{-\imth kn}\dket{k},
+ \qquad
+ \expval{n_1|n_2}=\delta_{n_1,n_2}.
+\end{equation}
+We also have the resolution of identity for these two basis sets
+\begin{align}\label{resolution of identity:discrete}
+    \sum_{n=0}^{N-1}\proj{n}=\sum_{n_k=0}^{N-1}\proj{k}=\hat1
+\end{align}
+
+
+\subsubsection{Momentum as the generator of translation}
+Because $\hat{T}_x$ is unitary, write
+\begin{equation}
+ \hat{T}_x=e^{-\imth a\hat{p}/\hbar}.
+\end{equation}
+The momentum operator is therefore the generator of spatial translations.
+On a translation eigenstate,
+\begin{equation}
+ \hat{p}\dket{k}=\frac{\hbar k}{a}\dket{k}.
+\end{equation}
+Using the commutator of $\hat{x}$ with $\hat{T}_x$, or expanding an
+infinitesimal translation ($a\rightarrow0^+$), gives the canonical commutation relation
+\begin{equation}
+ \boxed{\comm{\hat{x}}{\hat{p}}=\imth\hbar.}
+\end{equation}
+
+\subsubsection{Continuum and thermodynamic limits}
+To connect the DFT on a discrete lattice to position and momentum operators in the continuum, we need to simultaneously take the continuum limit
+\begin{equation}
+ a\longrightarrow0
+\end{equation}
+and the thermodynamic limit
+\begin{align}
+    Na\longrightarrow\infty.
+\end{align}
+ 
+
+Introduce continuous variables
+\begin{equation}
+ x=na,
+ \qquad
+ p=\frac{\hbar k}{a},
+\end{equation}
+with spacings that approach zero in the continnum and thermodynamic limits:
+\begin{equation}
+ \Delta x=a,
+ \qquad
+ \Delta p=\frac{2\pi\hbar}{Na}.
+\end{equation}
+and associated basis vectors:
+\begin{align}
+    \dket{x}\equiv\frac1{\sqrt a}\dket{n=\frac{x}a},~~~\dket{p}\equiv\sqrt{\frac{Na}{2\pi\hbar}}\dket{k=\frac{pa}{\hbar}}
+\end{align}
+
+
+The discrete resolutions of the identity in (\ref{resolution of identity:discrete}) become
+\begin{equation}
+ \int_{-\infty}^{\infty}\dif p\,\dket{p}\dbra{p}=\id,
+ \qquad
+ \int_{-\infty}^{\infty}\dif x\,\dket{x}\dbra{x}=\id.
+\end{equation}
+The continuum states are normalized according to
+\begin{equation}
+ \expval{x|x'}=\delta(x-x')=\lim_{\Delta x\rightarrow0^+}\frac{\delta_{n,n^\prime}}{\Delta x},
+ \qquad
+ \expval{p|p'}=\delta(p-p')=\lim_{\Delta p\rightarrow0^+}\frac{\delta_{p,p^\prime}}{\Delta p}.
+\end{equation}
+Finally, the position-momentum overlap is the plane wave
+\begin{equation}
+ \boxed{\expval{x|p}=\frac{1}{\sqrt{2\pi\hbar}}
+ e^{\imth px/\hbar}.}
+\end{equation}
+
+\subsection{The Schr\"odinger Wave Equation}
+
+\subsubsection{Fourier transformation between representations}
+Using the continuum completeness relations,
+\begin{align}
+ \dket{p}
+ &=\int_{-\infty}^{\infty}\dif x\,\dket{x}\expval{x|p}
+ =\int_{-\infty}^{\infty}\dif x\,\dket{x}
+ \frac{e^{\imth px/\hbar}}{\sqrt{2\pi\hbar}},\\
+ \dket{x}
+ &=\int_{-\infty}^{\infty}\dif p\,\dket{p}\expval{p|x}
+ =\int_{-\infty}^{\infty}\dif p\,\dket{p}
+ \frac{e^{-\imth px/\hbar}}{\sqrt{2\pi\hbar}}.
+\end{align}
+The orthonormality relations follow from
+\begin{equation}
+ \frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\dif x\,
+ e^{\imth(p'-p)x/\hbar}=\delta(p-p'),
+\end{equation}
+and similarly for $\delta(x-x')$.
+
+\subsubsection{Dirac delta function}
+The Dirac delta distribution satisfies
+\begin{align}
+ \delta(x)&=0\quad\text{for }x\neq0,\\
+ \int_{-\infty}^{\infty}\delta(x)\,\dif x&=1,\\
+ \delta(x)&=\delta(-x),\\
+ \int_{-\infty}^{\infty}f(x)\delta(x-x_0)\,\dif x&=f(x_0).
+\end{align}
+A useful Fourier representation is
+\begin{equation}
+ \delta(x)=\frac{1}{2\pi}\int_{-\infty}^{\infty}
+ e^{\imth kx}\,\dif k.
+\end{equation}
+The scaling and derivative identities are
+\begin{equation}
+ \delta(ax)=\frac{1}{|a|}\delta(x),
+ \qquad
+ \int f(x)\delta'(x-x_0)\,\dif x=-f'(x_0).
+\end{equation}
+Two common regularized representations of Dirac delta function are
+\begin{equation}
+ \delta(x)=\lim_{\epsilon\to0^+}
+ \frac{1}{\pi}\frac{\epsilon}{x^2+\epsilon^2}
+\end{equation}
+and
+\begin{equation}
+ \delta(x)=\lim_{\epsilon\to0^+}
+ \frac{1}{\sqrt{\pi\epsilon}}e^{-x^2/\epsilon}.
+\end{equation}
+
+\subsubsection{Wave functions}
+For a state $\dket{\psi}$, define its position-space and momentum-space wave
+functions by
+\begin{equation}
+ \psi(x)=\expval{x|\psi},
+ \qquad
+ \widetilde{\psi}(p)=\expval{p|\psi}.
+\end{equation}
+They are Fourier-transform pairs:
+\begin{align}
+ \psi(x)&=\frac{1}{\sqrt{2\pi\hbar}}
+ \int_{-\infty}^{\infty}\dif p\,
+ e^{\imth px/\hbar}\widetilde{\psi}(p),\\
+ \widetilde{\psi}(p)&=\frac{1}{\sqrt{2\pi\hbar}}
+ \int_{-\infty}^{\infty}\dif x\,
+ e^{-\imth px/\hbar}\psi(x).
+\end{align}
+
+\subsubsection{Operators in the position representation}
+For a function of position,
+\begin{equation}
+ \dbra{x}V(\hat{x})\dket{x'}=V(x)\delta(x-x').
+\end{equation}
+For momentum,
+\begin{align}
+ \dbra{x}\hat{p}\dket{x'}
+ &=\int\dif p\,\expval{x|p}\,p\,\expval{p|x'}\\
+ &=-\imth\hbar\frac{\pd}{\pd x}\delta(x-x').
+\end{align}
+Thus, acting on wave functions,
+\begin{equation}
+ \boxed{\hat{p}\longrightarrow-\imth\hbar\frac{\pd}{\pd x}.}
+\end{equation}
+More generally,
+\begin{equation}
+ \dbra{x}U(\hat{p})\dket{x'}
+ =U\!\left(-\imth\hbar\frac{\pd}{\pd x}\right)\delta(x-x').
+\end{equation}
+
+\subsubsection{Time-dependent and stationary Schr\"odinger equations}
+The abstract time-dependent Schr\"odinger equation is
+\begin{equation}
+ \imth\hbar\frac{\pd}{\pd t}\dket{\psi(t)}
+ =\hat{H}\dket{\psi(t)}.
+\end{equation}
+If
+\begin{equation}
+ \hat{H}\dket{n}=E_n\dket{n},
+ \qquad
+ c_n=\expval{n|\psi(0)},
+\end{equation}
+then
+\begin{equation}
+ \dket{\psi(t)}=\sum_n c_n e^{-\imth E_nt/\hbar}\dket{n}.
+\end{equation}
+The time-independent (or stationary) Schrodinger equation is
+\begin{equation}
+ \hat{H}\dket{\psi}=E\dket{\psi}.
+\end{equation}
+
+\subsubsection{Wave equation for a particle in one dimension}
+For a particle with no electromagnetic field,
+\begin{equation}
+ \hat{H}=\frac{\hat{p}^{\,2}}{2m}+V(\hat{x}).
+\end{equation}
+Taking the position-space matrix element of the stationary equation gives
+\begin{align}
+ \dbra{x}\hat{H}\dket{\psi}
+ &=\frac{1}{2m}\dbra{x}\hat{p}^{2}\dket{\psi}
+ +\dbra{x}V(\hat{x})\dket{\psi}\\
+ &=-\frac{\hbar^2}{2m}\frac{\dif{}^2}{\dif x^2}\psi(x)
+ +V(x)\psi(x).
+\end{align}
+Therefore,
+\begin{equation}
+ \boxed{-\frac{\hbar^2}{2m}\frac{\dif{}^2\psi(x)}{\dif{x^2}}
+ +V(x)\psi(x)=E\psi(x).}
+\end{equation}
+This is the one-dimensional stationary Schr\"odinger wave equation.
+
+In momentum space, where $\widetilde{\psi}(p)=\expval{p}{\psi}$, the same
+equation becomes
+\begin{equation}
+ \boxed{\frac{p^2}{2m}\widetilde{\psi}(p)
+ +V\!\left(\imth\hbar\frac{\pd}{\pd p}\right)
+ \widetilde{\psi}(p)=E\widetilde{\psi}(p).}
+\end{equation}
+
+\subsection{Summary}
+%\addcontentsline{toc}{chapter}{Summary}
+\begin{itemize}
+ \item Momentum is the generator of spatial translations.
+ \item The continuum position and momentum bases are delta normalized and
+       connected by a Fourier transform.
+ \item In the position representation,
+       $\hat{p}=-\imth\hbar\pd/\pd x$.
+ \item In the momentum representation,
+       $\hat{x}=\imth\hbar\pd/\pd p$.
+ \item Projecting the abstract eigenvalue problem onto a position basis gives
+       the Schr\"odinger wave equation.
+\end{itemize}
