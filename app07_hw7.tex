@@ -1,0 +1,186 @@
+\chapter{Homework 7 (due 10/28)}
+
+\subsection{Lippmann-Schwinger equation}
+
+In this problem, we delve into the derivation of Lippmann-Schwinger equation, which was briefly mentioned in our lectures. Consider a Hamiltonian 
+\begin{align}
+\hat H=\hat H_0+\hat V
+\end{align}
+where $\hat H_0$ is the non-interacting Hamiltonian which is exactly solvable, e.g. the free particle Hamiltonian $\hat p^2/2m$ in lectures. $\hat V$ represents an interaction term, e.g. the potential term $V(\hat x)$ for a quantum particle in free space, whose presence makes the full Hamiltonian $\hat H$ hard to solve. 
+
+Next we assume that $\hat H$ and $\hat H_0$ have the same energy spectrum. This is exactly the case for a localized potential
+\begin{align}
+\lim_{|x|\rightarrow\infty}V(x)=0.
+\end{align}
+that we have discussed in lectures: it is obvious from the asymptotic behavior of the Schrodinger equation at $|x|\rightarrow\infty$. 
+
+Now we label the orthonormal diagonal basis of non-interacting Hamiltonian $\hat H_0$ to be $\{\dket{a}\}$, satisfying
+\begin{align}
+\hat H_0\dket{a}=E_a\dket{a},~~~\expval{a|b}=\delta_{a,b}.
+\end{align}
+We further label the eigenstate of full Hamiltonian $\hat H$ with energy $E_a$ as $\dket{\psi^\pm_{a}}$, satisfying the stationary Schrodinger equation
+\begin{align}
+\hat H\dket{\psi^\pm_a}=(E_a\pm\imth\epsilon)\dket{\psi^\pm_a}
+\end{align}
+where $\epsilon\rightarrow0^+$ is an infinitely small positive number. 
+
+(1) \textbf{Bonus} Show that 
+\begin{align}
+\dket{\psi^\pm_a}=\alpha\dket{a}+(E_a-\hat H_0\pm\imth\epsilon)^{-1}\hat V\dket{\psi^\pm_a}
+\end{align}
+where $\alpha$ is a complex coefficient.
+
+Comment: we can always absorb the coefficient $\alpha$ into the un-normalized eigenstate $\dket{\psi^\pm_a}$, which leads to the familiar form of Lippmann-Schwinger equation:
+\begin{align}
+\dket{\psi^\pm_a}=\dket{a}+\frac1{E_a-\hat H_0\pm\imth\epsilon}\hat V\dket{\psi^\pm_a}
+\end{align}
+But it is sometimes important to keep the coefficient $\alpha$ in mind, as we will see in the next problem when we are dealing with piecewise continuous wavefunctions.\\
+
+(2) \textbf{Bonus} Show that $\{\dket{\psi^+_a}\}$ forms another set of complete orthonormal basis of the Hilbert space. In other words, show that
+\begin{align}
+\expval{\psi^+_a|\psi^+_b}=\delta_{a,b}=\expval{a|b}
+\end{align}
+
+Comment: we need to use the Gellmann-Low theorem for this problem, which we mentioend during lectures. Similarly one can show that $\{\dket{\psi^-_a}\}$ is also a set of complete orthonormal basis. 
+
+\subsection{Solving the Lippmann-Schwinger equation for a delta function potential}
+
+In this problem, we will use the Lippmann-Schwinger equation to solve the eigenstate wavefunctions for scattering states with a delta function potential:
+\begin{align}
+\hat H=\hat H_0+\hat V,~~~\hat H_0=\frac{\hat p^2}{2m},~~~\hat V=V(\hat x)
+\end{align}
+Recall the Lippmann-Schwinger equation:
+\begin{align}\label{hw7:lippmann-schwinger eq}
+\psi^{\pm}_k(x)=\alpha\expval{x|k}+\int\text{d}yG_0^{\pm}(E|x,y)V(y)\psi^{\pm}_k(y)
+\end{align}
+where $\alpha$ is an arbitrary coefficient to be determined, and $\dket{k}$ is a plane wave 
+\begin{align}
+\expval{x|k}=\frac1{\sqrt{2\pi}}e^{\imth kx}
+\end{align}
+with wavevector $k=\sqrt{2mE}/\hbar>0$, with a positive energy $E>0$ for the free particle Hamiltonian $\hat H_0$. The retarded ($G^+$) and advanced ($G^-$) Green's functions are defined as 
+\begin{align}\label{hw7:Green's function}
+G_0^{\pm}(E|x,y)=\int\text{d}k\expval{x|k}\frac{1}{E-\hbar^2k^2/2m\pm\imth\epsilon}\expval{k|y}=\int\frac{\text{d}k}{2\pi}\frac{e^{\imth k(x-y)}}{E-\hbar^2k^2/2m\pm\imth\epsilon}
+\end{align}
+where $\epsilon\rightarrow0^+$ is an infinitely small positive number. 
+
+(1) Show the following relation holds for an arbitrary potential $V(\hat x)$
+\begin{align}
+\big[\psi^+_k(x)\big]^\ast=\psi^-_{-k}(x)
+\end{align}
+using the Lippmann-Schwinger equation (\ref{hw7:lippmann-schwinger eq}). This relation is a consequence of the time reversal symmetry $\hat H^\ast=\hat H$.
+
+(2) \textbf{Bonus} Using the contour integral in complex analysis, compute the retarded Green's function $G_0^+(E|x,y)$ in (\ref{hw7:Green's function}). Explain why it corresponds to an outgoing wave. 
+
+Hint: it should have different behaviors in $x<y$ and $x>y$ regions. 
+
+(3) \textbf{Bonus} Similarly compute the advanced Green's function $G_0^-(E|x,y)$ in (\ref{hw7:Green's function}). Explain why it corresponds to an incoming wave. 
+
+(4) \textbf{Bonus} Now we turn to the delta function potential $V(x)=V_0\delta(x)$. We will focus on only the outgoing states $\dket{\psi^+_k}$. Write down the Lippmann-Schwinger equation (\ref{hw7:lippmann-schwinger eq}) for $x>0$ and $x<0$ separately. Note that the coefficient $\alpha$ can be different for the two regions. Solve the Lippmann-Schwinger equation to obtain the transmission and reflection coefficents $t$ and $r$. They should recover the exact solution we derived in lectures. 
+
+\subsection{S matrix and the phase shift}
+
+In lectures we have mentioned that the $S$ matrix defined as the change of basis between two sets of complete orthonormal basis $\{\dket{\psi^+_a}\}$ and $\{\dket{\psi_a^-}\}$ (see problem 1.(2)~)
+\begin{align}
+S_{a,b}=\expval{\psi_a^-|\psi_b^+}
+\end{align}
+is a unitary matrix, satisfying $\hat S^\dagger\hat S=\hat 1$. A unitary matrix can always be diagonalized, and its eigenvalues are phase factors $e^{2\imth\delta}$ known as phase shifts in scattering problems. We will learn more about the phase shift in this problem. 
+
+In our lectures, we have derived the asymptotic form of exact eigenstates for an arbitrary localized potential $\lim_{|x|\rightarrow\infty}V(x)=0$:
+\begin{align}
+\psi^+_k(x)=\begin{cases}
+    t e^{\imth kx},~~~&x\rightarrow+\infty,\\
+    e^{\imth kx}+re^{-\imth kx},~~~&x\rightarrow-\infty.
+\end{cases}\\
+\psi^+_{-k}(x)=\begin{cases}
+    e^{-\imth kx}+r^\prime e^{\imth kx},~~~&x\rightarrow+\infty,\\
+    t^\prime e^{-\imth kx},~~~&x\rightarrow-\infty.
+\end{cases}
+\end{align}
+and 
+\begin{align}
+\psi^-_k(x)=\big[\psi^+_{-k}(x)\big]^\ast,~~~\psi^-_{-k}(x)=\big[\psi^+_{k}(x)\big]^\ast
+\end{align}
+
+(1) Using the continuity of probability flux, show that
+\begin{align}\label{hw7:continuity}
+|t|^2+|r|^2=1=|t^\prime|^2+|r^\prime|^2.
+\end{align}
+
+(2) Using the fact that $(t\psi^+_{-k}-r^\prime\psi_k^+)^\ast\propto\psi_k^+$ and relation (\ref{hw7:continuity}), show that
+\begin{align}
+t^\prime=t,~~~r^\prime=-r^\ast t/t^\ast.
+\end{align}
+
+(3) Using the relations proved in parts (1) and (2), show that 
+\begin{align}
+\expval{\psi_k^+|\psi^+_{-k}}=\expval{\psi_k^-|\psi^-_{-k}}=0.
+\end{align}
+
+Comment: this verifies that either $\{\dket{\psi_k^+},\dket{\psi_{-k}^+}\}$ or $\{\dket{\psi_k^-},\dket{\psi_{-k}^-}\}$ forms a complete orthogonal basis of the Hilbert space. 
+
+(4) \textbf{Bonus} In the subspace with energy $E=\hbar^2k^2/2m>0$, the $\hat S$ matrix is given by
+\begin{align}
+\hat S(k)=\bpm\expval{\psi^-_{k}|\psi^+_{k}}&\expval{\psi^-_{k}|\psi^+_{-k}}\\ \expval{\psi^-_{-k}|\psi^+_{k}}&\expval{\psi^-_{-k}|\psi^+_{-k}}\epm
+\end{align}
+Diagonalized it to obtain its eigenvalues $e^{2\imth\delta_+}$ and $e^{2\imth\delta_-}$ as a function of $r$ and $t$. 
+
+Hint: since $|t|^2+|r|^2=1$ we can parameterize them as
+\begin{align}
+t=\cos\theta e^{\imth\phi_t},~~~r=\sin\theta e^{\imth\phi_r},~~~0\leq\theta\leq\pi/2.
+\end{align}
+
+Comment: the diagonal basis of $\hat S(k)$ are inversion eigenstates with inversion eigenvalue $+1$ and $-1$ respectively, if the potential is inversion symmetric i.e. $V(-x)=V(x)$. 
+
+\subsection{Tunneling through a finite potential barrier}
+
+Consider a finite potential barrier
+\begin{align}
+V(x)=\begin{cases}
+    0,~~~&|x|>a/2,\\
+    U>0,~~~&|x|<a/2.
+\end{cases}
+\end{align}
+where $a>0$ is the width of the potential barrier. 
+
+(1) Consider an eigenstate $\dket{\psi_k^+}$ with energy $0<E<U$. Write down the form of its eigenstate wavefunction $\psi_k^+(x)$, without computing the coefficients. 
+
+(2) Write down the boundary conditions satisfied by $\psi_k^+(x)$ at $x=\pm a/2$.
+
+(3) Obtain the reflection and transmission coefficients $r$ and $t$ as functions of $E,U,a$. 
+
+(4) \textbf{Bonus} Show that in the low energy limit of 
+\begin{align}
+U-E\gg\frac{\hbar^2}{ma^2}
+\end{align}
+the transmission probability decays exponentially with $\sqrt{U-E}$
+\begin{align}
+T\equiv|t|^2\sim e^{-C\sqrt{U-E}}
+\end{align}
+Compute the coefficient $C$. 
+
+(5) Now we consider $U<0$ case, i.e. a finite potential well which we discussed in details in our lectures. In this case, the even-parity bound state solution is determined by the following equation
+\begin{align}
+    k'\tan(k'a/2)=\sqrt{\frac{2m|U|}{\hbar^2}-(k')^2},~~~E=\frac{(\hbar k')^2}{2m}-|U|<0.
+\end{align}
+Show that in the limits of
+\begin{align}
+    a\rightarrow0^+,~~~|U|\rightarrow\infty,~~~a|U|=|D_0|=\text{const.}
+\end{align}
+the finite potential well is reduced to an attractive delta function $V(x)=-|D_0|\delta(x)$, and show the bound state energy is given by
+\begin{align}
+    E=-\frac{m|D_0|^2}{2\hbar^2}
+\end{align}
+
+\subsection{A step potential}
+
+Consider the following step potential 
+\begin{align}
+V(x)=\begin{cases}
+    0,~~~&x<0,\\
+    U>0,~~~&x>0
+\end{cases}
+\end{align}
+
+(1) Compute the wavefunction for an eigenstate with energy $E>U$.
+
+(2) Compute the wavefunction for an eigenstate with energy $0<E<U$. 

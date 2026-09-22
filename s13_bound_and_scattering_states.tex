@@ -1,2 +1,318 @@
 \section{Bound states in one dimension (10/14)}
 
+\referto{\tong~2.3, 7.5}
+
+A bound-state wave function is square-normalizable:
+\begin{equation}
+ \int_{-\infty}^{\infty}|\psi(x)|^2\dif x<\infty.
+\end{equation}
+Consequently,
+\begin{equation}
+ \lim_{|x|\to\infty}\psi(x)=0.
+\end{equation}
+For a potential with a well-defined asymptotic value, a bound-state energy
+lies below the asymptotic continuum threshold:
+\begin{equation}
+ E<\lim_{|x|\to\infty}V(x).
+\end{equation}
+Unlike scattering states characterized by a continuous wavevector, bound states have a discrete spectrum. 
+
+\subsection{The Infinite Potential Well}
+
+\subsubsection{Potential and boundary conditions}
+Consider a box of width $L$ centered at the origin:
+\begin{equation}
+ V(x)=
+ \begin{cases}
+ 0, & |x|<L/2,\\
+ +\infty, & |x|>L/2.
+ \end{cases}
+\end{equation}
+The wave function vanishes outside the box and satisfies
+\begin{equation}
+ \psi(-L/2)=\psi(L/2)=0.
+\end{equation}
+Inside the box, a general energy eigenfunction is
+\begin{equation}
+ \psi(x)=A e^{\imth px/\hbar}+B e^{-\imth px/\hbar}.
+\end{equation}
+The two boundary conditions give
+\begin{align}
+ A e^{\imth pL/(2\hbar)}+B e^{-\imth pL/(2\hbar)}&=0,\\
+ A e^{-\imth pL/(2\hbar)}+B e^{\imth pL/(2\hbar)}&=0.
+\end{align}
+A nontrivial solution requires
+\begin{equation}
+ e^{2\imth pL/\hbar}=1,
+\end{equation}
+so the allowed momenta are quantized.
+
+\subsubsection{Eigenfunctions and energies}
+It is convenient to write the normalized eigenfunctions as
+\begin{equation}
+ \boxed{
+ \psi_n(x)=\sqrt{\frac{2}{L}}
+ \sin\!\left[\frac{n\pi}{L}\left(x+\frac{L}{2}\right)\right],
+ \qquad n=1,2,3,\ldots,}
+\end{equation}
+for $|x|<L/2$, with $\psi_n(x)=0$ outside the well. The energies are
+\begin{equation}
+ \boxed{E_n=\frac{\pi^2\hbar^2}{2mL^2}n^2,
+ \qquad n=1,2,3,\ldots.}
+\end{equation}
+The ground state has no interior node, the first excited state has one node,
+and the state with quantum number $n$ has $n-1$ interior nodes.
+
+\subsection{General Theorems for One-Dimensional Bound States}
+
+\subsubsection{Nondegeneracy}
+The bound-state spectrum of a one-dimensional Schr\"odinger Hamiltonian is
+nondegenerate. Suppose $\psi_1$ and $\psi_2$ are square-normalizable
+solutions with the same energy $E$:
+\begin{align}
+ -\frac{\hbar^2}{2m}\psi_1''+V\psi_1&=E\psi_1,\\
+ -\frac{\hbar^2}{2m}\psi_2''+V\psi_2&=E\psi_2.
+\end{align}
+Multiply the first equation by $\psi_2$, the second by $\psi_1$, and
+subtract. This gives
+\begin{equation}
+ \frac{\dif{}}{\dif x}\left(\psi_2\psi_1'-\psi_1\psi_2'\right)=0.
+\end{equation}
+Thus the Wronskian is constant. Bound-state boundary conditions make this
+constant zero, so
+\begin{equation}
+ \psi_2\psi_1'=\psi_1\psi_2'.
+\end{equation}
+Where the wave functions are nonzero,
+\begin{equation}
+ \frac{\psi_1'}{\psi_1}=\frac{\psi_2'}{\psi_2},
+\end{equation}
+and hence
+\begin{equation}
+ \psi_1(x)=C\psi_2(x).
+\end{equation}
+The two solutions therefore represent the same physical state.
+
+\subsubsection{Node theorems}
+For one-dimensional bound states:
+\begin{enumerate}[label=\arabic*.]
+ \item The ground-state wave function has no node at finite $x$.
+ \item The $m$th excited state has exactly $m$ nodes.
+\end{enumerate}
+Equivalently, if the eigenstates are indexed by $n=1,2,3,\ldots$, then the
+$n$th state has $n-1$ nodes.
+
+\subsection{The Finite Square Well}
+
+
+Consider the symmetric finite well
+\begin{equation}
+ V(x)=
+ \begin{cases}
+ -V_0, & |x|<a,\\
+ 0, & |x|>a,
+ \end{cases}
+ \qquad V_0>0.
+\end{equation}
+
+\subsubsection{Scattering states with $E>0$}
+
+For scattering states with $E>0$, define
+\begin{equation}
+ k=\frac{\sqrt{2mE}}{\hbar},
+ \qquad
+ k'=\frac{\sqrt{2m(E+V_0)}}{\hbar}.
+\end{equation}
+A left-incident scattering state has the form
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ e^{\imth kx}+r e^{-\imth kx}, & x<-a,\\
+ A e^{\imth k'x}+B e^{-\imth k'x}, & |x|<a,\\
+ t e^{\imth kx}, & x>a.
+ \end{cases}
+\end{equation}
+Continuity of $\psi$ and $\psi'$ at $x=-a$ gives
+\begin{align}
+ e^{-\imth ka}+r e^{\imth ka}
+ &=A e^{-\imth k'a}+B e^{\imth k'a},\\
+ k\left(e^{-\imth ka}-r e^{\imth ka}\right)
+ &=k'\left(A e^{-\imth k'a}-B e^{\imth k'a}\right).
+\end{align}
+At $x=a$,
+\begin{align}
+ A e^{\imth k'a}+B e^{-\imth k'a}&=t e^{\imth ka},\\
+ k'\left(A e^{\imth k'a}-B e^{-\imth k'a}\right)&=kt e^{\imth ka}.
+\end{align}
+These matching equations determine the reflection and transmission
+amplitudes.
+
+Solving the two matching equations at \(x=\pm a\) for \(A\) and \(B\), we find \begin{align}\label{1d finite well:mathcing A} A &= \frac{e^{\imth k'a}}{2} \left[ \left(1+\frac{k}{k'}\right)e^{-\imth ka} + r\left(1-\frac{k}{k'}\right)e^{\imth ka} \right]= \frac{e^{-\imth k'a}}{2}\, t e^{\imth ka} \left(1+\frac{k}{k'}\right), \\ B &= \frac{e^{-\imth k'a}}{2} \left[ \left(1-\frac{k}{k'}\right)e^{-\imth ka} + r\left(1+\frac{k}{k'}\right)e^{\imth ka} \right]= \frac{e^{\imth k'a}}{2}\, t e^{\imth ka} \left(1-\frac{k}{k'}\right). \label{1d finite well:mathcing B}\end{align}
+
+
+\subsubsection{Bound states with $-V_0<E<0$}
+For bound states,
+\begin{equation}
+ -V_0<E<0.
+\end{equation}
+Define
+\begin{equation}
+ \kappa=-\imth k=\frac{\sqrt{2m|E|}}{\hbar},
+ \qquad
+ k'=\frac{\sqrt{2m(E+V_0)}}{\hbar}.
+\end{equation}
+These obey
+\begin{equation}
+ \kappa^2+(k')^2=\frac{2mV_0}{\hbar^2}.
+\end{equation}
+Normalizability requires exponential decay outside the well:
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ r e^{\kappa x}, & x<-a,\\
+ A e^{\imth k'x}+B e^{-\imth k'x}, & |x|<a,\\
+ t e^{-\kappa x}, & x>a.
+ \end{cases}
+\end{equation}
+Note that the matching conditions for bound states are exactly the same as for scattering states, except for replacing $k=\imth\kappa$. Comparing the form of wavefunctions, we see that in bound states
+\begin{align}
+    |r|,|t|\rightarrow\infty
+\end{align}
+and Eqs. (\ref{1d finite well:mathcing A})-(\ref{1d finite well:mathcing B}) becomes
+\begin{equation} 
+\frac{r}{t} = e^{2\imth k'a}\frac{k'-k}{k'+k} = e^{-2\imth k'a}\frac{k'+k}{k'-k} = \pm 1. \end{equation}
+for bound states. 
+
+
+\subsubsection{Inversion symmetry}
+For an even potential,
+\begin{equation}
+ V(x)=V(-x),
+\end{equation}
+define the parity operator
+\begin{equation}
+ \hat P=\int_{-\infty}^{\infty}\dif x\,\dket{-x}\dbra{x}.
+\end{equation}
+It satisfies
+\begin{equation}
+ \hat P^2=\id,
+ \qquad
+ \hat P\hat x\hat P^{-1}=-\hat x,
+ \qquad
+ \hat P\hat p\hat P^{-1}=-\hat p.
+\end{equation}
+For
+\begin{equation}
+ \hat H=\frac{\hat p^{\,2}}{2m}+V(\hat x),
+\end{equation}
+one has
+\begin{equation}
+ \comm{\hat P}{\hat H}=0.
+\end{equation}
+Because the one-dimensional bound spectrum is nondegenerate, each bound
+energy eigenstate is also a parity eigenstate:
+\begin{equation}
+ \hat P\dket{\psi}=\frac{r}{t}\dket\psi=\pm\dket{\psi}.
+\end{equation}
+Thus the wave function is either even or odd under the parity operator, depending on the sign of
+\begin{align}\label{1d finite well:parity}
+    \frac rt=e^{-2\imth k'a}\frac{k'+\imth\kappa}{k'-\imth\kappa}=\pm1,~~~~\kappa=\sqrt{2mV_0/\hbar^2-(k')^2}
+\end{align}
+
+\subsubsection{Even-parity bound states}
+For an even state, choose
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ C e^{\kappa x}, & x<-a,\\
+ D\cos(k'x), & |x|<a,\\
+ C e^{-\kappa x}, & x>a.
+ \end{cases}
+\end{equation}
+Matching $\psi$ and $\psi'$ at $x=a$ gives
+\begin{equation}
+ \boxed{k'\tan(k'a)=\kappa.}
+\end{equation}
+Using $\kappa^2+(k')^2=2mV_0/\hbar^2$,
+\begin{equation}
+ \boxed{k'\tan(k'a)
+ =\sqrt{\frac{2mV_0}{\hbar^2}-(k')^2}.}
+\end{equation}
+
+\subsubsection{Odd-parity bound states}
+For an odd state, choose
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ -C e^{\kappa x}, & x<-a,\\
+ D\sin(k'x), & |x|<a,\\
+ C e^{-\kappa x}, & x>a.
+ \end{cases}
+\end{equation}
+Matching at $x=a$ gives
+\begin{equation}
+ \boxed{-k'\cot(k'a)=\kappa,}
+\end{equation}
+or
+\begin{equation}
+ \boxed{-k'\cot(k'a)
+ =\sqrt{\frac{2mV_0}{\hbar^2}-(k')^2}.}
+\end{equation}
+Equivalently,
+\begin{equation}
+ \tan\!\left(k'a+\frac{\pi}{2}\right)
+ =\frac{\kappa}{k'}.
+\end{equation}
+
+\subsubsection{Graphical solution}
+The allowed bound-state energies are obtained by solving Eq. (\ref{1d finite well:parity}), which can be simplified as
+\begin{align}
+    k'\tan(k'a)=\sqrt{\frac{r}{t}}\cdot\sqrt{\frac{2mV_0}{\hbar^2}-(k')^2}
+\end{align}
+Graphically, as shown in Fig. \ref{fig:finite-well-graphical-solution}, the allowed values of $k'$ are the intersections of the red curve
+\begin{equation}
+ \kappa(k')=\sqrt{\frac{2mV_0}{\hbar^2}-(k')^2}
+\end{equation}
+with the green even-parity branches $k'\tan(k'a)$ and the blue odd-parity
+branches $-k'\cot(k'a)$. Intersections with $k'\tan(k'a)$ give even-parity states, while intersections
+with $-k'\cot(k'a)$ give odd-parity states. The vertical dashed lines indicate the poles at
+$k'a=\pi/2,\pi,\ldots$, and the red curve meets the horizontal axis at
+\begin{equation}
+ k'a=a\sqrt{\frac{2mV_0}{\hbar^2}}.
+\end{equation}
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\textwidth]{1d_finite_well_bound_states.png}
+ \caption{Graphical solution of the even- and odd-parity finite-well
+ bound-state equations. Intersections with the red curve determine the
+ allowed bound-state energies.}
+ \label{fig:finite-well-graphical-solution}
+\end{figure}
+
+
+Once an allowed $k'$ is found,
+\begin{equation}
+ E=-V_0+\frac{\hbar^2(k')^2}{2m}.
+\end{equation}
+Only finitely many intersections occur for a well of finite depth and width,
+so a finite square well supports finitely many bound states.
+
+Finally, note that in the limit of 
+\begin{align}
+    a\rightarrow0^+,~~~V_0\rightarrow+\infty,~~~2aV_0\rightarrow|D_0|
+\end{align}
+the square potential well discussed here reduces to the delta function potential studied in the last section. 
+
+\subsection{Summary}
+%\addcontentsline{toc}{chapter}{Summary}
+\begin{itemize}
+ \item Bound states are square-normalizable and decay at spatial infinity.
+ \item One-dimensional bound-state energy levels are nondegenerate.
+ \item The ground state has no nodes, and successive excited states acquire
+       one additional node each.
+ \item For an even potential, nondegenerate bound states have definite parity.
+ \item Finite-well energies follow from separate even- and odd-parity
+       transcendental equations.
+\end{itemize}
+
