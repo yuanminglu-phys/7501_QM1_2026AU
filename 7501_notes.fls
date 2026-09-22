@@ -411,6 +411,10 @@ INPUT ./s13_bound_and_scattering_states.tex
 INPUT ./s13_bound_and_scattering_states.tex
 INPUT ./s13_bound_and_scattering_states.tex
 INPUT s13_bound_and_scattering_states.tex
+INPUT ./figures/1d_finite_well_bound_states.png
+INPUT ./figures/1d_finite_well_bound_states.png
+INPUT ./figures/1d_finite_well_bound_states.png
+INPUT ./figures/1d_finite_well_bound_states.png
 INPUT ./s14_S-matrix.tex
 INPUT ./s14_S-matrix.tex
 INPUT ./s14_S-matrix.tex
@@ -507,6 +511,11 @@ INPUT ./app06_hw6.tex
 INPUT ./app06_hw6.tex
 INPUT ./app06_hw6.tex
 INPUT app06_hw6.tex
+INPUT ./app07_hw7.tex
+INPUT ./app07_hw7.tex
+INPUT ./app07_hw7.tex
+INPUT ./app07_hw7.tex
+INPUT app07_hw7.tex
 INPUT ./7501_notes.bbl
 INPUT ./7501_notes.bbl
 INPUT 7501_notes.bbl
