@@ -1,5 +1,359 @@
 \section{Scattering in one dimension (10/21)}
 
-\referto{\tong~14.1}
+\referto{\tong~14.1.1-14.1.3, Sakurai 6.1}
 
-\subsection{S-matrix formulation}
+\subsection{Scattering by a Delta Potential}
+
+We first review the case of a one-dimensional quantum particle scattered by a delta function potential. Consider
+\begin{equation}
+ \hat H=\frac{\hat p^{\,2}}{2m}+V(\hat x),
+ \qquad
+ V(x)=V_0\delta(x).
+\end{equation}
+If $V_0>0$, then $\hat H\geq0$, so a negative-energy bound state is
+impossible. A bound state with $E<0$ can occur only for an attractive delta
+potential. 
+
+\subsubsection{Matching conditions at the singular point}
+The stationary Schr\"odinger equation is
+\begin{equation}
+ -\frac{\hbar^2}{2m}\psi''(x)+V_0\delta(x)\psi(x)=E\psi(x).
+\end{equation}
+The wave function remains continuous,
+\begin{equation}
+ \psi(0^-)=\psi(0^+)=\psi(0),
+\end{equation}
+but its derivative is discontinuous. Integrating across the origin gives
+\begin{align}
+ \psi'(0^+)-\psi'(0^-)
+ &=\frac{2mV_0}{\hbar^2}\psi(0).
+\end{align}
+These two conditions replace the usual continuity of both $\psi$ and
+$\psi'$ at a finite nonsingular potential discontinuity.
+
+
+\subsubsection{Scattering states}
+Consider a scattering state with $E>0$, introduce
+\begin{equation}
+ k=\frac{\sqrt{2mE}}{\hbar}>0.
+\end{equation}
+A general solution away from the origin is
+\begin{equation}
+ \psi(x)=
+ \begin{cases}
+ \alpha e^{\imth kx}+\beta e^{-\imth kx},&x<0,\\
+ \gamma e^{\imth kx}+\delta e^{-\imth kx},&x>0.
+ \end{cases}
+\end{equation}
+Here we focus on the \textbf{in-state}, i.e. an incidental plane wave from the left
+\begin{equation}
+ \psi_k^+(x)=
+ \begin{cases}
+ e^{\imth kx}+r e^{-\imth kx},&x<0,\\
+ t e^{\imth kx},&x>0.
+ \end{cases}
+\end{equation}
+where $r$ and $t$ correspond to the reflection and transmission amplitude after the incident wave was scattered by the delta function potential. 
+
+The continuity and derivative-jump equations are
+\begin{equation}
+ 1+r=t,
+ \qquad
+ \imth k t-\imth k(1-r)=\frac{2mV_0}{\hbar^2}t.
+\end{equation}
+Thus
+\begin{equation}
+ \boxed{
+ t=\frac{1}{1-\dfrac{mV_0}{\imth\hbar^2k}},
+ \qquad
+ r=\frac{\dfrac{mV_0}{\imth\hbar^2k}}
+ {1-\dfrac{mV_0}{\imth\hbar^2k}}.}
+\end{equation}
+Equivalently, with $\eta=mV_0/(\hbar^2k)$,
+\begin{equation}
+ t=\frac{1}{1+\imth\eta},
+ \qquad
+ r=\frac{-\imth\eta}{1+\imth\eta}.
+\end{equation}
+The reflection and transmission amplitudes obey
+\begin{equation}
+ \boxed{|t|^2+|r|^2=1.}
+\end{equation}
+
+
+
+\subsection{General properties of one-Dimensional scattering}
+
+\subsubsection{In-state basis $\{\dket{\psi^+_k}\}$}
+
+Let $V(x)$ satisfy
+\begin{equation}
+ \lim_{|x|\to\infty}V(x)=0.
+\end{equation}
+The stationary equation is
+\begin{equation}
+ -\frac{\hbar^2}{2m}\psi''(x)+V(x)\psi(x)=E\psi(x).
+\end{equation}
+For $E>0$, its asymptotic solutions are plane waves:
+\begin{equation}
+ \psi(x)\sim\alpha e^{\imth kx}+\beta e^{-\imth kx},
+ \qquad
+ k=\frac{\sqrt{2mE}}{\hbar}.
+\end{equation}
+
+We consider a set of complete orthonormal basis for the scattering state, known as the \textbf{in-states} $\{\dket{\psi^+_k}\}$ which physically correspond to the incident plane waves
+\begin{align}
+ \psi_k^+(x)&\sim
+ \begin{cases}
+ e^{\imth kx}+r e^{-\imth kx},&x\to-\infty,\\
+ t e^{\imth kx},&x\to+\infty,
+ \end{cases}\\
+ \psi_{-k}^+(x)&\sim
+ \begin{cases}
+ t'e^{-\imth kx},&x\to-\infty,\\
+ e^{-\imth kx}+r'e^{\imth kx},&x\to+\infty.
+ \end{cases}
+\end{align}
+If bound states exist, they must also be added to in-states (or out-states) to complete the Hilbert space.
+
+
+\subsubsection{Probability flux}
+For a stationary wave function, define
+\begin{equation}
+ \boxed{
+ j(x)=\frac{\imth\hbar}{2m}
+ \left(\psi^*\psi'-\psi(\psi^*)'\right)
+ =\frac{\hbar}{m}\im\!\left(\psi^*\psi'\right).}
+\end{equation}
+Subtracting the complex-conjugated Schr\"odinger equation from the original
+one gives the continuity equation for probability flux in a stationary state (eigenstate):
+\begin{equation}
+ \frac{\dif j}{\dif x}=0.
+\end{equation}
+Thus the flux at $x\to-\infty$ equals the flux at $x\to+\infty$. Applied to
+$\psi_{\pm k}^{+}$, this yields
+\begin{equation}\label{probability flux conservation}
+ \boxed{1=|r|^2+|t|^2=|r'|^2+|t'|^2}
+\end{equation}
+
+\subsubsection{Time-reversal symmetry}
+For a real scalar potential,
+\begin{equation}
+ \hat H^*=\hat H.
+\end{equation}
+Therefore, if $\psi(x)$ has energy $E$, then $\psi^*(x)$ has the same energy.
+This produces two independent scattering solutions at each enegry $E>0$.
+
+Because $\psi_k^+$ and $\psi_{-k}^+$ have the same energy, form the complex
+conjugate of a linear combination that cancels one incoming component:
+\begin{equation}
+ \left(t'\psi_k^+-r\psi_{-k}^+\right)^*\propto\psi_{-k}(x)
+\end{equation}
+This condition, combined with the conservation of probability flux in Eq. (\ref{probability flux conservation}), yields the following relation:
+\begin{equation}
+ \boxed{t'=t,
+ \qquad
+ r'=-\frac{r^*t}{t^*}.}
+\end{equation}
+Together with flux conservation, these relations are equivalent to the
+unitarity of the two-channel \textbf{scattering matrix} (also known as the $S$-matrix):
+\begin{align}\label{scattering matrix:1d potential}
+    \hat S(k)=\bpm t&r\\r'&t'\epm=\bpm t&r\\-\frac{r^*t}{t^*}&t\epm,~~~\hat S^\dagger(k)\hat S(k)=\hat1.
+\end{align}
+
+\subsubsection{Inversion symmetry in the case of an even potential $V(x)=V(-x)$}
+The inversion symmetry is implemented by a unitary operator 
+\begin{equation}
+ \hat U=\int_{-\infty}^{\infty}\dif x\,\dket{-x}\dbra{x},
+\end{equation}
+and satisfies
+\begin{equation}
+ \hat U\hat x\hat U^\dagger=-\hat x,
+ \qquad
+ \hat U\hat p\hat U^\dagger=-\hat p.
+\end{equation}
+If $V(x)=V(-x)$, then $\hat H=\hat U\hat H\hat U^\dagger$ i.e. the Hamiltonian $\hat H$ preserves the inversion/parity symmetry. Hence, if
+$\psi(x)$ has energy $E$, so does $\psi(-x)$.
+
+In the presence of inversion symmetry, the two in-states are related by the inversion operator $\hat U\dket{\psi_k^+}=\dket{\psi_{-k}^+}$:
+\begin{align}
+    \psi_{-k}^+(x)=\psi_k(-x)
+\end{align}
+and hence
+\begin{align}
+    r=r',~~~t=t'.
+\end{align}
+
+\subsubsection{Out-state basis $\{\dket{\psi_k^-}\}$}
+The \text{out-states} are the time reversal partners of the in-states:
+\begin{equation}
+ \psi_k^-(x)=\bigl[\psi_{-k}^+(x)\bigr]^*,
+ \qquad
+ \psi_{-k}^-(x)=\bigl[\psi_k^+(x)\bigr]^*.
+\end{equation}
+They are asymptotically outgoing plane waves. When the potential has no bound states, the out-states
+$\{\dket{\psi_k^-}\}$ also form a complete set of orthonormal basis of the Hilbert space, similar to the in-state basis $\{\dket{\psi_k^+}\}$. If bound states exist, they must be added to complete the Hilbert space.
+
+The unitary operator that relates these two basis sets $\{\dket{\psi_k^+}\}$ (in-states) and $\{\dket{\psi_k^-}\}$ (out-states) is exactly the scattering matrix:
+\begin{align}
+    &S_{a,b}(k)=\expval{\psi^-_{ak}|\psi^+_{bk}},~a,b=\pm;\\
+    &\hat S(k)=\bpm\expval{\psi^-_{k}|\psi^+_{k}}&\expval{\psi^-_{k}|\psi^+_{-k}}\\ \expval{\psi^-_{-k}|\psi^+_{k}}&\expval{\psi^-_{-k}|\psi^+_{-k}}\epm=\bpm t&r\\-\frac{r^*t}{t^*}&t\epm
+\end{align}
+There is a deep reason behind this equation, as we explain below. 
+
+\subsection{Scattering theory in a nutshell}
+
+\subsubsection{The Lippmann--Schwinger Equation}
+Consider a generic Hamiltonian
+\begin{equation}
+ \hat H=\hat H_0+\hat V
+\end{equation}
+where $\hat H_0$ can be exactly solved (e.g. $\hat H_0=\frac{\hat p^{\,2}}{2m}$ as we considered in one-dimensional scatterings), and $\hat V$ is a complicated term that makes it difficult to solve the full Hamiltonian $\hat H$.  
+If
+\begin{equation}
+ \hat H\dket{\psi}=E\dket{\psi},
+\end{equation}
+then
+\begin{equation}
+ (E-\hat H_0)\dket{\psi}=\hat V\dket{\psi}.
+\end{equation}
+Let $\dket{a}$ be a free eigenstate satisfying
+\begin{equation}
+ \hat H_0\dket{a}=E_a\dket{a}.
+\end{equation}
+The in- and out-states are eigenstates of full Hamiltonian $\hat H$ with the same energy $E_a$
+\begin{align}
+    (E_a-\hat H\pm\imth\epsilon)\dket{\psi^\pm_a}=0
+\end{align}
+This can be rewritten as (see HW7)
+\begin{equation}\label{Lipmann-Schwinger equation}
+ \boxed{
+ \dket{\psi_a^\pm}
+ =\dket{a}+\frac{1}{E_a-\hat H_0\pm\imth\epsilon}
+ \hat V\dket{\psi_a^\pm}=\dket{a}+\hat G_0^\pm(E_a)\hat V\dket{\psi_a^\pm},
+ \qquad \epsilon\to0^+.}
+\end{equation}
+where we defined the free retarded ($+$) and advanced ($-$) Green's function by
+\begin{equation}
+ G_0^+(E)=\frac{1}{E-\hat H_0+\imth\epsilon},
+ \qquad
+ G_0^-(E)=\frac{1}{E-\hat H_0-\imth\epsilon}.
+\end{equation}
+
+Iteration gives the so-called \emph{Born series} and a formal solution to $\dket{\psi_a^\pm}$
+\begin{align}
+ \dket{\psi_a^\pm}
+ &=\dket{a}+G_0^\pm\hat V\dket{a}
+ +(G_0^\pm\hat V)^2\dket{a}+\cdots\\
+ &=\sum_{j=0}^{\infty}(G_0^\pm\hat V)^j\dket{a}=\frac{1}{1-G_0^\pm\hat V}\dket{a}.
+\end{align}
+Equivalently,
+\begin{equation}
+ \dket{\psi_a^\pm}
+ =(E_a-\hat H\pm\imth\epsilon)^{-1}
+ (E_a-\hat H_0\pm\imth\epsilon)\dket{a}.
+\end{equation}
+
+\subsubsection{Adiabatic switching and the S matrix}
+Gell-Mann and Low introduced an adiabatically switched interaction
+\begin{equation}
+ \hat H(t)=\hat H_0+\hat V e^{-\epsilon|t|},
+ \qquad \epsilon\to0^+.
+\end{equation}
+The time evolution operator in the interaction picture is
+\begin{equation}
+ U_I^\epsilon(t,t_0)
+ =e^{\imth\hat H_0t/\hbar}
+ \mathcal T\exp\!\left[-\frac{\imth}{\hbar}
+ \int_{t_0}^{t}\hat H(t')\dif t'\right]
+ e^{-\imth\hat H_0t_0/\hbar}.
+\end{equation}
+The Gell-Mann--Low construction gives the unnormalized scattering states
+\begin{align}
+ \dket{\psi_a^+}&=\lim_{t_0\to-\infty\atop\epsilon\to0^+}
+ U_I^\epsilon(0,t_0)\dket{a},\\
+ \dbra{\psi_a^-}&=\lim_{t\to+\infty\atop\epsilon\to0^+}
+ \dbra{a}U_I^\epsilon(t,0).
+\end{align}
+Therefore,
+\begin{equation}
+ S_{ab}=\expval{\psi_a^-|\psi_b^+}
+ =\lim_{t\to+\infty,\,t_0\to-\infty\atop\epsilon\to0^+}
+ \dbra{a}U_I^\epsilon(t,t_0)\dket{b},
+\end{equation}
+and
+\begin{equation}
+ \hat S=\lim_{\epsilon\rightarrow0^+}U^\epsilon_I(+\infty,-\infty).
+\end{equation}
+Since time evolution is unitary, the scattering matrix is unitary.
+
+
+
+\subsubsection{The scattering matrix}
+At fixed energy $E=\hbar^2k^2/(2m)$, define
+\begin{equation}
+ S_{ab}=\expval{\psi_a^-|\psi_b^+}.
+\end{equation}
+In the in- and out-state basis,
+\begin{equation}
+ \boxed{
+ S(k)=\begin{pmatrix}t&r\\r'&t\end{pmatrix}.}
+\end{equation}
+The scattering matrix is unitary:
+\begin{equation}
+ S^\dagger S=\id.
+\end{equation}
+
+\subsubsection{Position-space Green function}
+With plane-wave normalization
+\begin{equation}
+ \expval{x|k}=\frac{e^{\imth kx}}{\sqrt{2\pi}},
+ \qquad
+ \int_{-\infty}^{\infty}\dif k\,\dket{k}\dbra{k}=\id,
+\end{equation}
+the Lippmann--Schwinger equation in position space is
+\begin{equation}
+ \psi_k^+(x)=\frac{e^{\imth kx}}{\sqrt{2\pi}}
+ +\int_{-\infty}^{\infty}\dif x'\,
+ \dbra{x}G_0^+(E)\dket{x'}V(x')\psi_k^+(x').
+\end{equation}
+The Green-function kernel is
+\begin{align}
+ \dbra{x}G_0^\pm(E)\dket{x'}
+ &=\int_{-\infty}^{\infty}\frac{\dif q}{2\pi}
+ \frac{e^{\imth q(x-x')}}
+ {E-\hbar^2q^2/(2m)\pm\imth\epsilon}.
+\end{align}
+The $+\imth\epsilon$ prescription produces the retarded Green
+function, while the $-\imth\epsilon$ prescription produces the advanced Green function.
+
+\textbf{Application to the delta potential:}
+
+For
+\begin{equation}
+ V(x)=V_0\delta(x),
+\end{equation}
+the integral equation reduces to
+\begin{equation}
+ \psi_k^+(x)=\frac{e^{\imth kx}}{\sqrt{2\pi}}
+ +V_0\dbra{x}G_0^+(E)\dket{0}\psi_k^+(0).
+\end{equation}
+Evaluating the same equation at $x=0$ gives an algebraic equation for
+$\psi_k^+(0)$, from which the reflection and transmission amplitudes of the
+delta potential follow.
+
+\subsection{Summary}
+%\addcontentsline{toc}{chapter}{Summary}
+\begin{itemize}
+ \item Delta-potential scattering follows from continuity of $\psi$ and a
+ finite jump in $\psi'$.
+ \item Probability-flux conservation implies $|r|^2+|t|^2=1$.
+ \item Time reversal gives $t'=t$ and
+ $r'=-r^*t/t^*$ for a general real one-dimensional potential.
+ \item Inversion symmetry further constrains $r'=r$ for scattering by an even potential $V(x)=V(-x)$
+ \item The Lippmann--Schwinger equation encodes boundary
+ conditions for in- and out-states through the $\pm\imth\epsilon$ prescriptions.
+ \item The scattering matrix is unitary because the underlying time evolution
+ is unitary.
+\end{itemize}
+

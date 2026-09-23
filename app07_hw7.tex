@@ -1,6 +1,6 @@
 \chapter{Homework 7 (due 10/28)}
 
-\subsection{Lippmann-Schwinger equation}
+\subsection{(Bonus) Lippmann-Schwinger equation}
 
 In this problem, we delve into the derivation of Lippmann-Schwinger equation, which was briefly mentioned in our lectures. Consider a Hamiltonian 
 \begin{align}
@@ -43,9 +43,9 @@ But it is sometimes important to keep the coefficient $\alpha$ in mind, as we wi
 
 Comment: we need to use the Gellmann-Low theorem for this problem, which we mentioend during lectures. Similarly one can show that $\{\dket{\psi^-_a}\}$ is also a set of complete orthonormal basis. 
 
-\subsection{Solving the Lippmann-Schwinger equation for a delta function potential}
+\subsection{(Bonus) Solving Lippmann-Schwinger eq. for a delta function potential}
 
-In this problem, we will use the Lippmann-Schwinger equation to solve the eigenstate wavefunctions for scattering states with a delta function potential:
+Next, we will use the Lippmann-Schwinger equation to solve the eigenstate wavefunctions for scattering states with a delta function potential:
 \begin{align}
 \hat H=\hat H_0+\hat V,~~~\hat H_0=\frac{\hat p^2}{2m},~~~\hat V=V(\hat x)
 \end{align}
@@ -63,7 +63,7 @@ G_0^{\pm}(E|x,y)=\int\text{d}k\expval{x|k}\frac{1}{E-\hbar^2k^2/2m\pm\imth\epsil
 \end{align}
 where $\epsilon\rightarrow0^+$ is an infinitely small positive number. 
 
-(1) Show the following relation holds for an arbitrary potential $V(\hat x)$
+(1) \textbf{Bonus} Show the following relation holds for an arbitrary potential $V(\hat x)$
 \begin{align}
 \big[\psi^+_k(x)\big]^\ast=\psi^-_{-k}(x)
 \end{align}
@@ -81,11 +81,11 @@ Hint: it should have different behaviors in $x<y$ and $x>y$ regions.
 
 In lectures we have mentioned that the $S$ matrix defined as the change of basis between two sets of complete orthonormal basis $\{\dket{\psi^+_a}\}$ and $\{\dket{\psi_a^-}\}$ (see problem 1.(2)~)
 \begin{align}
-S_{a,b}=\expval{\psi_a^-|\psi_b^+}
+S_{a,b}=\expval{\psi_a^-|\psi_b^+}=\expval{a|U_I(+\infty,-\infty)|b}
 \end{align}
 is a unitary matrix, satisfying $\hat S^\dagger\hat S=\hat 1$. A unitary matrix can always be diagonalized, and its eigenvalues are phase factors $e^{2\imth\delta}$ known as phase shifts in scattering problems. We will learn more about the phase shift in this problem. 
 
-In our lectures, we have derived the asymptotic form of exact eigenstates for an arbitrary localized potential $\lim_{|x|\rightarrow\infty}V(x)=0$:
+In our lectures, we have derived the asymptotic form of exact eigenstates for an arbitrary localized potential $V(x)$ satisfying $\lim_{|x|\rightarrow\infty}V(x)=0$:
 \begin{align}
 \psi^+_k(x)=\begin{cases}
     t e^{\imth kx},~~~&x\rightarrow+\infty,\\
@@ -122,7 +122,7 @@ Comment: this verifies that either $\{\dket{\psi_k^+},\dket{\psi_{-k}^+}\}$ or $
 \begin{align}
 \hat S(k)=\bpm\expval{\psi^-_{k}|\psi^+_{k}}&\expval{\psi^-_{k}|\psi^+_{-k}}\\ \expval{\psi^-_{-k}|\psi^+_{k}}&\expval{\psi^-_{-k}|\psi^+_{-k}}\epm
 \end{align}
-Diagonalized it to obtain its eigenvalues $e^{2\imth\delta_+}$ and $e^{2\imth\delta_-}$ as a function of $r$ and $t$. 
+Diagonalize it to obtain its eigenvalues $e^{2\imth\delta_+}$ and $e^{2\imth\delta_-}$ as a function of $r$ and $t$. 
 
 Hint: since $|t|^2+|r|^2=1$ we can parameterize them as
 \begin{align}
@@ -142,13 +142,13 @@ V(x)=\begin{cases}
 \end{align}
 where $a>0$ is the width of the potential barrier. 
 
-(1) Consider an eigenstate $\dket{\psi_k^+}$ with energy $0<E<U$. Write down the form of its eigenstate wavefunction $\psi_k^+(x)$, without computing the coefficients. 
+(1) Consider an eigenstate, the in $\dket{\psi_k^+}$ with energy $0<E<U$. Write down the form of its eigenstate wavefunction $\psi_k^+(x)$, without computing the coefficients. 
 
 (2) Write down the boundary conditions satisfied by $\psi_k^+(x)$ at $x=\pm a/2$.
 
 (3) Obtain the reflection and transmission coefficients $r$ and $t$ as functions of $E,U,a$. 
 
-(4) \textbf{Bonus} Show that in the low energy limit of 
+(4) Show that in the low energy limit of 
 \begin{align}
 U-E\gg\frac{\hbar^2}{ma^2}
 \end{align}
