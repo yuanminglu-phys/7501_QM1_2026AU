@@ -1,2 +1,305 @@
 \section{Simple harmonic oscillators (10/23)}
 
+\referto{\tong~3.5.1, \sakurai~1.4, 2.3}
+
+\subsection{Heisenberg's Uncertainty Principle}
+
+\subsubsection{Expectation values and fluctuations}
+For a normalized pure state $\dket{\psi}$ and a Hermitian operator $\hat A$,
+\begin{equation}
+ \langle\hat A\rangle=\dbra{\psi}\hat A\dket{\psi}.
+\end{equation}
+Define the fluctuation operator
+\begin{equation}
+ \Delta\hat A=\hat A-\langle\hat A\rangle.
+\end{equation}
+The standard deviation of observable $\hat A$ is
+\begin{equation}
+ \Delta A
+\equiv\sqrt{\left\langle(\Delta\hat A)^2\right\rangle}
+ =\sqrt{\langle\hat A^2\rangle-\langle\hat A\rangle^2}.
+\end{equation}
+
+\subsubsection{The uncertainty relation}
+The \textbf{Cauchy-Schwarz inequality} states
+\begin{equation}
+ \expval{\psi_1|\psi_1}\expval{\psi_2|\psi_2}
+ \geq\left|\expval{\psi_1|\psi_2}\right|^2,
+\end{equation}
+with equality if and only if the two vectors are linearly dependent.
+Choose
+\begin{equation}
+ \dket{\psi_1}=\Delta\hat A\dket{\psi},
+ \qquad
+ \dket{\psi_2}=\Delta\hat B\dket{\psi}.
+\end{equation}
+Then
+\begin{equation}
+ (\Delta A)^2(\Delta B)^2
+ \geq\left|\left\langle\Delta\hat A\Delta\hat B\right\rangle\right|^2.
+\end{equation}
+Decompose the product into commutator and anticommutator parts:
+\begin{equation}
+ \Delta\hat A\Delta\hat B
+ =\frac12\comm{\Delta\hat A}{\Delta\hat B}
+ +\frac12\{\Delta\hat A,\Delta\hat B\}.
+\end{equation}
+For Hermitian $\hat A$ and $\hat B$, the commutator expectation value is
+purely imaginary and the anticommutator expectation value is real. Therefore,
+\begin{align}
+ (\Delta A)^2(\Delta B)^2
+ &\geq\frac14\left|\left\langle
+ \comm{\hat A}{\hat B}\right\rangle\right|^2
+ +\frac14\left|\left\langle
+ \{\Delta\hat A,\Delta\hat B\}\right\rangle\right|^2\\
+ &\geq\frac14\left|\left\langle
+ \comm{\hat A}{\hat B}\right\rangle\right|^2.
+\end{align}
+Thus
+\begin{equation}
+ \boxed{\Delta A\,\Delta B
+ \geq\frac12\left|\left\langle\comm{\hat A}{\hat B}\right\rangle\right|.}
+\end{equation}
+
+\subsubsection{Conditions for equality}
+Equality in the Schwarz inequality requires constants $a$ and $b$, not both
+zero, such that
+\begin{equation}
+ \left(a\Delta\hat A+b\Delta\hat B\right)\dket{\psi}=0.
+\end{equation}
+To saturate the commutator-only uncertainty relation, one also needs
+\begin{equation}
+ \left\langle\{\Delta\hat A,\Delta\hat B\}\right\rangle=0.
+\end{equation}
+The second condition follows from the first when $a^\ast b+ab^\ast=0$ i.e. 
+\begin{align}
+    \arg{a}=\arg{b}\pm\frac\pi2
+\end{align}
+
+\subsubsection{Spin operators as an example}
+In this example we consider
+\begin{equation}
+ \hat A=\hat S_x,
+ \qquad
+ \hat B=\hat S_y.
+\end{equation}
+Since
+\begin{equation}
+ \comm{\hat S_x}{\hat S_y}=\imth\hbar\hat S_z,
+ \qquad
+ \{\hat S_x,\hat S_y\}=0
+\end{equation}
+for spin one-half, the uncertainty relation is
+\begin{equation}
+ \Delta S_x\cdot \Delta S_y
+ \geq\frac{\hbar}{2}|\langle\hat S_z\rangle|
+\end{equation}
+For an $S_x$ eigenstate, $\Delta S_x=0$ and consistency requires
+$\langle\hat S_z\rangle=0$.
+
+\subsubsection{Minimum-Uncertainty Wave Packets}
+For
+\begin{equation}
+ \hat A=\hat x,
+ \qquad
+ \hat B=\hat p,
+ \qquad
+ \comm{\hat x}{\hat p}=\imth\hbar,
+\end{equation}
+the uncertainty principle becomes
+\begin{equation}
+ \boxed{\Delta x\,\Delta p\geq\frac{\hbar}{2}.}
+\end{equation}
+A state saturating the bound obeys
+\begin{equation}
+ \left(\Delta\hat x+\imth R^2\frac{\Delta\hat p}{\hbar}\right)
+ \dket{\psi}=0.
+\end{equation}
+Writing
+\begin{equation}
+ x_0=\langle\hat x\rangle,
+ \qquad
+ p_0=\langle\hat p\rangle,
+\end{equation}
+the position-space equation is
+\begin{equation}
+ \left[(x-x_0)+R^2\left(\frac{\dif{}}{\dif x}
+ -\frac{\imth p_0}{\hbar}\right)\right]\psi(x)=0.
+\end{equation}
+Its normalized solution is the Gaussian packet
+\begin{equation}
+ \boxed{
+ \psi(x)=\frac{1}{\pi^{1/4}\sqrt R}
+ \exp\!\left(\frac{\imth p_0x}{\hbar}
+ -\frac{(x-x_0)^2}{2R^2}\right).}
+\end{equation}
+The position variance is
+\begin{equation}
+ (\Delta x)^2
+ =\left\langle(\hat x-x_0)^2\right\rangle
+ =\frac{R^2}{2}.
+\end{equation}
+
+%\subsubsection{Momentum-space Gaussian}
+With
+\begin{equation}
+ \expval{x|p}=\frac{e^{\imth px/\hbar}}{\sqrt{2\pi\hbar}},
+\end{equation}
+the momentum-space wave function is
+\begin{equation}
+ \widetilde\psi(p)=\expval{p|\psi}
+ =\frac{\sqrt R}{\pi^{1/4}\sqrt\hbar}
+ \exp\!\left[-\frac{\imth(p-p_0)x_0}{\hbar}
+ -\frac{R^2(p-p_0)^2}{2\hbar^2}
+\right],
+\end{equation}
+up to an overall phase convention. Hence
+\begin{equation}
+ (\Delta p)^2=\frac{\hbar^2}{2R^2},
+ \qquad
+ \boxed{\Delta x\,\Delta p=\frac{\hbar}{2}.}
+\end{equation}
+
+\subsection{The Simple Harmonic Oscillator}
+
+The one-dimensional simple harmonic oscillator has the following Hamiltonian
+\begin{equation}\label{sho hamiltonian}
+ \hat H_{\mathrm{SHO}}
+ =\frac{\hat p^{\,2}}{2m}+\frac12m\omega^2\hat x^2.
+\end{equation}
+Near a stable minimum $x_0$, a smooth potential has the expansion
+\begin{equation}
+ V(x)=V(x_0)+\frac12V''(x_0)(x-x_0)^2+\cdots.
+\end{equation}
+Thus the harmonic oscillator is the leading approximation to motion near a
+stable equilibrium. It is also an exactly solvable model and a building
+block for systems such as quantized vibrational modes.
+
+\subsubsection{Ground state is the Gaussian wavepacket}
+
+Consider the Gaussian wavepacket $\dket\psi$ that saturates the Heisenberg uncertainty relation:
+\begin{equation}\label{sho ground state condition}
+\left(\Delta\hat{x}+\frac{\imth R^2}{\hbar}\Delta\hat{p}\right)
+\dket{\psi}=0.
+\end{equation}
+Then we have
+\begin{align}
+&\left(\Delta\hat{x}-\frac{\imth R^2}{\hbar}\Delta\hat{p}\right)
+ \left(\Delta\hat{x}+\frac{\imth R^2}{\hbar}\Delta\hat{p}\right)
+ \dket{\psi}
+\nonumber\\
+&=\left[
+ (\Delta\hat{x})^2
+ +(\Delta\hat{p})^2\left(\frac{R^2}{\hbar}\right)^2
+ +\frac{\imth R^2}{\hbar}
+ \comm{\Delta\hat{x}}{\Delta\hat{p}}
+ \right]\dket{\psi}
+\nonumber\\
+&=\left[
+ (\Delta\hat{x})^2
+ +(\Delta\hat{p})^2\left(\frac{R^2}{\hbar}\right)^2
+ -R^2
+ \right]\dket{\psi}=0,
+\end{align}
+where
+\begin{equation}
+\comm{\Delta\hat{x}}{\Delta\hat{p}}=\imth\hbar.
+\end{equation}
+
+
+
+Multiplying by $\hbar^2/(2mR^4)$ gives
+\begin{equation}
+\left[
+\frac{(\Delta\hat{p})^2}{2m}
++\frac{\hbar^2}{2mR^4}(\Delta\hat{x})^2
+\right]\dket{\psi}
+=E\dket{\psi},
+\end{equation}
+with the eigen-energy given by
+\begin{equation}
+E=\frac{\hbar^2}{2mR^2}
+\end{equation}
+Therefore the parent Hamiltonian for a Gaussian wavepacket  is nothing but the simple harmonic oscillator
+\begin{equation}
+\hat{H}
+=\frac{(\Delta\hat{p})^2}{2m}
++\frac{m\omega^2}{2}(\Delta\hat{x})^2.
+\end{equation}
+where the characteristic frequency $\omega$ is given by
+\begin{equation}
+\omega=\frac{\hbar}{mR^2}
+\end{equation}
+and the ground state energy is 
+\begin{equation}
+E_0=\frac{\hbar^2}{2mR^2}=\frac12\hbar\omega.
+\end{equation}
+Note the only length scale $R$ is proportional to the width of the wavepacket:
+\begin{equation}
+R=\sqrt{\frac{\hbar}{m\omega}}
+=\sqrt{2}\,\Delta x
+=\frac{\hbar}{\sqrt{2}\,\Delta p}.
+\end{equation}
+
+\subsubsection{Ground state wavefunction}
+In the simple harmonic oscillator Hamiltonian (\ref{sho hamiltonian}), we choose $\expval{\hat x}=\expval{\hat p}=0$ and hence $\Delta\hat x=\hat x$ and $\Delta\hat p=\hat p$. 
+
+In position space,
+\begin{equation}
+ \dbra{x}\hat p\dket{\psi}
+ =-\imth\hbar\frac{\dif{}}{\dif x}\psi(x).
+\end{equation}
+The condition (\ref{sho ground state condition}) for ground state $\dket{\psi_0}$ therefore gives
+\begin{equation}
+ \left(\sqrt{\frac{m\omega}{2\hbar}}x
+ +\sqrt{\frac{\hbar}{2m\omega}}\frac{\dif{}}{\dif x}\right)
+ \psi_0(x)=0.
+\end{equation}
+Hence we arrive at the ground state wavefunction
+\begin{equation}
+ \boxed{
+ \psi_0(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+ e^{-m\omega x^2/(2\hbar)}
+ =\frac{1}{\pi^{1/4}\sqrt R}e^{-x^2/(2R^2)}.}
+\end{equation}
+
+\subsubsection{Symmetries}
+
+The Hamiltonian (\ref{sho hamiltonian}) is obviously invariant under the inversion operation $\hat\pi\equiv\int\dif{x}~\proj{x}$:
+\begin{equation}
+ \hat x\longmapsto-\hat x,
+ \qquad
+ \hat p\longmapsto-\hat p,
+ \qquad
+ \hat H_{\text{SHO}}\longmapsto\hat H_{\text{SHO}}
+\end{equation}
+In addition, the SHO Hamiltonian also preserves another $SO(2)\simeq U(1)$ symmetry:
+\begin{align}
+    \bpm\hat x\\ \hat p/m\omega\epm \longmapsto \bpm\cos\theta&\sin\theta\\-\sin\theta&\cos\theta\epm \bpm\hat x\\ \hat p/m\omega\epm
+\end{align}
+where $\theta\in[0,2\pi)$ is an arbitrary rotation angle. 
+
+\subsection{Equation of motion in the Heisenberg picture}
+
+Recall that in the Heisenberg picture, states remain constants while the operators evolve with time:
+\begin{align}
+    \dket{\psi_H(t)}=\dket{\psi_0},~~~\hat O_H(t)=\hat U^\dagger(t,0)\hat O\hat U(t,0)=e^{\imth\hat Ht/\hbar}\hat Oe^{-\imth\hat Ht/\hbar}
+\end{align}
+Therefore the operators in the Heisenberg picture obey the following equation of motion:
+\begin{align}
+    \imth\hbar\frac{\dif{}}{\dif t}\hat O_H(t)=[\hat O_H(t),\hat H]=e^{\imth\hat Ht/\hbar}[\hat O,\hat H]e^{-\imth\hat Ht/\hbar}
+\end{align}
+for a time-independent Hamiltonian $\hat H$. If we intend to compute the time dependence of expectation values of observable $\hat O$, it is more convenient to use the Heisenberg picture. 
+
+For example, in the case of a simple harmonic oscillator (\ref{sho hamiltonian}), using the canonical commutation relation between position and momentum operators:
+\begin{align}
+    [\hat x,\hat p]=\imth\hbar
+\end{align}
+it is straightforward to show that
+\begin{align}
+    &\frac{\dif{}}{\dif t}\expval{\hat x(t)}=\frac{\expval{\hat p(t)}}{m},\\
+    &\frac{\dif{}}{\dif t}\expval{\hat p(t)}=-{\expval{V'(\hat x(t))}}=-m\omega^2\expval{\hat x(t)}
+\end{align}
+where $V'(x)$ is the derivative of potential $V(x)$ in the Hamiltonian. Solving these two equations of motion produces the harmonic oscillation that is well known in classical mechanics. 
+
+

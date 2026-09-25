@@ -1,0 +1,338 @@
+\section{*Squeezed states of light (11/4)}
+
+\referto{\scully~2.5-2.7}
+
+\subsection{Squeezed states}
+
+\subsubsection{Field quadratures}
+For a single mode, define the field quadratures:
+\begin{equation}
+\hat X=\frac{\hat a+\hat a^\dagger}{\sqrt2},
+\qquad
+\hat Y=\frac{\imth(\hat a^\dagger-\hat a)}{\sqrt2}.
+\end{equation}
+Then
+\begin{equation}
+\comm{\hat X}{\hat Y}=\imth,
+\qquad
+\Delta X\,\Delta Y\geq\frac12.
+\end{equation}
+For coherent states,
+\begin{equation}
+\Delta X=\Delta Y=\frac{1}{\sqrt2}.
+\end{equation}
+
+\subsubsection{Squeezing}
+A minimum-uncertainty squeezed state satisfies
+\begin{equation}
+\left(\Delta\hat X+\imth R^2\Delta\hat Y\right)\dket{\psi}=0.
+\end{equation}
+Equivalently,
+\begin{equation}
+\left[(1-R^2)\hat a^\dagger+(1+R^2)\hat a
+-(X_0+\imth R^2Y_0)\right]\dket{\psi}=0.
+\end{equation}
+Define the squeeze parameter by
+\begin{equation}
+\frac{1-R^2}{1+R^2}=\tanh r,
+\qquad
+R=e^{-r}.
+\end{equation}
+Then
+\begin{equation}
+\boxed{\Delta X=\frac{e^{-r}}{\sqrt2},
+\qquad
+\Delta Y=\frac{e^r}{\sqrt2},
+\qquad
+\Delta X\Delta Y=\frac12.}
+\end{equation}
+
+\subsubsection{Electric-field noise}
+For phase
+\begin{equation}
+\Phi=\omega t-\bm k\cdot\bm r,
+\end{equation}
+the electric field (\ref{electric field}) is proportional to
+\begin{equation}
+\hat E(\bm r,t)=\sqrt{\frac{2\hbar\omega}{\epsilon V}}
+\left(\hat X\cos\Phi+\hat Y\sin\Phi\right).
+\end{equation}
+For a squeezed state with vanishing quadrature covariance,
+\begin{equation}
+\boxed{
+(\Delta E)^2=\frac{\hbar\omega}{\epsilon V}
+\left(e^{-2r}\cos^2\Phi+e^{2r}\sin^2\Phi\right).}
+\end{equation}
+For $r>0$,
+\begin{align}
+\Delta E_{\min}&=\Delta X=\frac{e^{-r}}{\sqrt2},
+&&\Phi=0\pmod\pi,\\
+\Delta E_{\max}&=\Delta Y=\frac{e^r}{\sqrt2},
+&&\Phi=\frac\pi2\pmod\pi,\\
+\Delta E_{\min}\Delta E_{\max}&=\Delta X\Delta Y=\frac12.
+\end{align}
+
+\subsection{Generation of coherent and squeezed states in quantum optics}
+
+\subsubsection{Generating coherent states}
+With a classical current,
+\begin{equation}
+\hat H=\hat H_{\mathrm{EM}}
+-\int\bm j(\bm r,t)\cdot\hat{\bm A}(\bm r)\text{d}^3{\bm r}.
+\end{equation}
+The evolved vacuum is a coherent state:
+\begin{equation}
+e^{-\imth\hat Ht/\hbar}\dket{0}
+=\exp\left[\sum_k(\alpha_k\hat a_k^\dagger
+-\alpha_k^*\hat a_k)\right]\dket{0},
+\end{equation}
+where
+\begin{equation}
+\alpha_k=-\int\text{d}^3{\bm r}\int_0^t\dif t'
+\,e^{\imth(\omega t'-\bm k\cdot\bm r)}
+\bm j(\bm r,t')\cdot\bm e_k
+\sqrt{\frac{\hbar}{\omega\epsilon V}}.
+\end{equation}
+The displacement operator is
+\begin{equation}
+\boxed{\hat D(\alpha)=e^{\alpha\hat a^\dagger-\alpha^*\hat a}}.
+\end{equation}
+
+\subsubsection{Generating squeezed states}
+Degenerate parametric amplification, achieved by placing a nonlinear crystal nonlinear inside an optical cavity, produces the effective Hamiltonian
+\begin{equation}
+\hat H_{\mathrm{dpa}}
+=\hbar\chi\beta_0
+\left[(\hat a^\dagger)^2e^{-\imth\phi}
++\hat a^2e^{\imth\phi}\right].
+\end{equation}
+Define the squeeze operator:
+\begin{equation}
+\boxed{
+\hat S(\xi)=
+\exp\left[\frac12\left(\xi^*\hat a^2
+-\xi(\hat a^\dagger)^2\right)\right],
+\qquad \xi=re^{\imth\theta}.}
+\end{equation}
+It satisfies
+\begin{equation}
+\hat S^\dagger(\xi)(\hat X+\imth\hat Y)\hat S(\xi)
+=e^{-r}\hat X+\imth e^r\hat Y
+\end{equation}
+for a suitable squeezing phase. A squeezed coherent state is
+\begin{equation}
+\boxed{
+\dket{\xi,z}=\hat S(\xi)\hat D(z)\dket{0}
+\sim\hat S(\xi)\dket{z}.}
+\end{equation}
+Its quadrature variances are
+\begin{equation}
+\dbra{\xi,z}(\Delta\hat X)^2\dket{\xi,z}
+=\frac{e^{-2r}}{2},
+\qquad
+\dbra{\xi,z}(\Delta\hat Y)^2\dket{\xi,z}
+=\frac{e^{2r}}{2}.
+\end{equation}
+
+
+\subsection{Application: squeezed light in LIGO}
+
+\subsubsection{Gravitational-wave measurement}
+
+LIGO is a Michelson interferometer with long optical cavities in its two
+perpendicular arms. A passing gravitational wave changes the arm lengths in
+opposite directions. If the unperturbed arm length is \(L\), define the
+gravitational-wave strain by
+\begin{equation}
+    h(t)=\frac{\Delta L_x(t)-\Delta L_y(t)}{L}.
+\end{equation}
+The differential change in arm length produces a phase shift in the light
+returning from the two arms. The output photodetector measures this phase
+shift.
+
+Ideally, the interferometer is operated near a dark fringe, so little
+classical carrier light exits through the antisymmetric port. Quantum vacuum
+fluctuations can nevertheless enter through this port and interfere with the
+carrier field. These fluctuations contribute quantum noise to the measured
+signal.
+
+\subsubsection{Two sources of quantum noise}
+
+Introduce the amplitude and phase quadratures
+\begin{equation}
+    \hat X=\frac{\hat a+\hat a^\dagger}{\sqrt{2}},
+    \qquad
+    \hat Y=\frac{\imth(\hat a^\dagger-\hat a)}{\sqrt{2}},
+\end{equation}
+with
+\begin{equation}
+    \comm{\hat X}{\hat Y}=\imth,
+    \qquad
+    \Delta X\,\Delta Y\geq\frac12.
+\end{equation}
+
+The two quadratures affect LIGO in different ways:
+
+\begin{enumerate}
+    \item The phase quadrature \(\hat Y\) produces uncertainty in the
+    optical phase measured at the output. This is called shot noise.
+
+    \item The amplitude quadrature \(\hat X\) produces fluctuations in the
+    number of photons incident on the mirrors. The corresponding fluctuating
+    radiation pressure moves the mirrors. This is called quantum
+    radiation-pressure noise.
+\end{enumerate}
+
+The approximate frequency dependence of the quadrature variance is
+\begin{equation}
+    S_h^{\text{shot}}(\Omega)\sim\Delta Y^2\propto\frac{1}{P},
+    \qquad
+    S_h^{\text{rad}}(\Omega)\sim\Delta X^2\propto\frac{P}{\Omega^4},
+\end{equation}
+where \(P\) is the circulating optical power and \(\Omega\) is the
+gravitational-wave angular frequency. Shot noise is most important at high
+frequencies, while radiation-pressure noise becomes important at low
+frequencies.
+
+Increasing the laser power reduces shot noise but increases
+radiation-pressure noise. This tradeoff leads to the standard quantum limit.
+
+\subsubsection{Injection of squeezed vacuum}
+
+For ordinary vacuum,
+\begin{equation}
+    (\Delta X)^2=(\Delta Y)^2=\frac12.
+\end{equation}
+A squeezed vacuum state redistributes these uncertainties. For phase
+squeezing,
+\begin{equation}
+    (\Delta X)^2=\frac12e^{2r},
+    \qquad
+    (\Delta Y)^2=\frac12e^{-2r},
+\end{equation}
+where \(r>0\) is the squeeze parameter. Therefore,
+\begin{equation}
+    \Delta X\,\Delta Y=\frac12.
+\end{equation}
+
+Injecting this squeezed vacuum into the antisymmetric port reduces the phase
+uncertainty:
+\begin{equation}
+    \Delta Y_{\text{sq}}=e^{-r}\Delta Y_{\text{vac}}.
+\end{equation}
+The shot-noise contribution is consequently reduced by
+\begin{equation}
+    S_{h,\text{sq}}^{\text{shot}}
+    =e^{-2r}S_{h,\text vac}^{\text{shot}}.
+\end{equation}
+
+The uncertainty principle is not violated. The reduction of phase noise is
+accompanied by an increase in amplitude noise:
+\begin{equation}
+    \Delta X_{\text{sq}}=e^r\Delta X_{\text{vac}},~~~S_{h,\text{sq}}^{\text{rad}}=e^{2r}S_{h,\text{sq}}^{\text{rad}}.
+\end{equation}
+The increased amplitude noise can increase radiation-pressure noise at low
+frequencies.
+
+\subsubsection{Frequency-dependent squeezing}
+
+A fixed squeezing angle cannot reduce both forms of quantum noise over the
+entire detection band. LIGO therefore uses frequency-dependent squeezing.
+
+Let the quadrature vector be
+\begin{equation}
+    \hat{\bm q}
+    =
+    \begin{pmatrix}
+        \hat X\\
+        \hat Y
+    \end{pmatrix}.
+\end{equation}
+A rotation of the squeezing ellipse through an angle \(\theta\) is represented
+by
+\begin{equation}
+    \hat{\bm q}_\theta
+    =
+    \begin{pmatrix}
+        \cos\theta & -\sin\theta\\
+        \sin\theta & \cos\theta
+    \end{pmatrix}
+    \hat{\bm q}.
+\end{equation}
+
+Before the squeezed vacuum enters the main interferometer, it is reflected
+from an auxiliary optical filter cavity. The cavity produces a
+frequency-dependent quadrature rotation,
+\begin{equation}
+    \theta=\theta(\Omega).
+\end{equation}
+The squeezing ellipse is therefore oriented differently for different
+gravitational-wave frequencies.
+
+At high frequencies, the squeezed quadrature is aligned to reduce phase
+noise:
+\begin{equation}
+    (\Delta Y)^2_{\text{high\ frequency}}
+    =\frac12e^{-2r}.
+\end{equation}
+This reduces shot noise.
+
+At low frequencies, the filter cavity rotates the ellipse so that the
+amplitude quadrature is squeezed:
+\begin{equation}
+    (\Delta X)^2_{\text{low\ frequency}}
+    =\frac12e^{-2r}.
+\end{equation}
+This reduces radiation-pressure fluctuations acting on the mirrors.
+
+Schematically,
+\begin{equation}
+    \boxed{
+    \begin{aligned}
+        \text{low frequency:}\quad
+        &\text{amplitude squeezing}
+        &&\Longrightarrow
+        \text{less radiation-pressure noise},\\
+        \text{high frequency:}\quad
+        &\text{phase squeezing}
+        &&\Longrightarrow
+        \text{less shot noise}.
+    \end{aligned}}
+\end{equation}
+
+\subsubsection{Optical loss}
+
+Optical loss replaces part of the squeezed state with ordinary vacuum. If
+\(\eta\) is the total optical efficiency, the observed squeezed variance is
+approximately
+\begin{equation}
+    (\Delta Q)^2_{\text obs}
+    =
+    \eta\,\frac{e^{-2r}}{2}
+    +(1-\eta)\frac12,
+\end{equation}
+where \(\hat Q\) denotes the intended squeezed quadrature.
+
+Even if the generated squeezing is very strong, the measured noise reduction
+is limited by optical loss and fluctuations of the squeezing angle. High
+optical efficiency and accurate control of the squeezing phase are therefore
+essential.
+
+\subsubsection{Summary}
+
+LIGO does not evade the uncertainty principle. Instead, squeezed light
+places less quantum uncertainty in the quadrature that limits a particular
+part of the measurement and more uncertainty in the conjugate quadrature.
+
+Frequency-dependent squeezing extends this idea by rotating the squeezing
+ellipse as a function of frequency. It reduces the relevant quantum noise at
+both low and high frequencies, allowing weaker gravitational-wave signals to
+be distinguished from the quantum fluctuations of the light.
+
+
+This section summarizes LIGO’s use of vacuum fluctuations entering the unused interferometer port, squeezed states to reduce shot noise, and frequency-dependent squeezing to control the tradeoff between high-frequency phase noise and low-frequency radiation-pressure noise.
+
+LIGO reports that frequency-dependent squeezing has been operating since the observing run began in May 2023 and improves sensitivity across its gravitational-wave frequency range.
+
+
+
