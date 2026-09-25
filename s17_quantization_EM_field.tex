@@ -1,0 +1,239 @@
+\section{Quantization of electromagnetic fields (10/30)}
+
+\referto{\sakurai~7.6, \tong~5.3, 13.4.1, \scully~1.1}
+
+\subsection{Classical Electromagnetic Field}
+
+Let
+\begin{equation}
+ x^a=(ct,\bm r),
+ \qquad
+ A^a=(\phi/c,\bm A),
+\end{equation}
+and
+\begin{equation}
+ F_{ab}=\frac{\partial A_b}{\partial x^a}
+ -\frac{\partial A_a}{\partial x^b}.
+\end{equation}
+The electromagnetic Lagrangian density is
+\begin{equation}
+ \mathcal L=-\frac{1}{4\mu}F^{ab}F_{ab}
+ =\frac12\left(\epsilon\bm E^2-\frac{\bm B^2}{\mu}\right),
+ \qquad
+ c=\frac{1}{\sqrt{\mu\epsilon}}.
+\end{equation}
+The electric and magnetic fields are
+\begin{equation}
+ \bm E=-\frac{\partial\bm A}{\partial t}-\bm\nabla\phi,
+ \qquad
+ \bm B=\bm\nabla\times\bm A.
+\end{equation}
+They are invariant under the following gauge transformations
+\begin{equation}
+ \bm A\longmapsto\bm A+\bm\nabla\Theta,
+ \qquad
+ \phi\longmapsto\phi-\frac{\partial\Theta}{\partial t}.
+\end{equation}
+Below we choose the Weyl and Coulomb gauges:
+\begin{equation}
+ \phi=0,
+ \qquad
+ \bm\nabla\cdot\bm A=0.
+\end{equation}
+
+\subsection{One-dimensional optical cavity}
+
+In a cavity which is confined along $x,z$ direction but has length $L$ along $y$ direction, we consider one linearly polarized mode propagating along $y$,
+\begin{equation}
+ \bm A=(A(y,t),0,0),
+ \qquad
+ \bm E=(E_x,0,0),
+ \qquad
+ \bm B=(0,0,B_z),
+\end{equation}
+with
+\begin{equation}
+ E_x=-\frac{\partial A}{\partial t},
+ \qquad
+ B_z=-\frac{\partial A}{\partial y}.
+\end{equation}
+The cavity Lagrangian is
+\begin{equation}
+ L=\int_0^L\dif y\,
+ \left[
+ \frac{\epsilon}{2}\left(\frac{\partial A}{\partial t}\right)^2
+ -\frac{1}{2\mu}\left(\frac{\partial A}{\partial y}\right)^2
+ \right].
+\end{equation}
+
+
+\subsubsection{Standing wave boundary conditions}
+Impose perfectly reflecting standing-wave boundary conditions
+\begin{equation}
+ \boxed{A(0,t)=A(L,t)=0.}
+\end{equation}
+The normalized spatial modes are
+\begin{equation}
+ u_n(y)=\sqrt{\frac{2}{L}}\sin(k_ny),
+ \qquad
+ k_n=\frac{n\pi}{L},
+ \qquad
+ n=1,2,3,\ldots,
+\end{equation}
+and satisfy
+\begin{equation}
+ \int_0^L\dif y\,u_n(y)u_m(y)=\delta_{nm}.
+\end{equation}
+Expand the field as
+\begin{equation}
+ \boxed{A(y,t)=\sum_{n=1}^{\infty}q_n(t)u_n(y)
+ =\sqrt{\frac{2}{L}}\sum_{n=1}^{\infty}
+ q_n(t)\sin(k_ny).}
+\end{equation}
+Then
+\begin{align}
+ E_x(y,t)&=-\sqrt{\frac{2}{L}}
+ \sum_{n=1}^{\infty}\dot q_n(t)\sin(k_ny),\\
+ B_z(y,t)&=-\sqrt{\frac{2}{L}}
+ \sum_{n=1}^{\infty}k_nq_n(t)\cos(k_ny).
+\end{align}
+
+\subsubsection{Mode Lagrangian}
+Using
+\begin{align}
+ \int_0^L\dif y\,\sin(k_ny)\sin(k_my)&=\frac{L}{2}\delta_{nm},\\
+ \int_0^L\dif y\,\cos(k_ny)\cos(k_my)&=\frac{L}{2}\delta_{nm},
+\end{align}
+one obtains the following Lagrangian
+\begin{equation}
+ \boxed{L=\sum_{n=1}^{\infty}
+ \left(\frac{\epsilon}{2}\dot q_n^{\,2}
+ -\frac{k_n^2}{2\mu}q_n^2\right).}
+\end{equation}
+Thus there is one real harmonic oscillator for each standing-wave mode.
+
+\subsection{Canonical Quantization}
+
+The momentum conjugate to $q_n$ is
+\begin{equation}
+ p_n=\frac{\partial L}{\partial\dot q_n}=\epsilon\dot q_n.
+\end{equation}
+Canonical quantization gives
+\begin{equation}
+ \boxed{\comm{\hat q_n}{\hat p_m}=\imth\hbar\delta_{nm},}
+ \qquad
+ \comm{\hat q_n}{\hat q_m}=0,
+ \qquad
+ \comm{\hat p_n}{\hat p_m}=0.
+\end{equation}
+The Hamiltonian is
+\begin{align}
+ \hat H
+ &=\sum_{n=1}^{\infty}
+ \left(\hat p_n\dot{\hat q}_n-L_n\right)\\
+ &=\boxed{\sum_{n=1}^{\infty}
+ \left(\frac{\hat p_n^2}{2\epsilon}
+ +\frac{k_n^2}{2\mu}\hat q_n^2\right)}.
+\end{align}
+Identifying each term with
+\begin{equation}
+ \frac{\hat p_n^2}{2M}+\frac12M\omega_n^2\hat q_n^2
+\end{equation}
+gives
+\begin{equation}
+ M=\epsilon,
+ \qquad
+ \omega_n^2=\frac{k_n^2}{\mu\epsilon}=c^2k_n^2.
+\end{equation}
+Therefore,
+\begin{equation}
+ \boxed{\omega_n=ck_n=\frac{n\pi c}{L}.}
+\end{equation}
+
+\subsubsection{Creation and annihilation operators}
+Define
+\begin{align}
+ \hat a_n
+ &=\sqrt{\frac{\epsilon\omega_n}{2\hbar}}\hat q_n
+ +\frac{\imth}{\sqrt{2\hbar\epsilon\omega_n}}\hat p_n,\\
+ \hat a_n^\dagger
+ &=\sqrt{\frac{\epsilon\omega_n}{2\hbar}}\hat q_n
+ -\frac{\imth}{\sqrt{2\hbar\epsilon\omega_n}}\hat p_n.
+\end{align}
+Then
+\begin{equation}
+ \comm{\hat a_n}{\hat a_m^\dagger}=\delta_{nm}.
+\end{equation}
+The inverse relations are
+\begin{align}
+ \hat q_n&=\sqrt{\frac{\hbar}{2\epsilon\omega_n}}
+ (\hat a_n+\hat a_n^\dagger),\\
+ \hat p_n&=-\imth\sqrt{\frac{\hbar\epsilon\omega_n}{2}}
+ (\hat a_n-\hat a_n^\dagger).
+\end{align}
+Thus
+\begin{equation}
+ \boxed{\hat H=\sum_{n=1}^{\infty}
+ \hbar\omega_n\left(\hat a_n^\dagger\hat a_n+\frac12\right).}
+\end{equation}
+The total zero-point energy is
+\begin{equation}
+ E_{0}=\frac12\sum_{n=1}^{\infty}\hbar\omega_n.
+\end{equation}
+
+\subsubsection{Photon number states}
+For one mode,
+\begin{equation}
+ \hat N_n=\hat a_n^\dagger\hat a_n,
+ \qquad
+ \hat N_n\dket{N_n}=N_n\dket{N_n}.
+\end{equation}
+Each excitation carries energy $\hbar\omega_n$, and
+\begin{equation}
+ E_n(N_n)=\hbar\omega_n\left(N_n+\frac12\right).
+\end{equation}
+
+\subsection{Quantized Standing-Wave Fields}
+
+\subsubsection{Vector potential}
+In the Schr\"odinger picture,
+\begin{equation}
+ \boxed{
+ \hat A(y)=\sum_{n=1}^{\infty}
+ \sqrt{\frac{\hbar}{\epsilon L\omega_n}}
+ \sin(k_ny)(\hat a_n+\hat a_n^\dagger).}
+\end{equation}
+In the Heisenberg picture,
+\begin{equation}
+ \boxed{
+ \hat A(y,t)=\sum_{n=1}^{\infty}
+ \sqrt{\frac{\hbar}{\epsilon L\omega_n}}
+ \sin(k_ny)
+ \left(\hat a_ne^{-\imth\omega_nt}
+ +\hat a_n^\dagger e^{\imth\omega_nt}\right).}
+\end{equation}
+The boundary conditions are automatically satisfied because
+\begin{equation}
+ \sin(k_n0)=\sin(k_nL)=0.
+\end{equation}
+
+\subsubsection{Electric and magnetic fields}
+Using $\hat E_x=-\partial_t\hat A$,
+\begin{equation}\label{electric field}
+ \boxed{
+ \hat E_x(y,t)=\imth\sum_{n=1}^{\infty}
+ \sqrt{\frac{\hbar\omega_n}{\epsilon L}}
+ \sin(k_ny)
+ \left(\hat a_ne^{-\imth\omega_nt}
+ -\hat a_n^\dagger e^{\imth\omega_nt}\right).}
+\end{equation}
+Using $\hat B_z=-\partial_y\hat A$,
+\begin{equation}
+ \boxed{
+ \hat B_z(y,t)=-\sum_{n=1}^{\infty}
+ k_n\sqrt{\frac{\hbar}{\epsilon L\omega_n}}
+ \cos(k_ny)
+ \left(\hat a_ne^{-\imth\omega_nt}
+ +\hat a_n^\dagger e^{\imth\omega_nt}\right).}
+\end{equation}
+

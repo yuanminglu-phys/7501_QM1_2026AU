@@ -1,0 +1,157 @@
+\chapter{Homework 8 (due 11/4)}
+
+\subsection{The simple harmonic oscillator}
+
+(1) When we learnt about Heisenberg's uncertainty relation, we know that the equality $\Delta x\Delta p=\hbar/2$ holds when the following two conditions hold simultaneously:
+\begin{align}\label{hw8:cond 1}
+&(\Delta\hat x+C\Delta\hat p)\dket{\psi}=0,\\
+&\expval{\psi|\{\Delta\hat x,\Delta\hat p\}|\psi}=0\label{hw8:cond 2}
+\end{align}
+where $C$ is a constant, and 
+\begin{align}
+\Delta\hat x\equiv\hat x-\expval{\hat x},~~~\Delta\hat p\equiv\hat p-\expval{\hat p}.
+\end{align}
+Using the fact that $\Delta\hat x$ and $\Delta p$ are both Hermitian operators, show that the constant $C$ must be an imaginary number (e.g. we can choose $C=\imth R^2/\hbar$), and the two conditions (\ref{hw8:cond 1})-(\ref{hw8:cond 2}) turn out to be just one condition
+\begin{align}\label{hw8:cond 3}
+(\Delta\hat x+\frac{\imth R^2}{\hbar}\Delta\hat p)\dket{\psi}=0
+\end{align}
+Here $R$ is a constant length scale. 
+
+(2) Following our lecture discussions, the ground state $\dket0$ of simple harmonic oscillator Hamiltonian
+\begin{align}\label{hw8:sho}
+\hat H_\text{SHO}=\frac{\hat p^2}{2m}+\frac{m\omega^2}2\hat x^2
+\end{align}
+must satisfy equation (\ref{hw8:cond 3}) where the length $R$ is given by
+\begin{align}
+R=\sqrt{\frac\hbar{m\omega}}
+\end{align}
+Consider the creation and annihilation operators defined as follows for a simple harmonic oscillator (\ref{hw8:sho}):
+\begin{align}
+\hat a=\frac{\hat x/R+\imth\hat p~R/\hbar}{\sqrt2},~~~\hat a^\dagger=\frac{\hat x/R-\imth\hat p~R/\hbar}{\sqrt2}
+\end{align}
+which simplifies the Hamiltonian (\ref{hw8:sho}) to the following form
+\begin{align}
+\hat H_\text{SHO}=\hbar\omega(a^\dagger a+\frac12)
+\end{align}
+Following our lecture discussions, show that in the orthonormal eigenbasis $\{\dket n|n=0,1,2,\cdots\}$, we have
+\begin{align}
+\expval{0|a^n(a^\dagger)^n|0}=n!
+\end{align}
+
+Comment: this means the normalized eigenstate of $\hat H_\text{SHO}$ can be written as
+\begin{align}
+\dket{n}=\frac{(a^\dagger)^n}{\sqrt{n!}}\dket0
+\end{align}
+
+(3) Show that 
+\begin{align}
+\hat a^\dagger(t)\equiv e^{\imth H_\text{SHO}t/\hbar}a^\dagger e^{-\imth H_\text{SHO}t/\hbar}=e^{\imth\omega t}a^\dagger
+\end{align}
+
+(4) In lectures we showed that the ground state wavefunction satisfying (\ref{hw8:cond 3}) is the Gaussian wavepacket:
+\begin{align}
+\psi_0(x)\equiv\expval{x|0}\propto e^{-x^2/2R^2}
+\end{align}
+Obtain the wavefunction $\psi_1(x)=\expval{x|1}$ of the first excited state $\dket{1}$.
+
+Hint:
+\begin{align}
+\psi_1(x)=\expval{x|a^\dagger|0}
+\end{align}
+
+(5) Compute the wavefunction $\psi_2(x)=\expval{x|2}$ for the 2nd excited state $\dket2$. 
+
+
+
+\subsection{Coupled harmonic oscillators}
+
+Consider the following quantum-mechanical Hamiltonian describing two particles connected by a spring of spring constant $k$ in one dimension:
+\begin{align}\label{coupled harmonic oscillator}
+\hat H=\frac{\hat p_1^2}{2m}+\frac{\hat p_2^2}{2m}+\frac{k}2(\hat x_1-\hat x_2)^2
+\end{align}
+with canonical commutation relation
+\begin{align}
+[\hat x_i,\hat p_j]=\imth\hbar\delta_{i,j},~~~i,j=1,2.
+\end{align}
+
+(1) In the Heisenberg picture, derive the equation of motion for positions and momenta of the two particles:
+\begin{align}
+\frac{\text{d}}{\text{d}t}\bpm\hat p_1(t)\\ \hat p_2(t)\\ \hat x_1(t)\\ \hat x_2(t)\epm=?
+\end{align}
+
+(2) Based on results of question (1), show that 
+\begin{align}
+-\frac{\text{d}^2}{\text{d}t^2}\bpm\hat x_1(t)\\ \hat x_2(t)\epm=\textbf{K}\bpm\hat x_1(t)\\ \hat x_2(t)\epm
+\end{align}
+where $\textbf{K}$ is a $2\times2$ matrix. Diagonalize matrix $\textbf{K}$ to obtain its eigenvalues and eigenvectors. Can you explain their physical meanings? 
+
+(3) Show that the center of mass momentum
+\begin{align}\label{coupled harmonic oscillator:com mtm}
+\hat P_\text{COM}\equiv \hat p_1+\hat p_2
+\end{align}
+is a constant of motion, i.e. 
+\begin{align}
+[\hat P_\text{COM},\hat H]=0
+\end{align}
+
+(4) Show that the Hamiltonian can be written as a summation of two terms: the center of mass part and the relative motion part
+\begin{align}
+\hat H=\hat H_{COM}(\hat P_\text{COM})+\hat H_\text{relative}(\hat x,\hat p)
+\end{align}
+where $\hat H_{COM}$ only depends on the center of mass momentum (\ref{coupled harmonic oscillator:com mtm}), and $\hat H_\text{relative}$ only depends on the following variables:
+\begin{align}
+\hat x=\hat x_1-\hat x_2,~~~\hat p\equiv\frac{\hat p_1-\hat p_2}2
+\end{align}
+
+(5) Show that $\hat x,\hat p$ defined above is a pair of conjugate variables, satisfying
+\begin{align}
+[\hat x,\hat p]=\imth\hbar
+\end{align}
+Using this relation to diagonalize the Hamiltonian $\hat H_\text{relative}$ of relative motions, show that it is just another simple harmonic oscillator, and find its eigen-frequency $\omega_\text{relative}$. 
+
+(6) \textbf{ Bonus} Compute the ground state (labeled as $\dket{g}$) wavefunction of the full Hamiltonian (\ref{coupled harmonic oscillator})
+\begin{align}
+\psi_g(x_1,x_2)\equiv\expval{x_1,x_2|g}=?
+\end{align}
+You don't have to normalize the wavefunction. 
+
+Hint: separate the center of mass and relative motions. 
+
+\subsection{(Bonus) The operator algebra approach to solve a Hamiltonian}
+
+The ladder operator approach to algebraically solve simple harmonic oscillator is one special case of the operator algebra approach to solve a Hamiltonian, which we describe below. 
+
+Consider a finite-dimensional Hilbert space $\mathbb{V}\simeq\mathbb{C}^N$. In HW1 we learnt tht all linear operators therein also form a Hilbert space $L_\mathbb{V}$, where the inner product between two operators $\hat O_1$ and $\hat O_2$ is given by the Hilbert-Schmidt inner product:
+\begin{align}
+\expval{O_1|O_2}=\trace(O_1^\dagger O_2)
+\end{align}
+
+(1) \textbf{Bonus} Show that one can always find a complete orthonormal basis $\{T_j\}$ for $L_\mathbb{V}$, such that each basis vector of linear operator is Hermitian:
+\begin{align}
+\expval{T_i|T_j}=\delta_{i,j},~~~T_j^\dagger=T_j,~~~\forall~j
+\end{align}
+
+Hint: if $\{\dket a\}$ is a complete orthonormal basis for $\mathbb{V}$, then you can show that a complete orthonormal basis for $L_\mathbb{V}$ is 
+given by
+\begin{align}
+\{O_{ab}\equiv\dket{a}\dbra{b};~\forall~a,b\}
+\end{align}
+
+(2) \textbf{Bonus} In the above Hermitian basis of $L_\mathbb{V}$, consider the commutator formula
+\begin{align}
+[\hat H,\hat T_i]=\sum_j\hat T_jM_{j,i}
+\end{align}
+Show that the square matrix $M_{i,j}$ is anti-symmetric and Hermitian:
+\begin{align}
+M_{i,j}=-M_{j,i}=M^\ast_{j,i}
+\end{align}
+
+Hint: 
+\begin{align}
+M_{j,i}=\expval{T_j|[H,T_i]}
+\end{align}
+
+(3) \textbf{Bonus} Show that each right eigenvector $\vec\xi$ of matrix $M$ associated with eigenvalue $\lambda$, corresponds to an operator $\hat O=\sum_j\xi_j\hat T_j$, such that
+\begin{align}
+[\hat H,\hat O]=\lambda\hat O
+\end{align}

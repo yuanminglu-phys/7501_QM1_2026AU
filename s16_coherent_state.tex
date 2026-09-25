@@ -1,0 +1,259 @@
+\section{From ladder operators to coherent states (10/28)}
+
+\referto{\tong~5.1, 5.2; \sakurai~2.3; \scully~2.1-2.4}
+
+\subsection{Algebraic solution to the simple harmonic oscillator}
+
+%\subsubsection{Ground-state annihilation condition}
+For the centered oscillator, the minimum-energy Gaussian wavepacket has a width of 
+\begin{equation}
+ R=\sqrt{\frac{\hbar}{m\omega}}.
+\end{equation}
+Label the ground state by $\dket{0}$. The minimum-uncertainty condition is
+\begin{equation}
+ \left(\hat x+\imth R^2\frac{\hat p}{\hbar}\right)\dket{0}=0.
+\end{equation}
+The commutator of the two conjugate combinations is
+\begin{equation}
+ \comm{\hat x+\imth R^2\hat p/\hbar}
+ {\hat x-\imth R^2\hat p/\hbar}=2R^2.
+\end{equation}
+
+\subsubsection{Ladder operators}
+Define
+\begin{align}
+ \hat a
+ &=\sqrt{\frac{m\omega}{2\hbar}}\hat x
+ +\frac{\imth}{\sqrt{2\hbar m\omega}}\hat p,\\
+ \hat a^\dagger
+ &=\sqrt{\frac{m\omega}{2\hbar}}\hat x
+ -\frac{\imth}{\sqrt{2\hbar m\omega}}\hat p.
+\end{align}
+They obey
+\begin{equation}
+ \boxed{\comm{\hat a}{\hat a^\dagger}=1.}
+\end{equation}
+The inverse relations are
+\begin{align}
+ \hat x&=\sqrt{\frac{\hbar}{2m\omega}}
+ (\hat a+\hat a^\dagger),\\
+ \hat p&=-\imth\sqrt{\frac{\hbar m\omega}{2}}
+ (\hat a-\hat a^\dagger).
+\end{align}
+Substitution into the Hamiltonian gives
+\begin{equation}
+ \boxed{\hat H_{\text{SHO}}=\hbar\omega
+ \left(\hat a^\dagger\hat a+\frac12\right).}
+\end{equation}
+The ground state satisfies
+\begin{equation}
+ \hat a\dket{0}=0,
+ \qquad
+ \hat H\dket{0}=\frac12\hbar\omega\dket{0}.
+\end{equation}
+
+%\subsubsection{Raising and lowering energies}
+The commutators between the Hamiltonian and ladder operators are
+\begin{equation}
+ \comm{\hat H}{\hat a^\dagger}=\hbar\omega\hat a^\dagger,
+ \qquad
+ \comm{\hat H}{\hat a}=-\hbar\omega\hat a.
+\end{equation}
+If
+\begin{equation}
+ \hat H\dket{\psi}=E\dket{\psi},
+\end{equation}
+then
+\begin{align}
+ \hat H\hat a^\dagger\dket{\psi}
+ &=(E+\hbar\omega)\hat a^\dagger\dket{\psi},\\
+ \hat H\hat a\dket{\psi}
+ &=(E-\hbar\omega)\hat a\dket{\psi}.
+\end{align}
+Thus $\hat a^\dagger$ is the creation or raising operator, because it raises the energy by $\hbar\omega$. Meanwhile $\hat a$ is
+the annihilation or lowering operator, since it lowers the energy by $\hbar\omega$. 
+
+\subsubsection{Occupation number basis}
+The normalized energy eigenstates are
+\begin{equation}
+ \boxed{
+ \dket{n}=\frac{(\hat a^\dagger)^n}{\sqrt{n!}}\dket{0},
+ \qquad n=0,1,2,\ldots.}
+\end{equation}
+They satisfy
+\begin{equation}
+ \boxed{\hat H\dket{n}
+ =\left(n+\frac12\right)\hbar\omega\dket{n}.}
+\end{equation}
+The ladder actions are
+\begin{align}
+ \hat a^\dagger\dket{n}&=\sqrt{n+1}\dket{n+1},\\
+ \hat a\dket{n}&=\sqrt n\dket{n-1}.
+\end{align}
+Equivalently,
+\begin{align}
+ \hat a^\dagger&=\sum_{n=0}^{\infty}
+ \sqrt{n+1}\,\dket{n+1}\dbra{n},\\
+ \hat a&=\sum_{n=0}^{\infty}
+ \sqrt{n+1}\,\dket{n}\dbra{n+1}.
+\end{align}
+
+\subsubsection{Oscillator Wave Functions}
+
+\textbf{Ground state:}
+
+In position space,
+\begin{equation}
+ \dbra{x}\hat p\dket{\psi}
+ =-\imth\hbar\frac{\dif{}}{\dif x}\psi(x).
+\end{equation}
+The condition $\hat a\dket{0}=0$ gives
+\begin{equation}
+ \left(\sqrt{\frac{m\omega}{2\hbar}}x
+ +\sqrt{\frac{\hbar}{2m\omega}}\frac{\dif{}}{\dif x}\right)
+ \psi_0(x)=0.
+\end{equation}
+Hence
+\begin{equation}
+ \boxed{
+ \psi_0(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}
+ e^{-m\omega x^2/(2\hbar)}
+ =\frac{1}{\pi^{1/4}\sqrt R}e^{-x^2/(2R^2)}.}
+\end{equation}
+
+\textbf{First excited state:}
+
+Using $\dket{1}=\hat a^\dagger\dket{0}$,
+\begin{align}
+ \psi_1(x)
+ &=\dbra{x}\hat a^\dagger\dket{0}\\
+ &=\left(\sqrt{\frac{m\omega}{2\hbar}}x
+ -\sqrt{\frac{\hbar}{2m\omega}}\frac{\dif{}}{\dif x}\right)
+ \psi_0(x)\\
+ &=\sqrt{\frac{2m\omega}{\hbar}}\,x\psi_0(x).
+\end{align}
+Thus
+\begin{equation}
+ \psi_1(x)\propto xe^{-x^2/(2R^2)}.
+\end{equation}
+
+\textbf{Second excited state:}
+
+The second excited state is
+\begin{equation}
+ \dket{2}=\frac{(\hat a^\dagger)^2}{\sqrt{2!}}\dket{0}
+ =\frac{\hat a^\dagger}{\sqrt2}\dket{1}.
+\end{equation}
+Applying the creation operator again gives
+\begin{equation}
+ \boxed{
+ \psi_2(x)=\frac{1}{\sqrt2}
+ \left(\frac{2x^2}{R^2}-1\right)\psi_0(x).}
+\end{equation}
+
+
+\subsection{Coherent States}
+
+A coherent state is an eigenstate of the annihilation operator:
+\begin{equation}
+\boxed{\hat a\dket{z}=z\dket{z}},
+\qquad z\in\mathbb C.
+\end{equation}
+Using
+\begin{equation}
+\hat x=\sqrt{\frac{\hbar}{2m\omega}}(\hat a+\hat a^\dagger),
+\qquad
+\hat p=\imth\sqrt{\frac{m\hbar\omega}{2}}(\hat a^\dagger-\hat a),
+\end{equation}
+one obtains
+\begin{align}
+\dbra{z}\hat x\dket{z}
+&=\sqrt{\frac{2\hbar}{m\omega}}\re z,\\
+\dbra{z}\hat p\dket{z}
+&=\sqrt{2m\hbar\omega}\im z.
+\end{align}
+
+\subsubsection{Time evolution}
+\begin{equation}
+\dket{z(t)}=e^{-\imth\hat Ht/\hbar}\dket{z}.
+\end{equation}
+Since
+\begin{equation}
+\hat a\dket{z(t)}=e^{-\imth\omega t}z\dket{z(t)},
+\end{equation}
+we have
+\begin{equation}
+\boxed{z(t)=ze^{-\imth\omega t}}.
+\end{equation}
+Thus $\langle\hat x(t)\rangle$ and $\langle\hat p(t)\rangle$ follow the
+classical oscillator trajectory (see Fig. \ref{fig:coherent-state-phase-space}):
+\begin{align}
+    &\langle\hat x(t)\rangle=\sqrt{\frac{2\hbar}{m\omega}}\re{(ze^{-\imth\omega t})},\\
+    &\expval{\hat p(t)}=\sqrt{2m\hbar\omega}\im{(ze^{-\imth\omega t})}
+\end{align}
+
+
+\begin{figure}[htbp] \centering \includegraphics[width=0.85\textwidth] {coherent_state_phase_space.png} \caption{Phase-space evolution of a coherent state, \(z(t)=z e^{-\imth\omega t}\).} \label{fig:coherent-state-phase-space} \end{figure}
+
+
+\subsubsection{Number-state expansion}
+Write
+\begin{equation}
+\dket{z}=\sum_{n=0}^{\infty}C_n\dket{n}.
+\end{equation}
+The eigenvalue equation gives
+\begin{equation}
+C_{n+1}=\frac{z}{\sqrt{n+1}}C_n\Longrightarrow C_n=\frac{z^n}{\sqrt{n!}}C_0.
+\end{equation}
+The normalized coherent state is
+\begin{equation}
+\boxed{
+\dket{z}=e^{-|z|^2/2}\sum_{n=0}^{\infty}
+\frac{z^n}{\sqrt{n!}}\dket{n}
+=e^{-|z|^2/2}e^{z\hat a^\dagger}\dket{0}.}
+\end{equation}
+Equivalently,
+\begin{equation}
+\dket{z}=\hat D(z)\dket{0}
+\end{equation}
+where $D(z)$ is known as the displacement operator:
+\begin{align}
+   \hat D(z)=e^{z\hat a^\dagger-z^*\hat a}. 
+\end{align}
+It shifts the center of the Gaussian wavepacket from $\expval{\hat x}=\expval{\hat p}=0$ to
+\begin{align}
+    z=\sqrt{\frac{m\omega}{2\hbar}}x_0+\frac{\imth}{\sqrt{2m\hbar\omega}} p_0
+\end{align}
+
+\subsubsection{Overlap and completeness}
+\begin{align}
+\expval{z|z'}
+&=\exp\left[-\frac{|z|^2}{2}-\frac{|z'|^2}{2}+z^*z'\right],\\
+\int_{\mathbb C}\frac{\text{d}^2z}{\pi}\proj{z}&=\id.
+\end{align}
+Coherent states form a nonorthogonal overcomplete basis.
+
+\subsubsection{Gaussian wavepacket as its wavefunction}
+Let
+\begin{equation}
+R=\sqrt{\frac{\hbar}{m\omega}},
+\quad
+x_0=\sqrt{\frac{2\hbar}{m\omega}}\re z,
+\quad
+p_0=\sqrt{2m\hbar\omega}\im z.
+\end{equation}
+Then
+\begin{equation}
+\left[(\hat x-x_0)+\frac{\imth R^2}{\hbar}(\hat p-p_0)\right]
+\dket{z}=0.
+\end{equation}
+Hence we obtain the wavefunction of coherent states as a Gaussian wavepacket:
+\begin{align}
+\expval{x|z}&\propto
+\exp\left(\frac{\imth p_0x}{\hbar}
+-\frac{(x-x_0)^2}{2R^2}\right),\\
+\expval{p|z}&\propto
+\exp\left(-\frac{\imth x_0p}{\hbar}
+-\frac{R^2(p-p_0)^2}{2\hbar^2}\right).
+\end{align}
+Since all coherent states saturate the Heisenberg uncertainty relation, among all quantum states, they are closest to the classical trajectory $x(t),p(t)$ of a simple harmonic oscillator. 

@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {1.4}Projective measurements (9/4)}{20}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Unitary evolution of a closed quantum system (9/9)}{22}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Schrodinger vs. Heisenberg pictures}{23}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Quantum Zeno effect}{24}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}*Quantum Zeno effect}{24}{subsection.1.5.2}%
 \contentsline {section}{\numberline {1.6}Composite quantum systems (9/11)}{25}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Tensor product}{25}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}Generalized measurements}{26}{subsection.1.6.2}%
@@ -32,13 +32,13 @@
 \contentsline {subsection}{\numberline {2.2.2}The CHSH inequality}{33}{subsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.2.1}Quantum-mechanical violation}{34}{subsubsection.2.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2.2}Experimental test with photon polarization}{34}{subsubsection.2.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}The GHZ argument}{34}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Bell's Original Inequality}{35}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.3}*The GHZ argument}{34}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}*Bell's Original Inequality}{35}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Summary}{36}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}Generalized measurements and decoherence (9/23)}{37}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Generalized measurements on a mixed state}{37}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Examples of generalized measurements}{38}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Measurements induce decoherence}{39}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.3}*Measurements induce decoherence}{39}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Time evolution of open quantum systems (9/25)}{41}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Quantum channels and Kraus operators}{41}{subsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.1.1}Definition of a quantum channel}{41}{subsubsection.2.4.1.1}%
@@ -102,56 +102,112 @@
 \contentsline {subsubsection}{\numberline {3.4.2.3}Time-reversal symmetry}{65}{subsubsection.3.4.2.3}%
 \contentsline {subsubsection}{\numberline {3.4.2.4}Inversion symmetry in the case of an even potential $V(x)=V(-x)$}{65}{subsubsection.3.4.2.4}%
 \contentsline {subsubsection}{\numberline {3.4.2.5}Out-state basis $\{|{\psi _k^-}\rangle \}$}{65}{subsubsection.3.4.2.5}%
-\contentsline {subsection}{\numberline {3.4.3}Scattering theory in a nutshell}{66}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}*Scattering theory in a nutshell}{66}{subsection.3.4.3}%
 \contentsline {subsubsection}{\numberline {3.4.3.1}The Lippmann--Schwinger Equation}{66}{subsubsection.3.4.3.1}%
 \contentsline {subsubsection}{\numberline {3.4.3.2}Adiabatic switching and the S matrix}{67}{subsubsection.3.4.3.2}%
 \contentsline {subsubsection}{\numberline {3.4.3.3}The scattering matrix}{67}{subsubsection.3.4.3.3}%
 \contentsline {subsubsection}{\numberline {3.4.3.4}Position-space Green function}{67}{subsubsection.3.4.3.4}%
 \contentsline {subsection}{\numberline {3.4.4}Summary}{68}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Simple harmonic oscillators (10/23)}{69}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Quantum optics}{70}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Rotational symmetry and central potentials in three dimensions}{71}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Approximation methods}{72}{chapter.6}%
+\contentsline {chapter}{\numberline {4}Quantum optics}{69}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Simple harmonic oscillators (10/23)}{70}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Heisenberg's Uncertainty Principle}{70}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Expectation values and fluctuations}{70}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}The uncertainty relation}{70}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}Conditions for equality}{70}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}Spin operators as an example}{71}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}Minimum-Uncertainty Wave Packets}{71}{subsubsection.4.1.1.5}%
+\contentsline {subsection}{\numberline {4.1.2}The Simple Harmonic Oscillator}{72}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Ground state is the Gaussian wavepacket}{72}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}Ground state wavefunction}{73}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}Symmetries}{73}{subsubsection.4.1.2.3}%
+\contentsline {subsection}{\numberline {4.1.3}Equation of motion in the Heisenberg picture}{73}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}From ladder operators to coherent states (10/28)}{75}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Algebraic solution to the simple harmonic oscillator}{75}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Ladder operators}{75}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Occupation number basis}{76}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}Oscillator Wave Functions}{76}{subsubsection.4.2.1.3}%
+\contentsline {subsection}{\numberline {4.2.2}Coherent States}{77}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Time evolution}{77}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Number-state expansion}{78}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Overlap and completeness}{79}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}Gaussian wavepacket as its wavefunction}{79}{subsubsection.4.2.2.4}%
+\contentsline {section}{\numberline {4.3}Quantization of electromagnetic fields (10/30)}{80}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Classical Electromagnetic Field}{80}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}One-dimensional optical cavity}{80}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Standing wave boundary conditions}{80}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Mode Lagrangian}{81}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}Canonical Quantization}{81}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Creation and annihilation operators}{82}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}Photon number states}{82}{subsubsection.4.3.3.2}%
+\contentsline {subsection}{\numberline {4.3.4}Quantized Standing-Wave Fields}{83}{subsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.4.1}Vector potential}{83}{subsubsection.4.3.4.1}%
+\contentsline {subsubsection}{\numberline {4.3.4.2}Electric and magnetic fields}{83}{subsubsection.4.3.4.2}%
+\contentsline {section}{\numberline {4.4}*Squeezed states of light (11/4)}{84}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Squeezed states}{84}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Field quadratures}{84}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Squeezing}{84}{subsubsection.4.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Electric-field noise}{84}{subsubsection.4.4.1.3}%
+\contentsline {subsection}{\numberline {4.4.2}Generation of coherent and squeezed states in quantum optics}{85}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Generating coherent states}{85}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Generating squeezed states}{85}{subsubsection.4.4.2.2}%
+\contentsline {subsection}{\numberline {4.4.3}Application: squeezed light in LIGO}{86}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}Gravitational-wave measurement}{86}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}Two sources of quantum noise}{86}{subsubsection.4.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}Injection of squeezed vacuum}{86}{subsubsection.4.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}Frequency-dependent squeezing}{87}{subsubsection.4.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.4.3.5}Optical loss}{88}{subsubsection.4.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.4.3.6}Summary}{88}{subsubsection.4.4.3.6}%
+\contentsline {chapter}{\numberline {5}Rotational symmetry and central potentials in three dimensions}{89}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Approximation methods}{90}{chapter.6}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{73}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{73}{appendix.A.1}%
-\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{73}{appendix.A.2}%
-\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{75}{appendix.A.3}%
-\contentsline {section}{\numberline {A.4}Compton shift}{76}{appendix.A.4}%
-\contentsline {section}{\numberline {A.5}Quantization of angular momentum}{76}{appendix.A.5}%
-\contentsline {section}{\numberline {A.6}Mode counting in blackbody radiation}{76}{appendix.A.6}%
-\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{77}{appendix.B}%
-\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{77}{subsection.B.0.1}%
-\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{77}{subsection.B.0.2}%
-\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{78}{subsection.B.0.3}%
-\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{79}{subsection.B.0.4}%
-\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{80}{appendix.C}%
-\contentsline {subsection}{\numberline {C.0.1}Spin precession}{80}{subsection.C.0.1}%
-\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{80}{subsection.C.0.2}%
-\contentsline {subsection}{\numberline {C.0.3}Propagator}{80}{subsection.C.0.3}%
-\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{81}{subsection.C.0.4}%
-\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{83}{appendix.D}%
-\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{83}{subsection.D.0.1}%
-\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{83}{subsection.D.0.2}%
-\contentsline {subsection}{\numberline {D.0.3}Witnessing entanglement}{84}{subsection.D.0.3}%
-\contentsline {chapter}{\numberline {E}Homework 5 (due 10/2)}{86}{appendix.E}%
-\contentsline {subsection}{\numberline {E.0.1}Revisiting the quantum Zeno effect}{86}{subsection.E.0.1}%
-\contentsline {subsection}{\numberline {E.0.2}Measurements}{87}{subsection.E.0.2}%
-\contentsline {subsection}{\numberline {E.0.3}Quantum channels}{87}{subsection.E.0.3}%
-\contentsline {subsection}{\numberline {E.0.4}The master equation}{87}{subsection.E.0.4}%
-\contentsline {subsubsection}{\numberline {E.0.4.1}Phase damping}{87}{subsubsection.E.0.4.1}%
-\contentsline {subsubsection}{\numberline {E.0.4.2}Amplitude damping}{88}{subsubsection.E.0.4.2}%
-\contentsline {subsubsection}{\numberline {E.0.4.3}Amplitude + phase dampings}{88}{subsubsection.E.0.4.3}%
-\contentsline {chapter}{\numberline {F}Homework 6 (Due 10/14)}{89}{appendix.F}%
-\contentsline {subsection}{\numberline {F.0.1}(Bonus) Position and momentum operators on a discrete periodic chain}{89}{subsection.F.0.1}%
-\contentsline {subsection}{\numberline {F.0.2}Dirac delta function}{89}{subsection.F.0.2}%
-\contentsline {subsection}{\numberline {F.0.3}Inversion symmetry in one dimension}{90}{subsection.F.0.3}%
-\contentsline {subsection}{\numberline {F.0.4}Double delta function potential}{91}{subsection.F.0.4}%
-\contentsline {chapter}{\numberline {G}Homework 7 (due 10/28)}{92}{appendix.G}%
-\contentsline {subsection}{\numberline {G.0.1}(Bonus) Lippmann-Schwinger equation}{92}{subsection.G.0.1}%
-\contentsline {subsection}{\numberline {G.0.2}(Bonus) Solving Lippmann-Schwinger eq. for a delta function potential}{93}{subsection.G.0.2}%
-\contentsline {subsection}{\numberline {G.0.3}S matrix and the phase shift}{93}{subsection.G.0.3}%
-\contentsline {subsection}{\numberline {G.0.4}Tunneling through a finite potential barrier}{94}{subsection.G.0.4}%
-\contentsline {subsection}{\numberline {G.0.5}A step potential}{95}{subsection.G.0.5}%
-\contentsline {chapter}{\nonumberline Bibliography}{96}{chapter*.2}%
+\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{91}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Franck-Hertz experiment}{91}{appendix.A.1}%
+\contentsline {section}{\numberline {A.2}Davisson-Germer experiment}{91}{appendix.A.2}%
+\contentsline {section}{\numberline {A.3}Hilbert space $\mathbb {L}_\mathbb {V}$ of linear operators on $\mathbb {V}=\mathbb {C}^n$}{93}{appendix.A.3}%
+\contentsline {section}{\numberline {A.4}Compton shift}{94}{appendix.A.4}%
+\contentsline {section}{\numberline {A.5}Quantization of angular momentum}{94}{appendix.A.5}%
+\contentsline {section}{\numberline {A.6}Mode counting in blackbody radiation}{94}{appendix.A.6}%
+\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{95}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{95}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{95}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{96}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{97}{subsection.B.0.4}%
+\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{98}{appendix.C}%
+\contentsline {subsection}{\numberline {C.0.1}Spin precession}{98}{subsection.C.0.1}%
+\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{98}{subsection.C.0.2}%
+\contentsline {subsection}{\numberline {C.0.3}Propagator}{98}{subsection.C.0.3}%
+\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{99}{subsection.C.0.4}%
+\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{101}{appendix.D}%
+\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{101}{subsection.D.0.1}%
+\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{101}{subsection.D.0.2}%
+\contentsline {subsection}{\numberline {D.0.3}Witnessing entanglement}{102}{subsection.D.0.3}%
+\contentsline {chapter}{\numberline {E}Homework 5 (due 10/2)}{104}{appendix.E}%
+\contentsline {subsection}{\numberline {E.0.1}Revisiting the quantum Zeno effect}{104}{subsection.E.0.1}%
+\contentsline {subsection}{\numberline {E.0.2}Measurements}{105}{subsection.E.0.2}%
+\contentsline {subsection}{\numberline {E.0.3}Quantum channels}{105}{subsection.E.0.3}%
+\contentsline {subsection}{\numberline {E.0.4}The master equation}{105}{subsection.E.0.4}%
+\contentsline {subsubsection}{\numberline {E.0.4.1}Phase damping}{105}{subsubsection.E.0.4.1}%
+\contentsline {subsubsection}{\numberline {E.0.4.2}Amplitude damping}{106}{subsubsection.E.0.4.2}%
+\contentsline {subsubsection}{\numberline {E.0.4.3}Amplitude + phase dampings}{106}{subsubsection.E.0.4.3}%
+\contentsline {chapter}{\numberline {F}Homework 6 (Due 10/14)}{107}{appendix.F}%
+\contentsline {subsection}{\numberline {F.0.1}(Bonus) Position and momentum operators on a discrete periodic chain}{107}{subsection.F.0.1}%
+\contentsline {subsection}{\numberline {F.0.2}Dirac delta function}{107}{subsection.F.0.2}%
+\contentsline {subsection}{\numberline {F.0.3}Inversion symmetry in one dimension}{108}{subsection.F.0.3}%
+\contentsline {subsection}{\numberline {F.0.4}Double delta function potential}{109}{subsection.F.0.4}%
+\contentsline {chapter}{\numberline {G}Homework 7 (due 10/28)}{110}{appendix.G}%
+\contentsline {subsection}{\numberline {G.0.1}(Bonus) Lippmann-Schwinger equation}{110}{subsection.G.0.1}%
+\contentsline {subsection}{\numberline {G.0.2}(Bonus) Solving Lippmann-Schwinger eq. for a delta function potential}{111}{subsection.G.0.2}%
+\contentsline {subsection}{\numberline {G.0.3}S matrix and the phase shift}{111}{subsection.G.0.3}%
+\contentsline {subsection}{\numberline {G.0.4}Tunneling through a finite potential barrier}{112}{subsection.G.0.4}%
+\contentsline {subsection}{\numberline {G.0.5}A step potential}{113}{subsection.G.0.5}%
+\contentsline {chapter}{\numberline {H}Homework 8 (due 11/4)}{114}{appendix.H}%
+\contentsline {subsection}{\numberline {H.0.1}The simple harmonic oscillator}{114}{subsection.H.0.1}%
+\contentsline {subsection}{\numberline {H.0.2}Coupled harmonic oscillators}{115}{subsection.H.0.2}%
+\contentsline {subsection}{\numberline {H.0.3}(Bonus) The operator algebra approach to solve a Hamiltonian}{116}{subsection.H.0.3}%
+\contentsline {chapter}{\numberline {I}Homework 9 (due 11/13)}{118}{appendix.I}%
+\contentsline {subsection}{\numberline {I.0.1}Coherent states}{118}{subsection.I.0.1}%
+\contentsline {subsection}{\numberline {I.0.2}Quantization of electromagnetic fields in a one-dimensional cavity}{119}{subsection.I.0.2}%
+\contentsline {subsection}{\numberline {I.0.3}Casimir effect}{119}{subsection.I.0.3}%
+\contentsline {subsection}{\numberline {I.0.4}Squeezed states}{119}{subsection.I.0.4}%
+\contentsline {chapter}{\nonumberline Bibliography}{121}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
