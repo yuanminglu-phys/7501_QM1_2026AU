@@ -31,7 +31,7 @@ e^{-\imth\hat H_\text{SHO}t/\hbar}\dket{z}=e^{\imth\phi(t)}\dket{ze^{-\imth\omeg
 \end{align}
 Find out the phase $\phi(t)$. 
 
-(5) \textbf{ Bonus} A displacement operator $D(z)$ is defined as
+(5) A displacement operator $D(z)$ is defined as
 \begin{align}\label{displacement operator}
 D(z)=e^{za^\dagger-z^\ast a},~~z\in\mathbb{C}
 \end{align}
@@ -52,16 +52,14 @@ e^{\hat A+\hat B+\frac12[\hat A,\hat B]}=e^{\hat A}e^{\hat B}
 
 \subsection{Quantization of electromagnetic fields in a one-dimensional cavity}
 
-Considering a single mode in a one-dimensional optical cavity, with momentum $k$ and frequency $\omega=c|k|$, its electric field is given by
+(1) Considering a propagating mode in a one-dimensional optical cavity, with momentum $k$ and frequency $\omega=c|k|$, its electric field is given by
 \begin{equation}
- \hat E_x(y,t)=\imth
+ \hat E_x(y,t)=
  \sqrt{\frac{\hbar\omega}{\epsilon L}}
- \sin(ky)
- \left(\hat a e^{-\imth\omega t}
- -\hat a^\dagger e^{\imth\omega t}\right).
+ \left(\hat a e^{\imth(ky-\omega t)}
+ -\hat a^\dagger e^{\imth(\omega t-ky)}\right).
 \end{equation}
-
-(1) For phase factor defined below
+For phase factor defined below
 \begin{equation}
 \Phi=\omega t-ky,
 \end{equation}
@@ -77,15 +75,73 @@ where the quadratures $X,Y$ are defined as
 \hat Y=\frac{\imth(\hat a^\dagger-\hat a)}{\sqrt2}.
 \end{equation}
 
-(2) momentum density 
+(2) In classical electromagnetism, the energy density is given by
+\begin{align}
+    u=\frac{\epsilon}{2}|\textbf{E}|^2+\frac{1}{2\mu}|\textbf{B}|^2
+\end{align}
+where $\epsilon$ is the dielectric constant and $\mu$ is the permeability. For a single mode of standing wave in the one-dimensional optical cavity (along $y$ direction), as we discussed in section \ref{section:1d optical cavity}, the electric and magnetic fields are given by
+\begin{equation}
+ {
+ \hat E_x(y,t)=\imth
+ \sqrt{\frac{\hbar\omega}{\epsilon L}}
+ \sin(ky)
+ \left(\hat a e^{-\imth\omega t}
+ -\hat a^\dagger e^{\imth\omega t}\right).}
+\end{equation}
+and
+\begin{equation}
+{
+ \hat B_z(y,t)=-
+ k\sqrt{\frac{\hbar}{\epsilon L\omega}}
+ \cos(ky)
+ \left(\hat a e^{-\imth\omega t}
+ +\hat a^\dagger e^{\imth\omega t}\right).}
+\end{equation}
+Show that the total energy of electromagnetic fields is carried by the photon:
+\begin{align}
+    \int_0^L u(y,t)\dif{y}=\hbar\omega (\hat a^\dagger\hat a+\frac12)
+\end{align}
+
+
+(3) In classical eletromagnetism, the momentum density of the electromagnetic fields is given by 
+\begin{align}
+    \textbf{g}=\epsilon~\textbf{E}\times\textbf{B}
+\end{align}
+Again we consider a single mode of standing wave in the one-dimensional cavity with $g_y=-\epsilon E_xB_z$, and compute total momentum $\int_0^L g_y(y,t)$ of electromagnetic fields carried by this standing wave. 
+
+
+(4) In this problem we discuss the Planck formula of blackbody radiation, by considering electromagnetic fields as standing waves in a 3-dimensional cube of size $L\times L\times L$. The total energy density of photons (including the two polarization modes) is given by
+\begin{align}
+    u=\frac2{2\pi^2}\int|k|^2\dif|k|\expval{\hat n_k}\omega_k,~~~\omega_k=c|k|.
+\end{align}
+where the expectation value of photon number $\hat n_k=\hat a_k^\dagger\hat a_k$ is for thermal equilibrium at temperature $T>0$. By changing the integration variable from $|k|$ to (angular) frequency $\omega=c|k|$, derive the Planck formula:
+\begin{align}
+    u=\int\dif\omega~u(\omega),~~~u(\omega)=\frac1{\pi^2c^3}\frac{\omega^3}{e^{\beta\hbar\omega}-1}
+\end{align}
+
+Comment: in the original version of Planck's formula discussed in section \ref{sec:blackbody radiation}, we used the light frequency $\nu=\omega/2\pi$, hence the extra factor of $(2\pi)^4$. 
 
 
 \subsection{Casimir effect}
 
+Consider the quantization of light in a one-dimensional optical cavity of length $L$, as we discussed in section \ref{section:1d optical cavity}. 
+
+(1) Compute the ground state energy $E_0$ (i.e. zero point energy) of the system as a function of $L,c,\hbar$. 
+
+Hint: by the zeta function regularization we have
+\begin{align}
+    \sum_{n=1}^\infty n=\zeta{(-1)}=-\frac1{12}
+\end{align}
+
+(2) Show that $E_0$ increases with an increasing cavity length $L$, and compute the attractive Casimir force between the two cavity walls (separated by a distance $L$): 
+\begin{align}
+    F_\text{Cas}=-\frac{\partial E_0}{\partial L}
+\end{align}
 
 
 
-\subsection{Squeezed states}
+
+\subsection{(Bonus) Squeezed states}
 
 We consider a generic squeezed state $\dket{\xi,z}$, characterized by two complex numbers $\xi,z\in\mathbb{C}$ as
 \begin{align}\label{squeezed state}
@@ -116,7 +172,7 @@ Hint: use the Baker-Campbell-Hausdorff formula
 e^{A}Be^{-A}=B+[A,B]+\frac{1}{2!}[A,[A,B]]+\frac{1}{3!}[A,[A,[A,B]]]+\cdots
 \end{align}
 
-(2) Show that the squeezed state (\ref{squeezed state}) satisfies:
+(2) \textbf{Bonus} Show that the squeezed state (\ref{squeezed state}) satisfies:
 \begin{align}\label{squeezed state:gaussian wave packet}
 (\hat x+\imth\hat pe^{-2r}-C)\dket{\xi,z}=0.
 \end{align}
