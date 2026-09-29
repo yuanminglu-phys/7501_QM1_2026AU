@@ -1,0 +1,179 @@
+\chapter{Homework 10 (due 11/20)}
+
+
+\subsection{Beta decay of Tritium into Helium ion}
+
+(1)-(2) \sakurai~Problem 5.35 (a)-(b), see Fig. \ref{fig:hw10 sakurai 5.35}.
+
+\begin{figure}
+\includegraphics[width=0.95\columnwidth]{hw10_sakurai_5-35.png}
+\caption{Problem 1.(1)-(2)}
+\label{fig:hw10 sakurai 5.35}
+\end{figure}
+
+
+\subsection{Quantum quench of a simple harmonic oscillator}
+
+Consider the following quantum quench of a simple harmonic oscillator:
+\begin{align}
+    \hat H(t)=\hat H_0\theta(-t)+\hat H_1\theta(t)
+\end{align}
+where $\theta(t)$ is the heaviside step function, and the initial Hamiltonian is a simple harmonic oscillator of frequency $\omega_0$
+\begin{align}
+    \hat H_0=\frac{\hat p^2}{2m}+\frac{m\omega_0^2}{2}\hat x^2
+\end{align}
+We denote the ground state of $\hat H_0$ to be $\dket{0}$, in the same notation as in lecture notes. 
+
+(1) We first consider $\hat H_1$ to be a displaced harmonic oscillator of the same frequency:
+\begin{align}
+    \hat H_1=\frac{\hat p^2}{2m}+\frac{m\omega_0^2}{2}(\hat x-x_0)^2
+\end{align}
+centered at $x_0>0$. Denote the ground state of $\hat H_1$ as $\dket{\psi_{x_0}}$. 
+
+Compute the transition probability $|\expval{\psi_{x_0}|0}|^2$ between the two ground states before and after the quench.
+
+Hint: recall the ground state of a SHO is a Gaussian wavepacket $\expval{x|0}\sim e^{-x^2/2R^2}$. 
+
+
+(2) \textbf{Bonus} Before the quantum quench (i.e. the sudden change of Hamiltonian) at $t=0$, assume the initial state of the system is $\hat H_0$ ground state $\dket0$. After the quantum quench, the system evolves into $e^{-\imth\hat H_1t/\hbar}\dket{0}$. Show that it is a coherent state. 
+
+(3) \textbf{Bonus} Now we consider a different scenario: $\hat H_1$ is a SHO with a different frqeuency $\omega\neq\omega_0$. Show that the quantum state $e^{-\imth\hat H_1t/\hbar}\dket{0}$ after the quench is a squeezed state. 
+
+
+\subsection{Semiclassical equations of motion}
+
+In the Heisenberg picture, if we consider an electron under electromagnetic fields
+\begin{align}
+\hat H=\frac{|\hat{\vec\Pi}|^2}{2m}+e\phi(\hat{\vec x}),~~~\hat{\vec\Pi}=\hat{\vec p}-e\vec A(\hat{\vec x}).
+\end{align}
+the equations of motion for $\hat{\vec x}$ and $\hat{\vec\Pi}$ reproduce the following semiclassical equations of motion:
+\begin{align}
+&\frac{\text{d}\vec x}{\text{d}t}=\vec v,\\
+&m\frac{\text{d}\vec v}{\text{d}t}=e\vec E+e\vec v\times\vec B\label{semiclassical EoM}
+\end{align}
+where
+\begin{align}
+\vec x\equiv\expval{\hat{\vec x}},~~~\vec v\equiv\frac1m\expval{\hat{\vec\Pi}}
+\end{align}
+
+(1) For a constant electric field $\vec E$ and a constant magnetic field $\vec B$, if they are perpendicular to each other ($\vec E\perp\vec B$), solve the semiclassical equation of motion (\ref{semiclassical EoM}) to obtain the steady-state velocity $\vec v$, which is a constant of time, as a function of $\vec E$ and $\vec B$. 
+
+(2) Consider many electrons constrained in the two-dimensional $x$-$y$ plane, moving under a constant electric field $\vec E=E_y\hat y$ and a magnetic field $\vec B=|B|\hat z$ that are perpendicular to each other. The electric current density of the system is given by
+\begin{align}
+\vec j=en\vec v
+\end{align}
+where we assume the electron density $n$ is a constant in the syst nmem. The steady-state current density is related to the in-plane electric field by the \emph{Hall conductivity} $\sigma_{xy}$:
+\begin{align}
+j_x=\sigma_{xy}E_y
+\end{align}
+Compute the Hall conductivity $\sigma_{xy}$ as a function of magnetic field strength $|B|$ and $n$. 
+
+Comment: the perpendicular electric current driven by an electric field under a perpendicular magnetic field is known as the Hall effect. It is an important way to measure the electron density $n$ in a material. 
+
+(3) Now consider the case of $\vec E=0$, i.e. a two-dimensional electron moving under a perpendicular magnetic field. Solve the equation of motion (\ref{semiclassical EoM}) to show that the electron will move in a circle, known as the cyclotron motion of electrons under a perpendicular magnetic field. Compute the frequency $\omega_c$ of the circular motion, known as the cyclotron frequency.
+
+\subsection{Landau levels}
+
+Consider the motion of a two-dimensional electron in the $x$-$y$ plane, under a perpendicular magnetic field $\vec B=B\hat z$ with $B<0$:
+\begin{align}
+\hat H=\frac{(\hat\Pi_x)^2+(\hat\Pi_y)^2}{2m}
+\end{align}
+where the kinematic (mechanical) momentum is given by
+\begin{align}
+\hat\Pi_\alpha=\hat p_\alpha-eA_\alpha(\hat x,\hat y),~~~\alpha=x,y.
+\end{align}
+and the vector potential $\vec A$ satisfies
+\begin{align}
+\partial_xA_y-\partial_yA_x=B
+\end{align}
+$e<0$ is the electron charge. 
+
+(1) Prove the commutation relation
+\begin{align}
+[\Pi_x,\Pi_y]=\imth\hbar eB
+\end{align}
+where $e=-|e|$ is the electron charge. 
+
+(2) Find a dimensionless annihilation operator
+\begin{align}
+\hat a=a_1\hat \Pi_x+\imth a_2\hat \Pi_y,~~~a_{1,2}>0
+\end{align}
+such that
+\begin{align}
+[\hat a,\hat a^\dagger]=1
+\end{align}
+and the Hamiltonian is diagonalized as a simple harmonic oscillator:
+\begin{align}
+\hat H=\hbar\omega_c(\hat a^\dagger \hat a+\frac12)
+\end{align}
+Here $\omega_c=|eB|/m$ is the cyclotron frequency. 
+
+(3) Note that in addition to mechanical momentum $\hat{\vec\Pi}$, the position operators $(\hat x,\hat y)$ are also gauge-invariant physical observables. Verify the following commutation relation
+\begin{align}
+[\hat x_a,\hat\Pi_b]=\imth\hbar\delta_{a,b},~~~a,b=1,2.
+\end{align}
+Use this relation to find two conserved quantities of the system:
+\begin{align}\label{guiding center coordinates}
+\hat X=\hat x+c_x\hat\Pi_y,~~~\hat Y=\hat y+c_y\hat\Pi_x
+\end{align}
+so that 
+\begin{align}
+[\hat X,\hat H]=[\hat Y,\hat H]=0
+\end{align}
+Determine the two constants $c_x$ and $c_y$. 
+
+Comment: $(\hat X,\hat Y)$ are known as the \emph{guiding center coordinates} of electrons under a perpendicular magnetic field. 
+
+(4) Show that the guiding center coordinates (\ref{guiding center coordinates}) satisfy the following commutation relation:
+\begin{align}\label{hw10:noncommutative geometry}
+[\hat X,\hat Y]=-\imth l_B^2,~~~l_B=\sqrt{\frac{\hbar}{|eB|}}
+\end{align}
+where $l_B$ is known as the \emph{magnetic length}. Use this commutation relation to find an annihilation operator
+\begin{align}
+b=b_1(\hat X-\imth\hat Y),~~~b_1>0.
+\end{align}
+such that 
+\begin{align}
+[b,\hat\Pi_x]=[b,\hat\Pi_y]=0,~~~[b,b^\dagger]=1.
+\end{align}
+In this way, $n_b=b^\dagger b\geq0$ labels an extra quantum number of the system, in addition to energy $E=\hbar\omega_c(n_a+\frac12)$ where $n_a=a^\dagger a\geq0$. Eigenstates $\dket{n_a,n_b}$ with the same $n_a$ but different $n_b$ values are degenerate eigenstates with the same energy.
+
+(5) \textbf{ Bonus} Denote the projection operators into the $n$-th Landau level as
+\begin{align}
+\hat P_n\equiv\sum_{n_b}\dket{n_a=n,n_b}\dbra{n_a=n,n_b}
+\end{align}
+Show that 
+\begin{align}
+\hat P_n\hat x\hat P_n=\hat X\hat P_n,~~~\hat P_n\hat y\hat P_n=\hat Y\hat P_n,~~~\forall~n. 
+\end{align}
+
+Comment: this problem shows that the guiding center coordinates $\hat X,\hat Y$ are nothing but the projection of real space position operators $\hat x,\hat y$ into a single Landau level. The fact that they do not commute with each other, because of Eq.(\ref{hw10:noncommutative geometry}), demonstrates the extreme quantum nature of Landau levels, even though Erenfest's theorem says that the equations of motions do follow the classical result. 
+
+(6) \textbf{ Bonus} Now we choose the symmetric gauge 
+\begin{align}\label{symmetric gauge}
+\vec A=(-y,x,0)\frac B2
+\end{align}
+so that the system preserves rotational symmetry:
+\begin{align}
+\bpm x\\y\epm\rightarrow\bpm x\cos\theta-y\sin\theta\\x\sin\theta+y\cos\theta\epm,~~~\bpm p_x\\p_y\epm\rightarrow\bpm p_x\cos\theta-p_y\sin\theta\\p_x\sin\theta+p_y\cos\theta\epm
+\end{align}
+Show that the angular momentum operator
+\begin{align}
+\hat{L_z}=\hat x\hat p_y-\hat y\hat p_x
+\end{align}
+is related to the two pairs of creation/annohilation operators by
+\begin{align}
+\hat{L_z}/\hbar=b^\dagger b-a^\dagger a
+\end{align}
+This means the degeneracy within each Landau level (with fixed $n_a$) comes from different angular momenta of the states. 
+
+(7) \textbf{ Bonus} In the symmetric gauge (\ref{symmetric gauge}), compute the eigenstate wavefunctions $\expval{x,y|n_a=0,n_b\in\mbz_0^+}$ for the lowest Landau level, with $n_a=a^\dagger a=0$. What do they look like in real space? You don't have to normalize the wavefunction. 
+
+Hint: you may want to use complex coordinates:
+\begin{align}
+z=x+\imth y,~~~\bar z=x-\imth y.
+\end{align}
+The ground states in the lowest Landau level satisfy
+\begin{align}
+\hat a\dket{n_a=0,n_b}=0
+\end{align}

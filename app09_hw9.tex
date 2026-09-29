@@ -80,7 +80,7 @@ where the quadratures $X,Y$ are defined as
     u=\frac{\epsilon}{2}|\textbf{E}|^2+\frac{1}{2\mu}|\textbf{B}|^2
 \end{align}
 where $\epsilon$ is the dielectric constant and $\mu$ is the permeability. For a single mode of standing wave in the one-dimensional optical cavity (along $y$ direction), as we discussed in section \ref{section:1d optical cavity}, the electric and magnetic fields are given by
-\begin{equation}
+\begin{equation}\label{hw10:electric field}
  {
  \hat E_x(y,t)=\imth
  \sqrt{\frac{\hbar\omega}{\epsilon L}}
@@ -89,7 +89,7 @@ where $\epsilon$ is the dielectric constant and $\mu$ is the permeability. For a
  -\hat a^\dagger e^{\imth\omega t}\right).}
 \end{equation}
 and
-\begin{equation}
+\begin{equation}\label{hw10:magnetic field}
 {
  \hat B_z(y,t)=-
  k\sqrt{\frac{\hbar}{\epsilon L\omega}}
@@ -109,8 +109,12 @@ Show that the total energy of electromagnetic fields is carried by the photon:
 \end{align}
 Again we consider a single mode of standing wave in the one-dimensional cavity with $g_y=-\epsilon E_xB_z$, and compute total momentum $\int_0^L g_y(y,t)$ of electromagnetic fields carried by this standing wave. 
 
+(4) Show that the expectation values of electric field (\ref{hw10:electric field}) and magnetic field (\ref{hw10:magnetic field}) in a photon coherent state $\dket{z}$ reproduce their classical values as standing waves. Obtain the amplitude of electric and magnetic fields as functions of $z$. 
 
-(4) In this problem we discuss the Planck formula of blackbody radiation, by considering electromagnetic fields as standing waves in a 3-dimensional cube of size $L\times L\times L$. The total energy density of photons (including the two polarization modes) is given by
+Hint: recall that $\hat a\dket{z}=z\dket{z}$ in a coherent state $\dket{z}$. 
+
+
+(5) \textbf{Bonus} In this problem we discuss the Planck formula of blackbody radiation, by considering electromagnetic fields as standing waves in a 3-dimensional cube of size $L\times L\times L$. The total energy density of photons (including the two polarization modes) is given by
 \begin{align}
     u=\frac2{2\pi^2}\int|k|^2\dif|k|\expval{\hat n_k}\omega_k,~~~\omega_k=c|k|.
 \end{align}

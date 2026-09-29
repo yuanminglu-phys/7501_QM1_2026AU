@@ -1,0 +1,180 @@
+\chapter{Homework 11 (due 12/4)}
+
+\subsection{Adiabatic evolution and Berry's phase for spin-$S$}
+
+(1) Consider an instantaneous eigenstate $\dket{n,\vec R}$ of a time-dependent Hamiltonian $\hat H(\vec R)$ with eigenvalue $E_n(\vec R)$, where parameters $\vec R(t)$ change with time. We have learnt in lectures that its \emph{Berry connection} is given by
+\begin{align}
+\vec A_n(\vec R)=-\imth\expval{n,\vec R|\vec\nabla_R|n,\vec R}
+\end{align}
+and its \emph{Berry curvature} is given by
+\begin{align}
+\vec B_n(\vec R)=\vec\nabla_R\times\vec A_n(\vec R)=-\imth(\vec\nabla_R\expval{n,\vec R|)\times(\vec\nabla_R|n,\vec R})
+\end{align}
+Show that 
+\begin{align}
+\vec B_n(\vec R)=-\imth\sum_{m\neq n}\frac{\expval{n,\vec R|\vec\nabla_R\hat H(\vec R)|m,\vec R}\times\expval{m,\vec R|\vec\nabla_R\hat H(\vec R)|n,\vec R}}{(E_m-E_n)^2}
+\end{align}
+Hint:
+\begin{align}
+\hat H(\vec R)\dket{n,\vec R}=E_n(\vec R)\dket{n,\vec R}
+\end{align}
+
+
+(2) \textbf{ Bonus} Consider a spin-$S$ particle moving under a time-dependent magnetic field $\vec R(t)$:
+\begin{align}\label{spin-S ham}
+\hat H(\vec R)=-\vec S\cdot\vec R
+\end{align}
+where $\vec S=(S_x,S_y,S_z)$ are angular momentum operators for a particle of spin $j=S$. Without loss of generality, let's consider the magnetic field to be on a unit sphere near the north pole:
+\begin{align}\label{spin-S north pole}
+\vec R=(R_x,R_y,\sqrt{1-R_x^2-R_y^2}),~~~|R_{x,y}|\ll1.
+\end{align}
+We denote the eigenstate with largest $\hat S_z$ eigenvalue as $\dket{0}$, satisfying
+\begin{align}
+\hat S_z\dket{0}=S\dket{0},~~~(\hat{\vec S}\cdot\hat{\vec S})\dket{0}=S(S+1)\dket{0}.
+\end{align}
+Identify the ground state $\dket{\vec R}$ of Hamiltonian (\ref{spin-S ham}) with the following form:
+\begin{align}
+\dket{\vec R}=\hat U(\vec R)\dket{0}
+\end{align}
+where $\hat U(\vec R)$ is a unitary matrix as a function of $R_{x,y}$ in (\ref{spin-S north pole}). Obtain the unitary operator $\hat U(\vec R)$. 
+
+Hint: 
+The commutation relations for angular momenta $\hat S_a,~a=x,y,z$ is given by
+\begin{align}
+[S^a,S^b]=\imth\hbar\epsilon_{abc}S^c
+\end{align}
+This leads to the following identity
+\begin{align}
+e^{-\imth\theta\hat S_y/\hbar}f(\hat S_z)e^{\imth\theta\hat S_y/\hbar}=f(\cos\theta\hat S_z+\sin\theta\hat S_x).
+\end{align}
+where $f(x)$ is any function, and $e^{-\imth\theta\hat S_y}$ implements a counter-clockwise rotation along $y$-axis by angle $\theta$. You also need to make sure that $\dket{\vec R}$ is single-valued near the north pole. 
+
+(3) \textbf{ Bonus} Use the instantaneous ground state $\dket{\vec R}$ obtained previously to compute the Berry connection
+\begin{align}
+\vec A_{a}=-\imth\expval{\vec R|\partial_{R_{a}}|\vec R},~~~a=x,y
+\end{align}
+up to lowest order in $R_{x,y}$. 
+
+Hint: you can expand $\dket{\vec R}$ in Taylor series of variables $R_{x,y}$. 
+
+(4) \textbf{ Bonus} Compute the Berry curvature 
+\begin{align}
+B(\vec R)=\partial_{R_x}A_y-\partial_{R_y}A_x
+\end{align}
+at north pole $\vec R=(0,0,1)$. Use your result to further obtain the Berry flux over the unit sphere of $\vec R$, by integrating the Berry curvature over the unit sphere. How does your result depends on $S$?
+
+\subsection{Aharonov-Bohm phase for a quantum particle on a ring}
+
+Consider the following Hamiltonian of a quantum particle on a ring, trapped by a delta function potential located at $x=\lambda$:
+\begin{align}\label{hw11:particle on a ring}
+\hat H=\frac{(\hat p-eA)^2}{2m}-V\delta(\hat x-\lambda),~~~V>0,~~~A=\frac{\Phi}{L}=\frac{2\pi\hbar}{eL}\phi.
+\end{align}
+where we have considered a flux of $\phi\Phi_0$ piercing through the center of the ring, $\Phi_0=2\pi\hbar/e$ being the flux quantum. We will assume $\lambda=0$ for problems (1)-(3). 
+
+(1) Recall that any valid wavefunction of a particle on a ring must be periodic:
+\begin{align}
+\psi(x)=\psi(x+L)
+\end{align}
+A complete set of orthonormal basis of periodic functions is naturally given by the plane waves:
+\begin{align}
+\{\dket{n}|n\in\mbz,~\expval{x|n}=\frac{e^{2\pi n\imth x/L}}{\sqrt L}\},~~~\expval{l|n}=\delta_{n,l}
+\end{align}
+Consider an eigenstate $\dket\psi$ of Hamiltonian (\ref{hw11:particle on a ring}) satisfying:
+\begin{align}
+\hat H\dket{\psi}=E\dket\psi,~~~\dket\psi=\sum_nc_n\dket{n}.
+\end{align}
+Show that the above Schrodinger equation leads to the following formula:
+\begin{align}\label{hw11:wf}
+\big[(\frac{2\pi}{L})^2(n-\phi)^2-\frac{2mE}{\hbar^2}\big]c_n=\frac{2mV}{\hbar^2\sqrt{L}}\psi(0)
+\end{align}
+
+
+(2) Prove the following identity:
+\begin{align}\label{hw11:transcendental eq}
+\frac{2mL}{\hbar^2V}=\sum_{n\in\mbz}\frac1{(\frac{2\pi}L)^2(n-\phi)^2-2mE/\hbar^2}
+\end{align}
+This equation determines the energy eigenvalues of Hamiltonian (\ref{hw11:particle on a ring}).
+
+(3) This problem is a sanity check to see if we reproduce the bound state solution in the infinite space. In the limit of an infinitely long ring i.e. $L\rightarrow\infty$, solve for the energy $E$ in equation (\ref{hw11:transcendental eq}) for a bound state with $E<0$. Show that 
+\begin{align}
+E=-\frac{mV^2}{2\hbar^2}
+\end{align}
+This reproduces the bound state energy we obtained previously in (\ref{attractive delta potential:g.s. energy}). 
+ 
+Hint:
+ \begin{align}
+\lim_{L\rightarrow\infty}\frac1{L}\sum_{n\in\mbz}=\int_{-\infty}^\infty\frac{\text{d}k}{2\pi},~~~k=\frac{2\pi n}{L}
+ \end{align}
+
+(4) \textbf{ Bonus} Now consider the Hamiltonian (\ref{hw11:particle on a ring}) where the parameter $\lambda$ changes very slowly in the adiabatic limit. In this case, the ground state (i.e. the aforementioned bound state) of $\hat H(\lambda)$ has the following form:
+\begin{align}
+\expval{x|\psi_\lambda}=\sum_nc_n\frac{e^{\frac{2\pi\imth n}{L}(x-\lambda)}}{\sqrt L}\Longrightarrow\dket{\psi_\lambda}=\sum_nc_ne^{-\frac{2\pi\imth n\lambda}{L}}\dket{n}
+\end{align}
+Compute the Berry connection
+\begin{align}
+A_\text{Berry}(\lambda)=-\imth\expval{\psi_\lambda|\partial_\lambda|\psi_\lambda}
+\end{align}
+and then show that the Berry phase of adiabatically moving the bound-state particle (localized around $x=\lambda$) around the ring is equal to the AB phase:
+\begin{align}
+\gamma=-\oint_0^LA_\text{Berry}(\lambda)\text{d}\lambda =2\pi\phi=\frac{e}{\hbar}\oint_0^LA\text{d}x
+\end{align}
+
+Hint: you need to use conditions (\ref{hw11:wf}) and (\ref{hw11:transcendental eq}).
+
+\subsection{Rabi oscillation}
+
+Consider a qubit (i.e. a spin-$1/2$ particle) coupled to a constant magnetic field along $\hat z$-axis, and a time-dependent magnetic field in the $\hat x$-$\hat y$ plane:
+\begin{align}\label{rabi problem}
+\hat H(t)=\hat H_0+\hat V(t)=-\frac{\hbar\omega_{21}}2\sigma_z-\hbar\gamma(\sigma_x\cos\omega t-\sigma_y\sin\omega t)
+\end{align}
+where $\sigma_{x,y,z}$ are the Pauli matrices.
+
+(1) During the lecture, we have shown that in the interaction picture, the solution of the time-dependent Schrodinger equation is given by 
+\begin{align}
+\dket{\psi(t)}_I=c_1(t)\dket{\uparrow}+c_2(t)\dket{\downarrow}
+\end{align}
+where the coefficents $c_{1,2}$ satisfy the following equations:
+\begin{align}
+&\imth\dot{c_1}=-\gamma e^{\imth(\omega-\omega_{21})t}c_2,\\
+&\imth\dot{c_2}=-\gamma e^{\imth(\omega_{21}-\omega)t}c_1.
+\end{align}
+Under the initial condition
+\begin{align}
+c_1(t=0)=1,~~~c_2(t=0)=0
+\end{align}
+solve the above differential equations to obtain $c_1(t)$ and $c_2(t)$. 
+
+(2) Compute $\expval{S_z(t)}$. 
+
+(3) For $\omega=\omega_{21}=\gamma$, plot $\expval{S_z(t)}$ as a function of $\omega t$.  
+
+(4) \textbf{ Bonus} Consider the Schrodinger equation for Rabi's problem
+\begin{align}
+\imth\hbar\frac{\text{d}}{\text{d}t}\dket{\psi(t)}=\hat H(t)\dket{\psi(t)}
+\end{align}
+where the time-dependent Hamiltonian is given in (\ref{rabi problem}). Can you find a new ``rotating frame'', i.e. a $2\times 2$ unitary matrix $U(t)$ such that the following vector
+\begin{align}
+\dket{\tilde\psi(t)}=U(t)\dket{\psi(t)}
+\end{align}
+evolves under a time-independent Hamiltonian $\tilde H$:
+\begin{align}
+\imth\hbar\frac{\text{d}}{\text{d}t}\dket{\tilde\psi(t)}=\tilde H\dket{\tilde\psi(t)}
+\end{align}
+Find such a $U(t)$ and the associated $\tilde H$. 
+
+(5) \textbf{ Bonus} In the rotating frame, under the initial condition
+\begin{align}
+\dket{\psi(t=0)}=\dket{\uparrow}
+\end{align}
+solve for $\dket{\psi(t)}$ and compute $\dket{S_z(t)}$. 
+
+
+(6) Obtain the instantaneous eigenstates $\dket{\pm,t}$ and eigenvalues $E_\pm(t)$ for the Hamiltonian (\ref{rabi problem}) at a given time $t>0$. We use the convention that $E_+(t)>0>E_-(t)$. 
+
+
+(7) Consider Rabi's Hamiltonian (\ref{rabi problem}) as a function of parameter $\lambda=\omega t$. Is it possible to reach the adiabatic limit in Rabi's problem (\ref{rabi problem})? Derive the conditions for the adiabatic limit on $\omega_{21},\gamma,\omega$. 
+
+(8) In the adiabatic limit, compute the Berry's phase for both instantaneous eigenstates $\dket{\pm,\lambda(t)}$ over one period $T=2\pi/\omega$. 
+
+(9) \textbf{ Bonus} Can you use the Berry's phases obtained above to explain the Rabi oscillation, in the adiabatic limit? 
+
