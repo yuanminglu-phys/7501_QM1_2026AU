@@ -2,7 +2,7 @@
 
 \subsection{The simple harmonic oscillator}
 
-(1) When we learnt about Heisenberg's uncertainty relation, we know that the equality $\Delta x\Delta p=\hbar/2$ holds when the following two conditions hold simultaneously:
+(1) \textbf{Bonus} When we learnt about Heisenberg's uncertainty relation, we know that the equality $\Delta x\Delta p=\hbar/2$ holds when the following two conditions hold simultaneously:
 \begin{align}\label{hw8:cond 1}
 &(\Delta\hat x+C\Delta\hat p)\dket{\psi}=0,\\
 &\expval{\psi|\{\Delta\hat x,\Delta\hat p\}|\psi}=0\label{hw8:cond 2}
@@ -60,6 +60,15 @@ Hint:
 \end{align}
 
 (5) Compute the wavefunction $\psi_2(x)=\expval{x|2}$ for the 2nd excited state $\dket2$. 
+
+(6) In this problem we will learn about Bose-Einstein statistics, by considering a simple harmonic oscillator at a finite temperature $T>0$. In thermal equilibrium, the system is described by a mixed state with a density matrix
+\begin{align}
+    \hat\rho=\frac{e^{-\beta\hat H_\text{SHO}}}{\trace{e^{-\beta\hat H_\text{SHO}}}},~~~\beta=\frac1{k_BT}
+\end{align}
+where $k_B$ is the Boltzmann constant. Show that the expectation value of number operator $\hat n=\hat a^\dagger\hat a$ is given by
+\begin{align}
+    \expval{\hat n}=\trace{(\hat\rho\hat a^\dagger\hat a)}=\frac1{e^{\beta\hbar\omega}-1}
+\end{align}
 
 
 

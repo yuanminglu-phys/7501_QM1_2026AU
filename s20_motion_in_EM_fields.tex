@@ -1,0 +1,203 @@
+\section{A quantum particle in electromagnetic fields (11/13)}
+
+\subsection{Probability conservation}
+For
+\begin{equation}
+\imth\hbar\partial_t\psi
+=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi,
+\end{equation}
+the probability density and current are
+\begin{equation}
+\rho=|\psi|^2,
+\qquad
+\bm j=\frac{\imth\hbar}{2m}
+\left(\psi\bm\nabla\psi^*-\psi^*\bm\nabla\psi\right)
+=\frac{\hbar}{m}\im(\psi^*\bm\nabla\psi).
+\end{equation}
+They satisfy
+\begin{equation}
+\boxed{\partial_t\rho+\bm\nabla\cdot\bm j=0.}
+\end{equation}
+Hence
+\begin{equation}
+\frac{\dif}{\dif t}\int_R\rho\dif^3r
+=-\oint_{\partial R}\bm j\cdot\dif\bm S.
+\end{equation}
+For charge $e$ particles, the electric charge density and electric current are given by
+\begin{equation}
+\rho_e=e\rho,
+\qquad
+\bm j_e=e\bm j.
+\end{equation}
+
+\subsection{Gauge fields and minimal coupling}
+The electromagnetic fields are
+\begin{equation}
+\bm B=\bm\nabla\times\bm A,
+\qquad
+\bm E=-\bm\nabla\phi-\partial_t\bm A.
+\end{equation}
+Gauge transformations are
+\begin{equation}
+\phi\longmapsto\phi+\partial_t f,
+\qquad
+\bm A\longmapsto\bm A-\bm\nabla f.
+\end{equation}
+The Hamiltonian is
+\begin{equation}
+\boxed{
+\hat H=\frac{[\hat{\bm p}-e\bm A(\hat{\bm r},t)]^2}{2m}
++e\phi(\hat{\bm r},t).}
+\end{equation}
+Gauge invariance requires
+\begin{equation}
+\psi\longmapsto e^{-\imth ef/\hbar}\psi,
+\qquad
+\psi^*\longmapsto e^{\imth ef/\hbar}\psi^*.
+\end{equation}
+The canonical momentum is not gauge invariant:
+\begin{equation}
+\hat{\bm p}=-\imth\hbar\bm\nabla
+\longmapsto\hat{\bm p}-e\bm\nabla f.
+\end{equation}
+Instead the kinetic momentum (also known as mechanical momentum)
+\begin{equation}
+\boxed{\hat{\bm\pi}=\hat{\bm p}-e\bm A}
+\end{equation}
+is gauge invariant, and different components of the kinetic momenta generally don't commute:
+\begin{equation}
+\boxed{\comm{\hat\pi_a}{\hat\pi_b}
+=\imth\hbar e\epsilon_{abc}B_c.}
+\end{equation}
+
+\subsection{Ehrenfest equations}
+In the Heisenberg picture,
+\begin{equation}
+\imth\hbar\frac{\dif\hat O}{\dif t}=\comm{\hat O}{\hat H}.
+\end{equation}
+For the position operator,
+\begin{equation}
+\frac{\dif\langle\hat{\bm r}\rangle}{\dif t}
+=\frac{\langle\hat{\bm\pi}\rangle}{m}.
+\end{equation}
+For the kinetic momentum,
+\begin{equation}
+\frac{\dif\langle\hat{\bm\pi}\rangle}{\dif t}
+=e\langle\bm E\rangle
++\frac{e}{2m}
+\left\langle\hat{\bm\pi}\times\bm B
+-\bm B\times\hat{\bm\pi}\right\rangle.
+\end{equation}
+For a uniform and static electromagnetic field, we therefore have the following equation of motion:
+\begin{equation}
+\boxed{
+ m\frac{\dif^2\langle\hat{\bm r}\rangle}{\dif t^2}
+=e\bm E+e\frac{\dif\langle\hat{\bm r}\rangle}{\dif t}
+\times\bm B.}
+\end{equation}
+
+\subsection{Solving Schrodinger equation in a uniform magnetic field}
+
+\subsubsection{Landau gauge}
+Let
+\begin{equation}
+\bm B=(0,0,B),
+\qquad
+\bm A=(0,Bx,0).
+\end{equation}
+Neglecting free motion along $z$,
+\begin{equation}
+\hat H=\frac{\hat p_x^2+(\hat p_y-eB\hat x)^2}{2m}.
+\end{equation}
+Since
+\begin{equation}
+\comm{\hat p_y}{\hat H}=0,
+\end{equation}
+write
+\begin{equation}
+\hat p_y=\hbar k_y.
+\end{equation}
+Then
+\begin{equation}
+\hat H=\frac{\hat p_x^2}{2m}
++\frac{(eB)^2}{2m}
+\left(\hat x-\frac{\hbar k_y}{eB}\right)^2.
+\end{equation}
+Define
+\begin{equation}
+\omega_c=\frac{|eB|}{m},
+\qquad
+\ell_B=\sqrt{\frac{\hbar}{|eB|}}.
+\end{equation}
+The Landau levels are
+\begin{equation}
+\boxed{E_n=\hbar\omega_c\left(n+\frac12\right),
+\qquad n=0,1,2,\ldots.}
+\end{equation}
+The eigenstates are
+\begin{equation}
+\psi_{n,k_y}(x,y)
+\propto e^{\imth k_yy}
+\varphi_n\left(x-\frac{\hbar k_y}{eB}\right).
+\end{equation}
+For $n=0$,
+\begin{equation}
+\psi_{0,k_y}(x,y)
+\propto e^{\imth k_yy}
+\exp\left[-\frac{(x-\hbar k_y/eB)^2}{2\ell_B^2}\right].
+\end{equation}
+
+\subsubsection{Landau-level degeneracy}
+With periodic boundary conditions along $y$,
+\begin{equation}
+k_y=\frac{2\pi j}{L_y}.
+\end{equation}
+The guiding-center spacing is
+\begin{equation}
+\Delta X=\frac{\hbar\Delta k_y}{|eB|}
+=\frac{2\pi\hbar}{|eB|L_y}.
+\end{equation}
+The degeneracy in area $L_xL_y$ is
+\begin{equation}
+\boxed{D=\frac{|eB|L_xL_y}{2\pi\hbar}
+=\frac{\Phi}{\Phi_0},}
+\end{equation}
+where
+\begin{equation}
+\Phi_0=\frac{2\pi\hbar}{|e|}
+\end{equation}
+is the flux quantum.
+
+% \subsubsection{Guiding-center coordinates}
+% The guiding-center coordinates are defined as
+% \begin{equation}
+% \hat{\bm R}=\hat{\bm r}
+% -\frac{\hat{\bm z}\times\hat{\bm\pi}}{eB}.
+% \end{equation}
+% They are conserved observables
+% \begin{equation}
+% \comm{\hat{\bm R}}{\hat H}=0,
+% \end{equation}
+% and within a Landau level (see HW10)
+% \begin{equation}
+% \hat P_n\hat{\bm r}\hat P_n=\hat{\bm R}.
+% \end{equation}
+% The components do not commute:
+% \begin{equation}
+% \comm{\hat R_x}{\hat R_y}
+% =-\frac{\imth\hbar}{eB}.
+% \end{equation}
+
+\subsubsection{Filling factor}
+The filling factor is defined as the ratio of total electron number and Landau level degeneracy:
+\begin{equation}
+\nu=\frac{N_e}{D}
+=\frac{\rho_e\Phi_0}{B}.
+\end{equation}
+Physical observables such as conductivity and magntization oscillate with the magnetic field, known as the quantum oscillations. The quantum oscillations are periodic in $1/B$:
+\begin{equation}
+\boxed{\Delta\left(\frac1B\right)
+=\frac{1}{\rho_e\Phi_0}.}
+\end{equation}
+
+

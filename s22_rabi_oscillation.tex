@@ -1,0 +1,200 @@
+\section{The Interaction Picture and Rabi oscillation (11/20)}
+
+\subsection{The interaction picture}
+Let
+\begin{equation}
+ \hat H(t)=\hat H_0+\hat V(t),
+ \qquad
+ \hat H_0\dket a=E_a\dket a.
+\end{equation}
+The Schrödinger-picture evolution operator satisfies
+\begin{equation}
+ \imth\hbar\frac{\partial}{\partial t}\hat U(t,t_0)
+ =\hat H(t)\hat U(t,t_0).
+\end{equation}
+Define
+\begin{align}
+ \dket{\psi_I(t)}
+ &=e^{\imth\hat H_0t/\hbar}\dket{\psi_S(t)},\\
+ \hat U_I(t,t_0)
+ &=e^{\imth\hat H_0t/\hbar}
+ \hat U(t,t_0)e^{-\imth\hat H_0t_0/\hbar},\\
+ \hat V_I(t)
+ &=e^{\imth\hat H_0t/\hbar}
+ \hat V(t)e^{-\imth\hat H_0t/\hbar}.
+\end{align}
+Then
+\begin{align}
+ \imth\hbar\frac{\dif}{\dif t}\dket{\psi_I(t)}
+ &=\hat V_I(t)\dket{\psi_I(t)},\\
+ \imth\hbar\frac{\partial}{\partial t}\hat U_I(t,t_0)
+ &=\hat V_I(t)\hat U_I(t,t_0).
+\end{align}
+An interaction-picture operator is
+\begin{equation}
+ \hat O_I(t)=e^{\imth\hat H_0t/\hbar}
+ \hat O_Se^{-\imth\hat H_0t/\hbar},
+\end{equation}
+with
+\begin{equation}
+ \imth\hbar\frac{\dif\hat O_I}{\dif t}
+ =\comm{\hat O_I}{\hat H_0}.
+\end{equation}
+
+\subsection{Dyson equation and Dyson series}
+Integrating the evolution equation gives
+\begin{equation}
+ \boxed{
+ \hat U_I(t,t_0)
+ =\id-\frac{\imth}{\hbar}
+ \int_{t_0}^{t}\hat V_I(t')\hat U_I(t',t_0)\dif t'.}
+\end{equation}
+Iteration yields
+\begin{align}
+ \hat U_I(t,t_0)
+ &=\id-\frac{\imth}{\hbar}\int_{t_0}^{t}
+ \hat V_I(t_1)\dif t_1+
+ \left(-\frac{\imth}{\hbar}\right)^2
+ \int_{t_0}^{t}\dif t_1
+ \int_{t_0}^{t_1}\dif t_2\,
+ \hat V_I(t_1)\hat V_I(t_2)+\cdots\\
+ &=\mathcal T\exp\left[-\frac{\imth}{\hbar}
+ \int_{t_0}^{t}\hat V_I(t')\dif t'\right].
+\end{align}
+
+\subsubsection{Adiabatic switching and Gellmann-Low theorem}
+We start from the following Hamiltonian, where the interaction $\hat V$ is adiabatically switched on in the $\epsilon\rightarrow0^+$ limit. 
+\begin{equation}
+ \hat H(t)=\hat H_0+\hat V e^{-\epsilon|t|},
+ \qquad -\infty<t<0,
+ \qquad \epsilon>0.
+\end{equation}
+\begin{thm} \textbf{Gellmann-Low theorem:} If $\dket a$ is an eigenstate of $\hat H_0$, then
+\begin{equation}
+ \boxed{
+ \dket{\psi_a^+}
+ =\lim_{\epsilon\to0^+}
+ \lim_{t_0\to-\infty}
+ \hat U_I(0,t_0)\dket a}
+\end{equation}
+is an eigenstate of $\hat H_0+\hat V$, up to normalization and the usual
+adiabatic phase.
+\end{thm}
+ This is known as the Gellmann-Low theorem. It can be derived from Dyson's equation and the Lippmann--Schwinger equation.
+
+\subsection{Rabi Oscillations}
+
+\subsubsection{Spin one-half in a time-dependent magnetic field}
+Let
+\begin{equation}
+ \hat H(t)=-\bm\mu\cdot\bm B(t),
+ \qquad
+ \bm\mu=\frac{ge}{2m_e}\bm S,
+\end{equation}
+and
+\begin{equation}
+ \bm B(t)=B_0\hat{\bm z}
+ +B_1\left(\hat{\bm x}\cos\omega t
+ -\hat{\bm y}\sin\omega t\right).
+\end{equation}
+Write
+\begin{equation}
+ \hat H(t)=\hat H_0+\hat V(t),
+ \qquad
+ \hat H_0=-\frac{\hbar\omega_{12}}{2}\sigma_z,
+\end{equation}
+where
+\begin{equation}
+ \omega_{12}=\frac{geB_0}{2m_e},~~~\gamma=\frac{geB_1}{4m_e}
+\end{equation}
+Let
+\begin{equation}
+ \hat V(t)=\hbar\gamma
+ \left(\sigma_x\cos\omega t-\sigma_y\sin\omega t\right)
+ =\hbar\gamma
+ \begin{pmatrix}
+ 0&e^{\imth\omega t}\\
+ e^{-\imth\omega t}&0
+ \end{pmatrix}.
+\end{equation}
+In the interaction picture,
+\begin{equation}
+ \hat V_I(t)=-\hbar\gamma
+ \begin{pmatrix}
+ 0&e^{\imth(\omega-\omega_{12})t}\\
+ e^{-\imth(\omega-\omega_{12})t}&0
+ \end{pmatrix}.
+\end{equation}
+
+Our goal is to solve the time dependence of the 2-component wavefunction:
+\begin{equation}
+ \dket{\psi_I(t)}
+ =C_1(t)\dket\uparrow+C_2(t)\dket\downarrow.
+\end{equation}
+Then
+\begin{align}
+ \imth\dot C_1
+ &=-\gamma e^{\imth(\omega-\omega_{12})t}C_2,\\
+ \imth\dot C_2
+ &=-\gamma e^{-\imth(\omega-\omega_{12})t}C_1.
+\end{align}
+With detuning
+\begin{equation}
+ \Delta=\omega-\omega_{12},
+\end{equation}
+one obtains
+\begin{equation}
+ \ddot C_1-\imth\Delta\dot C_1+\gamma^2C_1=0.
+\end{equation}
+The characteristic frequencies are
+\begin{equation}
+ \Omega_\pm
+ =\frac{\Delta}{2}
+ \pm\sqrt{\gamma^2+\frac{\Delta^2}{4}}.
+\end{equation}
+Define the generalized Rabi frequency
+\begin{equation}
+ \boxed{\Omega_R=\sqrt{\gamma^2+\frac{\Delta^2}{4}}.}
+\end{equation}
+
+For
+\begin{equation}
+ C_1(0)=1,
+ \qquad C_2(0)=0,
+\end{equation}
+the transition probability is
+\begin{equation}
+ \boxed{
+ |C_2(t)|^2
+ =\frac{\gamma^2}{\gamma^2+\Delta^2/4}
+ \sin^2\left(\Omega_Rt\right).}
+\end{equation}
+The survival probability is
+\begin{equation}
+ |C_1(t)|^2=1-|C_2(t)|^2.
+\end{equation}
+At resonance,
+\begin{equation}
+ \omega=\omega_{12},~~~\Delta=0
+\end{equation}
+we have 
+\begin{equation}
+ \boxed{|C_2(t)|^2=\sin^2(\gamma t),
+ \qquad |C_1(t)|^2=\cos^2(\gamma t).}
+\end{equation}
+
+\subsection{Nuclear magnetic resonance}
+The resonance condition is
+\begin{equation}
+ \boxed{\omega_{\mathrm{res}}=\omega_{12}=\mu B_0.}
+\end{equation}
+In an NMR experiment,
+\begin{equation}
+ B_0=H+M=H+\chi H.
+\end{equation}
+The magnetization and susceptibility are
+\begin{equation}
+ M=\frac{\omega_{\mathrm{res}}}{\mu}-H,
+ \qquad
+ \chi=\frac{M}{H}=\frac{\omega_\text{res}}{\mu H}-1.
+\end{equation}

@@ -1,0 +1,282 @@
+\section{*Electrons in a uniform electric field (12/2)}
+
+
+\subsection{Solving Schrodinger equation in a uniform electric field}
+
+Let the electric field be $\ce\hat{\bm x}$ and define the electric force
+\begin{equation}
+ F=e\ce.
+\end{equation}
+for an electron of charge $e$. In one dimension, the electric field $\ce$ is related to scalar and vector potentials by
+\begin{align}
+    \ce=-\nabla\phi-\partial_t A
+\end{align}
+
+\subsubsection{Gauge 1: time-dependent vector-potential gauge}
+In one dimension,
+\begin{equation}
+\hat H=\frac{[-\imth\hbar\partial_x-eA(x,t)]^2}{2m}+e\phi(x,t).
+\end{equation}
+Choose the following gauge:
+\begin{equation}
+\phi_1=0,
+\qquad
+A_1=-\mathcal Et.
+\end{equation}
+Then
+\begin{equation}
+\imth\hbar\frac{\dif}{\dif t}\dket\psi
+=\frac{(\hat p+e\mathcal Et)^2}{2m}\dket\psi.
+\end{equation}
+For initial state
+\begin{equation}
+\psi(x,0)=e^{\imth kx},
+\end{equation}
+one obtains
+\begin{equation}
+\boxed{
+\psi(x,t)=
+\exp\left[
+\imth kx-\frac{\imth}{6me\mathcal E\hbar}
+\left((\hbar k+e\mathcal Et)^3-(\hbar k)^3\right)
+\right].}
+\end{equation}
+
+\subsubsection{Gauge 2: scalar-potential gauge and Airy functions}
+Alternatively we can choose
+\begin{equation}
+\phi_2=-\mathcal Ex,
+\qquad
+A_2=0.
+\end{equation}
+Then
+\begin{equation}
+\hat H=\frac{\hat p^2}{2m}-e\mathcal E\hat x.
+\end{equation}
+The stationary equation is
+\begin{equation}
+-\frac{\hbar^2}{2m}\psi''(x)-e\mathcal Ex\psi(x)=E\psi(x).
+\end{equation}
+With
+\begin{equation}
+u=\left(\frac{2m|e|\mathcal E}{\hbar^2}\right)^{1/3}
+\left(x-\frac{E}{e\mathcal E}\right),
+\end{equation}
+one obtains the Airy equation
+\begin{equation}
+\frac{\dif^2\psi}{\dif u^2}=u\psi.
+\end{equation}
+The decaying solution is
+\begin{equation}
+\boxed{
+\operatorname{Ai}(u)=\frac1\pi\int_0^\infty
+\cos\left(\frac{t^3}{3}+ut\right)\dif t.}
+\end{equation}
+Its asymptotic forms are
+\begin{align}
+\operatorname{Ai}(u)&\sim
+\frac{1}{2\sqrt\pi}u^{-1/4}e^{-2u^{3/2}/3},
+&&u\gg1,\\
+\operatorname{Ai}(u)&\sim
+\frac{1}{\sqrt\pi}|u|^{-1/4}
+\cos\left(\frac23|u|^{3/2}-\frac\pi4\right),
+&&u\ll-1.
+\end{align}
+The spectrum is continuous.
+
+\subsubsection{Relation between the two gauges}
+Use the gauge convention
+\begin{equation}
+ A'=A-\partial_xf,
+ \qquad \phi'=\phi+\partial_tf,
+ \qquad \psi'=e^{-\imth qf/\hbar}\psi.
+\end{equation}
+The choice
+\begin{equation}
+ \boxed{f(x,t)=-\ce tx}
+\end{equation}
+transforms Gauge 1 into Gauge 2:
+\begin{equation}
+ A_2=A_1-\partial_xf=0,
+ \qquad
+ \phi_2=\phi_1+\partial_tf=-\ce x.
+\end{equation}
+Therefore,
+\begin{equation}
+ \boxed{\psi_2(x,t)=e^{\imth Ftx/\hbar}\psi_1(x,t).}
+\end{equation}
+The Hamiltonians satisfy
+\begin{equation}
+ \hat H_2=\hat U_f\hat H_1\hat U_f^\dagger
+ +\imth\hbar\dot{\hat U}_f\hat U_f^\dagger,
+ \qquad
+ \hat U_f=e^{\imth Ft\hat x/\hbar}.
+\end{equation}
+The transformed plane-wave solution in gauge 2 is
+\begin{equation}
+ \boxed{
+ \psi_2(x,t)=C
+ \exp\left[
+ \imth\left(k+\frac{Ft}{\hbar}\right)x
+ -\frac{\imth}{2m\hbar}\int_0^t(\hbar k+F\tau)^2\dif\tau
+ \right].}
+\end{equation}
+It is a superposition of stationary Airy eigenstates $\{\dket{\varphi_E}\}$:
+\begin{equation}
+ \psi_2(x,t)=\int_{-\infty}^{\infty}
+ c(E)e^{-\imth Et/\hbar}\varphi_E(x)\dif E.
+\end{equation}
+
+\subsubsection{Density and electric current in the two gauges}
+For the plane-wave solution in Gauge 1, the charge density and electric currents are
+\begin{align}
+% \rho_1&=|C|^2,\\
+ \rho_{q,1}&=e|C|^2,\\
+% j_1&=\frac{|C|^2}{m}(\hbar k+Ft),\\
+ j_{q,1}&=\frac{e|C|^2}{m}(\hbar k+Ft).
+\end{align}
+For the gauge-transformed solution in Gauge 2, we also have
+\begin{align}
+% \rho_2&=|C|^2,\\
+ \rho_{q,2}&=e|C|^2,\\
+% j_2&=\frac{|C|^2}{m}(\hbar k+Ft),\\
+ j_{q,2}&=\frac{e|C|^2}{m}(\hbar k+Ft).
+\end{align}
+Hence
+\begin{equation}
+ \boxed{\rho_{q,1}=\rho_{q,2},
+ \qquad j_{q,1}=j_{q,2}.}
+\end{equation}
+
+A real stationary Airy state $\dket{\varphi_E}$ in Gauge 2 is
+\begin{equation}
+ \psi_{2,E}(x,t)=e^{-\imth Et/\hbar}\varphi_E(x),
+ \qquad \varphi_E(x)\in\mathbb R.
+\end{equation}
+Its charge density and current are
+\begin{equation}
+ \rho_{q,2}^{(E)}=e|\varphi_E(x)|^2,
+ \qquad
+ \boxed{j_{q,2}^{(E)}=0.}
+\end{equation}
+The corresponding Gauge-1 state is
+\begin{equation}
+ \boxed{
+ \psi_{1,E}(x,t)=e^{-\imth Ftx/\hbar}
+ e^{-\imth Et/\hbar}\varphi_E(x).}
+\end{equation}
+For this state,
+\begin{equation}
+ \rho_{q,1}^{(E)}=e|\varphi_E(x)|^2,
+ \qquad
+ \boxed{j_{q,1}^{(E)}=0.}
+\end{equation}
+The phase gradient contributes canonical momentum $-Ft$, while the vector
+potential contributes $+Ft$ to the kinetic momentum, so the physical current
+vanishes in both gauges.
+
+\subsection{Landau--Zener Tunneling in solids}
+
+\subsubsection{Band crossing}
+Consider
+\begin{equation}
+\hat H=\frac{\hat p^2}{2m}+V(\hat x)+|e|\mathcal E\hat x,
+\qquad
+V(x+a)=V(x).
+\end{equation}
+Near a valence-conduction avoided crossing, the conduction and valence bands can be modeled by a two-level system, where the energy of conduction band $\dket{c}$ is higher than the valence band $\dket{v}$ by the band gap $E_g>0$:
+\begin{equation}
+\hat H\simeq
+\begin{pmatrix}
+E_g/2+\hbar^2k^2/(2m_v)&\Delta\\
+\Delta^*&-E_g/2-\hbar^2k^2/(2m_c)
+\end{pmatrix}.
+\end{equation}
+$\Delta$ models the tunneling term between the two bands. 
+
+The electric field gives
+\begin{equation}
+\hbar\frac{\dif k}{\dif t}\simeq e\mathcal E,
+\qquad
+k(t)=k_0+\frac{e\mathcal E}{\hbar}t.
+\end{equation}
+
+\subsubsection{Landau--Zener model}
+In a semiconductor, we expand the wavevector $k$ around the smallest direct gap location $k_0$, and we arrive at the Landau-Zener model
+\begin{equation}
+\hat H_{\mathrm{LZ}}(t)=
+\begin{pmatrix}
+\alpha t&\Delta\\
+\Delta&-\alpha t
+\end{pmatrix},
+\qquad
+\dket{\psi(t)}=
+\begin{pmatrix}C_1(t)\\C_2(t)\end{pmatrix}.
+\end{equation}
+where
+\begin{align}
+    \alpha=|e|\mathcal E v_F/\hbar,~~~v_F=\frac{\hbar k_0}{m^\ast},~~~\frac1{m^*}=\frac1{m_c}+\frac1{m_v}.
+\end{align}
+
+The 2-component Schrodinger equation is
+\begin{align}
+\imth\hbar\dot C_1&=\alpha tC_1+\Delta C_2,\\
+\imth\hbar\dot C_2&=\Delta C_1-\alpha tC_2.
+\end{align}
+Eliminating $C_1$ gives
+\begin{equation}
+-\hbar^2\ddot C_2
+=\left(\alpha^2t^2+\Delta^2-\imth\hbar\alpha\right)C_2.
+\end{equation}
+
+
+
+
+
+
+\subsubsection{Computing the tunneling probability}
+Define
+\begin{equation}
+ z=e^{-\imth\pi/4}\sqrt{\frac{2\alpha}{\hbar}}\,t,
+ \qquad
+ \delta=\frac{\Delta^2}{2\hbar\alpha}.
+\end{equation}
+Then
+\begin{equation}
+ \boxed{
+ \frac{\dif^2C_2}{\dif z^2}
+ +\left(\nu+\frac12-\frac{z^2}{4}\right)C_2=0,
+ \qquad \nu=\imth\delta.}
+\end{equation}
+This is Weber's equation. Its solutions are parabolic-cylinder functions $D_\nu(z)$,
+also called Weber functions:
+\begin{equation}
+ \boxed{C_2(z)=A D_{\imth\delta}(z)
+ +B D_{\imth\delta}(-z).}
+\end{equation}
+The remaining amplitude follows from
+\begin{equation}
+ \boxed{C_1(t)=\frac{\imth\hbar\dot C_2+\alpha tC_2}{\Delta}.}
+\end{equation}
+
+If the initial state is $\dket{\psi(t=-\infty)}=(0,1)^T$
+\begin{equation}
+C_2(-\infty)=1,
+\qquad
+C_1(-\infty)=0,
+\end{equation}
+then
+\begin{equation}
+|C_2(+\infty)|^2
+=e^{-2\pi\Delta^2/(\hbar\alpha)}\equiv P_\text{diabatic}.
+\end{equation}
+Hence the transition probability is
+\begin{equation}
+\boxed{
+P_{1\to2}=1-e^{-2\pi\Delta^2/(\hbar\alpha)}.}
+\end{equation}
+The diabatic probability (Zener excitation probability) $P_\text{diabatic}$ increases, as parameter $\alpha$ increases. 
+
+In other words, as the electric field $\ce$ (and hence $\alpha$) increases, there is a larger chance for electrons to diabatically transfer from the lower-energy valence band to higher-energy conduction band. 
+
+
