@@ -254,7 +254,7 @@ Equivalently,
  (E_a-\hat H_0\pm\imth\epsilon)\dket{a}.
 \end{equation}
 
-\subsubsection{Adiabatic switching and the S matrix}
+\subsubsection{Adiabatic switching and the S matrix}\label{sec:gellmann-low}
 Gell-Mann and Low introduced an adiabatically switched interaction
 \begin{equation}
  \hat H(t)=\hat H_0+\hat V e^{-\epsilon|t|},
@@ -270,15 +270,15 @@ The time evolution operator in the interaction picture is
 \end{equation}
 The Gell-Mann--Low construction gives the unnormalized scattering states
 \begin{align}
- \dket{\psi_a^+}&=\lim_{t_0\to-\infty\atop\epsilon\to0^+}
+ \dket{\psi_a^+}&=\lim_{\substack{t_0\to-\infty\\ \epsilon\to0^+}}
  U_I^\epsilon(0,t_0)\dket{a},\\
- \dbra{\psi_a^-}&=\lim_{t\to+\infty\atop\epsilon\to0^+}
+ \dbra{\psi_a^-}&=\lim_{\substack{t\to+\infty\\ \epsilon\to0^+}}
  \dbra{a}U_I^\epsilon(t,0).
 \end{align}
 Therefore,
 \begin{equation}
  S_{ab}=\expval{\psi_a^-|\psi_b^+}
- =\lim_{t\to+\infty,\,t_0\to-\infty\atop\epsilon\to0^+}
+ =\lim_{\substack{t\to+\infty\\t_0\to-\infty\\ \epsilon\to0^+}}
  \dbra{a}U_I^\epsilon(t,t_0)\dket{b},
 \end{equation}
 and
