@@ -249,7 +249,7 @@
 \contentsline {subsection}{\numberline {J.0.3}Semiclassical equations of motion}{136}{subsection.J.0.3}%
 \contentsline {subsection}{\numberline {J.0.4}Landau levels}{137}{subsection.J.0.4}%
 \contentsline {chapter}{\numberline {K}Homework 11 (due 12/4)}{140}{appendix.K}%
-\contentsline {subsection}{\numberline {K.0.1}(Bonus) Berry's phase for a spin-S particle}{140}{subsection.K.0.1}%
+\contentsline {subsection}{\numberline {K.0.1}(Bonus) Berry's phase for a spin-$S$ particle}{140}{subsection.K.0.1}%
 \contentsline {subsection}{\numberline {K.0.2}Aharonov-Bohm phase for a quantum particle on a ring}{141}{subsection.K.0.2}%
 \contentsline {subsection}{\numberline {K.0.3}Rabi oscillation}{142}{subsection.K.0.3}%
 \contentsline {chapter}{\nonumberline Bibliography}{144}{chapter*.2}%
