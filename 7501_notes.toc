@@ -157,5 +157,41 @@
 \contentsline {subsubsection}{\numberline {4.4.3.4}Frequency-dependent squeezing}{86}{subsubsection.4.4.3.4}%
 \contentsline {subsubsection}{\numberline {4.4.3.5}Optical loss}{87}{subsubsection.4.4.3.5}%
 \contentsline {subsubsection}{\numberline {4.4.3.6}Summary}{87}{subsubsection.4.4.3.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{88}{chapter*.2}%
+\contentsline {chapter}{\numberline {5}Quantum dynamics}{88}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sudden and Adiabatic Limits (11/6)}{89}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Sudden approximation}{89}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Sudden quench of a harmonic oscillator}{89}{subsubsection.5.1.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Schrodinger equation in the instantaneous eigenstate basis}{90}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Adiabatic theorem and Berry phase}{90}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}A quantum particle in electromagnetic fields (11/13)}{92}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Probability conservation}{92}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Gauge fields and minimal coupling}{92}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Ehrenfest equations}{92}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Solving Schrodinger equation in a uniform magnetic field}{93}{subsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.4.1}Landau gauge}{93}{subsubsection.5.2.4.1}%
+\contentsline {subsubsection}{\numberline {5.2.4.2}Landau-level degeneracy}{93}{subsubsection.5.2.4.2}%
+\contentsline {subsubsection}{\numberline {5.2.4.3}Filling factor}{94}{subsubsection.5.2.4.3}%
+\contentsline {section}{\numberline {5.3}Nonintegrable phase factors (11/18)}{95}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}A review of adiabatic evolution and Berry's phase}{95}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Gauge redundancy}{95}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Aharonov--Bohm phase}{96}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Particle on a ring}{96}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Dirac quantization}{97}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Interaction Picture and Rabi Oscillation (11/20)}{98}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}The interaction picture}{98}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}Dyson equation and Dyson series}{98}{subsubsection.5.4.1.1}%
+\contentsline {subsection}{\numberline {5.4.2}Rabi Oscillations}{99}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Spin one-half in a time-dependent magnetic field}{99}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Nuclear magnetic resonance}{100}{subsubsection.5.4.2.2}%
+\contentsline {section}{\numberline {5.5}*Electrons in a uniform electric field (12/2)}{101}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Solving Schrodinger equation in a uniform electric field}{101}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}Gauge 1: time-dependent vector-potential gauge}{101}{subsubsection.5.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.2}Gauge 2: scalar-potential gauge and Airy functions}{101}{subsubsection.5.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.5.1.3}Relation between the two gauges}{102}{subsubsection.5.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.5.1.4}Density and electric current in the two gauges}{102}{subsubsection.5.5.1.4}%
+\contentsline {subsection}{\numberline {5.5.2}Landau--Zener Tunneling in solids}{103}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}Band crossing}{103}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}Landau--Zener model}{103}{subsubsection.5.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.3}Computing the tunneling probability}{104}{subsubsection.5.5.2.3}%
+\contentsline {chapter}{\nonumberline Bibliography}{105}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

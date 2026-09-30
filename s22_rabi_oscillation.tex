@@ -1,4 +1,4 @@
-\section{The Interaction Picture and Rabi oscillation (11/20)}
+\section{Interaction Picture and Rabi Oscillation (11/20)}
 
 \subsection{The interaction picture}
 Let
@@ -7,7 +7,7 @@ Let
  \qquad
  \hat H_0\dket a=E_a\dket a.
 \end{equation}
-The Schrödinger-picture evolution operator satisfies
+The Schrodinger-picture evolution operator satisfies
 \begin{equation}
  \imth\hbar\frac{\partial}{\partial t}\hat U(t,t_0)
  =\hat H(t)\hat U(t,t_0).
@@ -41,15 +41,15 @@ with
  =\comm{\hat O_I}{\hat H_0}.
 \end{equation}
 
-\subsection{Dyson equation and Dyson series}
-Integrating the evolution equation gives
+\subsubsection{Dyson equation and Dyson series}
+Integrating the evolution equation gives the Dyson equation
 \begin{equation}
  \boxed{
  \hat U_I(t,t_0)
  =\id-\frac{\imth}{\hbar}
  \int_{t_0}^{t}\hat V_I(t')\hat U_I(t',t_0)\dif t'.}
 \end{equation}
-Iteration yields
+Iteration yields the Dyson series:
 \begin{align}
  \hat U_I(t,t_0)
  &=\id-\frac{\imth}{\hbar}\int_{t_0}^{t}
@@ -62,25 +62,29 @@ Iteration yields
  \int_{t_0}^{t}\hat V_I(t')\dif t'\right].
 \end{align}
 
-\subsubsection{Adiabatic switching and Gellmann-Low theorem}
-We start from the following Hamiltonian, where the interaction $\hat V$ is adiabatically switched on in the $\epsilon\rightarrow0^+$ limit. 
-\begin{equation}
- \hat H(t)=\hat H_0+\hat V e^{-\epsilon|t|},
- \qquad -\infty<t<0,
- \qquad \epsilon>0.
-\end{equation}
-\begin{thm} \textbf{Gellmann-Low theorem:} If $\dket a$ is an eigenstate of $\hat H_0$, then
-\begin{equation}
- \boxed{
- \dket{\psi_a^+}
- =\lim_{\epsilon\to0^+}
- \lim_{t_0\to-\infty}
- \hat U_I(0,t_0)\dket a}
-\end{equation}
-is an eigenstate of $\hat H_0+\hat V$, up to normalization and the usual
-adiabatic phase.
-\end{thm}
- This is known as the Gellmann-Low theorem. It can be derived from Dyson's equation and the Lippmann--Schwinger equation.
+Finally we mention that the Gellmann-Low theorem introduced in section \ref{sec:gellmann-low} can be derived from Dyson's equation and the Lippmann--Schwinger equation.
+
+% \subsubsection{Adiabatic switching and Gellmann-Low theorem}
+% We start from the following Hamiltonian, where the interaction $\hat V$ is adiabatically switched on in the $\epsilon\rightarrow0^+$ limit. 
+% \begin{equation}
+%  \hat H(t)=\hat H_0+\hat V e^{-\epsilon|t|},
+%  \qquad -\infty<t<0,
+%  \qquad \epsilon>0.
+% \end{equation}
+
+% \begin{thm} (Gell-Mann and Low) If $\dket{a}$ is an eigenstate of $\hat H_0$, then
+% \begin{equation}
+%  \boxed{
+%  \dket{\psi_a^+}
+%  =\lim_{\epsilon\to0^+}
+%  \lim_{t_0\to-\infty}
+%  \hat U_I(0,t_0)\dket a}
+% \end{equation}
+% is an eigenstate of $\hat H_0+\hat V$, up to normalization and the usual
+% adiabatic phase.
+% \end{thm}
+
+% This is known as the Gellmann-Low theorem. It can be derived from Dyson's equation and the Lippmann--Schwinger equation.
 
 \subsection{Rabi Oscillations}
 
@@ -183,7 +187,7 @@ we have
  \qquad |C_1(t)|^2=\cos^2(\gamma t).}
 \end{equation}
 
-\subsection{Nuclear magnetic resonance}
+\subsubsection{Nuclear magnetic resonance}
 The resonance condition is
 \begin{equation}
  \boxed{\omega_{\mathrm{res}}=\omega_{12}=\mu B_0.}
@@ -196,5 +200,5 @@ The magnetization and susceptibility are
 \begin{equation}
  M=\frac{\omega_{\mathrm{res}}}{\mu}-H,
  \qquad
- \chi=\frac{M}{H}=\frac{\omega_\text{res}}{\mu H}-1.
+ \chi=\frac{M}{H}=\frac{\omega_{\mathrm{res}}}{\mu H}-1.
 \end{equation}
