@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  30 SEP 2026 02:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  30 SEP 2026 03:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -581,7 +581,8 @@ File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
 ))
 (./7501_notes.aux (./ch00_syllabus.aux) (./ch01_postulates.aux)
 (./ch02_density_matrix.aux) (./ch03_1d_schrodinger_eq.aux)
-(./ch04_quantum_optics.aux) (./ch05_quantum_dynamics.aux))
+(./ch04_quantum_optics.aux) (./ch05_quantum_dynamics.aux)
+(./app00_homeworks.aux))
 \openout1 = `7501_notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
@@ -729,15 +730,74 @@ File: uesint.fd
 
 
 ] [3]
-Overfull \hbox (1.095pt too wide) detected at line 196
+Overfull \hbox (1.095pt too wide) detected at line 197
  []\OT1/cmss/bx/n/10.95 105
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 204
+ []\OT1/cmss/bx/n/10.95 109
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 209
+ []\OT1/cmss/bx/n/10.95 112
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 214
+ []\OT1/cmss/bx/n/10.95 115
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 218
+ []\OT1/cmss/bx/n/10.95 118
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 226
+ []\OT1/cmss/bx/n/10.95 121
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 231
+ []\OT1/cmss/bx/n/10.95 124
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 237
+ []\OT1/cmss/bx/n/10.95 128
+ []
+
+[4]
+Overfull \hbox (1.095pt too wide) detected at line 241
+ []\OT1/cmss/bx/n/10.95 132
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 246
+ []\OT1/cmss/bx/n/10.95 136
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 251
+ []\OT1/cmss/bx/n/10.95 140
+ []
+
+
+Overfull \hbox (1.095pt too wide) detected at line 255
+ []\OT1/cmss/bx/n/10.95 144
  []
 
 )
 \tf@toc=\write3
 \openout3 = `7501_notes.toc'.
 
- [4]
+ [5] [6
+
+
+
+]
 \openout2 = `ch00_syllabus.aux'.
 
  (./ch00_syllabus.tex
@@ -749,9 +809,6 @@ Overfull \hbox (108.55759pt too wide) in paragraph at lines 58--59
  []
 
 [1
-
-
-
 
 
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
@@ -774,50 +831,50 @@ chapter 1.
 ] [5
 
 ]
-<figures/compton1.png, id=300, 1284.8pt x 903.375pt>
+<figures/compton1.png, id=419, 1284.8pt x 903.375pt>
 File: figures/compton1.png Graphic file (type png)
 <use figures/compton1.png>
 Package pdftex.def Info: figures/compton1.png  used on input line 64.
 (pdftex.def)             Requested size: 202.29759pt x 142.22717pt.
-<figures/compton2.png, id=302, 1927.2pt x 1137.24875pt>
+<figures/compton2.png, id=421, 1927.2pt x 1137.24875pt>
 File: figures/compton2.png Graphic file (type png)
 <use figures/compton2.png>
 Package pdftex.def Info: figures/compton2.png  used on input line 65.
 (pdftex.def)             Requested size: 202.29759pt x 119.37126pt.
  [6 <./figures/compton1.png> <./figures/compton2.png>]
-<figures/fh1.jpg, id=326, 321.2pt x 731.533pt>
+<figures/fh1.jpg, id=445, 321.2pt x 731.533pt>
 File: figures/fh1.jpg Graphic file (type jpg)
 <use figures/fh1.jpg>
 Package pdftex.def Info: figures/fh1.jpg  used on input line 95.
 (pdftex.def)             Requested size: 89.90927pt x 204.76086pt.
-<figures/fh2.png, id=327, 1284.8pt x 961.5925pt>
+<figures/fh2.png, id=446, 1284.8pt x 961.5925pt>
 File: figures/fh2.png Graphic file (type png)
 <use figures/fh2.png>
 Package pdftex.def Info: figures/fh2.png  used on input line 96.
 (pdftex.def)             Requested size: 202.29759pt x 151.39293pt.
-<figures/fh3.png, id=328, 803.0pt x 1215.54124pt>
+<figures/fh3.png, id=447, 803.0pt x 1215.54124pt>
 File: figures/fh3.png Graphic file (type png)
 <use figures/fh3.png>
 Package pdftex.def Info: figures/fh3.png  used on input line 97.
 (pdftex.def)             Requested size: 112.38832pt x 170.11897pt.
  [7]
-<figures/sg1.png, id=343, 1284.8pt x 908.39375pt>
+<figures/sg1.png, id=462, 1284.8pt x 908.39375pt>
 File: figures/sg1.png Graphic file (type png)
 <use figures/sg1.png>
 Package pdftex.def Info: figures/sg1.png  used on input line 129.
 (pdftex.def)             Requested size: 359.644pt x 254.2792pt.
  [8 <./figures/fh1.jpg> <./figures/fh2.png> <./figures/fh3.png>]
-<figures/sg2.png, id=361, 1927.2pt x 913.4125pt>
+<figures/sg2.png, id=480, 1927.2pt x 913.4125pt>
 File: figures/sg2.png Graphic file (type png)
 <use figures/sg2.png>
 Package pdftex.def Info: figures/sg2.png  used on input line 148.
 (pdftex.def)             Requested size: 404.5952pt x 191.7526pt.
-<figures/dg1.png, id=364, 1284.8pt x 927.465pt>
+<figures/dg1.png, id=483, 1284.8pt x 927.465pt>
 File: figures/dg1.png Graphic file (type png)
 <use figures/dg1.png>
 Package pdftex.def Info: figures/dg1.png  used on input line 162.
 (pdftex.def)             Requested size: 202.29759pt x 146.0199pt.
-<figures/dg2.png, id=365, 535.2497pt x 469.755pt>
+<figures/dg2.png, id=484, 535.2497pt x 469.755pt>
 File: figures/dg2.png Graphic file (type png)
 <use figures/dg2.png>
 Package pdftex.def Info: figures/dg2.png  used on input line 163.
@@ -915,7 +972,7 @@ Underfull \vbox (badness 2781) has occurred while \output is active []
 [54]) (./s13_bound_and_scattering_states.tex [55] [56
 
 ] [57] [58] [59]
-<figures/1d_finite_well_bound_states.png, id=1078, 1541.76pt x 1027.84pt>
+<figures/1d_finite_well_bound_states.png, id=1196, 1541.76pt x 1027.84pt>
 File: figures/1d_finite_well_bound_states.png Graphic file (type png)
 <use figures/1d_finite_well_bound_states.png>
 Package pdftex.def Info: figures/1d_finite_well_bound_states.png  used on input
@@ -951,7 +1008,7 @@ chapter 4.
 Underfull \vbox (badness 7047) has occurred while \output is active []
 
  [75]
-<figures/coherent_state_phase_space.png, id=1317, 1541.76pt x 1027.84pt>
+<figures/coherent_state_phase_space.png, id=1435, 1541.76pt x 1027.84pt>
 File: figures/coherent_state_phase_space.png Graphic file (type png)
 <use figures/coherent_state_phase_space.png>
 Package pdftex.def Info: figures/coherent_state_phase_space.png  used on input 
@@ -1003,29 +1060,137 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [99]) (./s23_electric_field.tex [100] [101
 
 ] [102] [103])) [104]
-(./7501_notes.bbl
+\openout2 = `app00_homeworks.aux'.
+
+
+(./app00_homeworks.tex (./app01_hw1.tex
+chapter A.
+<figures/Bragg law.png, id=1882, 1487.5575pt x 856.19875pt>
+File: figures/Bragg law.png Graphic file (type png)
+<use figures/Bragg law.png>
+Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
+(pdftex.def)             Requested size: 404.5952pt x 232.87514pt.
+
+Underfull \vbox (badness 1910) has occurred while \output is active []
+
+ [105
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [106 <./figures/Bragg law.png>]
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+ [107])
+(./app02_hw2.tex [108]
+chapter B.
+[109
+
+] [110]) (./app03_hw3.tex [111]
+chapter C.
+[112
+
+]) (./app04_hw4.tex [113] [114]
+chapter D.
+[115
+
+]
+Underfull \vbox (badness 3895) has occurred while \output is active []
+
+ [116]
+<figures/hw4_aspect_exp.pdf, id=2036, 2251.10002pt x 879.36531pt>
+File: figures/hw4_aspect_exp.pdf Graphic file (type pdf)
+<use figures/hw4_aspect_exp.pdf>
+Package pdftex.def Info: figures/hw4_aspect_exp.pdf  used on input line 126.
+(pdftex.def)             Requested size: 445.06021pt x 173.85724pt.
+)
+(./app05_hw5.tex [117 <./figures/hw4_aspect_exp.pdf>]
+chapter E.
+
+Underfull \vbox (badness 3138) has occurred while \output is active []
+
+ [118
+
+]
+[119]) (./app06_hw6.tex [120]
+chapter F.
+
+Underfull \vbox (badness 2035) has occurred while \output is active []
+
+ [121
+
+]
+[122]) (./app07_hw7.tex [123]
+chapter G.
+[124
+
+] [125] [126]) (./app08_hw8.tex [127]
+chapter H.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [128
+
+]
+Underfull \vbox (badness 4366) has occurred while \output is active []
+
+ [129]
+[130]) (./app09_hw9.tex [131]
+chapter I.
+[132
+
+] [133] [134]) (./app10_hw10.tex [135]
+chapter J.
+<figures/hw10_sakurai_5-35.png, id=2291, 907.89188pt x 435.12563pt>
+File: figures/hw10_sakurai_5-35.png Graphic file (type png)
+<use figures/hw10_sakurai_5-35.png>
+Package pdftex.def Info: figures/hw10_sakurai_5-35.png  used on input line 9.
+(pdftex.def)             Requested size: 404.5952pt x 193.91246pt.
+[136
+
+] [137 <./figures/hw10_sakurai_5-35.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [138])
+(./app11_hw11.tex [139]
+chapter K.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [140
+
+]
+[141]
+Underfull \vbox (badness 4981) has occurred while \output is active []
+
+ [142]))
+[143] (./7501_notes.bbl
 chapter without number
-) [105
+) [144
 
 
 
 
 ] (./7501_notes.aux (./ch00_syllabus.aux) (./ch01_postulates.aux)
 (./ch02_density_matrix.aux) (./ch03_1d_schrodinger_eq.aux)
-(./ch04_quantum_optics.aux) (./ch05_quantum_dynamics.aux))
+(./ch04_quantum_optics.aux) (./ch05_quantum_dynamics.aux)
+(./app00_homeworks.aux))
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20820 strings out of 467168
- 363192 string characters out of 5411585
- 956125 words of memory out of 5000000
- 48390 multiletter control sequences out of 15000+600000
- 648616 words of font info for 197 fonts, out of 8000000 for 9000
+ 21445 strings out of 467168
+ 372366 string characters out of 5411585
+ 956312 words of memory out of 5000000
+ 48591 multiletter control sequences out of 15000+600000
+ 649384 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,107p,11213b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,16n,107p,11213b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></
 opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/t
 exlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/texl
@@ -1048,10 +1213,10 @@ texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/texdir/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/texdir/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (109 pages, 2406238 bytes).
+Output written on 7501_notes.pdf (150 pages, 4229269 bytes).
 PDF statistics:
- 2398 PDF objects out of 2487 (max. 8388607)
- 2199 compressed objects within 22 object streams
- 1109 named destinations out of 1200 (max. 500000)
- 39752 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 3286 PDF objects out of 3580 (max. 8388607)
+ 3031 compressed objects within 31 object streams
+ 1469 named destinations out of 1728 (max. 500000)
+ 40207 words of extra memory for PDF output out of 42996 (max. 10000000)
 

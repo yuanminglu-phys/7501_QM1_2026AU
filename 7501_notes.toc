@@ -193,5 +193,64 @@
 \contentsline {subsubsection}{\numberline {5.5.2.1}Band crossing}{103}{subsubsection.5.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.5.2.2}Landau--Zener model}{103}{subsubsection.5.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.5.2.3}Computing the tunneling probability}{104}{subsubsection.5.5.2.3}%
-\contentsline {chapter}{\nonumberline Bibliography}{105}{chapter*.2}%
+\def \@chapapp {\appendixname }
+\contentsline {chapter}{\numberline {A}Homework 1 (due 9/4)}{105}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Franck--Hertz experiment}{105}{appendix.A.1}%
+\contentsline {section}{\numberline {A.2}Davisson--Germer experiment}{105}{appendix.A.2}%
+\contentsline {section}{\numberline {A.3}Hilbert space of linear operators}{107}{appendix.A.3}%
+\contentsline {section}{\numberline {A.4}Compton shift}{108}{appendix.A.4}%
+\contentsline {section}{\numberline {A.5}Quantization of angular momentum}{108}{appendix.A.5}%
+\contentsline {section}{\numberline {A.6}Mode counting in blackbody radiation}{108}{appendix.A.6}%
+\contentsline {chapter}{\numberline {B}Homework 2 (due 9/11)}{109}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Pauli matrices}{109}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Linear algebra}{109}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Consecutive measurements of incompatible operators}{110}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Quantum Zeno effect}{111}{subsection.B.0.4}%
+\contentsline {chapter}{\numberline {C}Homework 3 (due 9/18)}{112}{appendix.C}%
+\contentsline {subsection}{\numberline {C.0.1}Spin precession}{112}{subsection.C.0.1}%
+\contentsline {subsection}{\numberline {C.0.2}Neutrino oscillation}{112}{subsection.C.0.2}%
+\contentsline {subsection}{\numberline {C.0.3}Propagator}{112}{subsection.C.0.3}%
+\contentsline {subsection}{\numberline {C.0.4}2-qubit Hamiltonian}{113}{subsection.C.0.4}%
+\contentsline {chapter}{\numberline {D}Homework 4 (due 9/25)}{115}{appendix.D}%
+\contentsline {subsection}{\numberline {D.0.1}Bloch ball for single-qubit mixed states}{115}{subsection.D.0.1}%
+\contentsline {subsection}{\numberline {D.0.2}Entanglement entropy}{115}{subsection.D.0.2}%
+\contentsline {subsection}{\numberline {D.0.3}Witnessing entanglement}{116}{subsection.D.0.3}%
+\contentsline {chapter}{\numberline {E}Homework 5 (due 10/2)}{118}{appendix.E}%
+\contentsline {subsection}{\numberline {E.0.1}Revisiting the quantum Zeno effect}{118}{subsection.E.0.1}%
+\contentsline {subsection}{\numberline {E.0.2}Measurements}{119}{subsection.E.0.2}%
+\contentsline {subsection}{\numberline {E.0.3}Quantum channels}{119}{subsection.E.0.3}%
+\contentsline {subsection}{\numberline {E.0.4}The master equation}{119}{subsection.E.0.4}%
+\contentsline {subsubsection}{\numberline {E.0.4.1}Phase damping}{119}{subsubsection.E.0.4.1}%
+\contentsline {subsubsection}{\numberline {E.0.4.2}Amplitude damping}{120}{subsubsection.E.0.4.2}%
+\contentsline {subsubsection}{\numberline {E.0.4.3}Amplitude + phase dampings}{120}{subsubsection.E.0.4.3}%
+\contentsline {chapter}{\numberline {F}Homework 6 (Due 10/14)}{121}{appendix.F}%
+\contentsline {subsection}{\numberline {F.0.1}(Bonus) Position and momentum operators on a discrete periodic chain}{121}{subsection.F.0.1}%
+\contentsline {subsection}{\numberline {F.0.2}Dirac delta function}{121}{subsection.F.0.2}%
+\contentsline {subsection}{\numberline {F.0.3}Inversion symmetry in one dimension}{122}{subsection.F.0.3}%
+\contentsline {subsection}{\numberline {F.0.4}Double delta function potential}{123}{subsection.F.0.4}%
+\contentsline {chapter}{\numberline {G}Homework 7 (due 10/28)}{124}{appendix.G}%
+\contentsline {subsection}{\numberline {G.0.1}(Bonus) Lippmann-Schwinger equation}{124}{subsection.G.0.1}%
+\contentsline {subsection}{\numberline {G.0.2}(Bonus) Solving Lippmann-Schwinger eq. for a delta function potential}{125}{subsection.G.0.2}%
+\contentsline {subsection}{\numberline {G.0.3}S matrix and the phase shift}{125}{subsection.G.0.3}%
+\contentsline {subsection}{\numberline {G.0.4}Tunneling through a finite potential barrier}{126}{subsection.G.0.4}%
+\contentsline {subsection}{\numberline {G.0.5}A step potential}{127}{subsection.G.0.5}%
+\contentsline {chapter}{\numberline {H}Homework 8 (due 11/4)}{128}{appendix.H}%
+\contentsline {subsection}{\numberline {H.0.1}The simple harmonic oscillator}{128}{subsection.H.0.1}%
+\contentsline {subsection}{\numberline {H.0.2}Coupled harmonic oscillators}{129}{subsection.H.0.2}%
+\contentsline {subsection}{\numberline {H.0.3}(Bonus) The operator algebra approach to solve a Hamiltonian}{130}{subsection.H.0.3}%
+\contentsline {chapter}{\numberline {I}Homework 9 (due 11/13)}{132}{appendix.I}%
+\contentsline {subsection}{\numberline {I.0.1}Coherent states}{132}{subsection.I.0.1}%
+\contentsline {subsection}{\numberline {I.0.2}Quantization of electromagnetic fields in a one-dimensional cavity}{133}{subsection.I.0.2}%
+\contentsline {subsection}{\numberline {I.0.3}Casimir effect}{134}{subsection.I.0.3}%
+\contentsline {subsection}{\numberline {I.0.4}(Bonus) Squeezed states}{134}{subsection.I.0.4}%
+\contentsline {chapter}{\numberline {J}Homework 10 (due 11/20)}{136}{appendix.J}%
+\contentsline {subsection}{\numberline {J.0.1}Beta decay of Tritium into Helium ion}{136}{subsection.J.0.1}%
+\contentsline {subsection}{\numberline {J.0.2}Quantum quench of a simple harmonic oscillator}{136}{subsection.J.0.2}%
+\contentsline {subsection}{\numberline {J.0.3}Semiclassical equations of motion}{136}{subsection.J.0.3}%
+\contentsline {subsection}{\numberline {J.0.4}Landau levels}{137}{subsection.J.0.4}%
+\contentsline {chapter}{\numberline {K}Homework 11 (due 12/4)}{140}{appendix.K}%
+\contentsline {subsection}{\numberline {K.0.1}(Bonus) Berry's phase for a spin-S particle}{140}{subsection.K.0.1}%
+\contentsline {subsection}{\numberline {K.0.2}Aharonov-Bohm phase for a quantum particle on a ring}{141}{subsection.K.0.2}%
+\contentsline {subsection}{\numberline {K.0.3}Rabi oscillation}{142}{subsection.K.0.3}%
+\contentsline {chapter}{\nonumberline Bibliography}{144}{chapter*.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
