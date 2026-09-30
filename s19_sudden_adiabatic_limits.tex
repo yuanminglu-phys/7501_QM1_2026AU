@@ -1,0 +1,172 @@
+\section{Sudden and Adiabatic Limits (11/6)}
+
+In this section we study the time evolution of a quantum state under the time-dependent Schrodinger equation 
+\begin{equation}
+\dket{\psi(t)}=
+\mathcal T\exp\left[-\frac{\imth}{\hbar}
+\int_0^t\hat H(\tau)\dif\tau\right]\dket{\psi(0)},
+\qquad
+\imth\hbar\frac{\dif}{\dif t}\dket{\psi(t)}
+=\hat H(t)\dket{\psi(t)}.
+\end{equation}
+Specifically we focus on two limit cases: the extremely fast limit, described by the sudden approximation; and the extremely slow limit, described by the adiabatic evolution. 
+
+\subsection{Sudden approximation}
+In a very short time $t$
+\begin{equation}
+ t\ll\frac{\hbar}{\Delta E},
+\end{equation}
+where $\Delta E$ is the smallest level spacing between any two energy levels in the spectrum of the Hamiltonian, the unitary time evolution operator is approximately a global phase factor 
+\begin{equation}
+\hat U(t,0)=\mathcal T
+\exp\left[-\frac{\imth}{\hbar}\int_0^t\hat H(\tau)\dif\tau\right]
+\simeq e^{\imth\phi(t)}\id,
+\end{equation}
+and hence the state is approximately the same up to a phase factor
+\begin{equation}
+\boxed{\dket{\psi(t)}\simeq\dket{\psi(0)}.}
+\end{equation}
+For example,
+\begin{equation}
+\hat H(t)=\hat H_0+\delta\hat H\,\Theta(t)
+\end{equation}
+is a toy model that describes a sudden change from $\hat H_0$ to $\hat H_0+\delta\hat H$. In this toy model, it takes zero time for the Hamiltonian to jump from $\hat H_0$ at $t=-\epsilon$ to $\hat H$ at $t=+\epsilon$, and we have
+\begin{align}
+    \dket{\psi(t=-\epsilon)}\approx\dket{\psi(t=+\epsilon)}
+\end{align}
+
+\subsubsection{Sudden quench of a harmonic oscillator}
+Consider
+\begin{equation}
+\hat H(t)=\hbar\omega(t)
+\left(\hat a^\dagger\hat a+\frac12\right),
+\qquad
+\omega(t)=
+\begin{cases}
+\omega_0,&t<0,\\
+\omega,&t>0.
+\end{cases}
+\end{equation}
+Let
+\begin{equation}
+R_0=\sqrt{\frac{\hbar}{m\omega_0}},
+\qquad
+R=\sqrt{\frac{\hbar}{m\omega}}.
+\end{equation}
+The old annihilation operator is
+\begin{align}
+\hat a_0
+&=\frac{\hat x}{\sqrt2R_0}
++\frac{\imth R_0\hat p}{\sqrt2\hbar}\nonumber\\
+&=\frac12\left(\sqrt{\frac{\omega}{\omega_0}}
++\sqrt{\frac{\omega_0}{\omega}}\right)\hat a
++\frac12\left(\sqrt{\frac{\omega}{\omega_0}}
+-\sqrt{\frac{\omega_0}{\omega}}\right)\hat a^\dagger.
+\end{align}
+Define the squeezing parameter $r$ as 
+\begin{equation}
+\frac{\omega_0}{\omega}=e^{2r}.
+\end{equation}
+Then
+\begin{equation}
+\hat a_0=\cosh r\,\hat a+\sinh r\,\hat a^\dagger.
+\end{equation}
+Since
+\begin{equation}
+\hat a_0\dket{0}_{\omega_0}=0,
+\end{equation}
+one has
+\begin{equation}
+\left(\hat a+\tanh r\,\hat a^\dagger\right)
+\dket{0}_{\omega_0}=0.
+\end{equation}
+Thus the old ground state $\dket{0}_{\omega_0}$ of a SHO with frequency $\omega_0$ is a squeezed state of the new oscillator with frequency $\omega$.
+
+\subsection{Schrodinger equation in the instantaneous eigenstate basis}
+Define the instantaneous eigenstates $\{\dket{n,t}\}$ of a time-dependent Hamiltonian $\hat H(t)$:
+\begin{equation}\label{instantaneous eigenstates}
+\hat H(t)\dket{n,t}=E_n(t)\dket{n,t},~~~\expval{m,t|n,t}=\delta_{m,n}
+\end{equation}
+Expand
+\begin{equation}
+\dket{\psi(t)}=
+\sum_n C_n(t)
+\exp\left[-\frac{\imth}{\hbar}\int_0^tE_n(\tau)\dif\tau\right]
+\dket{n,t}.
+\end{equation}
+Then the Schrodinger equation becomes
+\begin{equation}
+\dot C_m=-\sum_n
+\exp\left[-\imth\int_0^t\omega_{nm}(\tau)\dif\tau\right]
+C_n\dbra{m,t}\frac{\dif}{\dif t}\dket{n,t},
+\end{equation}
+where
+\begin{equation}
+\omega_{nm}(t)=\frac{E_n(t)-E_m(t)}{\hbar}.
+\end{equation}
+Differentiating the instantaneous eigenvalue equation (\ref{instantaneous eigenstates}) gives, for $m\neq n$,
+\begin{equation}
+\dbra{m,t}\frac{\dif}{\dif t}\dket{n,t}
+=\frac{\dbra{m,t}\dot{\hat H}(t)\dket{n,t}}
+{E_n(t)-E_m(t)}.
+\end{equation}
+Thus
+\begin{align}
+\dot C_m
+=&-C_m\dbra{m,t}\frac{\dif}{\dif t}\dket{m,t}\nonumber\\
+&-\sum_{n\neq m}
+\exp\left[-\imth\int_0^t\omega_{nm}(\tau)\dif\tau\right]
+C_n\frac{\dbra{m,t}\dot{\hat H}(t)\dket{n,t}}
+{E_n(t)-E_m(t)}.
+\end{align}
+
+\subsection{Adiabatic theorem and Berry phase}
+Typically the time-dependence of a Hamiltonian comes from one (or more) time-dependent parameter(s):
+\begin{equation}
+\hat H(t)=\hat H(\lambda(t)),
+\qquad
+\dot{\hat H}=\frac{\partial\hat H}{\partial\lambda}\dot\lambda.
+\end{equation}
+A sufficient adiabatic condition is
+\begin{equation}
+\boxed{
+\left|\frac{\hbar\dot\lambda
+\dbra{m}\partial_\lambda\hat H\dket{n}}
+{(E_n-E_m)^2}\right|\ll1,
+\qquad m\neq n.}
+\end{equation}
+Neglecting transitions between distinct instantaneous levels,
+\begin{equation}
+\dot C_m=-C_m\dot\lambda
+\dbra m\partial_\lambda\dket m.
+\end{equation}
+Therefore, in the adiabatic limit we have
+\begin{equation}
+C_m(t)=C_m(0)
+\exp\left[-\int_{\lambda(0)}^{\lambda(t)}
+\dbra m\partial_\lambda\dket m\dif\lambda\right].
+\end{equation}
+Define the Berry connection
+\begin{equation}
+\boxed{\mathcal A_m(\lambda)
+=-\imth\dbra m\partial_\lambda\dket m.}
+\end{equation}
+It is real because
+\begin{equation}
+\partial_\lambda\expval m m
+=\expval{\partial_\lambda m}{m}
++\dbra{m}\partial_\lambda\dket{m}=0.
+\end{equation}
+The geometric phase is
+\begin{equation}
+\boxed{e^{\imth\gamma_m}
+=\exp\left[-\imth\int\mathcal A_m(\lambda)\dif\lambda\right].}
+\end{equation}
+For example, for a qubit in a slowly varying magnetic field,
+\begin{equation}
+\hat H=-\hbar\omega\,\hat{\bm n}(t)\cdot\bm\sigma,
+\qquad |\hat{\bm n}|=1,
+\end{equation}
+the Berry phase around a closed loop is proportional to the solid angle
+subtended on the Bloch sphere.
+

@@ -1,0 +1,206 @@
+\section{Nonintegrable phase factors (11/18)}
+
+\subsection{A review of adiabatic evolution and Berry's phase}
+Let
+\begin{equation}
+ \hat H(\lambda)\dket{n,\lambda}
+ =E_n(\lambda)\dket{n,\lambda}.
+\end{equation}
+In the adiabatic limit,
+\begin{equation}
+ \dket{\psi(t)}
+ =\sum_n C_n(t)
+ \exp\left[-\frac{\imth}{\hbar}
+ \int_0^t E_n(t')\dif t'\right]
+ \dket{n,t},
+\end{equation}
+where
+\begin{equation}
+ \dot C_n(t)
+ =-C_n(t)\dbra{n,t}\frac{\dif}{\dif t}\dket{n,t}.
+\end{equation}
+Thus
+\begin{equation}
+ C_n(t)=C_n(0)
+ \exp\left[-\imth\int_{\lambda(0)}^{\lambda(t)}
+ \mathcal A_n(\lambda)\dif\lambda\right],
+\end{equation}
+with the \emph{Berry connection} defined as
+\begin{equation}
+ \boxed{
+ \mathcal A_n(\lambda)
+ =-\imth\dbra{n,\lambda}\partial_\lambda\dket{n,\lambda}.}
+\end{equation}
+Since $\expval{n,\lambda|n,\lambda}=1$,
+\begin{equation}
+ \mathcal A_n^*(\lambda)=\mathcal A_n(\lambda).
+\end{equation}
+For several slowly-varying parameters $\{\lambda_j\}$, there can be more than one component of Berry connection 
+\begin{equation}
+ \mathcal A_{n,j}
+ =-\imth\dbra n\partial_{\lambda_j}\dket n.
+\end{equation}
+and 
+\begin{equation}
+ C_n(t)=C_n(0)
+ \exp\left[-\imth\sum_j\int_{\lambda(0)}^{\lambda(t)}
+ \mathcal A_{n,j}(\lambda)\dif\lambda_j\right],
+\end{equation}
+Notice that the phase factor in $C_n(t)$ depends not only on the endpoints $\lambda(0),\lambda(t)$, but also on the full trajectory in parameter space. Therefore it is a non-integrable phase factor. 
+
+\subsection{Gauge redundancy}
+Under
+\begin{equation}
+ \dket{n,\lambda}
+ \longmapsto
+ \dket{\widetilde n,\lambda}
+ =e^{\imth f(\lambda)}\dket{n,\lambda},
+\end{equation}
+the Berry connection transforms as
+\begin{equation}
+ \boxed{
+ \widetilde{\mathcal A}_n(\lambda)
+ =\mathcal A_n(\lambda)+\frac{\dif f}{\dif\lambda}.}
+\end{equation}
+For an open path,
+\begin{equation}
+ e^{\imth\gamma_n}
+ =\exp\left[-\imth\int_{\lambda_0}^{\lambda_1}
+ \mathcal A_n(\lambda)\dif\lambda\right]
+\end{equation}
+changes by an endpoint phase difference $f(\lambda_1)-f(\lambda_0)$. For a closed contour $C$,
+\begin{equation}
+ \boxed{
+ e^{\imth\gamma_n(C)}
+ =\exp\left[-\imth\oint_C
+ \mathcal A_n(\lambda)\dif\lambda\right]}
+\end{equation}
+is gauge invariant.
+
+\subsection{Aharonov--Bohm phase}
+
+Consider
+\begin{equation}
+ \hat H(\bm\lambda)
+ =\frac{(\hat{\bm p}-e\bm A)^2}{2m}
+ +e\phi(\hat{\bm r})
+ +V(\hat{\bm r}-\bm\lambda),
+\end{equation}
+where $V$ traps the particle near $\bm\lambda$. For a slow displacement
+$\bm\lambda\to\bm\lambda+\bm\delta$,
+\begin{equation}
+ \dket{n,\bm\lambda+\bm\delta}
+ \simeq
+ e^{-\imth\hat{\bm\pi}\cdot\bm\delta/\hbar}
+ \dket{n,\bm\lambda},
+ \qquad
+ \hat{\bm\pi}=\hat{\bm p}-e\bm A.
+\end{equation}
+Hence
+\begin{equation}
+ -\imth\dbra{n,\bm\lambda}
+ \frac{\partial}{\partial\lambda_j}
+ \dket{n,\bm\lambda}
+ =\frac1\hbar\dbra n\hat\pi_j\dket n
+ \simeq-\frac{e}{\hbar}A_j(\bm\lambda).
+\end{equation}
+The geometric phase is therefore
+\begin{equation}
+ \boxed{
+ e^{\imth\gamma}
+ =\exp\left[
+ \frac{\imth e}{\hbar}
+ \int_{\bm\lambda(0)}^{\bm\lambda(t)}
+ \bm A(\bm r)\cdot\dif\bm r\right].}
+\end{equation}
+Under
+\begin{equation}
+ \bm A\longmapsto\bm A-\bm\nabla f,
+ \qquad
+ \psi\longmapsto e^{-\imth ef/\hbar}\psi,
+\end{equation}
+the induced endpoint phase agrees with the gauge transformation of the wave
+function.
+
+
+For a closed contour $C$,
+\begin{equation}
+ e^{\imth\gamma_{\mathrm{AB}}}
+ =\exp\left[
+ \frac{\imth e}{\hbar}\oint_C\bm A\cdot\dif\bm r\right]
+ =\exp\left(2\pi\imth\frac{\Phi}{\Phi_0}\right),
+\end{equation}
+where
+\begin{equation}
+ \boxed{\Phi_0=\frac{2\pi\hbar}{e}=\frac{h}{e}}
+\end{equation}
+is the flux quantum.
+
+\subsection{Particle on a ring}
+For a particle on a ring of radius $R$ threaded by flux $\Phi$,
+\begin{equation}
+ \hat H
+ =\frac{(\hat p-eA)^2}{2m}
+ =\frac{\hbar^2}{2mR^2}
+ \left(-\imth\partial_\theta-\phi\right)^2,
+\end{equation}
+where
+\begin{equation}
+ \phi=\frac{eAR}{\hbar}
+ =\frac{\Phi}{\Phi_0}.
+\end{equation}
+Periodic boundary conditions give
+\begin{equation}
+ \psi_n(\theta)=\frac{e^{\imth n\theta}}{\sqrt{2\pi}},
+ \qquad n\in\mathbb Z,
+\end{equation}
+and
+\begin{equation}
+ \boxed{
+ E_n(\phi)=\frac{\hbar^2}{2mR^2}(n-\phi)^2.}
+\end{equation}
+Therefore,
+\begin{equation}
+ E_{n+1}(\phi+1)=E_n(\phi),
+\end{equation}
+so the spectrum is periodic in $\Phi$ with period $\Phi_0$.
+
+For two spinless electrons and $0\leq\phi\leq1$, the total energy is given by
+\begin{equation}
+ U(\phi)=E_0(\phi)+E_1(\phi)
+ =\frac{\hbar^2}{2mR^2}
+ \left[\phi^2+(\phi-1)^2\right].
+\end{equation}
+The magnetization is
+\begin{equation}
+ \boxed{
+ M=-\frac{\partial U}{\partial\Phi}
+ =\frac{\hbar^2}{mR^2\Phi_0}(1-2\phi).}
+\end{equation}
+It is a periodic function of $\phi$ with a periodicity of 1. 
+
+\subsection{Dirac quantization}
+Cover a sphere surrounding a magnetic monopole by northern and southern
+patches $R$ and $\overline R$, with common boundary $C$. Stokes' theorem gives
+\begin{equation}
+ \oint_C\bm A_R\cdot\dif\bm r
+ =\int_R\bm B\cdot\dif\bm a,
+\end{equation}
+and
+\begin{equation}
+ \oint_C\bm A_{\overline R}\cdot\dif\bm r
+ =-\int_{\overline R}\bm B\cdot\dif\bm a.
+\end{equation}
+Single-valuedness of the phase requires
+\begin{equation}
+ \frac{e}{\hbar}
+ \left(\Phi_R+\Phi_{\overline R}\right)
+ =2\pi N,
+ \qquad N\in\mathbb Z.
+\end{equation}
+Thus the total monopole flux is quantized:
+\begin{equation}
+ \boxed{
+ \Phi_{S^2}=N\Phi_0,
+ \qquad N\in\mathbb Z.}
+\end{equation}
