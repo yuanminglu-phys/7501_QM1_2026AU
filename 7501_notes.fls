@@ -50,8 +50,8 @@ INPUT /opt/texlive/texdir/texmf-dist/tex/latex/xpatch/xpatch.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/xpatch/xpatch.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/etoolbox/etoolbox.sty

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  30 SEP 2026 03:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  5 OCT 2026 03:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **7501_notes.tex
 (./7501_notes.tex
 LaTeX2e <2026-06-01>
-L3 programming layer <2026-06-18>
+L3 programming layer <2026-09-09>
 (/opt/texlive/texdir/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2026/02/02 v3.49.2 KOMA-Script document class (book)
 (/opt/texlive/texdir/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -229,10 +229,10 @@ Package: amsthm 2020/05/29 v2.20.6
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/xpatch/xpatch.sty
 (/opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2026-06-18 L3 programming layer (loader) 
+Package: expl3 2026-09-09 L3 programming layer (loader) 
 
-(/opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+(/opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-09-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
@@ -325,23 +325,23 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameSep=\dimen166
 )
 (/opt/texlive/texdir/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2026/06/14 v26.9 The multilingual framework for LuaLaTeX, pdfLaT
-eX and XeLaTeX
+Package: babel 2026/09/27 v26.13 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
 \babel@savecnt=\count302
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2084.
+ne 2110.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2086.
+ne 2112.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2088.
+e 2114.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2089.
+e 2115.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2090.
+on input line 2116.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2092.
+on input line 2118.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2117.
+on input line 2143.
 \U@D=\dimen167
 \l@unhyphenated=\language91
 
@@ -351,7 +351,7 @@ on input line 2117.
 
 (/opt/texlive/texdir/texmf-dist/tex/generic/babel/locale/en/babel-english.tex)
 Package babel Info: Importing font and identification data for 'english'
-(babel)             from babel-en.ini. Reported on input line 4380.
+(babel)             from babel-en.ini. Reported on input line 4478.
 
 (/opt/texlive/texdir/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
@@ -1192,11 +1192,11 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21469 strings out of 467168
- 372751 string characters out of 5411585
- 956316 words of memory out of 5000000
- 48609 multiletter control sequences out of 15000+600000
- 651736 words of font info for 220 fonts, out of 8000000 for 9000
+ 21654 strings out of 467050
+ 379102 string characters out of 5408429
+ 959592 words of memory out of 5000000
+ 48913 multiletter control sequences out of 15000+600000
+ 652504 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,107p,11213b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></
@@ -1222,7 +1222,7 @@ r/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/texdir/tex
 mf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/texdir/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/texdir/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (150 pages, 4237350 bytes).
+Output written on 7501_notes.pdf (150 pages, 4237362 bytes).
 PDF statistics:
  3291 PDF objects out of 3580 (max. 8388607)
  3034 compressed objects within 31 object streams
