@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  5 OCT 2026 03:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  7 OCT 2026 02:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -972,7 +972,7 @@ Underfull \vbox (badness 2781) has occurred while \output is active []
 [54]) (./s13_bound_and_scattering_states.tex [55] [56
 
 ] [57] [58] [59]
-<figures/1d_finite_well_bound_states.png, id=1196, 1541.76pt x 1027.84pt>
+<figures/1d_finite_well_bound_states.png, id=1197, 1541.76pt x 1027.84pt>
 File: figures/1d_finite_well_bound_states.png Graphic file (type png)
 <use figures/1d_finite_well_bound_states.png>
 Package pdftex.def Info: figures/1d_finite_well_bound_states.png  used on input
@@ -1008,7 +1008,7 @@ chapter 4.
 Underfull \vbox (badness 7047) has occurred while \output is active []
 
  [75]
-<figures/coherent_state_phase_space.png, id=1435, 1541.76pt x 1027.84pt>
+<figures/coherent_state_phase_space.png, id=1436, 1541.76pt x 1027.84pt>
 File: figures/coherent_state_phase_space.png Graphic file (type png)
 <use figures/coherent_state_phase_space.png>
 Package pdftex.def Info: figures/coherent_state_phase_space.png  used on input 
@@ -1065,7 +1065,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 (./app00_homeworks.tex (./app01_hw1.tex
 chapter A.
-<figures/Bragg law.png, id=1882, 1487.5575pt x 856.19875pt>
+<figures/Bragg law.png, id=1886, 1487.5575pt x 856.19875pt>
 File: figures/Bragg law.png Graphic file (type png)
 <use figures/Bragg law.png>
 Package pdftex.def Info: figures/Bragg law.png  used on input line 16.
@@ -1101,7 +1101,7 @@ chapter D.
 Underfull \vbox (badness 3895) has occurred while \output is active []
 
  [116]
-<figures/hw4_aspect_exp.pdf, id=2036, 2251.10002pt x 879.36531pt>
+<figures/hw4_aspect_exp.pdf, id=2040, 2251.10002pt x 879.36531pt>
 File: figures/hw4_aspect_exp.pdf Graphic file (type pdf)
 <use figures/hw4_aspect_exp.pdf>
 Package pdftex.def Info: figures/hw4_aspect_exp.pdf  used on input line 126.
@@ -1144,7 +1144,7 @@ chapter I.
 
 ] [133] [134]) (./app10_hw10.tex [135]
 chapter J.
-<figures/hw10_sakurai_5-35.png, id=2291, 907.89188pt x 435.12563pt>
+<figures/hw10_sakurai_5-35.png, id=2295, 907.89188pt x 435.12563pt>
 File: figures/hw10_sakurai_5-35.png Graphic file (type png)
 <use figures/hw10_sakurai_5-35.png>
 Package pdftex.def Info: figures/hw10_sakurai_5-35.png  used on input line 9.
@@ -1192,8 +1192,8 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21654 strings out of 467050
- 379102 string characters out of 5408429
+ 21658 strings out of 467050
+ 379158 string characters out of 5408429
  959592 words of memory out of 5000000
  48913 multiletter control sequences out of 15000+600000
  652504 words of font info for 220 fonts, out of 8000000 for 9000
@@ -1222,10 +1222,10 @@ r/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/texdir/tex
 mf-dist/fonts/type1/public/esint-type1/esint10.pfb></opt/texlive/texdir/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/texlive/texdir/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 7501_notes.pdf (150 pages, 4237362 bytes).
+Output written on 7501_notes.pdf (150 pages, 4238560 bytes).
 PDF statistics:
- 3291 PDF objects out of 3580 (max. 8388607)
- 3034 compressed objects within 31 object streams
- 1469 named destinations out of 1728 (max. 500000)
+ 3296 PDF objects out of 3580 (max. 8388607)
+ 3039 compressed objects within 31 object streams
+ 1473 named destinations out of 1728 (max. 500000)
  42255 words of extra memory for PDF output out of 42996 (max. 10000000)
 

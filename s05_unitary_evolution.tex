@@ -117,7 +117,7 @@ that governs the time evolution of the system. We used $h.c.$ as a shorthand not
 
 Starting from the initial state $\dket0$, after a very short time $\Delta t$, the state evolves into
 \begin{align}
-    \dket{\psi(t)}=e^{-\imth \hat Ht/\hbar}\dket0=(1-\frac\imth\hbar H_{0,0}\Delta t)\dket0-\frac\imth\hbar\Delta t\sum_q H_{q,0}\dket{q}+O(\Delta t^2)
+    \dket{\psi(t)}=e^{-\imth \hat Ht/\hbar}\dket0=(1-\frac\imth\hbar H_{0,0}\Delta t)\dket0-\frac\imth\hbar\Delta t\sum_{q\neq0} H_{q,0}\dket{q}+O(\Delta t^2)
 \end{align}
 Therefore at time $\Delta t$, the probability of measurement outcome $\hat O=q_0$ is given by
 \begin{align}
@@ -129,4 +129,8 @@ One can further show that if we repeat this 2-step procedure of small time evolu
 \begin{align}
     \text{Pr}(\dket{0}\rightarrow\dket0)\geq\lim_{N\rightarrow\infty}\big(|\expval{0|\psi(\frac TN)}|^2\big)^N=\lim_{N\rightarrow+\infty}e^{-\alpha T^2/N}=1
 \end{align}
-This is known as the quantum Zeno effect. 
+where we have used the identity
+\begin{align}
+    \lim_{x\rightarrow0^+}(1+x)^{1/x}=e,~~~x=-\frac{\alpha T^2}{N^2}
+\end{align}
+This phenomenon is known as the quantum Zeno effect. 
